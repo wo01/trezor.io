@@ -15,6 +15,9 @@
       color: $c_grey
       +unselectable()
 
+      &.active
+        color: $c_white !important
+
     a.buy
       margin-top: -10px
       margin-bottom: -10px
@@ -22,13 +25,12 @@
 .sticky
   position: fixed
   left: 0
+  right: 0
   top: 0
+  z-index: 2
   height: 64px
   width: 100%
-  overflow-y: hidden
-  overflow: hidden
   background: $c_black
-  z-index: 2
 
 
 /* INTRO SECTION */
@@ -36,17 +38,20 @@
 .intro-section
   background-color: $c_grey_bg
 
-  .text-block
-    width: 70%
-    position: relative
-    margin: 0 auto
-    padding-bottom: 20px
+  h2
+    padding: 10px 0 20px 0
 
   h4
     font-size: 1.1em
     font-style: $default_font
     font-weight: bolder
     color: $c_grey_font
+
+  .text-block
+    width: 78%
+    position: relative
+    margin: 0 auto
+    padding-bottom: 20px
 
   .presentation
     width: 100%
@@ -84,17 +89,20 @@
 
 .usage-section
   .item
+    position: relative
+    display: block
+    height: 250px
+
     h4
       font-size: 1.1em
       font-style: $default_font
       font-weight: bolder
       color: $c_grey_font
-
+      
     .text-block
-      width: 90%
+      max-width: 90%
       position: relative
       margin: 0 auto
-      padding-bottom: 20px
 
 
 /* FEATURES SECTION */
@@ -103,8 +111,14 @@
   position: relative
   background: $c_black
   color: $c_white
+
+  .heading
+    padding-bottom: 0
   p
     color: $c_grey
+
+  .entry
+    min-height: 220px
 
   .hidden-content
     position: absolute
@@ -114,10 +128,13 @@
     height: 1px
     visibility: hidden
 
+  .trezor-render
+    max-width: 80%
+    margin: 0 auto
 
   canvas#featureCanvas
     position: relative
-    height: 500px
+    height: 600px
     width: 100%
     display: block
     z-index: 0
@@ -171,7 +188,7 @@
       position: relative
       margin: 0 auto
       margin-bottom: 8px
-      background: url("../images/experts_faces/experts.png")
+      background: url("/static/images/experts_faces/experts.png")
       background-repeat: no-repeat
       background-size: 240px
       +border-radius(50%)
@@ -217,7 +234,8 @@
 
 .media
   img
-    height: 36px
+    height: 30px
+    margin: 20px
     opacity: .6
     width: auto
     +grey(100%)
@@ -280,7 +298,7 @@
       position: relative
       margin: 0 auto
       margin-bottom: 8px
-      background: url("../images/team_faces/faces.png")
+      background: url("/static/images/team_faces/faces.png")
       background-repeat: no-repeat
       background-size: 100%
 
@@ -291,6 +309,10 @@
         display: block
         padding-bottom: 100%
 
+      &.alena
+        background: url("/static/images/team_faces/source/alena.jpg")
+        background-repeat: no-repeat
+        background-size: 100%
       &.bach
         background-position: 0 0%
       &.ben
@@ -317,11 +339,14 @@
         background-position: 0 91.666667%
       &.vojtech
         background-position: 0 100%
+
+
     h4
       padding: 0
       margin: 0
       font-size: 1em
 
     .title
+      line-height: 1.2em
       font-weight: bold
       color: $c_grey

@@ -1,21 +1,22 @@
+*:focus
+  outline: 0 !important
+input::-moz-focus-inner
+  border: 0
 
 body, html
   padding: 0
   margin: 0
+  height: 100%
   background: $c_white
   font-family: $default_font
   +antialiased()
 
-html
-  overflow: hidden
-  height: 100%
-
 body
+  min-height: 100%
   overflow: auto
   overflow-y: scroll
   -webkit-overflow-scrolling: touch
   -ms-overflow-style: -ms-autohiding-scrollbar
-  height: 100%
 
 header
   position: relative
@@ -23,6 +24,7 @@ header
   height: 100%
   width: 100%
   z-index: 3
+  background-color: $c_grey_bg
 
 h1, h2, h3, h4, h5
   font-family: 'Open Sans', sans-serif
@@ -34,12 +36,31 @@ p
 a
   color: $c_green
 
+a.arrow
+  color: $c_green
+  &:hover
+    color: $c_green
+    text-decoration: none
+    &:after
+      +transform(translateX(3px) translateY(0))
+      +transition(transform .1s ease-in-out)
+
+  &:after
+    display: inline-block
+    content: '\276f'
+    position: relative
+    padding-left: 4px
+
 section
   padding-top: 80px
   padding-bottom: 80px
 
   .heading
-    padding-bottom: 30px
+    padding-bottom: 40px
+
+    p
+      margin: 0 auto
+      max-width: 70%
 
   .learn-more
     margin-top: 20px
