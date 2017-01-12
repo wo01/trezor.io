@@ -107,8 +107,12 @@ $(document).ready(function () {
   // On the RUN
 
   var OSName = "unknown",
-    pos = $('#usage').offset().top,
-    win = $('html');
+    win = $('html'),
+    $jumbo = $('#jumbotron'),
+    $header = $('#header'),
+    h = window.innerHeight;
+
+  // reorder platform icons
   if (navigator.appVersion.indexOf("Win") != -1) OSName = "win";
   if (navigator.appVersion.indexOf("Mac") != -1) OSName = "mac";
   if (navigator.appVersion.indexOf("X11") != -1) OSName = "linux";
@@ -116,9 +120,6 @@ $(document).ready(function () {
   $("#" + OSName).prependTo("#platforms");
 
   // jumbo height fixer
-  var $jumbo = $('#jumbotron'),
-    $header = $('#header'),
-    h = window.innerHeight;
   $jumbo.css('max-height', h + 'px');
   $header.css('max-height', h + 'px');
 
@@ -151,3 +152,34 @@ $(document).ready(function () {
 
 });
 
+var pepitacounter = 0;
+$($('.team-section .person .header')[0]).click(function () {
+  pepitacounter++;
+  if (pepitacounter === 5) {
+    laundromat();
+  }
+  if (pepitacounter === 6) {
+    laundromatOff();
+    pepitacounter = 0;
+  }
+});
+
+function laundromat() {
+  $('.team-section .person .header').each(function() {
+    var obj = $(this);
+    var time = Math.random() * 2;
+    var spin = Math.random() < 0.5;
+    if (spin) {
+      obj.css('animation', 'laundromat-right ' + time + 's linear infinite');
+    } else {
+      obj.css('animation', 'laundromat-left ' + time + 's linear infinite');
+    }
+  });
+}
+
+function laundromatOff() {
+  $('.team-section .person .header').each(function() {
+    var obj = $(this);
+    obj.css('animation', '');
+  });
+}
