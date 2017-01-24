@@ -1,1 +1,8 @@
-$(document).ready(function(){$("#url").text(window.location.pathname);var a=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;a&&a(function(){$("img.lazy").lazyload({threshold:500})});$("head link").each(function(){for(var a=0;a<window.location.pathname.split(/\//g).length-2;a++)$(this).attr("href","../"+$(this).attr("href"))});$("#error").css("min-height",window.innerHeight-280+"px")});
+$(document).ready(function () {
+    $("#url").text(window.location.pathname);
+    var a = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+    a && a(function () {
+        $("img.lazy").lazyload({threshold: 500})
+    });
+    $("#error").css("min-height", window.innerHeight - 280 + "px")
+});
