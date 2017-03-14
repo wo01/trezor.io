@@ -1,4 +1,9 @@
 .start
+
+  .step4
+    display: none
+    padding-top: 30px
+
   .thank-intro
     padding: 10% 0 10% 0
 
@@ -13,7 +18,6 @@
         color: $c_green
 
   .step
-    display: none
     background: $c_grey_bg
     margin: 10px
 
@@ -42,6 +46,11 @@
 
       p, i
         font-size: .9em
+
+        &.important
+          display: block
+          border-left: 3px solid orange
+          padding-left: 10px
 
     .order
       color: $c_grey

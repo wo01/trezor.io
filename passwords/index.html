@@ -1,15 +1,361 @@
-<html>
-<body>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-        crossorigin="anonymous"></script>
-<script>
-    $(function () {
-        // default
-        window.location = 'https://passwords.mytrezor.com/';
-    });
-</script>
-You're being redirected to <a href='https://passwords.mytrezor.com/'>https://passwords.mytrezor.com</a>. If it doesn't happen in few
-seconds, please click <a href='https://passwords.mytrezor.com'>here</a>.
-</body>
+
+<!DOCTYPE html>
+<html class="no-js" id="window">
+    <head>
+        <title>TREZOR Bitcoin Wallet | The original and most secure hardware wallet.</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="shortcut icon" href="/static/images/favicon.ico">
+        <link rel="canonical" href="https://trezor.io/" />
+
+        <meta name="keywords" content="trezor official bitcoin eshop ultra secure security hardware wallet cryptography cryptocurrency u2f password manager gpg">
+        <meta name="description" content="TREZOR is more than just a bulletproof bitcoin wallet. TREZOR is also a security device for passwords, accounts and emails.">
+
+        <meta property="og:type" content="product" />
+        <meta property="fb:page_id" content="198891850249377" />
+        <meta property="og:title" content="TREZOR Bitcoin Wallet | The original and most secure hardware wallet." />
+        <meta property="og:image" content="https://trezor.io/static/images/trezor_social01.jpg" />
+        <meta property="og:description" content="TREZOR is more than just a bulletproof bitcoin wallet. TREZOR is also a security device for passwords, accounts and emails." />
+        <meta property="og:url" content="https://trezor.io/" />
+        <meta property="product:brand" content="TREZOR" />
+        <meta property="product:category" content="Electronics" />
+        <meta property="product:plural_title" content="TREZORs" />
+        <meta property="product:price:amount" content="99"/>
+        <meta property="product:price:currency" content="USD"/>
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@BitcoinTrezor">
+        <meta name="twitter:creator" content="@BitcoinTrezor">
+        <meta name="twitter:title" content="TREZOR Bitcoin Wallet | The original and most secure hardware wallet.">
+        <meta name="twitter:description" content="TREZOR is more than just a bulletproof bitcoin wallet. TREZOR is also a security device for passwords, accounts and emails." />
+        <meta name="twitter:image:src" content="https://trezor.io/static/images/trezor_social01.jpg">
+        <meta name="twitter:domain" content="https://trezor.io/">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+
+    <body>
+    
+<nav class="navbar navbar-dark navbar-full" role="navigation" aria-label="Global Navigation">
+    <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar1"
+            aria-controls="exCollapsingNavbar1" aria-expanded="false" aria-label="Toggle navigation">
+        &#9776;
+    </button>
+    <a class="navbar-brand-mini hidden-md-up" href="/"><img class="trezor-logo"
+                                                            src="/static/images/trezor-logo.svg"
+                                                            onerror="this.src='/static/images/trezor-logo.png'; this.onerror=null;"
+                                                            alt="best bitcoin wallet and security device"/></a>
+    <div class="container">
+        <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar1">
+            <a class="navbar-brand hidden-sm-down" href="/"><img class="trezor-logo"
+                                                                 src="/static/images/trezor-logo.svg"
+                                                                 onerror="this.src='/static/images/trezor-logo.png'; this.onerror=null;"
+                                                                 alt="best bitcoin wallet and security device"/><span
+                    class="trezor-title">TREZOR.io</span></a>
+            <ul class="nav navbar-nav float-sm-right float-xs-left social">
+                <li class="nav-item">
+                    <a class="nav-link shop-btn" href="https://shop.trezor.io" data-amount="0" title="Go to shop and order TREZOR">Shop</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/" title="Presentation page of TREZOR - bitcoin wallet and security device">TREZOR<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://wallet.trezor.io/" title="Visit Wallet for your TREZOR security device">Wallet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://doc.satoshilabs.com/">Docs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://blog.trezor.io/">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mailto:support@trezor.io">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Follow us</a>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dLabel">
+                        <a class="dropdown-item" href="https://twitter.com/bitcointrezor"><span class="fa fa-twitter"></span> Twitter</a>
+                        <a class="dropdown-item" href="https://www.reddit.com/r/trezor"><span class="fa fa-reddit-alien"></span> Reddit</a>
+                        <a class="dropdown-item" href="https://www.instagram.com/bitcointrezor/"><span class="fa fa-instagram"></span> Instagram</a>
+                        <a class="dropdown-item" href="https://www.facebook.com/BitcoinTrezor/"><span class="fa fa-facebook"></span> Facebook</a>
+                        <a class="dropdown-item" href="https://github.com/trezor"><span class="fa fa-github-alt"></span> Github</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    
+<section class="tpm-jumbo" id="tpm">
+    <div class="overlay-image"></div>
+    <div class="overlay-color"></div>
+    <div class="overlay-image2"></div>
+    <div class="container">
+        <div class="col-md-5 col-sm-12 text-md-left text-sm-center">
+            <div class="top text-xs-center">
+                <img src="/static/images/vertical-trezor-logo.png"/>
+                <h1>Password Manager</h1>
+                <p class="lead">Say goodbye to your master password.</p>
+            </div>
+            <div class="bottom text-xs-center">
+                <p>
+                    <a class="btn btn-primary-full shop-btn"
+                       href="https://chrome.google.com/webstore/detail/trezor-password-manager/imloifkgjagghnncjkhggdhalmcnfklk"
+                       role="button">
+                        <span class="glyphicon glyphicon-chrome"></span> Download for Chrome</a>
+                    <small>
+                        <div>
+                            Don't have a TREZOR?
+                            <a ng-href="https://trezor.io/" target="_blank" class="arrow"
+                               href="https://trezor.io/">Get one</a>
+                        </div>
+                    </small>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tpm-info text-xs-center">
+    <a href="https://medium.com/@satoshilabs/1b260e5fbe6b" target="_blank" class="arrow">
+        Public Beta Announcement
+    </a>
+</section>
+
+<section class="tpm-trezor-owner">
+    <div class="container">
+        <div class="row heading">
+            <div class="col-xs-12 text-xs-center">
+                <h2>Expert-level encryption in your hands.</h2>
+                <p>
+                    
+                    TREZOR Password Manager benefits from the proven security design of the most trusted bitcoin
+                    hardware wallet.
+                    
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-12 text-xs-center">
+                <div class="text-block">
+                    <div class="presentation setup"></div>
+                    <h3>Secure access to passwords.</h3>
+                    <p>
+                        
+                        Forget about master passwords. A simple click on your TREZOR button is a much more secure way to
+                        unlock your password manager.
+                        
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12 text-xs-center">
+                <div class="text-block">
+                    <div class="presentation use"></div>
+                    <h3>Original TREZOR security.</h3>
+                    <p>
+                        
+                        The open-source TREZOR code has been reviewed by renowned security experts across the globe.
+                        
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12 text-xs-center">
+                <div class="text-block">
+                    <div class="presentation recover"></div>
+                    <h3>Lost? Restore.</h3>
+                    <p>
+                        
+                        Use your recovery seed of 24 words
+                        to regain access to you passwords, encrypted on Dropbox or Google
+                        Drive.
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tpm-coffee">
+    <div class="container">
+        <div class="row heading">
+            <div class="col-xs-12 text-xs-center">
+                <a class="btn btn-third-outline" href="mailto:support@satoshilabs.com" role="button"><i
+                        class="ion-social-github"></i> Send us feedback</a>
+                <div>
+                    <small>
+                        
+                        The TREZOR Password Manager has been released for public beta testing and we welcome your
+                        feedback and bug reports.
+                        
+                    </small>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tpm-faq">
+    <div class="container">
+        <div class="row heading">
+            <div class="col-xs-12 text-xs-center">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <b>Why is a "master password" a bad idea?</b>
+                    </div>
+                    <div class="col-md-8 col-xs-12">
+                        <p>
+                            
+                            Traditional password managers share one weak point - the master password. Once someone knows
+                            your Master Password, they can get all of your passwords.
+                            TREZOR Password Manager doesn't require a master password. Instead, your TREZOR is the
+                            master key to your passwords.
+                            
+                        </p>
+                        <p>
+                            
+                            Reports of master password breaches in <a
+                                href="http://thehackernews.com/2014/07/critical-vulnerability-and-privacy.html">RoboForm</a>
+                            and <a
+                                href="https://www.wired.com/2015/06/hack-brief-password-manager-lastpass-got-breached-hard/">LastPass</a>.
+                            
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <b>Why use TREZOR?</b>
+                    </div>
+                    <div class="col-md-8 col-xs-12">
+                        <p>
+                            
+                            TREZOR is the most secure and most ubiquitous hardware wallet in the world. It uses
+                            cutting-edge cryptography to protect digital money and
+                            any valuable online assets such as passwords.
+                            
+                        </p>
+                        <p>
+                            
+                            Since its launch in 2014, TREZOR has been embraced by users in almost 100 countries and
+                            continues to receive excellent reviews from renowned security experts.
+                            
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <b>How does TREZOR encrypt password entries?</b>
+                    </div>
+                    <div class="col-md-8 col-xs-12">
+                        <p>
+                            
+                            TREZOR encrypts each password entry separately with a
+                            unique key.
+                            
+                        </p>
+                        <p>
+                            
+                            The signature is derived from a unique private key on the TREZOR. All private keys are
+                            generated in its secure offline environment and never leave the device, making TREZOR
+                            impenetrable by hackers or malware.
+                            
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <b>How can I import / export my passwords?</b>
+                    </div>
+                    <div class="col-md-8 col-xs-12">
+                        <p>
+                            
+                            While we are in the testing phase, you can't. We will add these features once all basic
+                            functionalities are well tested and stable across most platforms.
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+<footer id="subscribe">
+    <div class="bottom-part">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 hidden-sm-down">
+                    <a href="/"><img class="trezor-logo lazy" data-original="/static/images/trezor-logo.svg"
+                                                 onerror="this.src='/static/images/trezor-logo.png'; this.onerror=null;"
+                                                 alt="TREZOR best bitcoin wallet and security device logo"/></a>
+                    <p>
+                        by <a href="https://satoshilabs.com">SatoshiLabs</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-12 text-md-left text-sm-center text-xs-center">
+                    <ul class="footer-nav">
+                        <li class="">
+                            <a class="nav-link shop-btn" href="https://shop.trezor.io" data-amount="0">Shop</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">TREZOR<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="https://wallet.trezor.io/">Wallet</a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="http://doc.satoshilabs.com/">Docs</a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="https://blog.trezor.io/">Blog</a>
+                        </li>
+                        <li class="">
+                            <a class="nav-link" href="mailto:support@trezor.io">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-7 col-sm-12 text-xs-center text-sm-center text-md-left" id="mc_embed_signup">
+                    <h5>Don't miss good news and security updates from TREZOR.</h5>
+                    <form action="//trezor.us7.list-manage.com/subscribe/post?u=a87eb6070c965ef1be1b02854&id=0ac8b24e69" method="post" novalidate target="_blank" name="mc-embedded-subscribe-form" id="mc-embedded-subscribe-form">
+                        <div id="mc_embed_signup_scroll">
+                            <input type="email" id="mce-EMAIL" name="EMAIL" class="email-form" required  placeholder="Your E-mail Address">
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a87eb6070c965ef1be1b02854_0ac8b24e69" tabindex="-1" value=""></div>
+                            <input class="btn button btn-third-outline" name="submit"  value="Subscribe" type="submit" id="mc-embedded-subscribe" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+<script type='text/javascript' charset='utf-8' src="/static/js/vendor/vendors.6e4e2d2011db209525d76f3866dddb7f.js"></script>
+<script type='text/javascript' charset='utf-8' src="/static/js/sources/page_error.86dd099a86e30ebb6c63f8297c74475e.js"></script>
+
+
+    <script type='text/javascript' charset='utf-8'>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-89067708-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </body>
 </html>
