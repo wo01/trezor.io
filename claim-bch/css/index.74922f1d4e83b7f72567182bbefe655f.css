@@ -307,7 +307,7 @@ main {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 .component-send fieldset p {
-  padding-bottom: 15px;
+  padding-bottom: 25px;
 }
 .component-send fieldset p:first-child {
   padding-bottom: 4px;
@@ -332,6 +332,9 @@ main {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+}
+.component-send fieldset label.targetAddressLabel {
+  vertical-align: middle;
 }
 .component-send fieldset #address {
   width: 550px;
@@ -387,7 +390,7 @@ main {
 .component-send fieldset span.address-hint {
   display: block;
   margin-left: 17%;
-  margin-top: 8px;
+  padding-bottom: 10px;
 }
 .component-send fieldset span.amount-hint {
   position: relative;
@@ -487,7 +490,6 @@ main {
 }
 .component-send fieldset.foreign-address .address-hint,
 .component-send fieldset.not-valid .address-hint {
-  margin-top: 10px;
   margin-bottom: 4px;
 }
 .component-send fieldset.foreign-address .address-hint:before,
