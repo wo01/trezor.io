@@ -264,6 +264,10 @@ main {
 .component-home p {
   padding-bottom: 10px;
 }
+.component-home button:disabled,
+.component-home button[disabled] {
+  background-color: #fa3e3e;
+}
 .component-send {
   padding: 15px;
   width: 50%;
