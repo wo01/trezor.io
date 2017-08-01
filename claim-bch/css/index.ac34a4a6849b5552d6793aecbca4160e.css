@@ -317,9 +317,6 @@ main {
 .component-send fieldset p {
   padding-bottom: 25px;
 }
-.component-send fieldset p:first-child {
-  padding-bottom: 4px;
-}
 .component-send fieldset .empty-account {
   display: none;
   padding-left: 17%;
@@ -409,7 +406,6 @@ main {
   display: block;
   margin-left: 17%;
   margin-top: 1px;
-  padding-bottom: 10px;
 }
 .component-send fieldset span.amount-hint {
   position: relative;
