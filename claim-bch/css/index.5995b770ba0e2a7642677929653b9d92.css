@@ -476,6 +476,18 @@ main {
 .component-send fieldset.not-bch-account .address-input button {
   display: none !important;
 }
+.component-send fieldset.not-bch-account .address-input:after {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA10";
+  padding-right: 18px;
+}
+.component-send fieldset.not-bch-account.empty .address-input:after {
+  display: none;
+}
 .component-send fieldset.not-bch-account .claim-button span {
   display: none;
 }
