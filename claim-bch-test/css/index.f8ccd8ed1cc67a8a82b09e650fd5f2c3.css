@@ -606,6 +606,16 @@ article.error a {
 article.error h4 {
   color: #fa3e3e;
 }
+article.info {
+  border-color: #f4a827;
+  background: transparent;
+}
+article.info a {
+  color: #f4a827;
+}
+article.info h4 {
+  color: #f4a827;
+}
 footer {
   width: 1170px;
   margin: 0 auto;
