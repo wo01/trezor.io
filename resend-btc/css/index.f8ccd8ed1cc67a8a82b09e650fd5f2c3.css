@@ -1,0 +1,637 @@
+/* roboto-mono-regular - greek_cyrillic-ext_greek-ext_latin_cyrillic_vietnamese_latin-ext */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/roboto-mono-v4-greek_cyrillic-ext_greek-ext_latin_cyrillic_vietnamese_latin-ext-regular.eot) format('embedded-opentype'),  url(../fonts/roboto-mono-v4-greek_cyrillic-ext_greek-ext_latin_cyrillic_vietnamese_latin-ext-regular.eot?#iefix) format('embedded-opentype'),  url(../fonts/roboto-mono-v4-greek_cyrillic-ext_greek-ext_latin_cyrillic_vietnamese_latin-ext-regular.woff2) format('woff2'),  url(../fonts/roboto-mono-v4-greek_cyrillic-ext_greek-ext_latin_cyrillic_vietnamese_latin-ext-regular.woff) format('woff'),  url(../fonts/roboto-mono-v4-greek_cyrillic-ext_greek-ext_latin_cyrillic_vietnamese_latin-ext-regular.ttf) format('truetype'),  url(../fonts/roboto-mono-v4-greek_cyrillic-ext_greek-ext_latin_cyrillic_vietnamese_latin-ext-regular.svg#RobotoMono) format('svg');
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: 'glyphiconsfont';
+  src: url(../fonts/glyphicons.eot) format('embedded-opentype'), url(../fonts/glyphicons.woff) format('woff'), url(../fonts/glyphicons.ttf) format('truetype'), url(../fonts/glyphicons.svg#icomoon) format('svg');
+}
+.glyphicon-trezor {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "_";
+  padding-top: 1px;
+  font-size: 14px;
+}
+.glyphicon-info {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA0C";
+}
+.glyphicon-warning {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA07";
+}
+.glyphicon-cross {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA0F";
+}
+.glyphicon-checkmark {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA10";
+}
+.glyphicon-up {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA41";
+}
+.glyphicon-down {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA43";
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus,
+*:active,
+*:active:focus,
+*.focus,
+*:active.focus,
+*.active.focus,
+*::selection,
+*::-moz-selection {
+  outline: 0 !important;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+html {
+  font-size: 100%;
+  line-height: 1.5;
+  position: relative;
+  overflow-y: scroll;
+}
+body {
+  min-height: 100%;
+  min-width: 727px;
+  background-color: #f1f1f1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+a:focus {
+  outline: none !important;
+  border-color: inherit !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+button:focus,
+input:focus {
+  outline: 0;
+}
+h3 {
+  margin: 0 !important;
+  padding-bottom: 15px;
+  color: #5A616D;
+  font-weight: 300;
+  font-size: 1.8em;
+  line-height: 1.1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+select {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px"><polyline fill="gainsboro" points="46.139,15.518 25.166,36.49 4.193,15.519"/></svg>');
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: right 10px top 8px;
+  background-size: 16px 16px;
+  color: #424242;
+  padding: 6px 12px;
+  width: 275px;
+  font-family: "Roboto Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 0px;
+  text-overflow: '';
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  outline: 0;
+}
+input {
+  width: 275px;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #424242;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  font-family: "Roboto Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+::-webkit-input-placeholder {
+  color: #cccccc;
+}
+input::-moz-placeholder {
+  color: #cccccc;
+}
+:-moz-placeholder {
+  color: #cccccc;
+}
+::-ms-input-placeholder {
+  color: #cccccc;
+}
+:-ms-input-placeholder {
+  color: #cccccc;
+}
+button {
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 0;
+  user-select: none;
+  transition: all 0.15s ease 0s;
+  color: #ffffff;
+  background-color: #4cc148;
+}
+button:hover {
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+}
+button:disabled,
+button[disabled] {
+  pointer-events: none;
+  opacity: 0.6;
+}
+header {
+  height: 50px;
+  background: #212121;
+  overflow: hidden;
+  min-width: 780px;
+}
+header .wrapper {
+  width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (max-width: 1200px) {
+  header .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 780px;
+  }
+}
+header figure {
+  margin: 0;
+  padding: 0;
+  height: 28px;
+  text-align: left;
+  margin-top: 9px;
+}
+header figure svg {
+  fill: #ffffff;
+}
+header img {
+  width: auto;
+  height: 34px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  width: 1170px;
+  margin: 0 auto;
+  flex: 1;
+  background: #f6f7f8;
+}
+@media (max-width: 1200px) {
+  main {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 780px;
+  }
+}
+.component-home {
+  padding: 15px;
+  width: 50%;
+  min-width: 750px;
+  margin: 0 auto;
+}
+.component-home fieldset {
+  display: block;
+  border: 0px;
+  position: relative;
+  background: #ffffff;
+  padding: 15px;
+  margin: 0;
+  margin-top: 15px;
+  min-height: 96px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+.component-home div {
+  text-align: center;
+  padding-top: 15px;
+}
+.component-home p {
+  padding-bottom: 10px;
+}
+.component-home button:disabled,
+.component-home button[disabled] {
+  background-color: #fa3e3e;
+}
+.component-home button.hidden {
+  display: none;
+}
+.component-send {
+  padding: 15px;
+  width: 50%;
+  min-width: 750px;
+  margin: 0 auto;
+}
+.component-send .show-advanced-settings {
+  padding-left: 17%;
+  padding-top: 4px;
+  padding-bottom: 10px;
+}
+.component-send .show-advanced-settings a {
+  color: #4cc148;
+  font-size: .8em;
+  font-family: 'Arial';
+}
+.component-send .show-advanced-settings a:before {
+  content: '\2303';
+  display: inline-block;
+  margin-right: 4px;
+  transform: rotate(180deg) translateY(2px);
+}
+.component-send .show-advanced-settings.opened a:before {
+  transform: translateY(2px);
+}
+.component-send .advanced-settings {
+  display: none;
+}
+.component-send .advanced-settings.opened {
+  display: block;
+}
+.component-send fieldset {
+  display: block;
+  border: 0px;
+  position: relative;
+  background: #ffffff;
+  padding: 15px;
+  margin: 0;
+  margin-top: 15px;
+  min-height: 96px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+.component-send fieldset p {
+  padding-bottom: 25px;
+}
+.component-send fieldset p:first-child {
+  padding-bottom: 4px;
+}
+.component-send fieldset .empty-account {
+  display: none;
+  padding-left: 17%;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #999;
+}
+.component-send fieldset label {
+  position: relative;
+  display: inline-block;
+  width: 17%;
+  text-align: right;
+  padding-top: 7px;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 400;
+  color: #99979c;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.component-send fieldset label.targetAddressLabel {
+  vertical-align: top;
+  line-height: 1.2;
+  padding-top: 0;
+}
+.component-send fieldset #address {
+  width: 550px;
+}
+.component-send fieldset span {
+  margin-left: 15px;
+  font-size: 12px;
+  color: #999;
+}
+.component-send fieldset span.address-input {
+  position: relative;
+  margin: 0;
+}
+.component-send fieldset span.address-input:after {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  color: #4cc148;
+  top: 0;
+  right: 4px;
+}
+.component-send fieldset span.address-input button {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 12px;
+}
+.component-send fieldset span.address-input button span {
+  color: #ffffff;
+  margin: 0;
+}
+.component-send fieldset span.address-input button span:before {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "_";
+  padding-top: 1px;
+  font-size: 14px;
+  vertical-align: -2px;
+  padding-right: 8px;
+}
+.component-send fieldset span.address-hint {
+  display: block;
+  margin-left: 17%;
+  margin-top: 1px;
+  padding-bottom: 10px;
+}
+.component-send fieldset span.amount-hint {
+  position: relative;
+  display: none;
+}
+.component-send fieldset span.amount-hint:before {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA0C";
+  vertical-align: -2px;
+  margin-right: 8px;
+  font-size: 14px;
+}
+.component-send fieldset span.amount-hint.warning {
+  display: inline;
+}
+.component-send fieldset span.amount-hint div {
+  display: inline-block;
+  margin-left: 10px;
+}
+.component-send fieldset span.amount-hint .amount-tooltip {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  left: 100%;
+  top: -10px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 1em;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 10px;
+}
+.component-send fieldset span.amount-hint:hover .amount-tooltip {
+  display: block;
+}
+.component-send fieldset button {
+  margin-left: 17%;
+}
+.component-send fieldset.valid .address-input:after {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "_";
+  padding-top: 1px;
+  font-size: 14px;
+}
+.component-send fieldset.not-bch-account .show-advanced-settings {
+  display: none;
+}
+.component-send fieldset.not-bch-account .advanced-settings p:first-child {
+  padding-bottom: 15px;
+}
+.component-send fieldset.not-bch-account .address-hint {
+  padding-bottom: 0px !important;
+}
+.component-send fieldset.not-bch-account p:first-child {
+  padding-bottom: 25px;
+}
+.component-send fieldset.not-bch-account .address-input button {
+  display: none !important;
+}
+.component-send fieldset.not-bch-account .address-input:after {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA10";
+  padding-right: 18px;
+}
+.component-send fieldset.not-bch-account.empty .address-input:after {
+  display: none;
+}
+.component-send fieldset.not-bch-account .claim-button span {
+  display: none;
+}
+.component-send fieldset.foreign-address .address-input:after {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA10";
+  padding-right: 18px;
+}
+.component-send fieldset.foreign-address .address-hint {
+  color: #f4a827;
+}
+.component-send fieldset.not-valid .address-input input {
+  border-color: #fa3e3e;
+}
+.component-send fieldset.not-valid .address-input:after {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA0F";
+  color: #fa3e3e;
+  font-size: 11px;
+  padding-top: 2px;
+}
+.component-send fieldset.not-valid .address-hint {
+  color: #fa3e3e;
+}
+.component-send fieldset.foreign-address .address-input button,
+.component-send fieldset.not-valid .address-input button {
+  display: block;
+}
+.component-send fieldset.foreign-address .address-hint,
+.component-send fieldset.not-valid .address-hint {
+  margin-bottom: 4px;
+}
+.component-send fieldset.foreign-address .address-hint:before,
+.component-send fieldset.not-valid .address-hint:before {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA07";
+  vertical-align: -1px;
+  margin-right: 8px;
+  font-size: 14px;
+}
+.component-send fieldset.low-amount .claim-button span {
+  display: none;
+}
+.component-send fieldset.disabled .show-advanced-settings,
+.component-send fieldset.disabled .advanced-settings,
+.component-send fieldset.disabled .claim-button {
+  display: none;
+}
+.component-send fieldset.disabled .empty-account {
+  display: block;
+}
+.component-send fieldset.disabled.warning .empty-account {
+  color: #f4a827;
+}
+.component-send fieldset.disabled.warning .empty-account p:before {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA07";
+  vertical-align: -1px;
+  margin-right: 8px;
+  font-size: 14px;
+}
+article {
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid #4cc148;
+  padding: 15px;
+  background: #ffffff;
+}
+article h4 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
+  padding-bottom: 5px;
+  color: #4cc148;
+}
+article button {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  color: #424242;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 0 1px 0 #ffffff;
+  background: transparent;
+}
+article button:hover {
+  box-shadow: none;
+}
+article a {
+  color: #4cc148;
+}
+article.error {
+  border-color: #fa3e3e;
+  background: transparent;
+}
+article.error a {
+  color: #fa3e3e;
+}
+article.error h4 {
+  color: #fa3e3e;
+}
+article.info {
+  border-color: #f4a827;
+  background: transparent;
+}
+article.info a {
+  color: #f4a827;
+}
+article.info h4 {
+  color: #f4a827;
+}
+footer {
+  width: 1170px;
+  margin: 0 auto;
+  height: 46px;
+  padding: 15px;
+  background: #f6f7f8;
+  font-size: smaller;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+}
+@media (max-width: 1200px) {
+  footer {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 780px;
+  }
+}
+footer a {
+  color: #4cc148;
+}
