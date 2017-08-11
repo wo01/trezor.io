@@ -366,6 +366,17 @@ main {
 .component-send fieldset #address {
   width: 550px;
 }
+.component-send fieldset .address-dropdown {
+  position: absolute;
+  left: 0;
+  top: 24px;
+  border: 1px solid red;
+  background: #ffffff;
+  width: 100%;
+}
+.component-send fieldset .address-dropdown div {
+  padding: 5px 10px;
+}
 .component-send fieldset span {
   margin-left: 15px;
   font-size: 12px;
