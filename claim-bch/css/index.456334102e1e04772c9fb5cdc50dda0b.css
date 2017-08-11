@@ -288,6 +288,9 @@ main {
 .component-home button.hidden {
   display: none;
 }
+.component-home a {
+  color: #4cc148;
+}
 .component-send {
   padding: 15px;
   width: 50%;
