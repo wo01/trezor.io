@@ -1,0 +1,1 @@
+$(document).ready(function(){var b=void 0;b=window.location.href;var a="p".replace(/[\[\]]/g,"\\$&");(a=(a=(new RegExp("[?&]"+a+"(=([^&#]*)|&|#|$)")).exec(b))?a[2]?decodeURIComponent(a[2].replace(/\+/g," ")):"":null)&&$("#url").text(a);$("#error").css("min-height",window.innerHeight-280+"px")});
