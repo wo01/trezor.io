@@ -32,7 +32,7 @@
         <meta name="twitter:description" content="TREZOR is more than just a bulletproof bitcoin wallet. TREZOR is also a security device for passwords, accounts and emails." />
         <meta name="twitter:image:src" content="https://trezor.io/static/images/trezor_social01.jpg">
         <meta name="twitter:domain" content="https://trezor.io/">
-        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/style.css?v=1">
     </head>
 
     <body>
@@ -89,6 +89,16 @@
 
     
 <div class="jumbotron-help">
+    <div class="video-container">
+        <div class="filter"></div>
+        <video autoplay loop class="fillWidth">
+            <source src="/static/video/MP4/Working-Space.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="/static/video/WEBM/Working-Space.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+        <div class="poster hidden">
+            <img src="/static/video/snapshots/Working-Space.jpg" alt="">
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-xs-center">
@@ -107,21 +117,21 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3  col-md-6 large-tile">
-                <a href="/troubleshooter" class="nav-link">
+                <a href="/troubleshooter/#1" class="nav-link">
                     <i class="fa fa-life-ring" aria-hidden="true"></i>
-                    Troubleshooter
+                    Technical Issues
                 </a>
             </div>
             <div class="col-lg-3  col-md-6 large-tile">
-                <a href="https://doc.satoshilabs.com/trezor-user/" class="nav-link">
-                    <i class="fa fa-address-book-o" aria-hidden="true"></i>
-                    User Manual
+                <a href="/troubleshooter/#2" class="nav-link">
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                    Orders &amp; Shipping
                 </a>
             </div>
             <div class="col-lg-3 col-md-12">
                 <div class="row">
                     <div class="col-xs-12">
-                        <a href="http://doc.satoshilabs.com/trezor-faq/index.html" class="nav-link">
+                        <a href="/troubleshooter/#57" class="nav-link">
                             <i class="fa fa-question-circle-o" aria-hidden="true"></i>
                             FAQ
                         </a>
@@ -137,15 +147,15 @@
             <div class="col-lg-3">
                 <div class="row">
                     <div class="col-xs-12">
-                        <a href="/troubleshooter/#2" class="nav-link">
-                            <i class="fa fa-truck" aria-hidden="true"></i>
-                            Orders &amp; Shipping
+                        <a href="https://doc.satoshilabs.com/trezor-user/" class="nav-link">
+                            <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                            User Manual
                         </a>
                     </div>
                     <div class="col-xs-12">
                         <a href="https://www.reddit.com/r/TREZOR/top/?sort=top&t=week" class="nav-link">
                             <i class="icon-bubbles4" aria-hidden="true"></i>
-                            Ask the Community
+                            Community Advice
                         </a>
                     </div>
                 </div>
@@ -321,7 +331,6 @@
 
     
 <script type='text/javascript' charset='utf-8' src="/static/js/vendor/vendors.f3148abdd34b48554863aacd45e8cac5.js"></script>
-<script type='text/javascript' charset='utf-8' src="/static/js/sources/page_support.68b329da9893e34099c7d8ad5cb9c940.js"></script>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
