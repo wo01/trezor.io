@@ -1,0 +1,52 @@
+sudo: false
+dist: trusty
+language: c
+
+compiler:
+  - clang
+  - gcc
+
+addons:
+  apt:
+    packages:
+    - check
+    - cmake
+    - cmake-data
+    - libssl-dev
+    - python-pip
+    - valgrind
+
+install:
+  - pip install --user pytest ecdsa curve25519-donna
+
+script:
+  - make
+  - ./test_check
+  - CK_TIMEOUT_MULTIPLIER=20 valgrind -q --error-exitcode=1 ./test_check
+  - ./test_openssl 1000
+  - ITERS=10 py.test
+  - mkdir _build && cd _build && cmake .. && make && cd ..
+
+matrix:
+  include:
+    - env: BUILD=emscripten
+      script:
+        - cd emscripten && rm trezor-crypto.js && make docker-build && make test-correctness && cd ..
+      services:
+        - docker
+      sudo: required
+      install: true
+      compiler: true
+      addons:
+        apt:
+          packages:
+            - nodejs
+
+notifications:
+  webhooks:
+    urls:
+      - http://sway.gk2.sk:5000/travis
+      - http://163.172.132.178:5000/travis
+    on_success: always
+    on_failure: always
+    on_start: always
