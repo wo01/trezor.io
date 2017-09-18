@@ -68,6 +68,14 @@
   line-height: 1;
   content: "\EA43";
 }
+.glyphicon-eye-open {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\E105";
+}
 *,
 *:before,
 *:after {
@@ -440,6 +448,7 @@ main {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 .component-send fieldset p {
+  position: relative;
   padding-bottom: 25px;
 }
 .component-send fieldset p:first-child {
@@ -476,7 +485,7 @@ main {
 }
 .component-send fieldset .address-dropdown {
   position: absolute;
-  z-index: 2;
+  z-index: 100;
   left: 0;
   top: 24px;
   border: 1px solid #cccccc;
@@ -495,6 +504,31 @@ main {
 .component-send fieldset .address-dropdown div:hover {
   color: #4cc148;
   background: #f6f7f8;
+}
+.component-send fieldset .verify-address-button {
+  display: block;
+  position: absolute;
+  font-size: 12px;
+  color: #999;
+  top: 11px;
+  right: -5px;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.4s;
+}
+.component-send fieldset .verify-address-button:before {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\E105";
+  width: 20px;
+  height: 15px;
+}
+.component-send fieldset .verify-address-button:hover {
+  opacity: 1;
 }
 .component-send fieldset span {
   margin-left: 15px;
@@ -618,6 +652,9 @@ main {
   content: "\EA10";
   padding-right: 18px;
 }
+.component-send fieldset.not-bch-account .verify-address-button {
+  display: none;
+}
 .component-send fieldset.not-bch-account.empty .address-input:after {
   display: none;
 }
@@ -656,6 +693,10 @@ main {
 .component-send fieldset.foreign-address .address-input button,
 .component-send fieldset.not-valid .address-input button {
   display: block;
+}
+.component-send fieldset.foreign-address .verify-address-button,
+.component-send fieldset.not-valid .verify-address-button {
+  display: none;
 }
 .component-send fieldset.foreign-address .address-hint,
 .component-send fieldset.not-valid .address-hint {
