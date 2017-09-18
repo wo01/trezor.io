@@ -318,7 +318,7 @@ main {
   line-height: 1.8;
 }
 .nl-form span {
-  padding: 0px 10px;
+  padding: 0px 6px;
 }
 .nl-form span:first-child {
   padding-left: 0px;
@@ -354,7 +354,7 @@ main {
   display: block;
   top: 0;
   left: 0;
-  min-width: 250px;
+  min-width: 200px;
   text-align: left;
   list-style: none;
   margin: 0;
@@ -367,7 +367,9 @@ main {
 .nl-select ul li {
   position: relative;
   color: #212121;
+  white-space: nowrap;
   padding: 4px 8px;
+  padding-right: 24px;
   transition: all 0.3s;
 }
 .nl-select ul li.selected {
