@@ -490,6 +490,7 @@ main {
 .component-send fieldset .address-dropdown div {
   cursor: pointer;
   padding: 5px 10px;
+  text-transform: capitalize;
 }
 .component-send fieldset .address-dropdown div:hover {
   color: #4cc148;
@@ -540,6 +541,7 @@ main {
   margin-left: 17%;
   margin-top: 1px;
   padding-bottom: 10px;
+  text-transform: capitalize;
 }
 .component-send fieldset span.amount-hint {
   position: relative;
