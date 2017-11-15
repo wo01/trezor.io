@@ -219,10 +219,10 @@
       @media only screen and (min-width: $sm)
         margin: 0
 
-  img.hand
-    max-width: 800px
-    width: 100%
-    max-height: 100%
+    img.hand
+      max-width: 800px
+      width: 100%
+      max-height: 100%
 
     @media only screen and (min-width: $sm)
       width: 140%
@@ -436,6 +436,7 @@ img.business-logo
       font-style: italic
       font-size: .9em
       quotes: "\201C""\201C""\201C""\2019"
+      color: $c_grey
 
       &:before
         font-family: Georgia, serif
@@ -568,3 +569,74 @@ img.business-logo
       font-weight: bold
       margin-top: -15px
       color: $c_grey
+
+/* ENDORSMENTS SECTION */
+
+.endorsments-section
+  border-top: 1px solid $c_lightgray
+  .endorsments
+    .header
+      width: 100%
+      max-width: 40px
+      max-height: 40px
+      float: left
+      overflow: hidden
+      position: relative
+      margin: 0 auto
+      margin-bottom: 8px
+      background: url("/static/images/costumers_faces/costumers.png")
+      background-repeat: no-repeat
+      background-size: 40px
+      +border-radius(50%)
+
+      &:after
+        content: ""
+        display: block
+        padding-bottom: 100%
+
+      &.moulder
+        background-position: 0 0%
+      &.rubens
+        background-position: 0 33%
+      &.ricardo
+        background-position: 0 17%
+      &.brett
+        background-position: 0 49%
+      &.bob
+        background-position: 0 83.4%
+      &.brian
+        background-position: 0 66.8%
+      &.ryan
+        background-position: 0 100%
+
+    h4
+      font-size: 1em
+      font-weight: bolder
+      display: inline-block
+      padding: 12px 0 10px 16px
+
+
+    blockquote
+      padding: 0.5em 10px
+      font-style: italic
+      font-size: .9em
+      quotes: "\201C""\201C""\201C""\2019"
+      color: $c_grey
+
+      &:before
+        font-family: Georgia, serif
+        color: $c_grey
+        content: open-quote
+        font-size: 4em
+        line-height: 0.1em
+        margin-right: 0.25em
+        vertical-align: -0.4em
+
+    .endorsments-person
+      margin-bottom: 30px
+      padding-bottom: 30px
+
+    .endorsments-list
+      margin-bottom: 30px
+      padding-bottom: 30px
+      border-bottom: 1px solid $c_lightgray
