@@ -545,7 +545,7 @@
         </div>
         <div class="col-lg-4 hidden-md-down ">
           <img class="shape lazy" data-progressive="{% static '/images/trezor_shape3.min.svg' %}" data-original="{% static '/images/trezor_shape3.min.svg' %}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.src='{% static '/images/trezor_shape3.png' %}'; this.onerror=null;"
-            alt="Shape of TREZOR security device" />
+            alt="Shape of TREZOR security device"/>
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="row spec">
@@ -617,54 +617,50 @@
         </div>
       </div>
     </section>
-    <section class="ceo-section">
-      <div class="container">
-        <div class="row heading">
-          <div class="col-lg-12  text-xs-center">
-            <h2>{% trans "You are in good company." %}</h2> {% blocktrans %}
-            <p>Led by renowned experts of the crypto industry.</p>
-            {% endblocktrans %}
+  </div>
+  <section class="ceo-section">
+    <div class="container">
+      <div class="row heading">
+        <div class="col-lg-12  text-xs-center">
+          <h2>{% trans "You are in good company." %}</h2> {% blocktrans %}
+          <p>Led by renowned experts of the crypto industry.</p>
+          {% endblocktrans %}
+        </div>
+      </div>
+
+      <div class="row ceos">
+
+        <div class="col-md-6 text-xs-center person shuffle">
+          <div class="header slush lazy"></div>
+          <div class="content">
+            <div class="description">
+              <h3>Marek "Slush" Palatinus</h3>
+              <p class="title">{% trans "CEO & Founder" %}</p>
+            </div>
           </div>
         </div>
 
-        <div class="row ceos">
-
-          <div class="col-md-6 text-xs-center person shuffle">
-            <div class="header slush lazy"></div>
-            <div class="content">
-              <div class="description">
-                <h3>Marek "Slush" Palatinus</h3>
-                <p class="title">{% trans "CEO & Founder" %}</p>
-              </div>
+        <div class="col-md-6 text-xs-center person shuffle">
+          <div class="header stick lazy"></div>
+          <div class="content">
+            <div class="description">
+              <h3>Pavol “Stick” Rusnak</h3>
+              <p class="title">{% trans "CTO & Founder" %}</p>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="col-md-6 text-xs-center person shuffle">
-            <div class="header stick lazy"></div>
-            <div class="content">
-              <div class="description">
-                <h3>Pavol “Stick” Rusnak</h3>
-                                <p class="title">{% trans "CTO & Founder" %}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row footing">
-                  <div class="col-xs-12 text-xs-center">
-                    <a class="arrow" href="/team/" role="button" aria-label="TREZOR team">Show me all team members</a>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-        </section>
+      <div class="row footing">
+        <div class="col-xs-12 text-xs-center">
+          <a class="arrow" href="/team/" role="button" aria-label="TREZOR team">Show me all team members</a>
+        </div>
+      </div>
     </div>
+  </section>
 </main>
-{% endblock %}
-
-{% block scripts %}
+{% endblock %} {% block scripts %}
 <script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
 <script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_homepage.js' %}"></script>
-<script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_homepage_features.js' %}"
-        async></script>
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_homepage_features.js' %}" async></script>
 {% endblock %}
