@@ -1,12 +1,10 @@
-{% extends "base.html" %}
-{% load i18n %}
-{% block body %}
+{% extends "base.html" %} {% load i18n %} {% block body %}
 
 <section class="beer">
-<div class="beer-intro">
-	<div class="container">
-		<div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
-		<h1>TREZOR Beer Fund!</h1>
+	<div class="beer-intro">
+		<div class="container">
+			<div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
+				<h1>TREZOR Beer Fund!</h1>
 				<p>
 					Did we help you beyond your expectations? Resolved your issues quickly? Recovered your coins sent to a wrong address?
 				</p>
@@ -14,34 +12,34 @@
 					Glad to hear we could assist you!
 				</p>
 
+			</div>
 		</div>
 	</div>
-</div>
 
 
-<div class="beer-cta">
-	<div class="container">
-	<div class="row">
-		<div class="col-lg-5 text-lg-left text-xs-center">
-		<h2>Say thanks with beer!</h2>
-	</div>
-		<div class="col-lg-7 text-lg-left text-xs-center">
-				<p>
-					Until recently, "thanks for your kind words" was all we could say. But due to popular demand, we have decided to start accepting tips to our Support Team and our Developers, in form of crypto-donations. They do deserve your appreciation, after all.
-				</p>
-				<p>
-					And what's the best way you can say thanks in Prague? <br />By buying beer, of course!
-				</p>
-  	</div>
-  </div>
+	<div class="beer-cta">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 text-lg-left text-xs-center">
+					<h2>Say thanks with beer!</h2>
+				</div>
+				<div class="col-lg-7 text-lg-left text-xs-center">
+					<p>
+						Until recently, "thanks for your kind words" was all we could say. But due to popular demand, we have decided to start accepting tips to our Support Team and our Developers, in form of crypto-donations. They do deserve your appreciation, after all.
+					</p>
+					<p>
+						And what's the best way you can say thanks in Prague? <br />By buying beer, of course!
+					</p>
+				</div>
+			</div>
 			<div class="row altcoins">
 				<div class="col-lg-4 text-lg-center text-xs-center">
 					<a href="#" data-toggle="modal" data-target="#btc-modal">
-							<div class="cta-altcoin">
-								<div class="altcoins-logo altcoins-logo-btc"></div>
-	      				<h4>Bitcoin</h4>
-								<p>Get Address for Bitcoin</p>
-							</div>
+						<div class="cta-altcoin">
+							<div class="altcoins-logo altcoins-logo-btc"></div>
+							<h4>Bitcoin</h4>
+							<p>Get Address for Bitcoin</p>
+						</div>
 					</a>
 				</div>
 
@@ -50,138 +48,143 @@
 					<a href="#" data-toggle="modal" data-target="#ltc-modal">
 						<div class="cta-altcoin">
 							<div class="altcoins-logo altcoins-logo-ltc"></div>
-	      			<h4>Litecoin</h4>
+							<h4>Litecoin</h4>
 							<p>Get Address for Litecoin</p>
 						</div>
-				</a>
+					</a>
 				</div>
 
 				<div class="col-lg-4 text-lg-center text-xs-center">
 					<a href="#" data-toggle="modal" data-target="#eth-modal">
 						<div class="cta-altcoin">
 							<div class="altcoins-logo altcoins-logo-eth"></div>
-	      			<h4>Ethereum</h4>
+							<h4>Ethereum</h4>
 							<p>Get Address for Ethereum</p>
 						</div>
 					</a>
 				</div>
 			</div>
-	</div>
+		</div>
 
-	<div class="container">
-		<div class="col-lg-12 text-lg-center">
-    		<p>
-			Feel like buying us refreshments? Donate with your favourite cryptocurrency!
-			</p>
+		<div class="container">
+			<div class="col-lg-12 text-lg-center">
+				<p>
+					Feel like buying us refreshments? Donate with your favourite cryptocurrency!
+				</p>
+			</div>
 		</div>
 	</div>
-</div>
 
-<!-- Modal BTC -->
-<div class="modal fade" id="btc-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Beer fund</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	<!-- Modal BTC -->
+	<div class="modal fade" id="btc-modal" tabindex="-1" role="dialog" aria-labelledby="btcModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="btcModalLabel">Beer fund</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-				<div class="row">
-         <div class="col-lg-12 text-lg-center text-xs-center">
-					 <h4>Bitcoin Adress</h4>
-					 <p>3QmuBaZrJNCxc5Xs7aGzZUK8RirUT8jRKf</p>
-				 </div>
-			 </div>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12 text-lg-center text-xs-center">
+							<h4>Bitcoin Adress</h4>
+							<p>3QmuBaZrJNCxc5Xs7aGzZUK8RirUT8jRKf</p>
+						</div>
+					</div>
 
-			<div class="row">
-				 <div class="col-lg-12 text-lg-center text-xs-center">
-					 <a href="bitcoin:3QmuBaZrJNCxc5Xs7aGzZUK8RirUT8jRKf"><div id="qrcode-btc" class="qrcode"></div></a>
-				 </div>
+					<div class="row">
+						<div class="col-lg-12 text-lg-center text-xs-center">
+							<a href="bitcoin:3QmuBaZrJNCxc5Xs7aGzZUK8RirUT8jRKf">
+								<div id="qrcode-btc" class="qrcode"></div>
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<a class="close-link" href="#" data-dismiss="modal">Close</a>
+					<button type="button" class="btn btn-primary-outline">Copy to the clipboard</button>
+				</div>
 			</div>
+		</div>
+	</div>
 
-      </div>
-      <div class="modal-footer">
-        <a class="close-link" href="#" data-dismiss="modal">Close</a>
-        <button type="button" class="btn btn-primary-outline">Copy to the clipboard</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal LTC -->
-<div class="modal fade" id="ltc-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Beer fund</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	<!-- Modal LTC -->
+	<div class="modal fade" id="ltc-modal" tabindex="-1" role="dialog" aria-labelledby="ltcModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="ltcModalLabel">Beer fund</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-				<div class="row">
-         <div class="col-lg-12 text-lg-center text-xs-center">
-					 <h4>Litecoin Adress</h4>
-					 <p>MCwFeGBkgpqN1vU4Wgs2kWhcFb3Qz6S592</p>
-				 </div>
-			 </div>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12 text-lg-center text-xs-center">
+							<h4>Litecoin Adress</h4>
+							<p>MCwFeGBkgpqN1vU4Wgs2kWhcFb3Qz6S592</p>
+						</div>
+					</div>
 
-			<div class="row">
-				 <div class="col-lg-12 text-lg-center text-xs-center">
-					 <a href="litecoin:MCwFeGBkgpqN1vU4Wgs2kWhcFb3Qz6S592"><div id="qrcode-ltc" class="qrcode"></div></a>
-				 </div>
+					<div class="row">
+						<div class="col-lg-12 text-lg-center text-xs-center">
+							<a href="litecoin:MCwFeGBkgpqN1vU4Wgs2kWhcFb3Qz6S592">
+								<div id="qrcode-ltc" class="qrcode"></div>
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<a class="close-link" href="#" data-dismiss="modal">Close</a>
+					<button type="button" class="btn btn-primary-outline">Copy to the clipboard</button>
+				</div>
 			</div>
+		</div>
+	</div>
 
-      </div>
-      <div class="modal-footer">
-      	<a class="close-link" href="#" data-dismiss="modal">Close</a>
-        <button type="button" class="btn btn-primary-outline">Copy to the clipboard</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal ETH -->
-<div class="modal fade" id="eth-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Beer fund</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	<!-- Modal ETH -->
+	<div class="modal fade" id="eth-modal" tabindex="-1" role="dialog" aria-labelledby="ethModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="ethModalLabel">Beer fund</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-				<div class="row">
-         <div class="col-lg-12 text-lg-center text-xs-center">
-					 <h4>Ethereum Adress</h4>
-					 <p>0x140E5C635D484f2AAA153d2B7d4c7A945242c21D</p>
-				 </div>
-			 </div>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12 text-lg-center text-xs-center">
+							<h4>Ethereum Adress</h4>
+							<p>0x140E5C635D484f2AAA153d2B7d4c7A945242c21D</p>
+						</div>
+					</div>
 
-			<div class="row">
-				 <div class="col-lg-12 text-lg-center text-xs-center">
-					 <a href="ethereum:0x140E5C635D484f2AAA153d2B7d4c7A945242c21D"><div id="qrcode-eth" class="qrcode"></div></a>
-				 </div>
+					<div class="row">
+						<div class="col-lg-12 text-lg-center text-xs-center">
+							<a href="ethereum:0x140E5C635D484f2AAA153d2B7d4c7A945242c21D">
+								<div id="qrcode-eth" class="qrcode"></div>
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<a class="close-link" href="#" data-dismiss="modal">Close</a>
+					<button type="button" class="btn btn-primary-outline">Copy to the clipboard</button>
+				</div>
 			</div>
+		</div>
+	</div>
 
-      </div>
-      <div class="modal-footer">
-        <a class="close-link" href="#" data-dismiss="modal">Close</a>
-        <button type="button" class="btn btn-primary-outline">Copy to the clipboard</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-				<!-- Disclaimer: The TREZOR Beer Fund may not necessarily be used for beer. -->
+	<!-- Disclaimer: The TREZOR Beer Fund may not necessarily be used for beer. -->
 </section>
 
 
-{% endblock body %}
-{% block scripts %}
+{% endblock body %} {% block scripts %}
 <script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
 <script type='text/javascript' charset='utf-8' src="{% static '/static/js/qrcodes/qrcode.js' %}"></script>
 <script type='text/javascript' charset='utf-8' src="{% static '/static/js/qrcodes/customcodes.js' %}"></script>
