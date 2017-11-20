@@ -7,30 +7,6 @@
   padding-top: 48px
   padding-bottom: 0
 
-.qr-code
-  background-image: url("/static/images/beer/code.png")
-  max-height: 100%
-  background-repeat: no-repeat
-  background-size: 100%
-  display: inline-block
-  margin: 0 auto
-
-  &-btc
-    width: 250px
-    height: 250px
-    background-position: 0 0px
-
-  &-ltc
-    width: 250px
-    height: 250px
-    background-position: 0 -250px
-
-  &-eth
-    width: 250px
-    height: 250px
-    background-position: 0 -500px
-
-
 .beer-intro
   height: 400px
   padding-top: 100px
@@ -118,3 +94,16 @@
       +box-shadow(0 8px 24px rgba(0, 0, 0, 0.15))
       i
         color: $c_green
+
+.close-link
+  padding-right: 15px
+
+
+h5
+  display: inline-block
+
+.qrcode
+  width: 250px
+  height: 250px
+  margin: 10px auto 20px auto
+  position: relative
