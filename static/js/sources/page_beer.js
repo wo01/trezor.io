@@ -27,4 +27,16 @@ $(document).ready(function() {
     height: 250,
   });
 
+  new Clipboard('.btn', {
+      container: document.getElementById('btc-modal')
+  });
+
+  new Clipboard('.btn', {
+      container: document.getElementById('ltc-modal')
+  });
+
+  new Clipboard('.btn', {
+      container: document.getElementById('eth-modal')
+  });
+  
 });
