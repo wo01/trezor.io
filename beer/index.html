@@ -86,73 +86,191 @@
 </nav>
 
     
-<section class="resellers" id="resellers">
-    <div class="container">
-        <h1>Resellers</h1>
-        <div class="search_form">
-            <form action="trezor.io/resellers/resellers_earch.html" type="get" class="input-wrapper" id="js-search">
-                <input type="search" name="company_search" placeholder="Quick filter" id="search">
-            </form>
-        </div>
+<section class="beer">
+	<div class="beer-intro">
+		<div class="container">
+			<div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
+				<h1>TREZOR Beer Fund!</h1>
+				<p>
+					
+					Did we help you beyond your expectations? Resolved your issues quickly? Recovered your coins sent to a wrong address?
+					
+				</p>
+				<p>
+					
+					Glad to hear we could assist you!
+					
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="beer-cta">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 text-lg-left text-xs-center">
+					<h2>Say thanks with beer!</h2>
+				</div>
+				<div class="col-lg-7 text-lg-left text-xs-center">
+					<p>
+						
+                                                We decided to listen to your frequent requests and created a few wallets for crypto-donations. Choose your favorite cryptocurrency and donate to the teams that deserve your recognition the most: our Support Team and our Development Team. They do deserve your appreciation, after all.
+						
+					</p>
+					<p>
+						
+						And what is the best way you can say thanks? In Prague? <br />By buying beer, of course!
+						
+					</p>
+				</div>
+			</div>
+			<div class="row altcoins">
+				<div class="col-lg-4 text-lg-center text-xs-center">
+					<a href="#" data-toggle="modal" data-target="#btc-modal">
+						<div class="cta-altcoin">
+							<div class="altcoins-logo altcoins-logo-btc"></div>
+							<h4>Bitcoin</h4>
+							<p>Get Bitcoin address</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 text-lg-center text-xs-center">
+					<a href="#" data-toggle="modal" data-target="#ltc-modal">
+						<div class="cta-altcoin">
+							<div class="altcoins-logo altcoins-logo-ltc"></div>
+							<h4>Litecoin</h4>
+							<p>Get Litecoin address</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 text-lg-center text-xs-center">
+					<a href="#" data-toggle="modal" data-target="#eth-modal">
+						<div class="cta-altcoin">
+							<div class="altcoins-logo altcoins-logo-eth"></div>
+							<h4>Ethereum</h4>
+							<p>Get Ethereum address</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="col-lg-12 text-lg-center">
+				<p>
+					
+					Feel like fueling our creativity? Donate with your favourite cryptocurrency!
+					
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- Modal BTC -->
+	<div class="modal fade" id="btc-modal" tabindex="-1" role="dialog" aria-labelledby="btcModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="btcModalLabel">Beer fund</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12 text-lg-center text-xs-center">
+							<div class="alert alert-success" role="alert"><strong>Copied to clipboard</strong></div>
+							<h4>Bitcoin address</h4>
+							<p>3QmuBaZrJNCxc5Xs7aGzZUK8RirUT8jRKf</p>
+						</div>
+					</div>
 
-        <hr>
-        <div id="content" class="row">
-            <div class="loader-wrapper">
-                <div class="loader" id="loader">Loading...</div>
-            </div>
-        </div>
-    </div>
-    <div class="tpl-ghost">
-        <article id="area">
-            <div class="resellers-card" data-toggle="modal" data-target="#myModal">
-                <div class="img-wrapper">
-                    <img class="picture" src="../static/images/logo.png" alt="image not found"
-                         onerror="this.src='../static/images/reseller.png'"/>
-                </div>
-                <div class="placeholder-text">
-                    <div class="name"></div>
-                    <div class="country"></div>
-                </div>
-            </div>
-        </article>
-    </div>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"><img class="picture" src="../static/images/logo.png"
-                                                                        alt="image not found"
-                                                                        onerror="this.src='../static/images/reseller.png'"/>
-                        <span class="title">Modal title</span></h5>
-                </div>
-                <div class="modal-body">
-                    <div id="webs">
-                        <div class="box" id="web1-box "><strong>Web:</strong> <span class="web1"></span></div>
-                        <div class="box" id="web2-box"><strong>Web:</strong> <span class="web2"></span></div>
-                        <div class="box" id="web3-box"><strong>Web:</strong> <span class="web3"></span></div>
-                    </div>
-                    <div class="box" id="email-box"><strong>Email:</strong> <span class="email"></span></div>
-                    <div class="box" id="phone-box"><strong>Phone:</strong> <span class="phone"></span></div>
-                    <div class="box" id="address-box"><br><strong>Address:</strong>
-                        <div class="address"></div>
-                    </div>
-                    <div class="box" id="shop-box"><br><strong>Shop address:</strong>
-                        <div class="shop"></div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary-full" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+					<div class="row">
+						<div class="col-lg-12 text-lg-center text-xs-center">
+							<a href="bitcoin:3QmuBaZrJNCxc5Xs7aGzZUK8RirUT8jRKf">
+								<div id="qrcode-btc" class="qrcode"></div>
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<a class="close-link" href="#" data-dismiss="modal">Close</a>
+					<button type="button" class="clipboard-cta btn btn-primary-outline" data-clipboard-text="3QmuBaZrJNCxc5Xs7aGzZUK8RirUT8jRKf">Copy to clipboard</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal LTC -->
+	<div class="modal fade" id="ltc-modal" tabindex="-1" role="dialog" aria-labelledby="ltcModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="ltcModalLabel">Beer fund</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12 text-lg-center text-xs-center">
+							<div class="alert alert-success" role="alert"><strong>Copied to clipboard</strong></div>
+							<h4>Litecoin address</h4>
+							<p>MCwFeGBkgpqN1vU4Wgs2kWhcFb3Qz6S592</p>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-12 text-lg-center text-xs-center">
+							<a href="litecoin:MCwFeGBkgpqN1vU4Wgs2kWhcFb3Qz6S592">
+								<div id="qrcode-ltc" class="qrcode"></div>
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<a class="close-link" href="#" data-dismiss="modal">Close</a>
+					<button type="button" class="clipboard-cta btn btn-primary-outline" data-clipboard-text="MCwFeGBkgpqN1vU4Wgs2kWhcFb3Qz6S592">Copy to clipboard</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal ETH -->
+	<div class="modal fade" id="eth-modal" tabindex="-1" role="dialog" aria-labelledby="ethModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="ethModalLabel">Beer fund</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12 text-lg-center text-xs-center">
+							<div class="alert alert-success" role="alert"><strong>Copied to clipboard</strong></div>
+							<h4>Ethereum address</h4>
+							<p>0x140E5C635D484f2AAA153d2B7d4c7A945242c21D</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 text-lg-center text-xs-center">
+							<a href="ethereum:0x140E5C635D484f2AAA153d2B7d4c7A945242c21D">
+								<div id="qrcode-eth" class="qrcode"></div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a class="close-link" href="#" data-dismiss="modal">Close</a>
+					<button type="button" class="clipboard-cta btn btn-primary-outline" data-clipboard-text="0x140E5C635D484f2AAA153d2B7d4c7A945242c21D">Copy to clipboard</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Disclaimer: The TREZOR Beer Fund may not be necessarily used for beer. -->
 </section>
-<section>
-    <div class="container">
-        <small class="attribution">Logos provided by Clearbit.</small>
-    </div>
-</section>
+
+
 
 
     
@@ -209,7 +327,7 @@
 
     
 <script type='text/javascript' charset='utf-8' src="/static/js/vendor/vendors.f3148abdd34b48554863aacd45e8cac5.js"></script>
-<script type='text/javascript' charset='utf-8' src="/static/js/sources/page_resellers.da693fe33f2dff9a073e7335e44b6f03.js"></script>
+<script type='text/javascript' charset='utf-8' src="/static/js/sources/page_beer.c25186eb17f049a541cb6bb27ec770ff.js" async></script>
 
 
     <script type='text/javascript' charset='utf-8'>
