@@ -38,5 +38,14 @@ $(document).ready(function() {
   new Clipboard('.btn', {
       container: document.getElementById('eth-modal')
   });
-  
+});
+
+$( ".clipboard-cta" ).click(function() {
+
+  $(".alert").addClass('show');
+
+      setTimeout(function() {
+          $(".alert").removeClass('show');
+      }, 2000);
+
 });
