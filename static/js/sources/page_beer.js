@@ -41,11 +41,8 @@ $(document).ready(function() {
 });
 
 $( ".clipboard-cta" ).click(function() {
-
-  $(".alert").addClass('show');
-
+  $(".alert").show();
       setTimeout(function() {
-          $(".alert").removeClass('show');
+          $(".alert").hide();
       }, 2000);
-
 });

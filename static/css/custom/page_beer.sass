@@ -1,117 +1,107 @@
-.tpl-area,
-.tpl-area *
-  display: none !important
-
 .beer
-  min-height: 85%
   padding-top: 48px
   padding-bottom: 0
 
-.beer-intro
-  height: 400px
-  padding-top: 100px
-  padding-bottom: 100px
-  background-image: url("/static/images/beer/beer-bg.jpg")
-  background-size: 100%
+  .qrcode
+    width: 250px
+    height: 250px
+    margin: 10px auto 50px auto
+    position: relative
 
-  @media only screen and (max-width: $md)
+  .alert
+    margin: 0
+    display: none
+
+  &-intro
+    height: 400px
     padding-top: 100px
-
-  @media only screen and (max-width: $sm)
-    padding-top: 100px
-    background-size: cover
-
-  @media only screen and (max-width: $xs)
-    h1
-      font-size: 32px
-
-  h1
-    display: inline-block
-    width: auto
-    height: auto
-    margin-top: 0
-    color: $c_white
-  p
-    color: $c_white
-.altcoins
-  margin: 40px 0 40px 0
-
-.beer-cta
-  padding-top: 80px
-  padding-bottom: 20px
-  background: $c_grey_bg
-  background: -webkit-linear-gradient($c_white, $c_grey_bg)
-  background: -o-linear-gradient($c_white, $c_grey_bg)
-  background: -moz-linear-gradient($c_white, $c_grey_bg)
-  background: linear-gradient($c_white, $c_grey_bg)
-
-  a
-    text-decoration: none
-
-  & > .container > .row
-    display: -webkit-box
-    display: -webkit-flex
-    display: -ms-flexbox
-    display: flex
+    padding-bottom: 100px
+    background-attachment: fixed
+    background-image: url("/static/images/beer/beer-bg.jpg")
+    background-size: 100%
 
     @media only screen and (max-width: $md)
-      display: block
+      padding-top: 100px
 
-    .altcoins-logo
-      background-image: url("/static/images/beer/beer-altcoins.png")
-      background-size: 50px auto
-      background-repeat: no-repeat
-      display: block
-      margin: auto
+    @media only screen and (max-width: $sm)
+      padding-top: 100px
+      background-size: cover
 
-      &-eth
-        width: 30px
-        height: 51px
-        background-position: 0 -119px
+    @media only screen and (max-width: $xs)
+      h1
+        font-size: 32px
 
-      &-ltc
-        width: 50px
-        height: 51px
-        background-position: 0 -59px
+    h1
+      display: inline-block
+      width: auto
+      height: auto
+      margin-top: 0
+      color: $c_white
+    p
+      color: $c_white
+  .altcoins
+    margin: 40px 0 40px 0
 
-      &-btc
-        width: 50px
-        height: 51px
-        background-position: 0 0px
+  .beer-cta
+    padding-top: 80px
+    padding-bottom: 20px
+    background: $c_grey_bg
+    background: -webkit-linear-gradient($c_white, $c_grey_bg)
+    background: -o-linear-gradient($c_white, $c_grey_bg)
+    background: -moz-linear-gradient($c_white, $c_grey_bg)
+    background: linear-gradient($c_white, $c_grey_bg)
 
-  .cta-altcoin
-    background-color: $c_white
-    box-shadow: 0 4px 24px 0 rgba(31, 31, 31, 0.05)
-    font-weight: bold
-    padding: 30px 20px 20px 20px
-    margin-top: 20px
+    a
+      text-decoration: none
 
-    color: $c_grey_font
-    +transition(all 0.15s ease 0s)
-    +border-radius(4px)
+    & > .container > .row
+      display: -webkit-box
+      display: -webkit-flex
+      display: -ms-flexbox
+      display: flex
 
-    &:hover
-      +box-shadow(0 8px 24px rgba(0, 0, 0, 0.15))
-      i
-        color: $c_green
+      @media only screen and (max-width: $md)
+        display: block
 
-.close-link
-  padding-right: 15px
+      .altcoins-logo
+        background-image: url("/static/images/beer/beer-altcoins.png")
+        background-size: 50px auto
+        background-repeat: no-repeat
+        display: block
+        margin: auto
 
-h5
-  display: inline-block
+        &-eth
+          width: 30px
+          height: 51px
+          background-position: 0 -119px
 
-.qrcode
-  width: 250px
-  height: 250px
-  margin: 10px auto 50px auto
-  position: relative
+        &-ltc
+          width: 50px
+          height: 51px
+          background-position: 0 -59px
 
-.alert
-  margin: 0
+        &-btc
+          width: 50px
+          height: 51px
+          background-position: 0 0px
 
-.hide
-  visibility: hidden
+    .cta-altcoin
+      background-color: $c_white
+      box-shadow: 0 4px 24px 0 rgba(31, 31, 31, 0.05)
+      font-weight: bold
+      padding: 30px 20px 20px 20px
+      margin-top: 20px
+      color: $c_grey_font
+      +transition(all 0.15s ease 0s)
+      +border-radius(4px)
 
-.show
-  visibility: visible
+      &:hover
+        +box-shadow(0 8px 24px rgba(0, 0, 0, 0.15))
+        i
+          color: $c_green
+
+  .close-link
+    padding-right: 15px
+
+  h5
+    display: inline-block
