@@ -19,15 +19,19 @@
     background-attachment: fixed
     background-image: url("/static/images/beer/beer-bg.jpg")
     background-size: 100%
+    background-repeat: no-repeat
 
     @media only screen and (max-width: $md)
       padding-top: 100px
 
     @media only screen and (max-width: $sm)
       padding-top: 100px
-      background-size: cover
+      background-size: auto
 
     @media only screen and (max-width: $xs)
+      background-size: 180%
+      background-position: 0 46px
+
       h1
         font-size: 32px
 
