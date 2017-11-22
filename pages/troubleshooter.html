@@ -1448,11 +1448,12 @@ Please, for more information read <a title="claim bitcoin cash"
                 <h4 class="header">{% trans "My wallet balance is zero after updating TREZOR firmware." %}</h4>
                 <span class="text">
                     {% blocktrans %}
-		    <p>
+                    <p>
 			If, after a firmware update, your wallet balance is zero and the entire transaction history has disappeared from your accounts, then your TREZOR was most likely erased during the update process.
 			<br /><br />
 			Please <a href="https://doc.satoshilabs.com/trezor-user/advanced_features.html?highlight=wipe#wiping-your-trezor-device">wipe your device</a> and then <a href="https://doc.satoshilabs.com/trezor-user/recovery.html">restore the original recovery seed</a> into your TREZOR.
 		    </p>
+                    {% endblocktrans %}
 		</span>
 	   </div>
 	</template>
