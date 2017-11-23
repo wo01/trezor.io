@@ -596,6 +596,7 @@ main {
 .component-send fieldset span.amount-hint {
   position: relative;
   display: none;
+  color: #f4a827;
 }
 .component-send fieldset span.amount-hint:before {
   display: inline-block;
@@ -785,6 +786,10 @@ article button:hover {
 }
 article a {
   color: #4cc148;
+  text-decoration: underline;
+}
+article a:hover {
+  text-decoration: none;
 }
 article.error {
   border-color: #fa3e3e;
