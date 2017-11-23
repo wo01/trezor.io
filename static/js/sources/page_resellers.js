@@ -92,16 +92,16 @@ $(document).ready(function() {
       address += rec.street;
     }
     if(typeof rec.street2 !== "undefined" && !!rec.street2.length) {
-      address += ' ' + rec.street2;
-    }
-    if(typeof rec.zip !== "undefined" && !!rec.zip.length) {
-      address += ' ' + rec.zip;
+      address += ', ' + rec.street2;
     }
     if(typeof rec.city !== "undefined" && !!rec.city.length) {
-      address += ' ' + rec.city;
+      address += ', ' + rec.city;
+    }
+    if(typeof rec.zip !== "undefined" && !!rec.zip.length) {
+      address += ', ' + rec.zip;
     }
     if(typeof rec.country !== "undefined" && !!rec.country.length) {
-      address += ' ' + rec.country;
+      address += ', ' + rec.country;
     }
     $('.address').text(address);
 
