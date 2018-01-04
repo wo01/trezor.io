@@ -1,6 +1,127 @@
 .troubleshooter
   min-height: 100%
 
+
+  .input-wrapper
+    position: relative
+    display: inline-block
+    background-color: transparent
+    border: 0
+    min-width: 100%
+    padding-bottom: 10px
+    z-index: 5
+
+    @media only screen and (max-width: $sm)
+      min-width: 100%
+
+    &.active
+      &:before
+        font-size: 1.2em
+        left: 15px
+        top: 12px
+        color: $c_grey_font
+      input
+        font-size: 1.2em
+        padding: 12px 0 12px 40px
+        height: 50px
+
+    &:before
+      font-family: 'FontAwesome'
+      color: $c_grey
+      position: absolute
+      left: 12px
+      top: 7px
+      z-index: 1
+      content: "\f002"
+      +transition(all 0.12s ease 0s)
+
+    input
+      background: transparent
+      width: 100%
+      height: 40px
+      padding: 10px 0 10px 35px
+      margin-bottom: -10px
+      border: 0
+      text-align: left
+      +transition(all 0.12s ease 0s)
+
+    &:hover::before
+      color: $c_grey_font
+
+  .search_form
+    position: relative
+    display: inline-block
+    background-color: $c_white
+    border: 1px solid $c_white
+    z-index: 5
+    min-width: 100%
+    max-width: 100%
+    height: auto
+    +border-radius(4px)
+
+  .search-results
+    display: none
+    position: relative
+    width: 100%
+    max-width: 100%
+    z-index: 6
+    background-color: transparent
+    text-decoration: none
+
+    a:hover, a:active
+      text-decoration: none !important
+
+    .container
+      margin-left: -15px
+
+    .category
+      display: none
+
+    .result-title
+      position: relative
+      display: block
+      margin-top: 20px
+      margin-bottom: 10px
+
+      strong
+        color: $c_grey_font
+        font-weight: bold
+        font-size: 1em
+        opacity: .8
+
+    .res
+      display: block
+      background-color: $c_white
+      border: 0
+      width: 100%
+      max-width: 100%
+      padding: 10px 10px 10px 35px
+      margin-bottom: 5px
+      cursor: pointer
+
+      p
+        display: block
+        position: relative
+        opacity: .4
+        font-size: .9em
+        margin-bottom: 0
+        max-width: 90%
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+
+      h6
+        margin-bottom: 0
+
+      &:hover
+        cursor: pointer
+        background-color: rgba($c_green, .1)
+        p
+          opacity: .9
+        h6
+          color: $c_green
+
+
   .scene
     width: 100%
     margin: 1em auto
@@ -13,6 +134,9 @@
       position: relative
       padding: 0 0 30px 0
       margin: 0 auto
+
+      @media only screen and (max-width: $md)
+        width: 100%
 
       .content-wrapper
         position: relative
@@ -71,3 +195,15 @@
     z-index: 2
     display: none
     position: absolute
+
+  .shadow-search
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(black, .7)
+    z-index: 4
+    display: none
