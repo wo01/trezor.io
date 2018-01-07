@@ -62,8 +62,10 @@ $(document).ready(function () {
       setTimeout(function () {
         $("ul#content > .content-wrapper").addClass("current");
         $("html, body").animate({scrollTop: 0}, "fast");
-        steps += ' > ' + $("ul#content > .content-wrapper > h4.header").html();
+        var step = $("ul#content > .content-wrapper > h4.header").html();
+        steps += ' > ' + step;
         if (id !== 0) {
+          ga('send', 'event', 'Troubleshooter', 'open', step);
           setTimeout(function () {
             $(".back-btn").detach().appendTo(".content-wrapper > span.text");
             $(".back-btn").slideDown();
@@ -129,7 +131,10 @@ $(document).ready(function () {
     return e.keyCode !== 13;
   });
 
-  $('#search').on('focus', function () {
+  $('#search').on('blur', function () {
+    var search = $(this).val();
+    ga('send', 'event', 'Troubleshooter', 'search', search);
+  }).on('focus', function () {
     showSearch();
   });
 
@@ -177,6 +182,7 @@ $(document).ready(function () {
   prepareSearch();
   prepareLinks();
   setId();
+  ga('send', 'event', 'Troubleshooter', 'visit', '');
 
   window.onhashchange = setId;
   window.gotoTroubleshooter = function () {
