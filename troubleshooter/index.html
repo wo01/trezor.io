@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html class="no-js" id="window" lang="en">
     <head>
-        <title>TREZOR Bitcoin Wallet | The original and most secure hardware wallet.</title>
+        <title>TREZOR Bitcoin Wallet (Official) | The most secure hardware wallet.</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <link rel="shortcut icon" href="/static/images/favicon.ico">
         <link rel="canonical" href="https://trezor.io/" />
@@ -77,6 +77,7 @@
                         <a class="dropdown-item" href="https://www.reddit.com/r/trezor"><span class="fa fa-reddit-alien"></span> Reddit</a>
                         <a class="dropdown-item" href="https://www.instagram.com/trezor.io/"><span class="fa fa-instagram"></span> Instagram</a>
                         <a class="dropdown-item" href="https://www.facebook.com/BitcoinTrezor/"><span class="fa fa-facebook"></span> Facebook</a>
+                        <a class="dropdown-item" href="https://t.me/trezortalk"><span class="fa fa-telegram"></span> Telegram</a>
                         <a class="dropdown-item" href="https://github.com/trezor"><span class="fa fa-github-alt"></span> Github</a>
                     </div>
                 </li>
@@ -87,8 +88,68 @@
 
     
 <section class="troubleshooter" id="troubleshooter">
+    <div class="shadow-search" id="search-shadow"></div>
     <div class="container">
         <h2>Troubleshooter</h2>
+        <div class="search_form">
+            <form action="#" type="get" class="input-wrapper" id="js-search">
+                <input type="search" name="quick_search" placeholder="Quick search your issue"
+                       id="search">
+            </form>
+            <div class="search-results" id="search-results">
+                <div class="category technical">
+                    <div class="row">
+                        <div class="col-xs-12 result-title">
+                            <a href="./#1" class="search-entry"><div class="res"><strong><i class="fa fa-life-ring" aria-hidden="true"></i> Technical Issues</strong></div></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 results" id="cat1">
+                        </div>
+                    </div>
+                </div>
+                <div class="category orders">
+                    <div class="row">
+                        <div class="col-xs-12 result-title">
+                            <a href="./#2" class="search-entry"><div class="res"><strong><i class="fa fa-truck" aria-hidden="true"></i> Order & Shipping</strong></div></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 results" id="cat2">
+                        </div>
+                    </div>
+                </div>
+                <div class="category warranty">
+                    <div class="row">
+                        <div class="col-xs-12 result-title">
+                            <a href="./#17" class="search-entry"><div class="res"><strong><i class="fa fa-file-text" aria-hidden="true"></i> Warranty</strong></div></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 results" id="cat17">
+                        </div>
+                    </div>
+                </div>
+                <div class="category faq">
+                    <div class="row">
+                        <div class="col-xs-12 result-title">
+                            <a href="./#57" class="search-entry"><div class="res"><strong><i class="fa fa-question-circle-o" aria-hidden="true"></i> FAQ</strong></div></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 results" id="cat57">
+                        </div>
+                    </div>
+                </div>
+                <div class="category no-res">
+                    <div class="row">
+                        <div class="col-xs-12 result-title">
+                            <div class="res"><strong>No Results</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <hr/>
         <div id="scene" class="scene">
             <div class="back-btn">
@@ -104,7 +165,6 @@
                     </div>
                 </li>
             </ul>
-
         </div>
     </div>
 
@@ -138,7 +198,7 @@
                     <li>81</li>
                     <li>3</li>
                     <li>45</li>
-		            <li>102</li>
+                    <li>102</li>
                     <li>46</li>
                     <li>51</li>
                     <li>54</li>
@@ -1468,7 +1528,8 @@ Please, for more information read <a title="claim bitcoin cash"
                 <span class="text">
                     
                     <p>
-			<strong>Update:</strong> We have released Bitcoin Gold support for TREZOR. To claim your Bitcoin Gold, please follow the guide on our blog, <a href="https://blog.trezor.io/claim-bitcoin-gold-bgold-btg-f66969e7f2c0">available here.</a>
+			<strong>Update:</strong> We have released Bitcoin Gold support for TREZOR. To claim your Bitcoin Gold, please follow the guide on our blog, <a
+                            href="https://blog.trezor.io/claim-bitcoin-gold-bgold-btg-f66969e7f2c0">available here.</a>
                     <br/><br/>
                         More information <a
                             href="https://blog.trezor.io/trezor-statement-on-bitcoin-gold-fork-78cebc0532c7">available on our blog</a>.
@@ -1485,7 +1546,8 @@ Please, for more information read <a title="claim bitcoin cash"
                     <p>
 			As of November 8th, the SegWit2X hard fork as been cancelled. We have also suspended our preparation works and will gradually update our resources to reflect the new developments. The coin-splitting guide will not be released, thank you for your understanding.
                     <br/><br/>
-			For more information, please refer to <a href="https://blog.trezor.io/trezor-statement-segwit2x-2x-hard-fork-b2x-f245fe4f0fb">our blog post.</a>
+			For more information, please refer to <a
+                            href="https://blog.trezor.io/trezor-statement-segwit2x-2x-hard-fork-b2x-f245fe4f0fb">our blog post.</a>
                     </p>
                     
                 </span>
@@ -1528,20 +1590,21 @@ Please, for more information read <a title="claim bitcoin cash"
                 </span>
             </div>
         </template>
-	<template id="102" class="entry">
+        <template id="102" class="entry">
             <div class="content-wrapper">
                 <h4 class="header">My wallet balance is zero after updating TREZOR firmware.</h4>
                 <span class="text">
                     
                     <p>
 			If, after a firmware update, your wallet balance is zero and the entire transaction history has disappeared from your accounts, then your TREZOR was most likely erased during the update process.
-			<br /><br />
-			Please <a href="https://doc.satoshilabs.com/trezor-user/advanced_features.html?highlight=wipe#wiping-your-trezor-device">wipe your device</a> and then <a href="https://doc.satoshilabs.com/trezor-user/recovery.html">restore the original recovery seed</a> into your TREZOR.
+			<br/><br/>
+			Please <a href="https://doc.satoshilabs.com/trezor-user/advanced_features.html?highlight=wipe#wiping-your-trezor-device">wipe your device</a> and then <a
+                            href="https://doc.satoshilabs.com/trezor-user/recovery.html">restore the original recovery seed</a> into your TREZOR.
 		    </p>
                     
 		</span>
-	   </div>
-	</template>
+            </div>
+        </template>
     </div>
 </section>
 
@@ -1607,7 +1670,7 @@ Please, for more information read <a title="claim bitcoin cash"
 
     
 <script type='text/javascript' charset='utf-8' src="/static/js/vendor/vendors.f3148abdd34b48554863aacd45e8cac5.js"></script>
-<script type='text/javascript' charset='utf-8' src="/static/js/sources/page_troubleshooter.c68dbecc2a817b84adee472c86241774.js"></script>
+<script type='text/javascript' charset='utf-8' src="/static/js/sources/page_troubleshooter.19235c520830540ebfe8989fef7170f6.js"></script>
 
 
     <script type='text/javascript' charset='utf-8'>
