@@ -5,8 +5,10 @@
     <div class="video-container">
         <div class="filter"></div>
         <video autoplay loop class="fillWidth">
-            <source src="{% static '/static/video/MP4/Working-Space.mp4' %}" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-            <source src="{% static '/static/video/WEBM/Working-Space.webm' %}" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="{% static '/static/video/MP4/Working-Space.mp4' %}" type="video/mp4"/>
+            Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source src="{% static '/static/video/WEBM/Working-Space.webm' %}" type="video/webm"/>
+            Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
         <div class="poster hidden">
             <img src="{% static '/static/video/snapshots/Working-Space.jpg' %}" alt="">
@@ -31,8 +33,12 @@
         <div class="row">
             <div class="col-lg-3  col-md-6 large-tile">
                 <a href="{% url '/troubleshooter/#1' %}" class="nav-link">
-                    <i class="fa fa-life-ring" aria-hidden="true"></i>
-                    Technical Issues
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <i class="fa fa-life-ring" aria-hidden="true"></i>
+                            Technical Issues
+                        </div>
+                    </div>
                 </a>
             </div>
             <div class="col-lg-3  col-md-6 large-tile">
@@ -57,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-12">
                 <div class="row">
                     <div class="col-xs-12">
                         <a href="https://doc.satoshilabs.com/trezor-user/" class="nav-link">
