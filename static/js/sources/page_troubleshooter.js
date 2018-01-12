@@ -32,7 +32,8 @@ $(document).ready(function () {
         var el = shadow.querySelector("[id='" + id + "']").content;
         var title = el.querySelector("h4.header").textContent;
         var text = el.querySelector("span.text").innerText.trim() || el.querySelector("span.text").textContent.trim();
-        searchContent.push({category: cat, id: id, title: title, text: text});
+        var hidEl = el.querySelector("div.hidden") || {textContent: ''};
+        searchContent.push({category: cat, id: id, title: title, text: text, hidden: hidEl.textContent});
       });
     });
     fuse = new Fuse(searchContent, options);
@@ -167,16 +168,27 @@ $(document).ready(function () {
   var options = {
     shouldSort: true,
     includeScore: true,
-    tokenize: true,
+    tokenize: false,
     findAllMatches: true,
-    threshold: 0.45,
+    threshold: 0.5,
     location: 0,
     distance: 100,
     maxPatternLength: 32,
     minMatchCharLength: 1,
     keys: [
-      "title",
-      "text"
+      {
+        name: 'title',
+        weight: 0.2
+      },
+      {
+        name: 'text',
+        weight: 0.1
+      },
+      {
+        name: 'hidden',
+        weight: 0.7
+      }
+
     ]
   };
   prepareSearch();
