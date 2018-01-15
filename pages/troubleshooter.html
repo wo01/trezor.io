@@ -855,6 +855,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                     <li>103</li>
                     <li>101</li>
                     <li>73</li>
+                    <li>104</li>
                     <li>98</li>
                     <li>26</li>
                     <li>27</li>
@@ -1182,13 +1183,23 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
         </template>
         <template id="75" class="entry">
             <div class="content-wrapper">
-                <h4 class="header">{% trans "I would like to see more coins supported by TREZOR." %}</h4>
+                <h4 class="header">{% trans "I want TREZOR to support more cryptocurrencies." %}</h4>
                 <span class="text">
                     {% blocktrans %}
-                   <p>Please relay this wish to the developers of said cryptocurrency as we do not have the required manpower to develop all integrations by ourselves. It is impossible for us to have up-to-date information and understanding of every existing cryptocurrency, after all.<br/>
-                   Developers can contact our integration specialist at integration@satoshilabs.com.<br/>
-                   Since the number of the requests is high, it may take some time until your email is answered. Thank you for your patience. 
-                    </p><p>The Support Team, will be provide you with similar information.</p>
+                   <p>
+							Please relay this wish to the developers of said cryptocurrency as we do not have the required manpower to develop all integrations by ourselves. It is impossible for us to have up-to-date information and understanding of every existing cryptocurrency, after all.
+                   </p><p>
+                     Developers can contact our integration specialist at integration@satoshilabs.com.
+                     Since the number of the requests is high, it may take some time until your email is answered. 
+                     Thank you for your patience.
+                   </p><p>
+                   <strong>Otherwise, please wait for our official announcement via social media (Blog, Twitter, Reddit ...), until then, the answer will be the same, even if you will contact our support.
+                     This basically applies to all questions regarding the unsupported cryptocurrencies.</strong>
+                   </p><p>
+                     You can subscribe to our newsletter through our form that is located at the bottom of our <a
+                                    href="https://trezor.io">website</a> and check out our <a
+                                    href="https://blog.trezor.io">blog</a> to be on top of the news!
+                    </p>
                     {% endblocktrans %}
                 </span>
             </div>
@@ -1631,6 +1642,64 @@ Please, for more information read <a title="claim bitcoin cash"
                 <div class="hidden">
                     BitcoinX Hot UnitedBitcoin Diamon God Faith FILE TOP Stake Atom Uranium Pizza All BCHC BCL BCD BTH LBTC BTT GOD BIFI BUM BPA BTA
                 </div>
+            </div>
+        </template>
+        <template id="104" class="entry">
+            <div class="content-wrapper">
+                <h4 class="header">{% trans "My transaction is still unconfirmed!" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>
+							If you provided a smaller fee, it may take some time until the transaction is included in the next block (confirmed by the respective network).
+                     In some cases, when the fee is really insignificant, the transaction is not processed at all and then returns to its source after few days.
+                    <br/><br/>
+                     <strong>It is important to know that TREZOR hardware wallet is responsible only for signing the transaction when sending from the device, it is NOT responsible for confirming the transaction on the respective network.</strong>
+                    </p>
+                    {% endblocktrans %}
+		        </span>
+                <ul class="option-list">
+                    <li>105</li>
+                    <li>106</li>
+                </ul>
+            </div>
+        </template>
+        <template id="105" class="entry">
+            <div class="content-wrapper">
+                <h4 class="header">{% trans "The unconfirmed transaction disappeared from my TREZOR." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>
+							Unfortunately, unconfirmed transactions are unreliable by design.
+							<br/><br/>
+                     When there is a large size of the unconfirmed transactions in the Bitcoin network, it is also possible that not all of them will fit into the memory of relaying nodes immediately.
+                     It is an inherent technical issue of Bitcoin. 
+                     <br/><br/>
+                     For instance, the transaction can get temporarily "lost" on its way in some node (generally happens to low fee transactions) and therefore it will not propagate to our servers. Hence, the unconfirmed transaction can be visible and then disappears from <a
+                                    href="https://wallet.trezor.io">TREZOR wallet</a> right away.
+                     <br/><br/>
+                     <strong>Once the transaction is confirmed by the network, it will show up in the <a
+                                    href="https://wallet.trezor.io">TREZOR wallet.</a></strong>
+                    </p>
+                    {% endblocktrans %}
+		        </span>
+             </div>
+        </template>
+         <template id="106" class="entry">
+            <div class="content-wrapper">
+                <h4 class="header">{% trans "If not processed, how long it takes until the transaction is returned?" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>
+							It depends on the network behavior and unfortunately, the time frame cannot be predicted precisely.
+							You don't need to worry as your transaction will not vanish, everything is processed or returned eventually (usually within some days).
+                    <br/><br/>
+                    <strong>TREZOR cannot in any way speed up this process. It is completely in the hands of the respective network/blockchain.</strong>
+                    </p>
+                    {% endblocktrans %}
+		        </span>
+                <ul class="option-list">
+                    <li>105</li>
+                </ul>
             </div>
         </template>
     </div>
