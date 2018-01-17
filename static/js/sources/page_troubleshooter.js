@@ -18,6 +18,7 @@ $(document).ready(function () {
     + ' browser: ' + platform.name
     + ' version: ' + platform.version
     + ' description: ' + platform.description;
+  var ts_link = 'https://satoshilabs.kayako.com/conversation/new/10';
 
   function getParameterByName() {
     return window.location.hash.split('#')[1];
@@ -199,6 +200,12 @@ $(document).ready(function () {
   window.onhashchange = setId;
   window.gotoTroubleshooter = function () {
     location.href = tb_link + '?technical=' + tech + steps;
+    return false;
+  }
+
+  window.gotoTroubleshooterOrder = function () {
+    var ts_subject = document.getElementsByTagName('h4')[0].textContent;
+    location.href = ts_link + '?subject=' + ts_subject;
     return false;
   }
 });
