@@ -18,65 +18,6 @@ $(document).ready(function () {
     return $(shuffled);
   };
 
-  function getParameterByName(name, url) {
-    if (!url) {
-      url = window.location.href;
-    }
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-      results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-  }
-
-  function domain(url) {
-    var m = url.match(/:\/\/(.[^\/]+)/);
-    return m ? m[1] : null;
-  }
-
-  function hexlify(str) {
-    var hex = '';
-    for (var i = 0; i < str.length; i++)
-      hex += str.charCodeAt(i).toString(16);
-    return hex;
-  }
-
-  function prepareAffilAnchors(str) {
-    $('a.shop-btn').each(function (idx) {
-      var attr = $(this).attr('href');
-      $(this).attr('href', attr + str);
-    });
-  }
-
-  function domainKey(url) {
-    var parser = document.createElement('a');
-    parser.href = url;
-    //remove second level subdomain
-    var regexParse = new RegExp('([a-z\-0-9]{2,63})\.([a-z\.]{2,5})$');
-    var urlParts = regexParse.exec(parser.hostname);
-    return urlParts && (urlParts.length > 1) ? urlParts[1] + '.' + urlParts[2] : null;
-
-  }
-
-  function handleAffil() {
-    var aParam = getParameterByName('a');
-    if (aParam) {
-      prepareAffilAnchors('?a=' + aParam);
-      return;
-    }
-    var hParam = getParameterByName('h');
-    if (hParam) {
-      prepareAffilAnchors('?h=' + hParam);
-      return;
-    }
-    var referrer = domainKey(domain(document.referrer));
-    if (referrer) {
-      prepareAffilAnchors('?h=' + hexlify(referrer));
-      return;
-    }
-  }
-
   function scrolled(event) {
     var scrollPos = $(document).scrollTop();
     $('.scrollTo').each(function () {
@@ -126,9 +67,6 @@ $(document).ready(function () {
   // jumbotron headline fitting
   $("#headline").fitText(.7);
   $("#lead").fitText(2.1);
-
-
-  handleAffil();
 
 
   shuffleTeam($('.shuffle'));
