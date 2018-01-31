@@ -104,7 +104,6 @@ $(document).ready(function () {
       }
 
       var rawref = document.referrer;
-      console.log(rawref);
       if (rawref.length) {
         var referrer = domainKey(domain(rawref));
         if (referrer) {
@@ -133,7 +132,7 @@ $(document).ready(function () {
         cookie = JSON.parse(cookie);
         if (cookie[0] === 'r') {
           // referrer cookie
-          if (jparam[0] === 'a' || jparam[0] === 'h' || jparam[0] === 'r') {
+          if (jparam[0] === 'a' || jparam[0] === 'h') {
             Cookies.remove(cookieName);
             setup = jparam;
             var content = JSON.stringify(jparam);
