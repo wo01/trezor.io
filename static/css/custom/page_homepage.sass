@@ -346,70 +346,12 @@ img.business-logo
       +border-radius(50%)
       +animation(pulsate 1.8s infinite ease-out 0.4s)
 
-/* EXPERTS SECTION */
-
-.experts-section
-  .experts
-    .header
-      width: 100%
-      max-width: 240px
-      max-height: 240px
-      display: block
-      overflow: hidden
-      position: relative
-      margin: 0 auto
-      margin-bottom: 8px
-      background: url("/static/images/experts_faces/experts.webp")
-      background-repeat: no-repeat
-      background-size: 240px
-      +border-radius(50%)
-
-      &.no-webp
-        background: url("/static/images/experts_faces/experts.png")
-        background-repeat: no-repeat
-        background-size: 240px
-        +border-radius(50%)
-
-      &:after
-        content: ""
-        display: block
-        padding-bottom: 100%
-
-      &.balaji
-        background-position: 0 0
-      &.pamela
-        background-position: 0 100%
-      &.jon
-        background-position: 0 50%
-
-    h3
-      font-size: 1.3em
-
-    .title
-      font-weight: bold
-      margin-top: -15px
-      color: $c_grey
-
-    blockquote
-      padding: 0.5em 10px
-      font-style: italic
-      font-size: .9em
-      quotes: "\201C""\201C""\201C""\2019"
-      color: $c_grey
-
-      &:before
-        font-family: Georgia, serif
-        color: $c_grey
-        content: open-quote
-        font-size: 4em
-        line-height: 0.1em
-        margin-right: 0.25em
-        vertical-align: -0.4em
 
 /* MEDIA SECTION */
 
 .media
-  padding-top: 40px
+  padding-top: 0
+  margin-top: -60px
 
   img
     height: 30px
@@ -535,7 +477,7 @@ img.business-logo
 /* ENDORSEMENTS SECTION */
 
 .endorsements-section
-  border-top: 1px solid $c_lightgray
+
   .endorsements
     .header
       width: 100%
@@ -607,4 +549,3 @@ img.business-logo
     .endorsements-list
       margin-bottom: 30px
       padding-bottom: 30px
-      border-bottom: 1px solid $c_lightgray
