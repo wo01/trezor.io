@@ -1,0 +1,610 @@
+{% extends "base.html" %} {% load i18n %} {% block body %}
+<section class="security">
+  <div class="security-intro">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
+          <h1>{% trans "TREZOR Security." %}</h1>
+        </div>
+        <div class="col-lg-7 col-xs-12 text-sm-left text-xs-center">
+          <p>
+            In line with our transparency policy, we are publishing a comprehensive list of all the past security incidents of TREZOR and our related services.
+          </p>
+          <p>
+            <a href="#" class="arrow">Transparency policy of TREZOR</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="security-measures">
+    <div class="container">
+      <h2>Security measures of TREZOR</h2>
+      <div class="row">
+        <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
+          <div class="text-block">
+            <img src="/static/images/security/shield.png" height="22" alt="shield">
+            <h4>Firmware verification</h4>
+            <p>The bootloader verifies the firmware signature. The device only runs if the firmware is correctly signed by SatoshiLabs, otherwise the TREZOR warns you.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
+          <div class="text-block">
+            <img src="/static/images/security/cpu.png" height="24" alt="cpu">
+            <h4>Ultrasound hardware seal.</h4>
+            <p>TREZOR hardware case is ultrasonically welded, making it difficult to be restored after breakage.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
+          <div class="text-block">
+            <img src="/static/images/security/key.png" height="14" alt="key">
+            <h4>Secure operations with keys.</h4>
+            <p>Operations with private and public keys require an unlocked device.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
+          <div class="text-block">
+            <img src="/static/images/security/lock.png" height="22" alt="lock">
+            <h4>Secure update procedure.</h4>
+            <p>The bootloader erases memory on firmware update and restores it only if the firmware signature is valid. Downgrade wipes the memory.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
+          <div class="text-block">
+            <img src="/static/images/security/pocket.png" height="20" alt="pocket">
+            <h4>Additional passphrase support.</h4>
+            <p>TREZOR supports BIP39 passphrases, which are never stored or remembered on the device.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
+          <div class="text-block">
+            <img src="/static/images/security/settings.png" height="22" alt="settings">
+            <h4>Write-protected bootloader.</h4>
+            <p>The bootloader is write protected, as the JTAG is disabled. MCU is safeguarded by RDP Level 2.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
+          <div class="text-block">
+            <img src="/static/images/security/rotate.png" height="20" alt="rotate">
+            <h4>Reliable backup.</h4>
+            <p>Your recovery seed protects you against theft, loss or destruction of your device. Simply restore the recovery seed, and your wallet is back.</p>
+          </div>
+        </div>
+        <div class="security-last col-lg-6 col-xs-12 text-sm-left text-xs-center">
+          <div class="text-block">
+            <a href="#" class="arrow">Get to know more on FAQ page</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="security-incidents">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
+          <h2>Past incidents.</h2>
+        </div>
+        <div class="col-lg-7 col-xs-12 text-sm-left text-xs-center">
+          <p>Incidents not listed in this timeline are either not real or they are a misrepresentation of the issues listed bellow.</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="date date-1">
+              <p>July 2014</p>
+              <div class="dot-active" data-toggle="collapse" data-target="#detail-1"></div>
+            </div>
+            <div class="date date-2">
+              <p>February 2015</p>
+              <div class="dot" data-toggle="collapse" data-target="#detail-2"></div>
+            </div>
+            <div class="date date-3" data-toggle="collapse" data-target="#detail-3">
+              <p>March 2015</p>
+              <div class="dot"></div>
+            </div>
+            <div class="date date-4" data-toggle="collapse" data-target="#detail-4">
+              <p>June 2017</p>
+              <div class="dot"></div>
+            </div>
+            <div class="date date-5" data-toggle="collapse" data-target="#detail-5">
+              <p>August 2017</p>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+      </div>
+      <div class="detail-container">
+        <div id="detail-1" class="detail">
+          <div class="arrow-left"><img src="/static/images/security/arrow-left.png" height="15" alt="arrow-left"></div>
+          <div class="arrow-right"><img src="/static/images/security/arrow-right.png" height="15" alt="arrow-right"></div>
+          <div class="badge">Fixed in 4 hours</div>
+          <div class="row">
+            <div class="col-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">01</div>
+            </div>
+            <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
+              <h4>Incident</h4>
+              <p>Malicious ScriptSig in transaction</p>
+              <h4>Detail</h4>
+              <p>Specially crafted transaction could extract the private key, knowledge of PIN and passphrase was required</p>
+            </div>
+            <div class="col-lg-5 offset-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <h4>Type</h4>
+              <p>Buffer overflow</p>
+              <div class="col-lg-12 col-md-6 space-bottom no-padding">
+                <div class="badge-bordered">Remote</div> <span class="additional">*requires physical confirmation</span></div>
+              <div class="col-lg-12 col-md-6 space-bottom no-padding">
+                <div class="badge-bordered">Exploitable</div>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-lg-2 offset-lg-1 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Fixed in firmware</h4>
+              <p>1.2.0</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Reported by</h4>
+              <p>Nicolas Bacca</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Date reported</h4>
+              <p>2014-07-30</p>
+            </div>
+            <div class="col-lg-5 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>More info</h4>
+              <p>–</p>
+            </div>
+          </div>
+        </div>
+        <div id="detail-2" class="detail collapse">
+          <div class="arrow-left"><img src="/static/images/security/arrow-left.png" height="15" alt="arrow-left"></div>
+          <div class="arrow-right"><img src="/static/images/security/arrow-right.png" height="15" alt="arrow-right"></div>
+          <div class="badge">Fixed in 1 day</div>
+          <div class="row">
+            <div class="col-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">02</div>
+            </div>
+            <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
+              <h4>Incident</h4>
+              <p>SpendMultisig malicious change in transaction</p>
+              <h4>Detail</h4>
+              <p>Specially crafted multisig transaction could contain a change output of an attacker, which wasn't confirmed by user</p>
+            </div>
+            <div class="col-lg-5 offset-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <h4>Type</h4>
+              <p><a href="https://en.wikipedia.org/wiki/Time_of_check_to_time_of_use" target="_blank">TOCTOU</a></p>
+              <div class="col-lg-12 col-md-6 space-bottom no-padding">
+                <div class="badge-bordered">Remote</div> <span class="additional">*requires physical confirmation</span></div>
+              <div class="col-lg-12 col-md-6 space-bottom no-padding">
+                <div class="badge-bordered">Exploitable</div>
+              </div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-2 offset-lg-1 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Fixed in firmware</h4>
+              <p>1.3.1</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Reported by</h4>
+              <p>Nicolas Bacca</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Date reported</h4>
+              <p>2015-02-23</p>
+            </div>
+            <div class="col-lg-5 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>More info</h4>
+              <p>–</p>
+            </div>
+          </div>
+        </div>
+        <div id="detail-3" class="detail collapse">
+          <div class="arrow-left"><img src="/static/images/security/arrow-left.png" height="15" alt="arrow-left"></div>
+          <div class="arrow-right"><img src="/static/images/security/arrow-right.png" height="15" alt="arrow-right"></div>
+          <div class="badge">Fixed in 4 days</div>
+          <div class="row">
+            <div class="col-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">03</div>
+            </div>
+            <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
+              <h4>Incident</h4>
+              <p>Possible key extraction with oscilloscope</p>
+              <h4>Detail</h4>
+              <p>With physical access to the device and an oscilloscope, the private key could have been extracted from the device.</p>
+            </div>
+            <div class="col-lg-5 offset-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <h4>Type</h4>
+              <p>Power analysis</p>
+              <div class="col-lg-12 col-md-6 space-bottom no-padding">
+                <div class="badge-bordered">Remote</div> <span class="additional">*No</span></div>
+              <div class="col-lg-12 col-md-6 space-bottom no-padding">
+                <div class="badge-bordered">Exploitable</div> <span class="additional">*Yes</span></div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-2 offset-lg-1 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Fixed in firmware</h4>
+              <p>1.3.3</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Reported by</h4>
+              <p>Jochen Hoenicke</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Date reported</h4>
+              <p>2015-03-26</p>
+            </div>
+            <div class="col-lg-5 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>More info</h4>
+              <a href="https://jochen-hoenicke.de/trezor-power-analysis/" target="_blank">Jochen's write-up</a>
+            </div>
+          </div>
+        </div>
+        <div id="detail-4" class="detail collapse">
+          <div class="arrow-left"><img src="/static/images/security/arrow-left.png" height="15" alt="arrow-left"></div>
+          <div class="arrow-right"><img src="/static/images/security/arrow-right.png" height="15" alt="arrow-right"></div>
+          <div class="badge">Fixed in 28 days</div>
+          <div class="row">
+            <div class="col-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">04</div>
+            </div>
+            <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
+              <h4>Incident</h4>
+              <p>Possible Clock/VCC glitching</p>
+              <h4>Detail</h4>
+              <p>Theoretically, the device's clock/VCC could be glitched to skip certain operations.</p>
+            </div>
+            <div class="col-lg-5 offset-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <h4>Type</h4>
+              <p>Fault attack</p>
+              <div class="col-lg-12 col-md-6 space-bottom no-padding">
+                <div class="badge-bordered">Remote</div> <span class="additional">*No</span></div>
+              <div class="col-lg-12 col-md-6 space-bottom no-padding">
+                <div class="badge-bordered">Exploitable</div> <span class="additional">*No, just precautionary changes</span></div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-2 offset-lg-1 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Fixed in firmware</h4>
+              <p> 1.5.1</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Reported by</h4>
+              <p>Josh Datko, Chris Quartier</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Date reported</h4>
+              <p>2017-06-28</p>
+            </div>
+            <div class="col-lg-5 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>More info</h4>
+              <a href="https://media.defcon.org/DEF%20CON%2025/DEF%20CON%2025%20presentations/DEFCON-25-Datko-and-Quartier-Breaking-Bitcoin-Hardware-Wallets.pdf" target="_blank">DEFCON</a> ,
+              <a href="https://www.youtube.com/watch?v=hAtoRrxFBWs" target="_blank">YouTube</a>
+            </div>
+          </div>
+        </div>
+        <div id="detail-5" class="detail collapse">
+          <div class="arrow-left"><img src="/static/images/security/arrow-left.png" height="15" alt="arrow-left"></div>
+          <div class="arrow-right"><img src="/static/images/security/arrow-right.png" height="15" alt="arrow-right"></div>
+          <div class="badge">Fixed in 8 days</div>
+          <div class="row">
+            <div class="col-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">05</div>
+            </div>
+            <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
+              <h4>Incident</h4>
+              <p>SRAM memory access</p>
+              <h4>Detail</h4>
+              <p>The SRAM was not cleared on soft reset, allowing extraction using special firmware and direct access to the device board.</p>
+            </div>
+            <div class="col-lg-5 offset-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <h4>Type</h4>
+              <p>–</p>
+              <div class="col-lg-12 col-md-6 space-bottom no-padding">
+                <div class="badge-bordered">Remote</div> <span class="additional">*No</span></div>
+              <div class="col-lg-12 col-md-6 space-bottom no-padding">
+                <div class="badge-bordered">Exploitable</div> <span class="additional">*Yes</span></div>
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-lg-2 offset-lg-1 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Fixed in firmware</h4>
+              <p>1.5.2</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Reported by</h4>
+              <p>Sunny</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Date reported</h4>
+              <p>2017-08-01</p>
+            </div>
+            <div class="col-lg-5 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>More info</h4>
+              <a href="https://blog.trezor.io/fixing-physical-memory-access-issue-in-trezor-2b9b46bb4522" target="_blank">Official</a> ,
+              <a href="https://saleemrashid.com/2017/08/17/extracting-trezor-secrets-sram/" target="_blank">Saleem</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="security-leaderboard">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 text-lg-left col-xs-12 text-xs-center">
+          <h2>Leaderboard.</h2>
+          <p>People that helped us with security.</p>
+        </div>
+        <div class="col-lg-8">
+          <div class="offset-lg-2 col-lg-10 col-xs-12 border-table">
+            <div class="col-lg-1 text-xs-center col-xs-2 border-right">1</div>
+            <div class="col-lg-5 col-xs-5 border-right">Anonymous</div>
+            <div class="col-lg-6 col-xs-5">40.000 points</div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="offset-lg-2 col-lg-10 col-xs-12 border-table">
+            <div class="col-lg-1 text-xs-center col-xs-2 border-right">2</div>
+            <div class="col-lg-5 col-xs-5 border-right"><a href="#">Nicolas Bacca</a></div>
+            <div class="col-lg-6 col-xs-5">20.000 points</div>
+          </div>
+        </div>
+        <div class="offset-lg-4 col-lg-8">
+          <div class="offset-lg-2 col-lg-10 col-xs-12 border-table">
+            <div class="col-lg-1 text-xs-center col-xs-2 border-right">3</div>
+            <div class="col-lg-5 col-xs-5 border-right"><a href="#">Jochen Hoenicke</a></div>
+            <div class="col-lg-6 col-xs-5">20.000 points</div>
+          </div>
+        </div>
+        <div class="offset-lg-4 col-lg-8">
+          <div class="offset-lg-2 col-lg-10 col-xs-12 border-table">
+            <div class="col-lg-1 text-xs-center col-xs-2 border-right">4</div>
+            <div class="col-lg-5 col-xs-5 border-right"><a href="#">Luke Jahnke</a></div>
+            <div class="col-lg-6 col-xs-5">1.000 points</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="security-disclosure">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-sm-center text-xs-center">
+          <h2>Responsible disclosure.</h2>
+          <p>We want to keep all our products and services safe for everyone. If you've discovered a security vulnerability, we appreciate your help in disclosing it to us in a responsible manner. We provide a bug bounty program to better engage with security
+            researchers and hackers.</p>
+        </div>
+        <div class="col-lg-6">
+          <div class="col-lg-12 bordered">
+            <p><strong>The idea is simple:</strong> you find and report vulnerabilities through responsible disclosure process. After they are confirmed, we recognize your effort by putting your name/nick and link in the table above and reward you a bounty
+              paid in bitcoins!</p>
+          </div>
+        </div>
+      </div>
+      <div class="security-requirements">
+        <div class="row">
+          <div class="col-lg-2 text-xs-center">
+            <h2>Requirements.</h2>
+          </div>
+          <div class="offset-lg-2 col-lg-8 top-buffer">
+            <div class="col-lg-4 rectangle rectangle-green"><img src="/static/images/security/finger.png" height="22" alt="finger">
+              <div class="text-block">
+                <p>Good faith and effort not to leak or destroy any user or our data.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 rectangle rectangle-black"><img src="/static/images/security/watch.png" height="24" alt="watch">
+              <div class="text-block">
+                <p>A reasonable amount of time to fix the issue before you publish it.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 rectangle rectangle-yellow"><img src="/static/images/security/bell.png" height="22" alt="bell">
+              <div class="text-block">
+                <p>Do not defraud our users or us in the process of discovery.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 text-lg-left text-md-center">
+          <p class="small">We promise not to bring legal action against researchers who point out a problem provided they do their best to follow the above guidelines. We reserve the right to decide if the bug is real and serious enough to receive the bounty. We will
+            also change our software to preemptively close possible security holes, even though we know they are not vulnerabilities at the present time. This means we may change our code in response to a report, even though the issue cannot actually
+            be used as an attack. In other words, we don't pay bounties for unproven, theoretical issues, but we reserve the right to patch them anyway. Show us a working exploit if you want to prove it's a true vulnerability.
+          </p>
+        </div>
+      </div>
+
+      <div class="security-topics">
+        <div class="row">
+          <div class="col-lg-12 text-lg-left text-xs-center">
+            <h3>Relevant topics.</h3>
+          </div>
+        </div>
+        <div class="row top-buffer">
+          <div class="col-lg-4">
+            <div class="col-lg-12 text-lg-center text-xs-center topic">
+              <div class="number">01</div>
+              <div class="text-block">Private key extraction from TREZOR.</div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="col-lg-12 text-lg-center text-xs-center topic">
+              <div class="number">02</div>
+              <div class="text-block">Tricking TREZOR into confirming action without user interaction.</div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="col-lg-12 text-lg-center text-xs-center topic">
+              <div class="number">03</div>
+              <div class="text-block">Bypassing PIN/passphrase protections of TREZOR.</div>
+            </div>
+          </div>
+        </div>
+        <div class="row top-buffer">
+          <div class="col-lg-4">
+            <div class="col-lg-12 text-lg-center text-xs-center topic">
+              <div class="number">04</div>
+              <div class="text-block">Tricking TREZOR into running unsigned firmware without warning.</div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="col-lg-12 text-lg-center text-xs-center topic">
+              <div class="number">05</div>
+              <div class="text-block">XSS or CSRF on wallet.trezor.io</div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="col-lg-12 text-lg-center text-xs-center topic">
+              <div class="number">06</div>
+              <div class="text-block">Obtaining user information from the TREZOR Wallet backends.</div>
+            </div>
+          </div>
+        </div>
+        <div class="row top-buffer">
+          <div class="col-lg-12">
+            <h3>Please, do not report</h3>
+            <ul>
+              <li>vulnerabilities on sites hosted by third parties (MailChimp, Medium, Twitter, Facebook, CloudFlare, etc.)</li>
+              <li>denial of service attacks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="security-send top-buffer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-lg-center text-xs-center white-paragraph">
+          <h2>How to disclose an issue.</h2>
+          <p>You can disclose a vulnerability by directly contacting our Security Team.</p>
+        </div>
+      </div>
+      <div class="form-content">
+        <div class="row">
+          <div class="col-lg-4 text-md-left text-sm-center text-xs-center">
+            <h3>Important information to include</h3>
+            <div class="number-big">1 of 3</div>
+          </div>
+          <div class="col-lg-8">
+            <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
+              <div class="text-block">
+                <img src="/static/images/security/code.png" height="14" alt="code">
+                <h4>Code</h4>
+                <p>Code which reproduces the issue as a proof of concept.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
+              <div class="text-block">
+                <img src="/static/images/security/description.png" height="14" alt="description">
+                <h4>Detailed description</h4>
+                <p>Thorough explanation and the potential impact of the bug.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
+              <div class="text-block">
+                <img src="/static/images/security/user.png" height="20" alt="user">
+                <h4>Your info</h4>
+                <p>Your name/nick and link for attribution on this page (optional).</p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
+              <div class="text-block">
+                <img src="/static/images/security/btc.png" height="20" alt="btc">
+                <h4>Bitcoin address</h4>
+                <p>Address for your bounty.</p>
+              </div>
+            </div>
+            <div class="content">
+              <div class="offset-lg-6 col-lg-6 col-sm-12">
+                <a href="#" class="btn btn-primary-full pull-right col-sm-12">Continue to next step</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="form-content">
+        <div class="row">
+          <div class="col-lg-4 text-md-left text-sm-center text-xs-center">
+            <h3>Important information to include</h3>
+            <div class="number-big">2 of 3</div>
+          </div>
+          <div class="col-lg-8">
+            <div class="col-lg-12 text-lg-left text-xs-center">
+              <h4>Use both of the following PGP keys when submitting sensitive information</h4>
+            </div>
+            <div class="col-lg-6 top-buffer">
+              <a href="#">
+                <div class="col-lg-12 rectangle"><img src="/static/images/security/download.png" alt="download" height="20">Stick, PGP key.</div>
+              </a>
+            </div>
+            <div class="col-lg-6 top-buffer">
+              <a href="#">
+                <div class="col-lg-12 rectangle"><img src="/static/images/security/download.png" alt="download" height="20">Slush, PGP key.</div>
+              </a>
+            </div>
+            <div class="content">
+              <div class="col-lg-6 col-sm-12 text-lg-left text-sm-center bottom-buffer">
+                <a href="#" class="arrow-back inline">Back to previous step</a>
+              </div>
+              <div class="col-lg-6">
+                <a href="#" class="btn btn-primary-full pull-right col-sm-12">Continue to next step</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-content">
+        <div class="row">
+          <div class="col-lg-4 text-md-left text-sm-center text-xs-center">
+            <h3>Important information to include</h3>
+            <div class="number-big">3 of 3</div>
+          </div>
+          <div class="col-lg-8">
+            <div class="col-lg-12 text-lg-left text-xs-center">
+              <h4>Send it to the following email address</h4>
+            </div>
+            <div class="col-lg-6 col-md-12 text-sm-center">
+              <a href="#" class="mail-big">
+                  security@satoshilabs.com
+                </a>
+            </div>
+            <div class="content">
+              <div class="col-lg-12 col-sm-12 text-lg-left text-sm-center bottom-buffer">
+                <a href="#" class="arrow-back inline">Back to previous step</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock body %} {% block scripts %}
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
+{% endblock %}
