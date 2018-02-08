@@ -51,6 +51,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://trezor.io/security/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://trezor.io/endorsements/</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
