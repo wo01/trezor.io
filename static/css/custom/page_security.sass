@@ -1,0 +1,394 @@
+.no-padding
+  padding: 0 !important
+
+.top-buffer
+  margin-top: 10px
+
+  @media only screen and (max-width: $sm)
+    margin-top: 30px
+
+  @media only screen and (max-width: $xs)
+    margin-top: 10px
+
+
+.number-big
+  color: $c_border_gray
+  font-size: 60px
+  font-weight: 100
+  padding: 0 10px 0 0
+  z-index: 1
+
+  @media only screen and (max-width: $md)
+    margin-top: 10px
+
+.text-block
+  width: 90%
+  position: relative
+  padding-bottom: 20px
+
+  @media only screen and (max-width: $sm)
+    width: 100%
+
+.security
+  padding-top: 48px
+  padding-bottom: 0
+  background: $c_white
+
+  @media only screen and (max-width: $xs)
+    padding-top: 0
+
+  ul, li
+    font: 400 17px / 1.75 $default_font
+    color: $c_grey_font
+
+  &-group
+    width: 100%
+    display: inline-block
+    padding-bottom: 30px
+
+  &-intro
+    height: 380px
+    padding-top: 120px
+    padding-bottom: 100px
+    background-size: 100%
+    background-repeat: no-repeat
+    background: $c_black
+    color: $c_white
+
+    p
+      color: $c_grey
+
+  &-measures
+    background: $c_subtle_gray
+    color: $c_black
+    padding-top: 80px
+    padding-bottom: 80px
+
+    h2
+      font-weight: 400
+      text-align: center
+      padding-bottom: 50px
+
+    h4
+      font-weight: 600
+      font-size: 16px
+
+    a
+      text-decoration: none
+      color: $c_green
+
+  &-last
+    margin-top: 80px
+
+    @media only screen and (max-width: $sm)
+      margin-top: 0px
+
+  &-incidents
+    background: $c_white
+    padding-top: 80px
+    padding-bottom: 80px
+
+    h4
+      font-weight: 600
+      font-size: 12px
+
+    .timeline
+      position: relative
+      margin: 70px 0 40px 0
+
+      p
+        font-size: 12px
+        color: $c_grey_font
+
+    .dot, .dot-active
+      width: 8px
+      height: 8px
+      +border-radius(50%)
+      position: relative
+      display: block
+      margin: 0 auto
+
+    .dot
+      background: $c_grey
+      cursor: pointer
+
+    .dot:hover
+      background: $c_green
+
+    .date
+      width: 25%
+      height: 41px
+      text-align: center
+      position: relative
+      float: left
+      display: block
+      top: -24px
+      border-bottom: 1px solid $c_grey
+      cursor: pointer
+      +unselectable()
+
+      &:hover
+        .dot
+          cursor: pointer
+          background: $c_green
+        p
+          cursor: pointer
+          color: $c_black
+
+      &-active
+        p
+          color: $c_black
+
+        .dot
+          display: inline-block
+          padding: 4px
+          background: $c_green
+          border: 8px solid $c_navlink
+          top: -9px
+
+    .detail-container
+      margin-top: 40px
+      position: relative
+      margin-bottom: 60px
+
+    .detail
+      border: 1px solid $c_border_gray
+      padding: 30px
+      position: relative
+      background: $c_white
+      z-index: 1
+      -webkit-backface-visibility: hidden
+      backface-visibility: hidden
+
+      p
+        font-size: 16px
+
+    .arrow-left, .arrow-right
+      display: inline-block
+      padding: 6px 15px 8px 15px
+      background: $c_white
+      border: 1px solid $c_border_gray
+      +border-radius(50%)
+      position: absolute
+      cursor: pointer
+      z-index: 10
+      +unselectable()
+
+    .arrow-left
+      top: 160px
+      left: -20px
+
+      @media only screen and (max-width: $md)
+        top: 95px
+
+    .arrow-right
+      top: 160px
+      right: -20px
+
+      @media only screen and (max-width: $md)
+        top: 95px
+
+    .arrow-left:hover, .arrow-right:hover
+      background: $c_border_gray
+
+    .badge-bordered, .additional
+      color: $c_grey
+      font-size: 12px
+
+    .badge-bordered, .badge
+      display: inline-block
+      padding: 4px 10px 4px 10px
+      +border-radius(32px)
+
+    .badge
+      background: $c_green
+      color: $c_white
+      border: 0
+      position: absolute
+      top: 30px
+      right: 30px
+
+    .badge-bordered
+      border: 1px solid $c_grey
+
+    .space-bottom
+      margin-bottom: 20px
+
+  &-leaderboard
+    padding-top: 60px
+    padding-bottom: 60px
+    background: $c_subtle_gray
+
+    @media only screen and (max-width: $md)
+      padding-top: 100px
+
+    .border-table
+      background: $c_white
+      border: 1px solid $c_border_gray
+      +border-radius(4px)
+      padding: 10px 0 10px 0
+      margin-bottom: 15px
+
+    @media only screen and (max-width: $sm)
+      font-size: 14px
+
+    .border-right
+      border-right: 1px solid $c_border_gray
+
+  &-disclosure
+    color: $c_black
+    padding-top: 80px
+    padding-bottom: 80px
+    background: $c_white
+
+    @media only screen and (max-width: $xs)
+      padding-top: 40px
+
+    .bordered
+      background: $c_white
+      border: 1px solid $c_border_gray
+      padding: 30px
+
+      p
+        margin: 0
+        font-size: 16px
+
+    .small
+      font-size: 16px
+
+  &-requirements
+    padding-top: 60px
+    padding-bottom: 60px
+
+    @media only screen and (max-width: $xs)
+      padding-top: 40px
+      padding-bottom: 40px
+
+    .rectangle
+      padding: 30px
+      height: 250px
+
+      @media only screen and (max-width: $md)
+        height: auto
+
+      p
+        color: $c_white
+        margin-top: 15px
+
+      &-green
+        background: $c_green
+
+      &-black
+        background: $c_black
+
+      &-yellow
+        background: $c_yellow
+
+        p
+          color: $c_black
+
+  &-topics
+    padding-top: 40px
+
+    .topic
+      background: $c_white
+      border: 1px solid $c_border_gray
+      position: relative
+
+      @media only screen and (max-width: $md)
+        margin-bottom: 30px
+
+      @media only screen and (max-width: $sm)
+        margin-bottom: 20px
+
+      .text-block
+        width: 100%
+        min-height: 60px
+        position: relative
+        padding: 0 20px 0 20px
+        margin: 80px 0 70px 0
+
+        @media only screen and (max-width: $lg)
+          min-height: 90px
+
+        @media only screen and (max-width: $md)
+          min-height: 30px
+
+      .number
+        top: 10px
+        right: 15px
+        position: absolute
+        color: $c_border_gray
+        font-size: 30px
+        font-weight: 200
+
+  &-send
+    width: 100%
+    padding-top: 60px
+    padding-bottom: 60px
+    background: $c_green
+
+    h2
+      color: $c_white
+
+    .white-paragraph
+      p
+        color: $c_white
+
+    .form-content
+      width: 100%
+      padding: 60px 60px 120px 60px
+      margin-top: 30px
+      min-height: 530px
+      background: $c_white
+      +border-radius(4px)
+      position: relative
+
+      a
+        color: $c_grey
+
+      h4
+        font-weight: 600
+        font-size: 16px
+
+      .content
+        bottom: 60px
+        right: 70px
+        left: 70px
+        height: 40px
+        position: absolute
+
+        & > .btn
+          width: auto !important
+
+      .mail-big
+        font-size: 42px
+        color: $c_green
+        font-weight: 200
+
+        @media only screen and (max-width: $md)
+          font-size: 28px
+          font-weight: 200
+
+        @media only screen and (max-width: $sm)
+          font-size: 20px
+          font-weight: 400
+
+      .rectangle
+        border: 1px solid $c_border_gray
+        background: $c_white
+        text-align: center
+        padding: 30px
+
+        @media only screen and (max-width: $md)
+          margin-top: 20px
+          min-height: 90px
+
+        @media only screen and (max-width: $sm)
+
+        img
+          margin-right: 10px
+          margin-bottom: 3px
+
+      .rectangle:hover
+        background: $c_border_gray
