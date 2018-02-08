@@ -10,8 +10,6 @@
   @media only screen and (max-width: $xs)
     margin-top: 10px
 
-.bottom-buffer
-  margin-bottom: 20px
 
 .number-big
   color: $c_border_gray
@@ -127,6 +125,7 @@
       top: -24px
       border-bottom: 1px solid $c_grey
       cursor: pointer
+      +unselectable()
 
       &:hover
         .dot
@@ -150,7 +149,7 @@
     .detail-container
       margin-top: 40px
       position: relative
-      margin-bottom: 40px
+      margin-bottom: 60px
 
     .detail
       border: 1px solid $c_border_gray
@@ -173,6 +172,7 @@
       position: absolute
       cursor: pointer
       z-index: 10
+      +unselectable()
 
     .arrow-left
       top: 160px
@@ -266,10 +266,10 @@
 
     .rectangle
       padding: 30px
-      max-height: 250px
+      height: 250px
 
       @media only screen and (max-width: $md)
-        max-height: 160px
+        height: auto
 
       p
         color: $c_white
@@ -337,9 +337,9 @@
 
     .form-content
       width: 100%
-      padding: 60px
+      padding: 60px 60px 120px 60px
       margin-top: 30px
-      min-height: 560px
+      min-height: 530px
       background: $c_white
       +border-radius(4px)
       position: relative
@@ -352,10 +352,14 @@
         font-size: 16px
 
       .content
-        top: 400px
-        width: 95%
-        height: 100%
+        bottom: 60px
+        right: 70px
+        left: 70px
+        height: 40px
         position: absolute
+
+        & > .btn
+          width: auto !important
 
       .mail-big
         font-size: 42px

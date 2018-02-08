@@ -21,7 +21,7 @@
         <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
           <div class="text-block">
             <img src="/static/images/security/shield.png" height="22" alt="shield">
-            <h4>Firmware verification</h4>
+            <h4>Firmware verification.</h4>
             <p>The bootloader verifies the firmware signature. The device only runs if the firmware is correctly signed by SatoshiLabs. Otherwise, the TREZOR warns you.</p>
           </div>
         </div>
@@ -75,7 +75,7 @@
         </div>
         <div class="security-last col-lg-6 col-xs-12 text-sm-left text-xs-center">
           <div class="text-block">
-            <a href="https://doc.satoshilabs.com/trezor-faq/threats.html" class="arrow">Learn more</a>
+            <a href="https://doc.satoshilabs.com/trezor-faq/threats.html" class="arrow">Learn more about security</a>
           </div>
         </div>
       </div>
@@ -95,19 +95,19 @@
       <div class="timeline hidden-md-down">
         <div class="row">
           <div class="col-lg-12">
-            <div class="date date-active" data-target="1">
+            <div class="date" id="date-1" data-target="1">
               <p>July 2014</p>
               <div class="dot"></div>
             </div>
-            <div class="date" data-target="2">
+            <div class="date" id="date-2" data-target="2">
               <p>February 2015</p>
               <div class="dot"></div>
             </div>
-            <div class="date" data-target="3">
+            <div class="date" id="date-3" data-target="3">
               <p>March 2015</p>
               <div class="dot"></div>
             </div>
-            <div class="date" data-target="4">
+            <div class="date" id="date-4" data-target="4">
               <p>August 2017</p>
               <div class="dot"></div>
             </div>
@@ -212,6 +212,7 @@
             <div class="col-lg-5 offset-lg-1 col-xs-12 text-sm-left text-xs-center">
               <h4>Type</h4>
               <p>Power analysis</p>
+              <span class="additional">*needs physical access to the device</span>
             </div>
           </div>
 
@@ -337,7 +338,7 @@
         </div>
         <div class="col-lg-6">
           <div class="col-lg-12 bordered">
-            <p><strong>The idea is simple:</strong> you find and report vulnerabilities through responsible disclosure process. After they are confirmed, we recognize your effort by putting your name/nick and link in the table above and reward you a bounty
+            <p><strong>The idea is simple — </strong>you find and report vulnerabilities through responsible disclosure process. After they are confirmed, we recognize your effort by putting your name/nick and link in the table above and reward you a bounty
               paid in bitcoins!</p>
           </div>
         </div>
@@ -368,7 +369,7 @@
       </div>
       <div class="row">
         <div class="col-lg-12 text-lg-left text-md-center">
-          <p class="small">We promise not to bring legal action against researchers who point out a problem provided they do their best to follow the above guidelines. We reserve the right to decide if the bug is real and severe enough to receive the bounty. We will also change our software to preemptively close possible security holes, even though we know they are not vulnerabilities at present. This means we may change our code in response to a report, even though the issue cannot be used as an attack. In other words, we don't pay bounties for unproven, theoretical issues, but we reserve the right to patch them anyway. Show us a working exploit if you want to prove it is a real vulnerability.
+          <p class="small">We promise not to bring legal action against researchers who point out a problem provided they do their best to follow the above guidelines. We reserve the right to decide if the bug is real and severe enough to receive the bounty. We will also change our software to preemptively close possible security holes, even though we know they are not vulnerabilities at present. This means we may change our code in response to a report, even though the issue cannot be used as an attack. In other words, we do not pay bounties for unproven, theoretical issues, but we reserve the right to patch them anyway. Show us a working exploit if you want to prove it is a real vulnerability.
           </p>
         </div>
       </div>
@@ -440,7 +441,8 @@
           <p>You can disclose a vulnerability by directly contacting our Security Team.</p>
         </div>
       </div>
-      <div class="form-content">
+
+      <div class="form-content" id="formStep1">
         <div class="row">
           <div class="col-lg-4 text-md-left text-sm-center text-xs-center">
             <h3>Important information to include</h3>
@@ -475,16 +477,14 @@
                 <p>Address for your bounty.</p>
               </div>
             </div>
-            <div class="content">
-              <div class="offset-lg-6 col-lg-6 col-sm-12">
-                <a href="#" class="btn btn-primary-full pull-right col-sm-12">Continue to next step</a>
-              </div>
-            </div>
           </div>
         </div>
-
+        <div class="content">
+          <a href="#" class="btn btn-primary-full pull-right col-sm-12 nextStep" data-target="2">Continue to next step</a>
+        </div>
       </div>
-      <div class="form-content">
+
+      <div class="form-content collapse" id="formStep2">
         <div class="row">
           <div class="col-lg-4 text-md-left text-sm-center text-xs-center">
             <h3>Important information to include</h3>
@@ -504,19 +504,15 @@
                 <div class="col-lg-12 rectangle"><img src="/static/images/security/download.png" alt="download" height="20px">Slush, PGP key.</div>
               </a>
             </div>
-            <div class="content">
-              <div class="col-lg-6 col-sm-12 text-lg-left text-sm-center bottom-buffer">
-                <a href="#" class="arrow-back inline">Back to previous step</a>
-              </div>
-              <div class="col-lg-6">
-                <a href="#" class="btn btn-primary-full pull-right col-sm-12">Continue to next step</a>
-              </div>
-            </div>
           </div>
+        </div>
+        <div class="content">
+          <a href="#" class="arrow-back inline prevStep" data-target="1">Back to previous step</a>
+          <a href="#" class="btn btn-primary-full pull-right nextStep" data-target="3">Continue to next step</a>
         </div>
       </div>
 
-      <div class="form-content">
+      <div class="form-content collapse" id="formStep3">
         <div class="row">
           <div class="col-lg-4 text-md-left text-sm-center text-xs-center">
             <h3>Important information to include</h3>
@@ -531,12 +527,10 @@
                   security@satoshilabs.com
                 </a>
             </div>
-            <div class="content">
-              <div class="col-lg-12 col-sm-12 text-lg-left text-sm-center bottom-buffer">
-                <a href="#" class="arrow-back inline">Back to previous step</a>
-              </div>
-            </div>
           </div>
+        </div>
+        <div class="content">
+          <a href="#" class="arrow-back inline prevStep" data-target="2">Back to previous step</a>
         </div>
       </div>
     </div>
