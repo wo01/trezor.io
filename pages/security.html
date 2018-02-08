@@ -22,7 +22,7 @@
           <div class="text-block">
             <img src="/static/images/security/shield.png" height="22" alt="shield">
             <h4>Firmware verification</h4>
-            <p>The bootloader verifies the firmware signature. The device only runs if the firmware is correctly signed by SatoshiLabs, otherwise the TREZOR warns you.</p>
+            <p>The bootloader verifies the firmware signature. The device only runs if the firmware is correctly signed by SatoshiLabs. Otherwise, the TREZOR warns you.</p>
           </div>
         </div>
         <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
@@ -54,7 +54,7 @@
           <div class="text-block">
             <img src="/static/images/security/pocket.png" height="20" alt="pocket">
             <h4>Additional passphrase support.</h4>
-            <p>TREZOR supports BIP39 passphrases, which are never stored or remembered on the device.</p>
+            <p>TREZOR supports <a href="https://blog.trezor.io/hide-your-trezor-wallets-with-multiple-passphrases-f2e0834026eb">BIP39 passphrases</a>, which are never stored or remembered on the device.</p>
           </div>
         </div>
         <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
@@ -69,7 +69,7 @@
         <div class="col-lg-6 col-xs-12 text-sm-left text-xs-center">
           <div class="text-block">
             <img src="/static/images/security/rotate.png" height="20" alt="rotate">
-            <h4>Reliable backup.</h4>
+            <h4>Reliable backup & recovery.</h4>
             <p>Your recovery seed protects you against theft, loss or destruction of your device. Simply restore the recovery seed, and your wallet is back.</p>
           </div>
         </div>
@@ -88,7 +88,7 @@
           <h2>Past incidents.</h2>
         </div>
         <div class="col-lg-7 col-xs-12 text-sm-left text-xs-center">
-          <p>Incidents not listed in this timeline are either not real or they are a misrepresentation of the issues listed bellow.</p>
+          <p>Incidents not listed below are most likely not real, or they are a misrepresentation with factual inaccuracies.</p>
         </div>
       </div>
       <div class="timeline">
@@ -132,7 +132,7 @@
               <h4>Incident</h4>
               <p>Malicious ScriptSig in transaction</p>
               <h4>Detail</h4>
-              <p>Specially crafted transaction could extract the private key, knowledge of PIN and passphrase was required</p>
+              <p>A specially crafted transaction could extract the private key. Knowledge of PIN and passphrase was required.</p>
             </div>
             <div class="col-lg-5 offset-lg-1 col-xs-12 text-sm-left text-xs-center">
               <h4>Type</h4>
@@ -176,7 +176,7 @@
               <h4>Incident</h4>
               <p>SpendMultisig malicious change in transaction</p>
               <h4>Detail</h4>
-              <p>Specially crafted multisig transaction could contain a change output of an attacker, which wasn't confirmed by user</p>
+              <p>A specially crafted multisig transaction could contain a change output of an attacker, which wasn't confirmed by the user.</p>
             </div>
             <div class="col-lg-5 offset-lg-1 col-xs-12 text-sm-left text-xs-center">
               <h4>Type</h4>
@@ -390,8 +390,7 @@
       <div class="row">
         <div class="col-lg-6 text-lg-left text-sm-center text-xs-center">
           <h2>Responsible disclosure.</h2>
-          <p>We want to keep all our products and services safe for everyone. If you've discovered a security vulnerability, we appreciate your help in disclosing it to us in a responsible manner. We provide a bug bounty program to better engage with security
-            researchers and hackers.</p>
+          <p>We want to keep all our products and services safe for everyone. If you have discovered a security vulnerability, we appreciate your help in disclosing it to us in a responsible manner. We provide a bug bounty program to better engage with security researchers and hackers.</p>
         </div>
         <div class="col-lg-6">
           <div class="col-lg-12 bordered">
@@ -408,7 +407,7 @@
           <div class="offset-lg-2 col-lg-8 top-buffer">
             <div class="col-lg-4 rectangle rectangle-green"><img src="/static/images/security/finger.png" height="22" alt="finger">
               <div class="text-block">
-                <p>Good faith and effort not to leak or destroy any user or our data.</p>
+                <p>Good faith and best effort not to leak or destroy any user or our data.</p>
               </div>
             </div>
             <div class="col-lg-4 rectangle rectangle-black"><img src="/static/images/security/watch.png" height="24" alt="watch">
@@ -426,9 +425,7 @@
       </div>
       <div class="row">
         <div class="col-lg-12 text-lg-left text-md-center">
-          <p class="small">We promise not to bring legal action against researchers who point out a problem provided they do their best to follow the above guidelines. We reserve the right to decide if the bug is real and serious enough to receive the bounty. We will
-            also change our software to preemptively close possible security holes, even though we know they are not vulnerabilities at the present time. This means we may change our code in response to a report, even though the issue cannot actually
-            be used as an attack. In other words, we don't pay bounties for unproven, theoretical issues, but we reserve the right to patch them anyway. Show us a working exploit if you want to prove it's a true vulnerability.
+          <p class="small">We promise not to bring legal action against researchers who point out a problem provided they do their best to follow the above guidelines. We reserve the right to decide if the bug is real and severe enough to receive the bounty. We will also change our software to preemptively close possible security holes, even though we know they are not vulnerabilities at present. This means we may change our code in response to a report, even though the issue cannot be used as an attack. In other words, we don't pay bounties for unproven, theoretical issues, but we reserve the right to patch them anyway. Show us a working exploit if you want to prove it is a real vulnerability.
           </p>
         </div>
       </div>
@@ -449,7 +446,7 @@
           <div class="col-lg-4">
             <div class="col-lg-12 text-lg-center text-xs-center topic">
               <div class="number">02</div>
-              <div class="text-block">Tricking TREZOR into confirming action without user interaction.</div>
+              <div class="text-block">Tricking TREZOR into confirming an action without user interaction.</div>
             </div>
           </div>
           <div class="col-lg-4">
