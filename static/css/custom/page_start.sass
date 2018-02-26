@@ -1,62 +1,37 @@
 .start
-
-  .step4
-    display: none
-    padding-top: 30px
+  background-color: $c_subtle_gray
 
   .thank-intro
-    padding: 10% 0 10% 0
+    padding: 2% 0 2% 0
 
-    h2
-      font-size: 3em
+  .nav-link
+    background-color: $c_white
+    padding: 70px 70px 30px 70px
+    margin-top: 20px
+    min-height: 400px
+    font-weight: bold
+    color: $c_grey_font
 
-    .arrow
-      cursor: pointer
-      color: $c_green
-      margin-top: 20px
-      &:hover
-        color: $c_green
+    +transition(all 0.15s ease 0s)
+    +box-shadow(0 1px 6px 0 rgba(218, 218, 218, 1))
+    +border-radius(4px)
 
-  .step
-    background: $c_grey_bg
-    margin: 10px
+    p
+      color: $c_grey_font
 
-    &.subscribe-step
-      .arrow
-        margin-left: 30px
+      @media only screen and (max-width: $md)
+        font-size: 0.9em
+    h3
+      @media only screen and (max-width: $md)
+        font-size: 1.3em
 
-    .content
-      padding: 20px 10px 50px 0
+      @media only screen and (max-width: $sm)
+        font-size: 1.2em
+    i
+      margin-bottom: 6px
+      font-size: 1.6em
+      clear: both
+      display: block
 
-      .email-form
-        width: 90%
-        background: $c_grey_bg
-        border: 2px solid $c_grey
-        padding: 8px
-        margin-bottom: 10px
-        +box-shadow(none)
-        +transition(all .4s ease)
-        +border-radius(.25rem)
-
-        &:focus, &:active
-          background: $c_white
-
-        &.red
-          border-color: $c_red
-
-      p, i
-        font-size: .9em
-
-        &.important
-          display: block
-          border-left: 3px solid orange
-          padding-left: 10px
-
-    .order
-      color: $c_grey
-      opacity: .3
-      font-size: 5em
-      font-weight: bold
-
-  .bottom-disclaimer
-    color: $c_grey
+    &:hover
+      +box-shadow(0 6px 24px 0 rgba(0, 0, 0, 0.15))
