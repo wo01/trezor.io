@@ -61,7 +61,7 @@
           <div class="text-block">
             <img src="/static/images/security/settings.png" height="22" alt="settings">
             <h4>Write-protected bootloader.</h4>
-            <p>The bootloader is write protected, as the JTAG is disabled. MCU is safeguarded by RDP Level 2.</p>
+            <p>The bootloader is write protected, as the JTAG is disabled. MCU is safeguarded by Memory Protection Unit.</p>
           </div>
         </div>
       </div>
@@ -109,6 +109,10 @@
             </div>
             <div class="date" id="date-4" data-target="4">
               <p>August 2017</p>
+              <div class="dot"></div>
+            </div>
+            <div class="date" id="date-5" data-target="5">
+              <p>February 2018</p>
               <div class="dot"></div>
             </div>
           </div>
@@ -272,6 +276,45 @@
               <a href="https://github.com/trezor/trezor-mcu/commit/98e617d8740b85ae01d7d6e0dd3f49e66057a210">GitHub</a>,
               <a href="https://blog.trezor.io/fixing-physical-memory-access-issue-in-trezor-2b9b46bb4522">Official blogpost</a>,
               <a href="https://saleemrashid.com/2017/08/17/extracting-trezor-secrets-sram/">Saleem's write-up</a>
+            </div>
+          </div>
+        </div>
+        <div id="detail-5" class="detail collapse">
+          <div class="badge">Fixed in 35 days</div>
+          <div class="row">
+            <div class="col-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">05</div>
+            </div>
+            <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
+              <h4>Incident</h4>
+              <p>STM32F205 chip issue</p>
+              <h4>Detail</h4>
+              <p>The bootloader memory write-protection is not working as intended in the STM32F205, which is used in the TREZOR One. The issue was solved by activating the Memory Protection Unit, keeping the bootloader safe from unauthorized write-access.</p>
+            </div>
+            <div class="col-lg-5 offset-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <h4>Type</h4>
+              <p>Supply chain attack</p>
+              <div class="badge-bordered">Needs physical access</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-2 offset-lg-1 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Fixed in firmware</h4>
+              <p>1.6.1</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Reported by</h4>
+              <p>Saleem Rashid</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Date reported</h4>
+              <p>2018-02-12</p>
+            </div>
+            <div class="col-lg-5 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>More info</h4>
+              <a href="https://github.com/trezor/trezor-mcu/commit/9588e8f2736b60916f51e470deb18f55112a6ebc">GitHub</a>,
+              <a href="https://blog.trezor.io/trezor-one-firmware-update-1-6-1-eecd0534ab95">Official blogpost</a>
             </div>
           </div>
         </div>
