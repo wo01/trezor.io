@@ -147,6 +147,7 @@
                     <li>21</li>
                     <li>88</li>
                     <li>15</li>
+                    <li>109</li>
                     <li>16</li>
                     <li>22</li>
                     <li>23</li>
@@ -864,6 +865,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                 </span>
                 <ul class="option-list">
                     <li>101</li>
+                    <li>108</li>
                     <li>103</li>
                     <li>73</li>
                     <li>104</li>
@@ -1465,7 +1467,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                 <h4 class="header">{% trans "What are the payment options in your e-shop?" %}</h4>
                 <span class="text">
                     {% blocktrans %}
-                   <p>You can pay with bitcoins or with a credit card. Please visit our <a
+                   <p>You can pay with bitcoin or with a credit card. Please visit our <a
                            href="https://shop.trezor.io/">e-shop</a> and see for yourself :).</p>
                     {% endblocktrans %}
                 </span>
@@ -1730,6 +1732,102 @@ Please, for more information read <a title="claim bitcoin cash"
                     <p>       The estimated start of the regular sale is scheduled for Q2 2018. Unfortunately, no specific date was set yet.
                     <br/><br/>It will be announced via our social media. Please subscribe to our newsletter through our form that is located at the bottom
                               of our <a href="https://trezor.io">website</a> and check out our <a href="https://blog.trezor.io"> blog</a> to be on top of the news!
+                    </p>
+                    {% endblocktrans %}
+		            </span>
+             </div>
+        </template>
+         <template id="108" class="entry">
+             <div class="content-wrapper">
+                <h4 class="header">{% trans "TREZOR Bridge software was reported as a virus." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>
+							This is most likely a <em>false positive</em> information. Some antiviruses (typically Kaspersky or Norton) can detect TREZOR Bridge as a Trojan or Virus. 
+							However, TREZOR Bridge which was downloaded from our <a href="https://wallet.trezor.io">TREZOR wallet</a> or official <a href="https://wallet.trezor.io/data/bridge/latest/index.html">source page</a> is safe to use
+                     and virus/trojan free.       
+                     <br/><br/>
+                     This issue was reported to most antiviruses producers and hopefully, TREZOR Bridge will be whitelisted as soon as possible.
+                     <br/><br/>
+                     <strong>In conclusion, if your TREZOR bridge was downloaded from our websites, it is safe to use even when detected as a Trojan by your antivirus.</strong>
+                    </p>
+                    {% endblocktrans %}
+		            </span>
+             </div>
+        </template>
+         <template id="109" class="entry">
+             <div class="content-wrapper">
+                <h4 class="header">{% trans "My delivered package was open!" %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>
+						   It may happen sometimes during the <strong>customs procedure</strong> and unfortunately, we can't do anything to prevent customs from doing so as it is within their legal powers.
+						   If your package was opened by the customs, they usually leave a tape informing the customer that it was caused by them, but it is not guaranteed in every case.
+						   <br/><br/>
+                     In case you still have doubts why and by who your package was opened, you can contact directly the courier or post office that handled the delivery.
+                     <br/><br/>
+                     <strong>There are also several aspects, that will show you if somebody tampered with your TREZOR and is safe to use it (please check the information below).</strong>
+                    </p>
+                    {% endblocktrans %}
+		            </span>
+                <ul class="option-list">
+                    <li>110</li>
+                    <li>111</li>
+                </ul>
+            </div>
+        </template>
+        <template id="110" class="entry">
+             <div class="content-wrapper">
+                <h4 class="header">{% trans "Anti-tampering protection of TREZOR One." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>
+						   All TREZOR devices are distributed without the <strong>firmware</strong> software, which is automatically installed before you can set up your wallet for the first time.
+						   Therefore, if you received TREZOR with already installed firmware, it is a clear sign that someone used the device before you. 
+						   <br/><br/>
+						   Our <strong>Bootloader</strong> (pre-installed) software, ensures that you're using the valid firmware version signed by us. If not, then there is a warning message on <strong>TREZOR display</strong>. 
+						   Because the recovery seed is generated during TREZOR setup, there is not "your seed" by default, but the seed you will generate for yourself.
+                     <br/><br/>
+                     TREZOR box is protected by the <strong>seals</strong> and it is also virtually impossible to open the device without breaking it (the case is sealed using ultrasound), so you would see right away
+                     if someone tampered with it.
+                    </p>
+                    {% endblocktrans %}
+		            </span>
+                <ul class="option-list">
+                    <li>112</li>
+                </ul>
+            </div>
+        </template>
+        <template id="111" class="entry">
+             <div class="content-wrapper">
+                <h4 class="header">{% trans "Anti-tampering protection of TREZOR model T." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>
+						   All TREZOR devices are distributed without the <strong>firmware</strong> software, which is automatically installed before you can set up your wallet for the first time.
+						   Therefore, if you received TREZOR with already installed firmware, it is a clear sign that someone used the device before you. 
+						   <br/><br/>
+                     Our <strong>Bootloader</strong> (pre-installed) software, ensures that you're using the valid firmware version signed by us. If not, then there is a warning message on <strong>TREZOR display</strong>. 
+						   Because the recovery seed is generated during TREZOR setup, there is not "your seed" by default, but the seed you will generate for yourself.
+                     <br/><br/>
+                     TREZOR model T is protected itself by the <strong>seal</strong> on its USB-C port. If the holographic seal has been removed, it will leave marks on the device.  
+                     It is also virtually impossible to open the device without breaking it (the case is sealed using ultrasound), so you would see right away if someone tampered with it.
+                    </p>
+                    {% endblocktrans %}
+		            </span>
+                <ul class="option-list">
+                    <li>112</li>
+                </ul>
+            </div>
+        </template>
+        <template id="112" class="entry">
+             <div class="content-wrapper">
+                <h4 class="header">{% trans "I still need to contact the support regarding the package." %}</h4>
+                <span class="text">
+                    {% blocktrans %}
+                    <p>
+							If you have something to report regarding the package (damaged products or accessories), then please <a href="https://satoshilabs.kayako.com/conversation/new/10">submit a ticket</a>
+							and attach the <strong>photos</strong> of the envelope and damaged parts so we can analyze it with relevant material. This will speed up the whole process.   
                     </p>
                     {% endblocktrans %}
 		            </span>
