@@ -1,8 +1,11 @@
 .navbar
-  background: $c_black
+  background: $c_black_bg
   font-weight: 400
-  padding: .2rem
+  padding: .7rem
+  min-height: 3.8rem
   margin-bottom: -48px
+  filter: blur(0)
+  -webkit-filter: blur(0)
   +unselectable()
 
   .navbar-toggler
@@ -39,6 +42,10 @@
 
   .nav-link
     color: $c_navlink
+    font-size: .9rem
+    font-weight: 500
+    padding: .425rem
+    text-rendering: optimizeLegibility
     +transition(color 0.4s ease)
 
     &[data-amount]:not([data-amount="0"])
@@ -64,11 +71,9 @@
   select
     background: transparent
     border: 0
-    padding-left: 14px
     margin-left: -14px
     color: rgba(255,255,255,.5)
-    padding-top: .425rem
-    padding-bottom: .425rem
+    padding: .425rem
     cursor: pointer
     +border-radius(0)
     +appearance-none()
@@ -85,7 +90,7 @@
 
   &:hover
     background: white
-    color: $c_black
+    color: $c_black_bg
 
   span
     display: inline-block
