@@ -53,7 +53,7 @@
   z-index: 3
   background-image: url("/static/images/passwords/tpmhero.png")
   background-repeat: no-repeat
-  background-position: 50% 140%
+  background-position: 50% 100%
   background-size: 80% auto
 
   @media only screen and (max-width: $md)
@@ -61,6 +61,9 @@
 
   @media only screen and (max-width: $sm)
     display: none
+
+  @media only screen and (min-width: $lg)
+    background-position: 50% 180px
 
 .tpm-info
   background-color: $c_grey_bg
