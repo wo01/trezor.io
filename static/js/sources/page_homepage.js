@@ -33,45 +33,6 @@ $(document).ready(function () {
     });
   }
 
-  function createStickyNav(sticky) {
-    if (typeof sticky !== 'undefined') {
-      $(document).on('scroll', scrolled);
-    }
-  }
-
-  function shuffleTeam(team) {
-    if (typeof team !== 'undefined') {
-      team.shuffle();
-    }
-  }
-
-  // On the RUN
-
-  var OSName = "unknown",
-    win = $('html'),
-    $jumbo = $('#jumbotron'),
-    $header = $('#header'),
-    h = window.innerHeight + 260;
-
-  // reorder platform icons
-  if (navigator.appVersion.indexOf("Win") != -1) OSName = "win";
-  if (navigator.appVersion.indexOf("Mac") != -1) OSName = "mac";
-  if (navigator.appVersion.indexOf("X11") != -1) OSName = "linux";
-  if (navigator.appVersion.indexOf("Linux") != -1) OSName = "linux";
-  $("#" + OSName).prependTo("#platforms");
-
-  // jumbo height fixer
-  $jumbo.css('max-height', h + 'px');
-  $header.css('max-height', h + 'px');
-
-  // jumbotron headline fitting
-  $("#headline").fitText(.7);
-  $("#lead").fitText(2.1);
-
-
-  shuffleTeam($('.shuffle'));
-  createStickyNav($("#sticky-nav"));
-
   $('.scrollTo').on('click touchstart', function (e) {
     e.preventDefault();
     var target = this.hash,

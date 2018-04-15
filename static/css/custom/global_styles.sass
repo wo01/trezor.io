@@ -19,15 +19,14 @@ body
   +antialiased()
 
 header
-  position: relative
-  display: block
-  height: 100%
+  min-height: 100vh
   width: 100%
   z-index: 3
+  overflow: hidden
   background-color: $c_grey_bg
 
 h1, h2, h3, h4, h5
-  font-family: 'Open Sans', sans-serif
+  font-family: $default_font
 
 p
   font: 400 16px/1.65 $default_font
@@ -42,6 +41,7 @@ a
 a.arrow
   color: $c_green
   cursor: pointer
+  +antialiased()
 
   &:hover
     color: $c_green
@@ -52,9 +52,15 @@ a.arrow
 
   &:after
     display: inline-block
-    content: '\276f'
+    content: ' '
     position: relative
-    padding-left: 4px
+    width: 15px
+    height: 10px
+    margin: 0 0 1px 7px
+    background-image: url("/static/images/arrow-left.svg")
+    background-size: 15px auto
+    background-repeat: no-repeat
+    background-position: center center
 
 a.arrow-back
   color: $c_green
@@ -102,3 +108,11 @@ section
   .shadow
     display: none
     visibility: hidden
+
+.vcenter
+  display: inline-block
+  vertical-align: middle
+  float: none
+
+.clearing
+  clear: both
