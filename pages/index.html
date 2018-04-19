@@ -8,16 +8,15 @@
             <h1 class="headline" id="headline">
               {% trans "The safe place for your coins." %}
             </h1>
-            <img src="{% static '/static/images/coins.svg' %}"/>
-            <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io" role="button"
-               aria-label="Get your TREZOR">
+            <img src="{% static '/static/images/coins.svg' %}" />
+            <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io" role="button" aria-label="Get your TREZOR">
               Get your TREZOR</a>
           </div>
         </div>
       </div>
     </div>
     <div class="bottom">
-      <img src="{% static '/static/images/scroll_down.svg' %}"/>
+      <img src="{% static '/static/images/scroll_down.svg' %}" />
     </div>
   </div>
 </header>
@@ -102,8 +101,7 @@
                 Intuitive & convenient interface.
               </h3>
               <p>
-                Designed for your confidence
-                and ease-of-mind.
+                Designed for your confidence and ease-of-mind.
               </p>
               <a href="#" class="arrow">Learn more</a>
             </div>
@@ -115,9 +113,11 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-xs-12 text-xs-center">
-            <a href="" class="active">Wallet</a> <a href="">Password Manager</a>
+        <div class="slider">
+          <div class="row">
+            <div class="col-xs-12 text-xs-center">
+              <a href="" class="active"> <img class="icons" src="{% static '/static/images/badges/wallet.svg' %}" alt="">Wallet</a> <a href="">  <img class="icons" src="{% static '/static/images/badges/tpm.svg' %}" alt="">Password Manager</a>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -202,6 +202,26 @@
           <div class="col-md-6">
             <img src="{% static '/static/images/media.svg' %}" alt="">
           </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="endorsed">
+    <section class="media-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-lg-center">
+            <div class="badge">
+              <img src="{% static '/static/images/badges/love.svg' %}" alt="">
+            </div>
+            <h3>Loved by the community.</h3>
+            <p class="quote">
+              “Hardware wallets have become the standard for secure, long-term bitcoin storage. Trezor is the gold standard for hardware wallets.”
+            </p>
+            <a href="#" class="arrow">More costumers that we helped.</a>
+          </div>
+
         </div>
       </div>
     </section>
