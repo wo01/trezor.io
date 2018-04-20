@@ -89,7 +89,7 @@
 
 .lost-section
   background-color: $c_white
-  padding-bottom: 40px
+  padding-bottom: 10px
 
   .heading
     padding-top: 20px
@@ -133,6 +133,72 @@
     padding-top: 50px
     padding-bottom: 20px
 
+.media-section
+  h2
+    padding-top: 5px
+    margin-bottom: 10px
+    font-size: 1.8em
+    line-height: 1.2em
+    font-weight: bold
+    color: $c_jumbo_grey
+
+  p
+    font-size: 1rem
+    margin-bottom: 0
+
+    &.lead
+      font-size: 1.05rem
+
+
+.community-section
+
+  h3
+    padding-top: 14px
+    padding-bottom: 12px
+    margin-bottom: 0
+    font-size: 1.1em
+    font-weight: bold
+    color: $c_jumbo_grey
+
+  .community
+    .header
+      width: 100%
+      max-width: 40px
+      max-height: 40px
+      float: left
+      overflow: hidden
+      position: relative
+      margin: 0 auto
+      margin-bottom: 8px
+      background: url("/static/images/customers_faces/customers.png") no-repeat
+      background-size: 40px
+      +border-radius(50%)
+
+      &:after
+        content: ""
+        display: block
+        padding-bottom: 100%
+
+      &.moulder
+        background-position: 0 2.5%
+      &.rubens
+        background-position: 0 24.5%
+      &.ricardo
+        background-position: 0 14%
+      &.brett
+        background-position: 0 34.5%
+      &.bob
+        background-position: 0 55.8%
+      &.brian
+        background-position: 0 45.4%
+      &.ryan
+        background-position: 0 66.3%
+      &.sean
+        background-position: 0 87.2%
+      &.andy
+        background-position: 0 76.6%
+      &.waldo
+        background-position: 0 97.5%
 
 .badge
   width: 100%
