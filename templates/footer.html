@@ -3,55 +3,79 @@
     <div class="bottom-part">
         <div class="container">
             <div class="row">
-                <div class="col-md-2 hidden-sm-down">
+                <div class="col-md-3 hidden-sm-down">
                     <a href="{% url '/' %}"><img class="trezor-logo lazy"
                                                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                                 data-progressive="{% static '/images/trezor-logo.png' %}"
-                                                 data-original="{% static '/images/trezor-logo.png' %}"
+                                                 data-progressive="{% static '/images/trezor.svg' %}"
+                                                 data-original="{% static '/images/trezor.svg' %}"
                                                  alt="TREZOR best bitcoin wallet and security device logo"/></a>
                     <p>
-                        by <a href="https://satoshilabs.com">SatoshiLabs</a>
+                        Brought to you by <a href="https://satoshilabs.com" class="satoshilabs">SatoshiLabs</a>
                     </p>
                 </div>
+
                 <div class="col-md-3 col-sm-12 text-md-left text-sm-center text-xs-center">
                     <ul class="footer-nav">
+                      <li>
+                        <strong>Products</strong>
+                      </li>
+                      <li class="nav-item active">
+                          <a class="nav-link" href="{% url '/' %}">{% trans "TREZOR" %}<span class="sr-only">(current)</span></a>
+                      </li>
                         <li class="">
                             <a class="nav-link shop-btn" href="https://shop.trezor.io" data-amount="0">{% trans "Shop" %}</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="{% url '/' %}">{% trans "TREZOR" %}<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="https://trezor.io/start/">{% trans "Wallet" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="http://doc.satoshilabs.com/">{% trans "Docs" %}</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="https://blog.trezor.io/">{% trans "Blog" %}</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url '/support' %}">{% trans "Support" %}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url '/security' %}">{% trans "Security" %}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url '/resellers' %}">{% trans "Resellers" %}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://shop.trezor.io/sales/">{% trans "Sales" %}</a>
-                        </li>
                     </ul>
-                </div>
-                <div class="col-md-7 col-sm-12 text-xs-center text-sm-center text-md-left" id="mc_embed_signup">
+                  </div>
+
+                  <div class="col-md-3 col-sm-12 text-md-left text-sm-center text-xs-center">
+                      <ul class="footer-nav">
+                        <li>
+                          <strong>Help & Support</strong>
+                        </li>
+
+                          <li class="nav-item">
+                              <a class="nav-link" href="http://doc.satoshilabs.com/">{% trans "Documentation" %}</a>
+                          </li>
+
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url '/support' %}">{% trans "Support" %}</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url '/security' %}">{% trans "Security" %}</a>
+                          </li>
+
+                      </ul>
+                    </div>
+
+                    <div class="col-md-3 col-sm-12 text-md-left text-sm-center text-xs-center">
+                        <ul class="footer-nav">
+                          <li>
+                            <strong>Others</strong>
+                          </li>
+
+                          <li class="nav-item">
+                              <a class="nav-link" href="{% url '/resellers' %}">{% trans "Resellers" %}</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="https://shop.trezor.io/sales/">{% trans "Sales" %}</a>
+                          </li>
+                        </ul>
+                      </div>
+                <!-- <div class="col-md-7 col-sm-12 text-xs-center text-sm-center text-md-left" id="mc_embed_signup">
                     <h5>Don't miss good news and security updates from TREZOR.</h5>
                     <form action="//trezor.us7.list-manage.com/subscribe/post?u=a87eb6070c965ef1be1b02854&id=0ac8b24e69" method="post" novalidate target="_blank" rel="noopener noreferrer" name="mc-embedded-subscribe-form" id="mc-embedded-subscribe-form">
                         <div id="mc_embed_signup_scroll">
                             <input type="email" id="mce-EMAIL" name="EMAIL" class="email-form"  aria-label="Email to subscribe for newsletter" required  placeholder="Your E-mail Address">
                             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a87eb6070c965ef1be1b02854_0ac8b24e69" tabindex="-1" value=""></div>
                             <input class="btn button btn-third-outline" name="submit" aria-label="Button to subscribe for newsletter"  value="Subscribe" type="submit" id="mc-embedded-subscribe" />
-                        </div>
+                        </div> -->
                     </form>
                 </div>
             </div>
