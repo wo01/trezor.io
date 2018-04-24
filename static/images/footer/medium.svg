@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="19px" viewBox="0 0 22 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-0.1%" y="-0.5%" width="100.2%" height="100.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Product-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Trezor-product-page-Copy-15" transform="translate(-1099.000000, -859.000000)" fill="#929497">
+            <g id="Footer" filter="url(#filter-1)" transform="translate(0.000000, 586.000000)">
+                <g id="Group-5">
+                    <g>
+                        <g id="Group-31" transform="translate(953.000000, 274.867769)">
+                            <g id="iconmonstr-medium-1" transform="translate(147.000000, 0.000000)">
+                                <path d="M2.37166667,3.26415788 C2.39666667,3.01642786 2.3025,2.77205689 2.11916667,2.60578387 L0.2525,0.338424395 L0.2525,0 L6.05083333,0 L10.5325,9.90500184 L14.4725,3.72929584e-16 L20,0 L20,0.338424395 L18.4033333,1.8810686 C18.2658333,1.98687871 18.1975,2.1607096 18.2258333,2.33286097 L18.2258333,13.6679788 C18.1975,13.8392904 18.2658333,14.0131213 18.4033333,14.1189314 L19.9625,15.6615756 L19.9625,16 L12.1191667,16 L12.1191667,15.6615756 L13.735,14.0811421 C13.8933333,13.9215872 13.8933333,13.8745604 13.8933333,13.6301895 L13.8933333,4.46837768 L9.4025,15.9630504 L8.79583333,15.9630504 L3.56666667,4.46837768 L3.56666667,12.1723613 C3.52333333,12.49567 3.63,12.8223377 3.85583333,13.0557917 L5.95666667,15.6237863 L5.95666667,15.9630504 L0,15.9630504 L0,15.6237863 L2.10083333,13.0557917 C2.32583333,12.8214979 2.42583333,12.4931507 2.37166667,12.1723613 L2.37166667,3.26415788 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
