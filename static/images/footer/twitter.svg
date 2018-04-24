@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="18px" viewBox="0 0 21 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Twitter-color</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-0.1%" y="-0.5%" width="100.2%" height="100.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Product-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Trezor-product-page-Copy-15" transform="translate(-1213.000000, -860.000000)" fill="#929497">
+            <g id="Footer" filter="url(#filter-1)" transform="translate(0.000000, 586.000000)">
+                <g id="Group-5">
+                    <g>
+                        <g id="Group-31" transform="translate(953.000000, 274.867769)">
+                            <path d="M280.2,2.0263448 C279.494524,2.34761602 278.734953,2.56487857 277.938193,2.66195333 C278.751858,2.16271172 279.376193,1.3710902 279.670329,0.428078281 C278.908505,0.890339025 278.066667,1.22663372 277.167353,1.40691541 C276.450608,0.622227794 275.426202,0.132231405 274.292481,0.132231405 C272.118577,0.132231405 270.354886,1.94082657 270.354886,4.17123466 C270.354886,4.48788326 270.388695,4.79528666 270.456313,5.09113354 C267.182497,4.92240836 264.280578,3.31605228 262.336573,0.869537292 C261.997359,1.46816495 261.803522,2.16271172 261.803522,2.90232891 C261.803522,4.30297897 262.498855,5.53952646 263.555943,6.26412017 C262.911322,6.24447409 262.302765,6.06072545 261.77084,5.76025596 L261.77084,5.80994899 C261.77084,7.76762324 263.128825,9.40055932 264.93196,9.77036792 C264.601761,9.86513137 264.253531,9.9125131 263.894031,9.9125131 C263.640465,9.9125131 263.392534,9.88824441 263.152492,9.84086268 C263.653988,11.4449075 265.107765,12.6132715 266.832013,12.6444741 C265.48417,13.7284755 263.784716,14.3744849 261.939884,14.3744849 C261.622081,14.3744849 261.30766,14.3559945 261,14.3190136 C262.743406,15.463109 264.814756,16.1322314 267.038246,16.1322314 C274.284592,16.1322314 278.245853,9.97838525 278.245853,4.64042931 C278.245853,4.46477023 278.242472,4.28911114 278.235711,4.11691902 C279.005423,3.54718265 279.67371,2.83645676 280.2,2.0263448" id="Twitter"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
