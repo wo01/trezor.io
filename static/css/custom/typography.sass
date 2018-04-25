@@ -1,0 +1,10 @@
+// ----
+// Typography generator
+// ----
+
+=generate-sizes($args...)
+  @for $i from 1 through length($args)
+    .h#{$i}
+      font-size: nth($args, $i) + unquote('px')
+
++generate-sizes(52, 20, 18, 16, 14, 12)
