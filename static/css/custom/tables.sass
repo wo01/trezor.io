@@ -9,7 +9,23 @@
 
   tbody tr:nth-of-type(odd):not(.divider)
     background: #fafafa
+
+  tbody tr
+    th, td
+      &:not(.table-title)
+        font-size: $f-s4
+        font-weight: $f-normal
+        color: #929497
+        
+
+    .table-title
+      font-size: $f-s3
+      font-weight: $f-bold
+      color: #24292F
+      & + .btn
+        margin-top: 15px
     
+
 
 .table-primary
   @extend %primaryTable

@@ -2,9 +2,27 @@
 // Typography generator
 // ----
 
+// control size variables
+$f-s1: 52px
+$f-s2: 20px
+$f-s3: 18px
+$f-s4: 16px
+$f-s5: 14px
+$f-s6: 12px
+$f-smoothing: antialiased
+$f-normal: 400 // font-weight
+$f-bold: 600 // font-weight
+
+// Body properties
+body
+  -webkit-font-smoothing: $f-smoothing
+
+// mixin to put things together
 =generate-sizes($args...)
   @for $i from 1 through length($args)
-    .h#{$i}
-      font-size: nth($args, $i) + unquote('px')
+    .f#{$i}
+      font-size: nth($args, $i)
 
-+generate-sizes(52, 20, 18, 16, 14, 12)
+// generate sizes
++generate-sizes($f-s1, $f-s2, $f-s3, $f-s4, $f-s5, $f-s6)
+
