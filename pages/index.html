@@ -401,8 +401,9 @@
             </p>
           </div>
         </div>
-        <div class="row">
+        <div class="row devices">
           <div class="col-sm-4 text-xs-center">
+            <img src="{% static '/static/images/devices.png' %}" alt="">
           </div>
           <div class="col-sm-4 text-xs-center">
             <h3>Don't risk your coins.</h3>
@@ -435,6 +436,22 @@
     </section>
   </div>
 
+  <div id="devs">
+    <section class="devs-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="badge">
+              <img src="{% static '/static/images/badges/interface.svg' %}" alt="">
+            </div>
+            <h2>
+              Want to contribute to the Trezor project?
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </main>
 {% endblock %} {% block scripts %}
 <script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
