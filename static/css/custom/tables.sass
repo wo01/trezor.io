@@ -7,8 +7,32 @@
     border: none
     background: #fff
 
-  tbody tr:nth-of-type(odd):not(.divider)
+  .highlight
     background: #fafafa
+
+  thead th
+    border: none
+
+  .label
+    display: flex
+    align-items: center
+    img
+      margin: 0 14px
+      height: 32px
+      &:first-child
+        margin-left: 0
+
+
+    
+
+  .badges
+    display: flex
+    justify-content: space-between
+    width: 55%
+    margin: 0 auto
+
+    img
+      height: 23px
 
   tbody tr
     th, td
@@ -23,11 +47,7 @@
       color: #24292F
       & + .btn
         margin-top: 15px
-
-    img
-      height: 23px
     
-
 
 .table-primary
   @extend %primaryTable

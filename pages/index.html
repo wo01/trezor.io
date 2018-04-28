@@ -253,11 +253,19 @@
               <thead>
                 <tr>
                   <th scope="col"></th>
-                  <th scope="col">Trezor One
-                    <img src="{% static '/static/images/best_choice.svg' %}" alt="">
+                  <th scope="col">
+                    <div class="label">
+                        <img src="{% static '/static/images/coins/t1.png' %}" alt="">
+                        <span>Trezor One</span>
+                        <img class="label-img" src="{% static '/static/images/best_choice.svg' %}" alt="">
+                    </div>
                   </th>
-                  <th scope="col">Trezor Model T
-                    <img src="{% static '/static/images/premium_choice.svg' %}" alt="">
+                  <th scope="col">
+                    <div class="label">
+                        <img src="{% static '/static/images/coins/t2.png' %}" alt="">
+                        <span>Trezor Model T</span>
+                        <img class="label-img" src="{% static '/static/images/premium_choice.svg' %}" alt="">
+                    </div>
                   </th>
                 </tr>
               </thead>
@@ -266,11 +274,20 @@
                   <th class="table-title" scope="row">
                     Coins & Tokens (+560)
                   </th>
-                  <td colspan="2" class="text-center">
-                    <img src="{% static '/static/images/coins.svg' %}" />
+                  <td colspan="2">
+                    <div class="badges">
+                      <img src="{% static '/static/images/coins/btc.svg' %}" alt="">
+                      <img src="{% static '/static/images/coins/ltc.svg' %}" alt="">
+                      <img src="{% static '/static/images/coins/dash.svg' %}" alt="">
+                      <img src="{% static '/static/images/coins/zcash.svg' %}" alt="">
+                      <img src="{% static '/static/images/coins/xem.svg' %}" alt="">
+                      <img src="{% static '/static/images/coins/eth.svg' %}" alt="">
+                      <img src="{% static '/static/images/coins/etc.svg' %}" alt="">
+                      <img src="{% static '/static/images/coins/bcash.svg' %}" alt="">
+                    </div>
                   </td>
                 </tr>
-                <tr>
+                <tr class="highlight">
                   <th class="table-title" scope="row">Interface</th>
                   <td>Monochrome display with 2 buttons</td>
                   <td>Full color touchscreen</td>
@@ -283,20 +300,20 @@
                   <td></td>
                   <td></td>
                 </tr>
-                <tr>
+                <tr class="highlight">
                   <th scope="row">PIN entry</th>
-                  <td>On your computer or mobile</td>
-                  <td>On your Trezor</td>
+                  <td><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt=""> On your computer or mobile</td>
+                  <td><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</td>
                 </tr>
                 <tr>
                   <th scope="row">Passphrase entry</th>
-                  <td>On your computer or mobile</td>
-                  <td>On your Trezor</td>
+                  <td><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt=""> On your computer or mobile</td>
+                  <td><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</td>
                 </tr>
-                <tr>
+                <tr class="highlight">
                   <th scope="row">Device recovery</th>
-                  <td>On your computer or mobile</td>
-                  <td>On your Trezor</td>
+                  <td><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt=""> On your computer or mobile</td>
+                  <td><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</td>
                 </tr>
                 
                 <tr class="divider">
@@ -307,10 +324,10 @@
                   <td></td>
                   <td></td>
                 </tr>
-                <tr>
+                <tr class="highlight">
                   <th scope="row">Encrypted cloud storage</th>
-                  <td>✓</td>
-                  <td>✓</td>
+                  <td><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                  <td><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
                 </tr>
                 <tr>
                   <th scope="row">On Trezor device</th>
@@ -326,10 +343,10 @@
                   <td></td>
                   <td></td>
                 </tr>
-                <tr>
+                <tr class="highlight">
                   <th scope="row">microSD card</th>
                   <td></td>
-                  <td>✓</td>
+                  <td><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
                 </tr>
                 <tr>
                   <th scope="row">On Trezor device data encryption</th>
