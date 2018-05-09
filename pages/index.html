@@ -339,7 +339,23 @@
               </div>
             </div>
 
-            <table class="table table-primary comparison-table show-desktop">
+            <div id="comparison-header-sticky" class="comparison-table-header-sticky show-desktop">
+              <div class="inner">
+                <div class="empty-cell"></div>
+                <div class="label">
+                  <img src="{% static '/static/images/coins/t1.png' %}" alt="">
+                  <span>Trezor One</span>
+                  <img class="label-img" src="{% static '/static/images/best_choice.svg' %}" alt="">
+                </div>
+                <div class="label">
+                  <img src="{% static '/static/images/coins/t2.png' %}" alt="">
+                  <span>Trezor Model T</span>
+                  <img class="label-img" src="{% static '/static/images/premium_choice.svg' %}" alt="">
+                </div>
+              </div>
+            </div>
+
+            <table id="comparison-table" class="table table-primary comparison-table show-desktop">
               <thead>
                 <tr>
                   <th scope="col"></th>
@@ -449,7 +465,7 @@
                   <td></td>
                   <td>Coming soon</td>
                 </tr>
-                <tr>
+                <tr id="comparison-table-footer">
                   <th class="table-title" scope="row">Price</th>
                   <td>
                     <div class="table-title">89 EUR </div>

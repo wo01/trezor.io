@@ -44,4 +44,27 @@ $(document).ready(function () {
     });
   });
 
+  function bindStickyHandler() {
+    // @todo config
+    var scrollPos = $(window).scrollTop();
+    var startPos = $('#comparison-table thead').offset().top;
+    var endPos = $('#comparison-table-footer').offset().top;
+    
+    if( scrollPos > startPos && endPos > scrollPos) {
+      $('#comparison-header-sticky').addClass('active')
+    } else {
+      $('#comparison-header-sticky').removeClass('active')
+    }
+  }
+
+  $(window).scroll(function(event){
+    bindStickyHandler();
+  });
+
+  function onPageLoaded() {
+    bindStickyHandler();
+  }
+
+  // init
+  onPageLoaded();
 });
