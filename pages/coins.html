@@ -1,5 +1,5 @@
 {% extends "base_new.html" %} {% load i18n %} {% block body %}
-<section class="team-section">
+<section class="coins-section">
   <div class="container">
     <h2>Supported coins & tokens (+560)</h2>
     <p>List of all coins & tokens supported by Trezor.</p>
@@ -8,10 +8,11 @@
     <table class="table">
   <thead>
     <tr>
-      <th scope="col"></th>
+      <th scope="col">#</th>
       <th scope="col">Coin & Token name</th>
-      <th scope="col"><img src="{% static '/static/images/coins/t1.png' %}" alt="" height="24px">Trezor One</th>
-      <th scope="col"><img src="{% static '/static/images/coins/t2.png' %}" alt="" height="24px">Trezor Model T</th>
+      <th scope="col devices"><img src="{% static '/static/images/coins/t1.png' %}" alt="" height="24px">Trezor One</th>
+      <th scope="col devices"><img src="{% static '/static/images/coins/t2.png' %}" alt="" height="24px">Trezor Model T</th>
+      <th scope="col">Markectcap (USD)</th>
       <th scope="col">Network</th>
       <th scope="col">Type</th>
       <th scope="col">Links</th>
@@ -23,6 +24,7 @@
       <th scope="row">Bitcoin (BTC)</th>
       <td><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
       <td><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+      <td>$157 373 085 204</td>
       <td>Bitcoin</td>
       <td>Blockchain</td>
       <td><a href="www.bitcoin.com">Bitcoin</a> , <a href="www.btc.com">BTC</a></td>
@@ -32,6 +34,7 @@
       <th scope="row">Ethereum (ETH)</th>
       <td><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
       <td><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+      <td>$70 517 989 818	</td>
       <td>Ethereum</td>
       <td>ERC-20</td>
       <td><a href="www.Ethereum.com">Ethereum</a></td>
@@ -41,6 +44,7 @@
       <th scope="row">Litecoin (LTC)</th>
       <td><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
       <td><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+      <td>$8 969 457 493</td>
       <td>Litecoin</td>
       <td>LTC</td>
       <td><a href="#">Litecoin</a></td>
