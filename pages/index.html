@@ -272,9 +272,74 @@
             <p class="lead">We made it easy for you to decide.</p>
           </div>
         </div>
+
         <div class="row">
           <div class="col-xs-12">
-            <table class="table table-primary">
+
+            <div class="comparison-description show-mobile">
+              <div class="comparison">
+                <div class="comparison-header">
+                  <div class="label">
+                    <img src="{% static '/static/images/coins/t1.png' %}" alt="">
+                    <span>Trezor One</span>
+                    <img class="label-img" src="{% static '/static/images/best_choice.svg' %}" alt="">
+                  </div>
+                </div>
+                <div class="comparison-body">
+                  <dl>
+                    <dt>Supported coins</dt>
+                    <dd>8</dd>
+                    <dt>Interface</dt>
+                    <dd>Monochrome display with 2 buttons</dd>
+                    <dt>Connector</dt>
+                    <dd>USB - C</dd>
+                    <dt>Compatibility</dt>
+                    <dd>PC / Mac / iOS / Android</dd>
+                  </dl>
+                  <dl>
+                    <dt>Price</dt>
+                    <dd>89 EUR</dd>
+                  </dl>
+                </div>
+                <div class="comparison-footer">
+                  <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io?h=6c6f63616c682e7374" role="button" aria-label="Get your Trezor">
+                    Get your Trezor One</a>
+                </div>
+              </div>
+              <div class="comparison">
+                <div class="comparison-header">
+                  <div class="label">
+                    <img src="{% static '/static/images/coins/t2.png' %}" alt="">
+                    <span>Trezor Model T</span>
+                    <img class="label-img" src="{% static '/static/images/premium_choice.svg' %}" alt="">
+                  </div>
+                </div>
+                <div class="comparison-body">
+                  <dl>
+                    <dt>Supported coins</dt>
+                    <dd>8+</dd>
+                    <dt>Interface</dt>
+                    <dd>Full color touchscreen</dd>
+                    <dt>Connector</dt>
+                    <dd>USB - C</dd>
+                    <dt>Compatibility</dt>
+                    <dd>PC / Mac / iOS / Android</dd>
+                    <dt>Extensible</dt>
+                    <dd>MicroSD</dd>
+                  </dl>
+                  <dl>
+                    <dt>Price</dt>
+                    <dd>129 EUR</dd>
+                  </dl>
+                </div>
+                <div class="comparison-footer">
+                  <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io?h=6c6f63616c682e7374" role="button" aria-label="Get your Trezor">
+                    Get your Trezor One</a>
+                </div>
+              </div>
+            </div>
+
+            <table class="table table-primary comparison-table show-desktop">
               <thead>
                 <tr>
                   <th scope="col"></th>
@@ -297,7 +362,7 @@
               <tbody>
                 <tr class="dividers">
                   <th class="table-title" scope="row">
-                    Coins & Tokens (+560)
+                    Coins & Tokens (+160)
                   </th>
                   <td colspan="2">
                     <div class="badges">
