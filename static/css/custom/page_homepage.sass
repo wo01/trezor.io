@@ -6,12 +6,16 @@
   min-height: 100%
 
   h2
-    @media only screen and (max-width: $sm)
-      font-size: 1.4rem
+    font-weight: bold
 
     @media only screen and (max-width: $md)
-      font-size: 1.8rem
+      font-size: 1.8em
 
+    @media only screen and (max-width: $sm)
+      font-size: 1.3em
+
+    @media only screen and (max-width: $xs)
+      font-size: 1.6em
 
   .badge
     width: 100%
@@ -72,7 +76,7 @@
       padding-top: 0
 
     img
-      max-width: 80%
+      max-width: 70%
 
 .entry-content
   @media only screen and (min-width: $sm)
@@ -93,6 +97,10 @@
     font-size: 1rem
     margin-bottom: 0
 
+    @media only screen and (max-width: $xs)
+      max-width: 320px
+      margin: 10px auto 10px auto
+
     &.lead
       font-size: 1.05rem
 
@@ -105,10 +113,18 @@
     color: $c_jumbo_grey
 
   .perspective
-    max-width: 70%
+    max-width: 100%
     margin: 0 auto
     display: block
-    padding-top: 90px
+    padding-top: 100px
+
+    @media only screen and (max-width: $md)
+      padding-top: 100px
+      max-width: 190%
+
+    @media only screen and (max-width: $sm)
+      padding-top: 30px
+      max-width: 100%
 
   .badge
     text-align: left
@@ -121,11 +137,17 @@
 
 .lost-section
   background-color: $c_white
-  padding-bottom: 10px
+  padding-bottom: 50px
+
+  .space-top
+    padding-top: 14px
 
   .heading
     padding-top: 20px
-    padding-bottom: 90px
+    padding-bottom: 80px
+
+    @media only screen and (max-width: $md)
+      padding-bottom: 10px
 
     @media only screen and (max-width: $sm)
       padding-bottom: 0
@@ -138,10 +160,18 @@
     font-weight: bold
     color: $c_jumbo_grey
 
+    @media only screen and (max-width: $xs)
+      max-width: 300px
+      margin: 0 auto 10px auto
+
   .seed-card
     max-width: 100%
     position: absolute
-    top: -110px
+    top: -50px
+
+    @media only screen and (max-width: $md)
+      position: relative
+      top: 20px
 
     @media only screen and (max-width: $sm)
       position: relative
@@ -158,7 +188,7 @@
   .badge
     text-align: left
     padding-left: 0
-    padding-bottom: 7px
+    padding-bottom: 10px
     padding-top: 40px
 
     @media only screen and (max-width: $sm)
@@ -167,6 +197,10 @@
   p
     font-size: 1rem
     margin-bottom: 0
+
+    @media only screen and (max-width: $xs)
+      max-width: 320px
+      margin: 10px auto 10px auto
 
     &.lead
       font-size: 1.05rem
@@ -177,6 +211,7 @@
 
 .media-section
   padding-bottom: 50px
+  padding-top: 40px
 
   .whitespace-top
     margin-top: 20px
@@ -324,6 +359,10 @@
   background-color: $c_subtle_gray
   padding-bottom: 0
 
+  .shop-btn
+    @media only screen and (max-width: $xs)
+      min-width: 320px
+
   h2
     padding-top: 5px
     margin-bottom: 10px
@@ -332,9 +371,16 @@
     font-weight: bold
     color: $c_jumbo_grey
 
+    @media only screen and (max-width: $xs)
+      font-size: 1.6em
+
   p
     font-size: 1rem
     margin-bottom: 0
+
+    @media only screen and (max-width: $xs)
+      max-width: 320px
+      margin: 10px auto 10px auto
 
     &.lead
       font-size: 1.05rem
@@ -367,21 +413,22 @@
         display: none
 
     h3
-      font-size: 1.3em
-      margin-top: 120px
+      font-size: 1.6em
+      margin-top: 100px
 
       @media only screen and (max-width: $md)
-        margin-top: 100px
+        margin-top: 95px
+        font-size: 1.4em
 
       @media only screen and (max-width: $sm)
         margin-top: 30px
 
 
     a
-      margin-top: 120px
+      margin-top: 110px
 
       @media only screen and (max-width: $md)
-        margin-top: 88px
+        margin-top: 85px
 
       @media only screen and (max-width: $sm)
         margin: 20px 0 40px 0
@@ -397,12 +444,18 @@
   padding-top: 110px
   +background-size(cover)
 
+  @media only screen and (max-width: $sm)
+    padding-top: 70px
+
   @media only screen and (max-width: $xs)
-    padding-top: 50px
+    padding-top: 80px
 
   h2
     font-weight: bold
     margin-bottom: 20px
+
+    @media only screen and (max-width: $xs)
+      font-size: 1.7em
 
   .email-form
     width: 100%
@@ -412,7 +465,20 @@
     border-radius: 4px
     border: 0px solid white
     background: $c_white
-    margin: 15px 10px 10px 0
+    margin: 20px 0 10px 0
+
+    @media only screen and (max-width: $sm)
+      max-width: 460px
+
+    @media only screen and (max-width: $xs)
+      max-width: 320px
+
+  .subscribe-btn
+    @media only screen and (max-width: $sm)
+      min-width: 460px
+
+    @media only screen and (max-width: $xs)
+      min-width: 320px
 
   .agree
     font-size: 0.9rem
@@ -428,6 +494,10 @@
 .devs-section
   padding-top: 130px
   padding-bottom: 160px
+
+  .btn
+    @media only screen and (max-width: $xs)
+      min-width: 320px
 
   .spacing
     @media only screen and (max-width: $xs)
@@ -456,6 +526,28 @@
       margin-bottom: 20px
 
 .comparison-section
+  padding-top: 40px
+
+  .btn
+    @media only screen and (max-width: $md)
+      min-width: 630px
+
+    @media only screen and (max-width: $sm)
+      min-width: 450px
+
+    @media only screen and (max-width: $xs)
+      min-width: 320px
+
+  h2
+    font-size: 1.8em
+    font-weight: bold
+
+  .lead
+    font-size: 1.1em
+
+    @media only screen and (min-width: $sm)
+      margin-bottom: 40px
+
   .label
     @media only screen and (min-width: $md)
       display: flex
@@ -470,24 +562,32 @@
         margin-left: 0
 
   .comparison
+    background-color: $c_white
+    +box-shadow(0 4px 24px rgba(0, 0, 0, 0.12))
+    border-radius: 6px
+    padding: 30px 10px 30px 10px
     text-align: center
   .comparison + .comparison
     margin-top: 4rem
-      
+
   .comparison dl
-    border-top: 1px solid #ddd
-    margin: 1rem 0
-    padding: 1rem 0 0 0
+    margin: 1em 0
+    padding: 1em 0 0 0
 
     dd
-      margin-bottom: 1.3rem
+      margin-bottom: 1.3em
+      font-size: 1.4em
 
     dd:last-child
       margin: 0
 
     dt
       font-weight: 400
-      color: #929497
+      color: $c_grey
+
+    .price
+      font-weight: bold
+      font-size: 1.8em
 
   .comparison-header
     .label img
