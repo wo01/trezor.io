@@ -176,7 +176,37 @@
     padding-bottom: 20px
 
 .media-section
-  margin-bottom: 30px
+  padding-bottom: 50px
+
+  .whitespace-top
+    margin-top: 20px
+
+  .companies
+    width: 100%
+    min-height: 32px
+    overflow: hidden
+    position: relative
+    margin: 0 auto
+    background: url("/static/images/media.png") no-repeat
+    background-size: 1000px
+    margin-top: 10px
+
+    &:after
+      content: ""
+      display: block
+
+    &.forbes
+      background-position: 0% 0
+    &.coindesk
+      background-position: 37.6% 0
+    &.cnn
+      background-position: 18% 0
+    &.magazine
+      background-position: 86% 0
+    &.bitstamp
+      background-position: 66.7% 0
+    &.bitwala
+      background-position: 103.6% 0
 
   h2
     padding-top: 5px
@@ -186,10 +216,22 @@
     font-weight: bold
     color: $c_jumbo_grey
 
+    @media only screen and (max-width: $xs)
+      max-width: 290px
+      margin: 0 auto 20px auto
+
   img
+    @media only screen and (max-width: $md)
+      margin-top: 10px
+      max-height: 70px
+
     @media only screen and (max-width: $sm)
       margin-top: 40px
-      width: 80%
+      max-height: 80px
+
+    @media only screen and (max-width: $xs)
+      margin-top: 50px
+      max-height: 60px
 
   p
     font-size: 1em
@@ -199,9 +241,11 @@
     &.lead
       font-size: 1.1rem
 
-
 .community-section
   padding-top: 0
+
+  .badge
+    padding-top: 30px
 
   h3
     padding-top: 14px
@@ -235,13 +279,12 @@
       padding: 20px 0 20px 0
 
     .active
-      -webkit-transform: scale(1.5, 1.5)
+      +transform(scale(1.5, 1.5))
 
     .header
       width: 100%
       max-width: 40px
       max-height: 40px
-
       overflow: hidden
       position: relative
       margin: 0 auto
