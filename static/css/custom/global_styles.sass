@@ -1,3 +1,8 @@
+// ----
+// Global styles
+// ----
+
+
 *:focus
   outline: 0 !important
 input::-moz-focus-inner
@@ -8,7 +13,7 @@ body, html
   margin: 0
   height: 100%
   background: $c_white
-  font-family: $default_font
+  font-family: $f-base-family
 
 body
   min-height: 100%
@@ -16,7 +21,6 @@ body
   overflow-y: scroll
   -webkit-overflow-scrolling: touch
   -ms-overflow-style: -ms-autohiding-scrollbar
-  +antialiased()
 
 header
   min-height: 100vh
@@ -25,11 +29,7 @@ header
   overflow: hidden
   background-color: $c_grey_bg
 
-h1, h2, h3, h4, h5
-  font-family: $default_font
-
 p
-  font: 400 16px/1.65 $default_font
   color: $c_grey_font
   +antialiased()
 
@@ -41,7 +41,6 @@ a
 a.arrow
   color: $c_green
   cursor: pointer
-  font-size: .9rem
   +antialiased()
 
   &:hover
