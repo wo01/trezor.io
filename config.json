@@ -4,7 +4,10 @@
   "fingerprint": [
     "js"
   ],
-  "optimize": [],
+  "optimize": [
+    "js",
+    "css"
+  ],
   "prettify": true,
   "context": {
     "CURRENT_PAGE": {
