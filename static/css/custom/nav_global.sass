@@ -92,6 +92,21 @@
     background: transparent
     color: $c_black
 
+    @media only screen and (max-width: $sm)
+      position: relative
+      background: black
+
+      & > .navbar-toggler
+        color: $c_white !important
+
+      .active > .nav-link,
+      .active > .nav-link:hover
+        color: $c_white !important
+
+
+    .navbar-toggler
+      color: $c_black
+
     .nav-link
       color: $c_nav_grey
 
@@ -113,4 +128,5 @@
 
   .navbar .collapse.in, .navbar .collapsing
     clear: both
+
 

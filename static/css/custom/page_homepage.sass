@@ -118,6 +118,11 @@
     display: block
     padding-top: 100px
 
+    &.preview
+      padding: 0
+      +box-shadow(0 4px 30px rgba(30, 30, 30, 0.1))
+      +border-radius(6px)
+
     @media only screen and (max-width: $md)
       padding-top: 100px
       max-width: 190%
@@ -136,7 +141,6 @@
       text-align: center
 
 .lost-section
-  background-color: $c_white
   padding-bottom: 80px
   background-color: $c_subtle_gray
 

@@ -129,15 +129,19 @@
         </div>
 
         <div class="slider">
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-xs-12 text-xs-center">
               <a href="" class="active">Wallet</a> <a href="">Password Manager</a>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{% static '/static/images/wallet_ui.webp' %}" data-original="{% static '/static/images/wallet_ui.png' %}" class="perspective lazy" alt="">
+            <video loop="" muted="" autoplay="" preload="metadata" poster="{% static '/static/images/wallet_ui.webp' %}" data-original="{% static '/static/images/wallet_ui.png' %}" class="perspective lazy preview">
+              <source src="{% static '/static/video/MP4/wallet.mp4' %}" type="video/mp4">
+              <source src="{% static '/static/video/OGV/wallet.ogv' %}" type="video/ogg">
+              <source src="{% static '/static/video/WEBM/wallet.webm' %}" type="video/webm">
+            </video>
           </div>
         </div>
       </div>
@@ -589,7 +593,7 @@
               <img src="{% static '/static/images/badges/github.svg' %}" alt="">
             </div>
             <h2>
-              &lt;Code the revolution /&gt;
+              Code the revolution.
             </h2>
             <p class="lead">
               Join us and work on top-notch global projects related to Bitcoin and security. Become a part of our team resposible for several influential projects that marked milestones in the Bitcoin world. We love to work with talented and enthusiastic developers,
