@@ -4,25 +4,39 @@
 
 // control size variables
 $f-s1: 52px
-$f-s2: 20px
+$f-s2: 28px
 $f-s3: 18px
 $f-s4: 16px
 $f-s5: 14px
 $f-s6: 12px
+$f-brand-family: 'trezor'
 $f-smoothing: antialiased
 $f-normal: 400 // font-weight
-$f-bold: 600 // font-weight
+$f-bold: 500 // font-weight
 
 // Body properties
 body
   -webkit-font-smoothing: $f-smoothing
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important
+
+// Font faces
+@font-face
+  font-family: "trezor"
+  font-style: normal
+  font-weight: normal
+  src: url("/static/fonts/trezor.woff") format("woff")
 
 // mixin to put things together
 =generate-sizes($args...)
   @for $i from 1 through length($args)
-    .f#{$i}
-      font-size: nth($args, $i)
+    h#{$i}
+      font: $f-bold (nth($args, $i) + / 1.16) $f-brand-family !important
 
 // generate sizes
 +generate-sizes($f-s1, $f-s2, $f-s3, $f-s4, $f-s5, $f-s6)
+
+p 
+  font-size: $f-s4 !important
+p.lead
+  font-size: $f-s3 !important
 
