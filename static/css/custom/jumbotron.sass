@@ -16,6 +16,12 @@
   .list
     padding-left: 20px
 
+  .btn-primary-full
+
+    @media only screen and (max-width: $sm)
+      min-width: 320px
+      max-width: 340px
+
   //@media only screen and (min-width: 400px)
     background-image: url("/static/images/photos/1-1200.webp")
   //@media only screen and (min-width: 600px)
@@ -61,8 +67,17 @@
         -ms-flex-align: center!important
         align-items: center!important
 
-      img
-        padding: 30px 0 30px 0
+        .badges
+          width: 100%
+          padding: 26px 0 32px 0
+
+          img
+            height: 32px
+            margin-right: 22px
+
+            @media only screen and (max-width: $sm)
+              height: 24px
+              margin-right: 15px
 
     h1, p
       color: $c_jumbo_grey
@@ -71,3 +86,6 @@
       font-size: 3.9em
       font-weight: bold
       text-align: left
+
+      @media only screen and (max-width: $sm)
+        max-width: 320px

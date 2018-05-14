@@ -8,7 +8,16 @@
             <h1 class="headline" id="headline">
               {% trans "The safe place for your coins." %}
             </h1>
-            <img src="{% static '/static/images/coins.svg' %}" />
+            <div class="badges">
+              <img src="{% static '/static/images/coins/btc.svg' %}" alt="">
+              <img src="{% static '/static/images/coins/ltc.svg' %}" alt="">
+              <img src="{% static '/static/images/coins/dash.svg' %}" alt="">
+              <img src="{% static '/static/images/coins/zcash.svg' %}" alt="">
+              <img src="{% static '/static/images/coins/xem.svg' %}" alt="">
+              <img src="{% static '/static/images/coins/eth.svg' %}" alt="">
+              <img src="{% static '/static/images/coins/etc.svg' %}" alt="">
+              <img src="{% static '/static/images/coins/bcash.svg' %}" alt="">
+            </div>
             <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io" role="button" aria-label="Get your Trezor">
               Get your Trezor</a> <a href="#" class="arrow list">Full list of supported coins</a>
           </div>
