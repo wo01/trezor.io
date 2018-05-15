@@ -9,18 +9,41 @@
   background-size: auto 100%
   background-repeat: no-repeat
   background-position: center center
+  background-color: #F3F6F9
   z-index: 2
   +background-size(cover)
   +border-radius(0)
 
+  @media only screen and (max-width: $md)
+    background-position: left
+    background-size: 140%
+
+  @media only screen and (max-width: $sm)
+    background-size: 160%
+
+  @media only screen and (max-width: $xs)
+    background-image: none
+    background-color: #F3F6F9
+
   .list
     padding-left: 20px
+
+    @media only screen and (max-width: $sm)
+      display: block
+      margin: 30px auto
+
+    @media only screen and (max-width: $xs)
+      padding: 0
+      display: block
+      text-align: center
 
   .btn-primary-full
 
     @media only screen and (max-width: $sm)
+      min-width: 340px
+
+    @media only screen and (max-width: $xs)
       min-width: 320px
-      max-width: 340px
 
   //@media only screen and (min-width: 400px)
     background-image: url("/static/images/photos/1-1200.webp")
@@ -52,7 +75,8 @@
       margin-left: -70px
 
     @media only screen and (max-width: $sm)
-      bottom: 60px
+      bottom: 80px
+
 
   .container
     min-height: 100vh
@@ -68,7 +92,7 @@
         align-items: center!important
 
         .badges
-          width: 100%
+          width: 120%
           padding: 26px 0 32px 0
 
           img
@@ -79,6 +103,7 @@
               height: 24px
               margin-right: 15px
 
+
     h1, p
       color: $c_jumbo_grey
 
@@ -87,5 +112,9 @@
       font-weight: bold
       text-align: left
 
-      @media only screen and (max-width: $sm)
+      @media only screen and (max-width: $md)
+        max-width: 380px
+
+      @media only screen and (max-width: $xs)
         max-width: 320px
+        text-align: center

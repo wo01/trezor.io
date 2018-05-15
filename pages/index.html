@@ -19,7 +19,8 @@
               <img src="{% static '/static/images/coins/bcash.svg' %}" alt="">
             </div>
             <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io" role="button" aria-label="Get your Trezor">
-              Get your Trezor</a> <a href="#" class="arrow list">Full list of supported coins</a>
+              Get your Trezor</a>
+              <a href="#" class="arrow list">Full list of supported coins</a>
           </div>
         </div>
       </div>
@@ -136,16 +137,16 @@
             </div>
           </div>
         </div>
-
+        <!--
         <div class="slider">
-          <!-- <div class="row">
+          <div class="row">
             <div class="col-xs-12 text-xs-center">
               <a href="" class="active">Wallet</a> <a href="">Password Manager</a>
             </div>
-          </div> -->
-        </div>
+          </div>
+        </div>-->
         <div class="row">
-          <div class="col-xs-12">
+          <div class="col-xs-12 wallet-video">
             <video loop="" muted="" autoplay="" preload="metadata" poster="{% static '/static/images/wallet_ui.webp' %}" data-original="{% static '/static/images/wallet_ui.png' %}" class="perspective lazy preview">
               <source src="{% static '/static/video/MP4/wallet.mp4' %}" type="video/mp4">
               <source src="{% static '/static/video/OGV/wallet.ogv' %}" type="video/ogg">
@@ -335,13 +336,37 @@
                 <div class="comparison-body">
                   <dl>
                     <dt>Supported coins</dt>
-                    <dd>8</dd>
+                    <dd>
+                      <div class="badges">
+                        <img src="{% static '/static/images/coins/btc.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/ltc.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/dash.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/zcash.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/xem.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/eth.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/etc.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/bcash.svg' %}" alt="">
+                      </div>
+                    </dd>
                     <dt>Interface</dt>
                     <dd>Monochrome display with 2 buttons</dd>
-                    <dt>Connector</dt>
-                    <dd>USB - C</dd>
-                    <dt>Compatibility</dt>
-                    <dd>PC / Mac / iOS / Android</dd>
+                    <dt>Pin entry</dt>
+                    <dd><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
+                    <span> On your computer or mobile</span></dd>
+                    <dt>Passphrase entry</dt>
+                    <dd><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
+                    <span> On your computer or mobile</span></dd>
+                    <dt>Device recovery</dt>
+                    <dd><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
+                    <span> On your computer or mobile</span></dd>
+                    <dt>Password manager encrypted cloud storage</dt>
+                    <dd><img src="{% static '/static/images/coins/check.svg' %}" alt=""></dd>
+                    <dt>On Trezor device</dt>
+                    <dd>–</dd>
+                    <dt>microSD card</dt>
+                    <dd>–</dd>
+                    <dt>On Trezor device data encryption</dt>
+                    <dd>–</dd>
                   </dl>
                   <dl>
                     <dt>Price</dt>
@@ -364,15 +389,34 @@
                 <div class="comparison-body">
                   <dl>
                     <dt>Supported coins</dt>
-                    <dd>8+</dd>
+                    <dd>
+                      <div class="badges">
+                        <img src="{% static '/static/images/coins/btc.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/ltc.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/dash.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/zcash.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/xem.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/eth.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/etc.svg' %}" alt="">
+                        <img src="{% static '/static/images/coins/bcash.svg' %}" alt="">
+                      </div>
+                    </dd>
                     <dt>Interface</dt>
                     <dd>Full color touchscreen</dd>
-                    <dt>Connector</dt>
-                    <dd>USB - C</dd>
-                    <dt>Compatibility</dt>
-                    <dd>PC / Mac / iOS / Android</dd>
-                    <dt>Extensible</dt>
-                    <dd>MicroSD</dd>
+                    <dt>Pin entry</dt>
+                    <dd><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</dd>
+                    <dt>Passphrase entry</dt>
+                    <dd><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</dd>
+                    <dt>Device recovery</dt>
+                    <dd><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</dd>
+                    <dt>Password manager encrypted cloud storage</dt>
+                    <dd><img src="{% static '/static/images/coins/check.svg' %}" alt=""></dd>
+                    <dt>On Trezor device</dt>
+                    <dd>Coming soon</dd>
+                    <dt>microSD card</dt>
+                    <dd><img src="{% static '/static/images/coins/check.svg' %}" alt=""></dd>
+                    <dt>On Trezor device data encryption</dt>
+                    <dd>Coming soon</dd>
                   </dl>
                   <dl>
                     <dt>Price</dt>
