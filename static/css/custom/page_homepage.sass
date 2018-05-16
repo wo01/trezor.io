@@ -145,7 +145,7 @@
       text-align: center
 
 .lost-section
-  padding-bottom: 80px
+  padding: 130px 0 100px 0
   background-color: $c_subtle_gray
 
   .space-top
@@ -153,11 +153,10 @@
 
   .heading
     padding-top: 40px
-    padding-bottom: 90px
+    padding-bottom: 130px
 
     @media only screen and (max-width: $md)
       padding-bottom: 10px
-
     @media only screen and (max-width: $sm)
       padding-bottom: 0
 
@@ -177,7 +176,7 @@
     max-width: 100%
     position: absolute
     top: -85px
-    z-index: 1
+    z-index: 0
 
     @media only screen and (max-width: $md)
       position: relative
@@ -539,7 +538,10 @@
   padding-top: 40px
 
   .badges
-    width: 100%
+    width: 80%
+
+  .list
+    vertical-align: baseline
 
   .btn
     @media only screen and (max-width: $md)
