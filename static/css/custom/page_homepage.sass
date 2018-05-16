@@ -664,14 +664,20 @@
       top: 0
       left: 0
       width: 100%
+      max-width: 100%
+      overflow: visible
       background: #fff
       padding: 1rem 0
       border-bottom: 1px solid #ddd
 
       .label-img
         right: -170px
+        @media only screen and (max-width: $lg)
+          right: -160px !important
 
     .empty-cell
       width: 452px
     .label + .label
       margin-left: 278px
+      @media only screen and (max-width: $lg)
+        margin-left: 200px !important
