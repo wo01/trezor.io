@@ -444,12 +444,12 @@
             <div id="comparison-header-sticky" class="comparison-table-header-sticky show-desktop">
               <div class="inner">
                 <div class="empty-cell"></div>
-                <div class="label">
+                <div class="label text-xs-center">
                   <img src="{% static '/static/images/coins/t1.png' %}" alt="">
                   <span>Trezor One</span>
                   <img class="label-img" src="{% static '/static/images/best_choice.svg' %}" alt="">
                 </div>
-                <div class="label">
+                <div class="label text-xs-center">
                   <img src="{% static '/static/images/coins/t2.png' %}" alt="">
                   <span>Trezor Model T</span>
                   <img class="label-img" src="{% static '/static/images/premium_choice.svg' %}" alt="">
@@ -496,69 +496,74 @@
                     </div>
                   </td>
                 </tr>
-                <tr class="highlight">
-                  <th class="table-title" scope="row">Authentication</th>
-                  <td colspan="2">
-                    <div class="badges">
-                      <div class="list"><img src="{% static '/static/images/badges/ssh.svg' %}" alt="">Secured with SSH</div>
-                      <div class="list"><img src="{% static '/static/images/badges/gpg.svg' %}" alt="">Secured with GPG</div>
-                      <div class="list"><img src="{% static '/static/images/badges/u2f.svg' %}" alt="">Secured with U2F</div>
-                    </div>
-                  </td>
-                </tr>
                 <tr>
                   <th class="table-title" scope="row">Interface</th>
-                  <td>Monochrome display with 2 buttons</td>
-                  <td>Full color touchscreen</td>
+                  <td class="text-xs-center">Monochrome display with 2 buttons</td>
+                  <td class="text-xs-center">Full color touchscreen</td>
                 </tr>
                 <tr class="divider">
                   <th class="table-title" scope="row">
-                    <hr> Security features
+                    <hr> Security
                   </th>
                   <td></td>
                   <td></td>
                 </tr>
                 <tr class="highlight">
                   <th scope="row">PIN entry</th>
-                  <td>
+                  <td class="text-xs-center">
                     <img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
                     <span> On your computer or mobile</span>
                   </td>
-                  <td><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</td>
+                  <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</td>
                 </tr>
                 <tr>
                   <th scope="row">Passphrase entry</th>
-                  <td>
+                  <td class="text-xs-center">
                     <img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
                     <span> On your computer or mobile</span>
                   </td>
-                  <td><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</td>
+                  <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</td>
                 </tr>
                 <tr class="highlight">
                   <th scope="row">Device recovery</th>
-                  <td>
+                  <td class="text-xs-center">
                     <img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
                     <span> On your computer or mobile</span>
                   </td>
-                  <td><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</td>
+                  <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</td>
                 </tr>
 
                 <tr class="divider">
                   <th class="table-title" scope="row">
-                    <hr> Password manager
+                    <hr> Extra features
                   </th>
                   <td></td>
                   <td></td>
                 </tr>
                 <tr class="highlight">
-                  <th scope="row">Encrypted cloud storage</th>
-                  <td><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
-                  <td><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                  <th scope="row"><a href="./passwords/">Password Manager</a></th>
+                  <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                  <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
                 </tr>
                 <tr>
-                  <th scope="row">On Trezor device</th>
-                  <td></td>
-                  <td>Coming soon</td>
+                  <th scope="row"><a href="https://blog.trezor.io/secure-two-factor-authentication-with-trezor-u2f-e940fd5a60af">U2F authentication</a></th>
+                  <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                  <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                </tr>
+                <tr class="highlight">
+                  <th scope="row"><a href="https://github.com/romanz/trezor-agent">Encryption via GPG</a></th>
+                  <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                  <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="https://github.com/romanz/trezor-agent">SSH</a></th>
+                  <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                  <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                </tr>
+                <tr class="highlight">
+                  <th scope="row">On Trezor data &amp; file encryption</th>
+                  <td class="text-xs-center">-</td>
+                  <td class="text-xs-center">Coming soon</td>
                 </tr>
 
                 <tr class="divider">
@@ -570,23 +575,18 @@
                 </tr>
                 <tr class="highlight">
                   <th scope="row">microSD card</th>
-                  <td></td>
-                  <td><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
-                </tr>
-                <tr>
-                  <th scope="row">On Trezor device data encryption</th>
-                  <td></td>
-                  <td>Coming soon</td>
+                  <td class="text-xs-center">-</td>
+                  <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
                 </tr>
                 <tr id="comparison-table-footer">
                   <th class="table-title" scope="row">Price</th>
-                  <td>
-                    <div class="table-title">89 EUR </div>
+                  <td class="text-xs-center">
+                    <div class="table-title text-xs-center">89 EUR </div>
                     <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io?h=6c6f63616c682e7374" role="button" aria-label="Get your Trezor">
                     Get your Trezor One</a>
                   </td>
-                  <td>
-                    <div class="table-title">139 EUR </div>
+                  <td class="text-xs-center">
+                    <div class="table-title text-xs-center">139 EUR </div>
                     <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io?h=6c6f63616c682e7374" role="button" aria-label="Get your Trezor">
                     Get your Trezor Model T</a>
                   </td>
