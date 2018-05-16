@@ -578,6 +578,8 @@
 
   .label
     font-weight: bold
+    position: relative
+
     @media only screen and (min-width: $md)
       display: flex
       align-items: center
@@ -588,6 +590,13 @@
       height: 32px
       &:first-child
         margin-left: 0
+        
+    .label-img
+      position: absolute
+      right: -40px
+      +transform(scale(0.8, 0.8))
+      @media only screen and (max-width: $lg)
+        right: -70px !important
 
   .comparison
     background-color: $c_white
@@ -631,6 +640,7 @@
 
   .comparison-table-header-sticky
     //display: none
+    z-index: 3
     transform: translateY(-100%)
     transition: transform 0.3s ease
 
@@ -658,7 +668,10 @@
       padding: 1rem 0
       border-bottom: 1px solid #ddd
 
+      .label-img
+        right: -170px
+
     .empty-cell
-      width: 355px
+      width: 452px
     .label + .label
-      margin-left: 100px
+      margin-left: 278px
