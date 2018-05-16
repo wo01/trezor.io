@@ -1,6 +1,12 @@
 {% extends "base_new.html" %} {% load i18n %} {% block body %}
 <header id="header">
-  <div class="jumbotron webp" id="jumbotron">
+  <div class="jumbotron video-wrapper">
+    <div class="color-overlay"></div>
+    <video loop="" muted="" autoplay="" preload="metadata" poster="/static/images/header.jpg" class="video-responsive">
+        <source src="/static/video/mp4/trezor2.mp4" type="video/mp4">
+        <source src="/static/video/ogv/trezor2.ogv" type="video/ogg">
+        <source src="/static/video/webm/trezor2.webm" type="video/webm">
+    </video>
     <div class="container">
       <div class="row">
         <div class="col col-lg-5">
