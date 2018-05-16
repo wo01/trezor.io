@@ -223,7 +223,9 @@
   padding-top: 60px
 
   .whitespace-top
-    margin-top: 20px
+    margin-top: 25px
+    @media only screen and (max-width: $xs)
+      margin-top: 0 !important
 
   .companies
     width: 119px
@@ -235,6 +237,9 @@
     background: url("/static/images/media.svg") no-repeat
     background-size: 100%
 
+    @media only screen and (max-width: $sm)
+      margin-top: 25px !important
+
     &:after
       content: ""
       display: block
@@ -242,15 +247,15 @@
     &.cnn
       background-position: 0 0
     &.coindesk
-      background-position: 0 -26px
+      background-position: 0 20%
     &.forbes
-      background-position: 0 -52px
+      background-position: 0 40%
     &.bitwala
-      background-position: 0 -78px
+      background-position: 0 60%
     &.magazine
-      background-position: 0 -104px
+      background-position: 0 80%
     &.bitstamp
-      background-position: 0 -130px
+      background-position: 0 100%
 
   h2
     padding-top: 5px
@@ -284,6 +289,7 @@
 
     &.lead
       font-size: 1.1rem
+      margin-bottom: 20px
 
 .community-section
   padding-top: 0
