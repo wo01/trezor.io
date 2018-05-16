@@ -20,7 +20,7 @@
             </div>
             <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io" role="button" aria-label="Get your Trezor">
               Get your Trezor</a>
-              <a href="#" class="arrow list">All supported coins</a>
+            <a href="#" class="arrow list">All supported coins</a>
           </div>
         </div>
       </div>
@@ -352,21 +352,16 @@
                     <dd>Monochrome display with 2 buttons</dd>
                     <dt>Pin entry</dt>
                     <dd><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
-                    <span> On your computer or mobile</span></dd>
+                      <span> On your computer or mobile</span></dd>
                     <dt>Passphrase entry</dt>
                     <dd><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
-                    <span> On your computer or mobile</span></dd>
+                      <span> On your computer or mobile</span></dd>
                     <dt>Device recovery</dt>
                     <dd><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
-                    <span> On your computer or mobile</span></dd>
+                      <span> On your computer or mobile</span></dd>
                     <dt>Password manager encrypted cloud storage</dt>
                     <dd><img src="{% static '/static/images/coins/check.svg' %}" alt=""></dd>
-                    <dt>On Trezor device</dt>
-                    <dd>–</dd>
-                    <dt>microSD card</dt>
-                    <dd>–</dd>
-                    <dt>On Trezor device data encryption</dt>
-                    <dd>–</dd>
+
                   </dl>
                   <dl>
                     <dt>Price</dt>
@@ -486,6 +481,16 @@
                   </td>
                 </tr>
                 <tr class="highlight">
+                  <th class="table-title" scope="row">Authentication</th>
+                  <td colspan="2">
+                    <div class="badges">
+                    <img src="{% static '/static/images/badges/ssh.svg' %}" alt="">
+                    <img src="{% static '/static/images/badges/gpg.svg' %}" alt="">
+                    <img src="{% static '/static/images/badges/u2f.svg' %}" alt="">
+                  </div>
+                  </td>
+                </tr>
+                <tr>
                   <th class="table-title" scope="row">Interface</th>
                   <td>Monochrome display with 2 buttons</td>
                   <td>Full color touchscreen</td>
