@@ -26,6 +26,10 @@ header
     background-image: none
     background-color: #F3F6F9
 
+  .jumbotron-inner
+    @media only screen and (max-width: $xs)
+      text-align: center
+
   .list
     padding-left: 20px
 
@@ -44,7 +48,7 @@ header
       min-width: 340px
 
     @media only screen and (max-width: $xs)
-      min-width: 320px
+      min-width: 90%
 
   //@media only screen and (min-width: 400px)
     background-image: url("/static/images/photos/1-1200.webp")
@@ -91,10 +95,16 @@ header
         display: flex!important
         -ms-flex-align: center!important
         align-items: center!important
+        justify-content: center
 
         .badges
           width: 120%
           padding: 26px 0 32px 0
+
+          @media only screen and (max-width: $sm)
+            display: flex
+            justify-content: space-between
+            width: 100%
 
           img
             height: 32px
@@ -102,7 +112,7 @@ header
 
             @media only screen and (max-width: $sm)
               height: 24px
-              margin-right: 15px
+              margin-right: 0
 
 
     h1, p
