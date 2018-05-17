@@ -144,7 +144,7 @@
             <div class="row">
               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
                    data-progressive="{% static '/static/images/perspective.webp' %}"
-                   data-original="{% static '/static/images/perspective.png' %}" class="perspective lazy" alt="">
+                   data-original="{% static '/static/images/perspective.png' %}" class="devices perspective lazy" alt="">
             </div>
           </div>
         </div>
@@ -560,17 +560,17 @@
               <tr class="highlight">
                 <th scope="row">PIN entry</th>
                 <td class="text-xs-center">
-                  <img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
+                  <img src="{% static '/static/images/badges/pc_mobile.svg' %}" class="icon" alt="">
                   <span>Via computer or mobile</span>
                 </td>
-                <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your
+                <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" class="icon" alt=""> On your
                   Trezor
                 </td>
               </tr>
               <tr>
                 <th scope="row">Passphrase entry</th>
                 <td class="text-xs-center">
-                  <img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
+                  <img src="{% static '/static/images/badges/pc_mobile.svg' %}" class="icon" alt="">
                   <span>Via computer or mobile</span>
                 </td>
                 <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your
@@ -580,7 +580,7 @@
               <tr class="highlight">
                 <th scope="row">Device recovery</th>
                 <td class="text-xs-center">
-                  <img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
+                  <img src="{% static '/static/images/badges/pc_mobile.svg' %}" class="icon" alt="">
                   <span>Via computer or mobile</span>
                 </td>
                 <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your
@@ -598,8 +598,8 @@
               </tr>
               <tr class="highlight">
                 <th scope="row">Password Manager<a href="./passwords/" class="arrow"></a></th>
-                <td class="text-xs-center">Storage on cloud</td>
-                <td class="text-xs-center">Storage on cloud + soon on microSD card</td>
+                <td class="text-xs-center"><img src="{% static '/static/images/badges/cloud.svg' %}" class="icon" alt="">Storage on cloud</td>
+                <td class="text-xs-center"><img src="{% static '/static/images/badges/cloud.svg' %}" class="icon" alt="">Storage on cloud + <img src="{% static '/static/images/badges/sdcard.svg' %}" class="icon" alt="">soon on microSD card</td>
               </tr>
               <tr>
                 <th scope="row">U2F authentication<a
