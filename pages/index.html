@@ -143,14 +143,21 @@
             </div>
           </div>
         </div>
-        <!--
+
         <div class="slider">
           <div class="row">
-            <div class="col-xs-12 text-xs-center">
-              <a href="" class="active">Wallet</a> <a href="">Password Manager</a>
-            </div>
+            <a href="">
+              <div class="switcher active col-lg-6 col-sm-6 text-xs-center">
+                <div class="badges"><img src="{% static '/static/images/badges/wallet.svg' %}" alt=""></div>Wallet
+              </div>
+            </a>
+            <a href="">
+              <div class="switcher inactive col-lg-6  col-sm-6 text-xs-center">
+                <div class="badges"><img src="{% static '/static/images/badges/tpm.svg' %}" alt=""></div>Password Manager
+              </div>
+            </a>
           </div>
-        </div>-->
+        </div>
         <div class="row">
           <div class="col-xs-12 wallet-video">
             <video loop="" muted="" autoplay="" preload="metadata" poster="{% static '/static/images/wallet_ui.webp' %}" data-original="{% static '/static/images/wallet_ui.png' %}" class="perspective lazy preview">

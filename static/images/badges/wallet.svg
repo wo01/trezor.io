@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
-    <title>Combined Shape</title>
+    <title>wallet</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Trezor-product-page-Copy-14" transform="translate(-602.000000, -2287.000000)" fill="#929497">
-            <g id="Browser" transform="translate(0.000000, 1474.000000)">
-                <g id="Group-9" transform="translate(584.000000, 799.000000)">
-                    <g id="Group-61">
-                        <g id="Group-62">
-                            <g id="Group-63">
-                                <g id="Group-65" transform="translate(18.000000, 12.000000)">
-                                    <path d="M11,6 L8,6 C6.8954305,6 6,6.8954305 6,8 C6,9.1045695 6.8954305,10 8,10 L11,10 C11.5522847,10 12,10.4477153 12,11 L12,12 C12,13.1045695 11.1045695,14 10,14 L2,14 C0.8954305,14 0,13.1045695 0,12 L0,4 C0,2.8954305 0.8954305,2 2,2 L10,2 C11.1045695,2 12,2.8954305 12,4 L12,5 C12,5.55228475 11.5522847,6 11,6 Z M8,9 C7.44771525,9 7,8.55228475 7,8 C7,7.44771525 7.44771525,7 8,7 C8.55228475,7 9,7.44771525 9,8 C9,8.55228475 8.55228475,9 8,9 Z" id="Combined-Shape"></path>
-                                </g>
-                            </g>
-                        </g>
-                    </g>
-                </g>
+        <g id="Trezor-product-page-Copy-14" transform="translate(-1231.000000, -3440.000000)" fill="#01B757" fill-rule="nonzero">
+            <g id="wallet" transform="translate(1231.000000, 3440.000000)">
+                <path d="M15,5.3333333 L10.6666667,5.3333333 C9.1939073,5.3333333 8,6.5272407 8,8 C8,9.4727593 9.1939073,10.6666667 10.6666667,10.6666667 L15,10.6666667 C15.5522847,10.6666667 16,11.1143819 16,11.6666667 L16,13.3333333 C16,14.8060927 14.8060927,16 13.3333333,16 L2.6666667,16 C1.19390733,16 0,14.8060927 0,13.3333333 L0,2.6666667 C0,1.19390733 1.19390733,0 2.6666667,0 L13.3333333,0 C14.8060927,0 16,1.19390733 16,2.6666667 L16,4.3333333 C16,4.8856181 15.5522847,5.3333333 15,5.3333333 Z M10.6666667,9.3333333 C9.930287,9.3333333 9.3333333,8.7363797 9.3333333,8 C9.3333333,7.2636203 9.930287,6.6666667 10.6666667,6.6666667 C11.4030463,6.6666667 12,7.2636203 12,8 C12,8.7363797 11.4030463,9.3333333 10.6666667,9.3333333 Z" id="Combined-Shape"></path>
             </g>
         </g>
     </g>

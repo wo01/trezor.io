@@ -52,14 +52,6 @@
     display: block
     text-align: center
 
-  .slider a
-    color: $c_grey
-
-  .quote
-    font-size: 2.8em
-    font-weight: 100
-    font-style: italic
-
   .half-shadow
     display: block
     position: absolute
@@ -114,8 +106,42 @@
   padding-bottom: 0
 
   .wallet-video
+    width: 100%
     z-index: -9
     top: 5px
+    display: block
+
+    @media only screen and (max-width: $sm)
+      display: none
+
+  .slider
+    width: 60%
+    padding: 40px 0 10px 0
+    margin: 0 auto 20px auto
+    font-size: 1.1em
+    font-weight: 400
+    display: block
+
+    @media only screen and (max-width: $sm)
+      display: none
+
+    .badges
+      height: 24px
+      padding-right: 10px
+      display: inline-block
+
+    .active
+      padding-bottom: 10px
+      border-bottom: 2px solid $c_green
+
+    .inactive
+      color: $c_grey !important
+      padding-bottom: 10px
+      border-bottom: 2px solid $c_grey_bg
+
+    .switcher:hover
+      opacity: 0.8
+      +transition(all 0.1s)
 
   h2
     padding-top: 5px
@@ -602,7 +628,7 @@
   .lead
     font-size: 1.1em
 
-    @media only screen and (min-width: $sm)
+    @media only screen and (max-width: $sm)
       margin-bottom: 40px
 
   .label
