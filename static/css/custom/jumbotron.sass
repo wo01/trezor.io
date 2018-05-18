@@ -4,6 +4,9 @@ header
   overflow: hidden
   background-color: $c_grey_bg
 
+  @media only screen and (max-width: $sm)
+    height: 100vh
+
 .jumbotron
   position: relative
   height: auto
@@ -31,7 +34,9 @@ header
     display: flex
     flex-direction: column
     justify-content: center
-    @media only screen and (max-width: $xs)
+
+    @media only screen and (max-width: $sm)
+      height: 100vh
       text-align: center
 
   .video-responsive
@@ -44,6 +49,16 @@ header
     width: 100%
     opacity: 0.4
 
+    @media only screen and (max-width: $sm)
+      display: none
+
+  .hero-image
+    width: auto
+    z-index: 1
+    display: none
+    position: relative
+    @media only screen and (max-width: $sm)
+      display: block
 
   .color-overlay
     background-color: $c_white
@@ -55,11 +70,12 @@ header
     bottom: 0
     position: absolute
     z-index: 0
+
   .list
 
     @media only screen and (max-width: $sm)
       display: block
-      margin: 30px auto
+      margin: 30px 0 10px 0
 
     @media only screen and (max-width: $xs)
       padding: 0
@@ -126,19 +142,14 @@ header
 
         .badges
           width: 100%
-          padding: 26px 0 32px 0
-
-          @media only screen and (max-width: $sm)
-            display: flex
-            justify-content: space-between
+          padding: 30px 0 30px 0
 
           img
             height: 28px
             margin-right: 22px
 
             @media only screen and (max-width: $sm)
-              height: 24px
-              margin-right: 0
+              margin: 0 7px 0 7px
 
 
     h1, p
@@ -150,8 +161,9 @@ header
       text-align: left
 
       @media only screen and (max-width: $md)
+        text-align: center
         max-width: 380px
+        margin: 0 auto
 
       @media only screen and (max-width: $xs)
         max-width: 320px
-        text-align: center
