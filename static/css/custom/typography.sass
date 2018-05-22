@@ -17,7 +17,7 @@ $f-bold: 500 // font-weight
 $f-smoothing: antialiased
 
 // control size vars (in px of course)
-$f-s1: 52
+$f-s1: 60
 $f-s2: 28
 $f-s3: 18
 $f-s4: 16
@@ -49,7 +49,7 @@ body
   @for $i from 1 through length($args)
     h#{$i}, .f-s#{$i}
       font: $f-bold ( rem(nth($args, $i)) + / $f-line-height ) $f-brand-family !important
-  
+
   h3, h4, h5, h6
     font-weight: $f-normal !important
 
@@ -57,10 +57,9 @@ body
 +generate-sizes($f-s1, $f-s2, $f-s3, $f-s4, $f-s5, $f-s6)
 
 // typo elements specifics
-p 
+p
   font-size: rem($f-s4)
   line-height: 1.5
 p.lead
   font-size: rem($f-s3)
   line-height: 1.5
-
