@@ -355,9 +355,17 @@
     h5
       font-size: 1.1em
       padding: 20px 0 20px 0
+    
+    .endor
+      display: inline-block
+      margin: 0 auto
+      position: relative
 
-    .active
-      +transform(scale(1.5, 1.5))
+      &:not(.center)
+        .header
+          +transform(scale(.8, .8))
+        h5
+          visibility: hidden
 
     .header
       width: 100%
