@@ -83,9 +83,8 @@ header
       text-align: center
 
   .btn-primary-full
-
-    @media only screen and (max-width: $sm)
-      min-width: 340px
+    @media only screen and (min-width: $sm)
+      max-width: 400px
 
     @media only screen and (max-width: $xs)
       min-width: 90%
@@ -144,6 +143,9 @@ header
           width: 100%
           padding: 30px 0 30px 0
 
+          @media only screen and (max-width: $md)
+            text-align: center
+
           img
             height: 28px
             margin-right: 22px
@@ -159,6 +161,7 @@ header
       font-size: 3.9em
       font-weight: bold
       text-align: left
+      max-width: 440px
 
       @media only screen and (max-width: $md)
         text-align: center
