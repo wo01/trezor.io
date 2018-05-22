@@ -355,7 +355,7 @@
     h5
       font-size: 1.1em
       padding: 20px 0 20px 0
-    
+
     .endor
       display: inline-block
       margin: 0 auto
@@ -490,16 +490,22 @@
   background-image: url("/static/images/subscribe.png")
   background-repeat: no-repeat
   color: $c_white
-  padding-top: 160px
+  padding-top: 140px
   +background-size(cover)
 
   @media only screen and (max-width: $sm)
-    padding-top: 150px
+    padding-top: 120px
+
+  @media only screen and (max-width: $xs)
+    padding-top: 100px
 
   h2
     max-width: 420px
     font-weight: bold
     margin-bottom: 20px
+
+    @media only screen and (max-width: $sm)
+      margin: 0 auto 20px auto
 
     @media only screen and (max-width: $xs)
       font-size: 1.7em
@@ -515,28 +521,16 @@
     margin: 20px 0 10px 0
 
     @media only screen and (max-width: $sm)
-      max-width: 460px
-
-    @media only screen and (max-width: $xs)
-      max-width: 320px
+      max-width: 100%
 
   .subscribe-btn
+    margin-left: 10px
     @media only screen and (max-width: $sm)
-      min-width: 460px
+      min-width: 100%
+      margin-left: 0
 
     @media only screen and (max-width: $xs)
       min-width: 100%
-
-  .agree
-    font-size: 0.9rem
-    padding-left: 10px
-
-    a
-      color: $c_white
-      text-decoration: underline
-
-    a:hover
-      color: $c_green
 
 .devs-section
   padding-top: 130px
