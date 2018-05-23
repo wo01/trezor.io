@@ -12,6 +12,8 @@ $(document).ready(function () {
             return 0;
         });
         coins.sort(function(a, b){return b.marketcap_usd - a.marketcap_usd});
+        var allCoins = coins.length;
+        $('#all-coins').html('(' + allCoins + ')');
         $.each(coins, function(i, e){
             var wrapper = $('<tr />');
             var links = $('<td scope="row" />');
@@ -21,21 +23,22 @@ $(document).ready(function () {
                 wrapper.append($('<td><img src="/static/images/coins/check.svg" alt=""></td>'));
             } else {
                 wrapper.append($('<td>-</td>'));
-                console.warn('e ', e);
             }
             if (e.t2_enabled === 'yes') {
                 wrapper.append($('<td><img src="/static/images/coins/check.svg" alt=""></td>'));
             } else {
                 wrapper.append($('<td>-</td>'));
-                console.warn('e ', e);
             }
             if (e.marketcap_usd === 0) {
                 wrapper.append($('<td>-</td>'));
             } else {
                 wrapper.append($('<td>$'+e.marketcap_usd.toLocaleString()+'</td>'));
             }
+            var length = Object.keys(e.links).length;
             $.each(e.links, function(title, link){
-                links.append('<a href="'+link+'">'+title+'</a>');
+                length--;
+                var separator = (length < 1) ? '' : ', ';
+                links.append('<a href="'+link+'">'+title+'</a>' + separator);
             });
             wrapper.append(links);
             $('#content').append(wrapper);
