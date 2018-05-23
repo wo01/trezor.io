@@ -1,5 +1,12 @@
 $(document).ready(function () {
     var coins = [];
+
+    var getResult = function(input) {
+        if (input === 'in progress') return 'Soon';
+        if (input === 'yes') return '<img src="/static/images/coins/check.svg" alt="">';
+        return '-'
+    };
+
     $.getJSON("https://raw.githubusercontent.com/trezor/trezor-common/master/coins_details.json",function(result){
         $.each(result.coins, function(i, field){
             coins.push(field);
@@ -15,20 +22,12 @@ $(document).ready(function () {
         var allCoins = coins.length;
         $('#all-coins').html('(' + allCoins + ')');
         $.each(coins, function(i, e){
-            var wrapper = $('<tr />');
+            var wrapper = $('<tr id="'+e.shortcut+'"/>');
             var links = $('<td scope="row" />');
             wrapper.append($('<th scope="row">'+ (i+1) +'</th>')); // logo
             wrapper.append($('<th scope="row">' + e.name + ' (' +e.shortcut+ ')</th>'));
-            if (e.t1_enabled === 'yes') {
-                wrapper.append($('<td><img src="/static/images/coins/check.svg" alt=""></td>'));
-            } else {
-                wrapper.append($('<td>-</td>'));
-            }
-            if (e.t2_enabled === 'yes') {
-                wrapper.append($('<td><img src="/static/images/coins/check.svg" alt=""></td>'));
-            } else {
-                wrapper.append($('<td>-</td>'));
-            }
+            wrapper.append($('<td>'+getResult(e.t1_enabled)+'</td>'));
+            wrapper.append($('<td>'+getResult(e.t2_enabled)+'</td>'));
             if (e.marketcap_usd === 0) {
                 wrapper.append($('<td>-</td>'));
             } else {
@@ -43,6 +42,13 @@ $(document).ready(function () {
             wrapper.append(links);
             $('#content').append(wrapper);
         });
-
+        var hash = window.location.hash;
+        if (typeof hash !== "undefined" && hash.length !== 0) {
+            if ( $(hash).length ) {
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 600);
+            }
+        }
     });
 });
