@@ -49,7 +49,7 @@ $(document).ready(function () {
     var scrollPos = $(window).scrollTop();
     var startPos = $('#comparison-table thead').offset().top;
     var endPos = $('#comparison-table-footer').offset().top;
-    
+
     if( scrollPos > startPos && endPos > scrollPos) {
       $('#comparison-header-sticky').addClass('active')
     } else {

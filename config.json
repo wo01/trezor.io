@@ -1,13 +1,6 @@
 {
   "site-url": "https://trezor.io",
   "USE_L10N" : true,
-  "fingerprint": [
-    "js"
-  ],
-  "optimize": [
-    "js",
-    "css"
-  ],
   "prettify": true,
   "context": {
     "CURRENT_PAGE": {
