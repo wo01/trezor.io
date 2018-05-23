@@ -15,7 +15,7 @@ $(document).ready(function () {
         $.each(coins, function(i, e){
             var wrapper = $('<tr />');
             var links = $('<td scope="row" />');
-            wrapper.append($('<th scope="row" />')); // logo
+            wrapper.append($('<th scope="row">'+ (i+1) +'</th>')); // logo
             wrapper.append($('<th scope="row">' + e.name + ' (' +e.shortcut+ ')</th>'));
             if (e.t1_enabled === 'yes') {
                 wrapper.append($('<td><img src="/static/images/coins/check.svg" alt=""></td>'));
@@ -29,7 +29,11 @@ $(document).ready(function () {
                 wrapper.append($('<td>-</td>'));
                 console.warn('e ', e);
             }
-            wrapper.append($('<td>$'+e.marketcap_usd+'</td>'));
+            if (e.marketcap_usd === 0) {
+                wrapper.append($('<td>-</td>'));
+            } else {
+                wrapper.append($('<td>$'+e.marketcap_usd.toLocaleString()+'</td>'));
+            }
             $.each(e.links, function(title, link){
                 links.append('<a href="'+link+'">'+title+'</a>');
             });
