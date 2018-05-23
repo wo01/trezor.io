@@ -3,17 +3,28 @@
   <div class="container">
     <h2>Supported coins & tokens <span id="all-coins"></span></h2>
     <p>List of all coins & tokens supported by Trezor.</p>
+
+    <a class="btn btn-primary-full shop-btn hidden-sm-down" href="https://shop.trezor.io" role="button"
+       aria-label="Get your Trezor">
+      Get your Trezor now</a>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 input-wrapper">
+        <input type="search" name="quick_search" placeholder="Quick search for coin or token"
+               id="search">
+      </div>
+    </div>
   </div>
   <div class="container">
     <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col"></th>
       <th scope="col">Coin & Token name</th>
       <th scope="col devices"><img src="{% static '/static/images/coins/t1.png' %}" alt="" height="24px">Trezor One</th>
       <th scope="col devices"><img src="{% static '/static/images/coins/t2.png' %}" alt="" height="24px">Trezor Model T</th>
-      <th scope="col">Markectcap (USD)</th>
-      <th scope="col">Links</th>
+      <th scope="col" class="hidden-sm-down">Links</th>
     </tr>
   </thead>
   <tbody id="content">

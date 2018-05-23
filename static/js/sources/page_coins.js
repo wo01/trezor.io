@@ -7,7 +7,27 @@ $(document).ready(function () {
         return '-'
     };
 
+    var getCoinCount = function(ob) {
+        return ob.t1_coins > ob.t2_coins ? ob.t1_coins : ob.t2_coins
+    };
+
+    var stringToColour = function(str) {
+        var hash = 0;
+        for (var i = 0; i < str.length; i++) {
+            hash = str.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        var colour = '#';
+        for (var i = 0; i < 3; i++) {
+            var value = (hash >> (i * 8)) & 0xFF;
+            colour += ('00' + value.toString(16)).substr(-2);
+        }
+        return colour;
+    };
+
     $.getJSON("https://raw.githubusercontent.com/trezor/trezor-common/master/coins_details.json",function(result){
+
+        $('#all-coins').html('(' + getCoinCount(result.info) + ')');
+
         $.each(result.coins, function(i, field){
             coins.push(field);
         });
@@ -19,25 +39,18 @@ $(document).ready(function () {
             return 0;
         });
         coins.sort(function(a, b){return b.marketcap_usd - a.marketcap_usd});
-        var allCoins = coins.length;
-        $('#all-coins').html('(' + allCoins + ')');
         $.each(coins, function(i, e){
             var wrapper = $('<tr id="'+e.shortcut+'"/>');
-            var links = $('<td scope="row" />');
             wrapper.append($('<th scope="row">'+ (i+1) +'</th>')); // logo
-            wrapper.append($('<th scope="row">' + e.name + ' (' +e.shortcut+ ')</th>'));
+            wrapper.append($('<th scope="row" title="$'+e.marketcap_usd.toLocaleString()+'">' + e.name + ' (' +e.shortcut+ ')</th>'));
             wrapper.append($('<td>'+getResult(e.t1_enabled)+'</td>'));
             wrapper.append($('<td>'+getResult(e.t2_enabled)+'</td>'));
-            if (e.marketcap_usd === 0) {
-                wrapper.append($('<td>-</td>'));
-            } else {
-                wrapper.append($('<td>$'+e.marketcap_usd.toLocaleString()+'</td>'));
-            }
+            var links = $('<td class="hidden-sm-down" />');
             var length = Object.keys(e.links).length;
             $.each(e.links, function(title, link){
                 length--;
                 var separator = (length < 1) ? '' : ', ';
-                links.append('<a href="'+link+'">'+title+'</a>' + separator);
+                links.append('<a href="'+link+'" rel="nofollow noopener noreferrer">'+title+'</a>' + separator);
             });
             wrapper.append(links);
             $('#content').append(wrapper);

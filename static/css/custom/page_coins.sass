@@ -1,8 +1,71 @@
 .coins-section
 
+  .input-wrapper
+    position: relative
+    display: inline-block
+    background-color: transparent
+    border: 0
+    min-width: 100%
+    padding-bottom: 10px
+    z-index: 5
+
+    @media only screen and (max-width: $sm)
+      min-width: 100%
+
+    &.active
+      &:before
+        font-size: 1.2em
+        left: 15px
+        top: 15px
+        color: $c_grey_font
+      input
+        background: $c_white
+        font-size: 1.2em
+        padding: 12px 0 12px 40px
+        height: 50px
+
+    &:before
+      font-family: 'FontAwesome'
+      color: $c_grey
+      position: absolute
+      font-size: 1.2em
+      left: 15px
+      top: 12px
+      z-index: 1
+      content: "\f002"
+      +transition(all 0.12s ease 0s)
+
+    input
+      background: $c_grey_bg
+      width: 100%
+      margin-bottom: -10px
+      border: 0
+      font-size: 1.2em
+      padding: 12px 0 12px 40px
+      height: 50px
+      text-align: left
+      +border-radius(4px)
+      +transition(all 0.12s ease 0s)
+
+    &:hover::before
+      color: $c_grey_font
+
+
+  .container
+    position: relative
+
+  .shop-btn
+    position: absolute
+    right: 15px
+    top: 0
+
+  .table th
+    border-top: 0
+
   tbody > tr:target
     border-left: 3px solid #dac89d
     +animation(target .5s linear)
 
   .devices, img
     margin-right: 10px
+
