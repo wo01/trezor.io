@@ -29,8 +29,8 @@
       color: $c_grey
       position: absolute
       font-size: 1.2em
-      left: 15px
-      top: 12px
+      left: 26px
+      top: 17px
       z-index: 1
       content: "\f002"
       +transition(all 0.12s ease 0s)
@@ -59,8 +59,30 @@
     right: 15px
     top: 0
 
-  .table th
-    border-top: 0
+  .table
+    th
+      border-top: 0
+
+    .logo
+      display: inline-block
+      position: relative
+      max-width: 18px
+      max-height: 18px
+      opacity: 0
+      +transition(opacity 500ms ease-in-out)
+      +border-radius(50%)
+
+      &.errored
+        &::after
+          content: ''
+          position: absolute
+          width: 18px
+          height: 18px
+          background: red
+          opacity: 1
+
+      &.loaded
+        opacity: 1
 
   tbody > tr:target
     border-left: 3px solid #dac89d
