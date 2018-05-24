@@ -153,11 +153,11 @@
         <div class="slider">
           <div class="row">
 
-              <div class="switcher active col-lg-6 col-sm-6 text-xs-center">
+              <div class="switcher active col-lg-6 col-sm-6 text-xs-center" data-video="wallet">
                 <div class="badges"><img src="{% static '/static/images/badges/wallet.svg' %}" alt=""></div>Wallet
               </div>
 
-              <div class="switcher inactive col-lg-6  col-sm-6 text-xs-center">
+              <div class="switcher inactive col-lg-6  col-sm-6 text-xs-center" data-video="tpm">
                 <div class="badges"><img src="{% static '/static/images/badges/tpm.svg' %}" alt=""></div>Password Manager
               </div>
           </div>
@@ -165,7 +165,7 @@
         <div class="row">
           <div class="col-xs-12 wallet-video">
             <video loop="" muted="" autoplay="" preload="metadata" poster="{% static '/static/images/wallet_ui.webp' %}"
-                   data-original="{% static '/static/images/wallet_ui.png' %}" class="perspective lazy preview">
+                   data-original="{% static '/static/images/wallet_ui.png' %}" id="interface-video" class="perspective lazy preview">
               <source src="{% static '/static/video/MP4/wallet.mp4' %}" type="video/mp4">
               <source src="{% static '/static/video/OGV/wallet.ogv' %}" type="video/ogg">
               <source src="{% static '/static/video/WEBM/wallet.webm' %}" type="video/webm">

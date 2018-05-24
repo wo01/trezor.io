@@ -48,7 +48,20 @@ $(document).ready(function () {
         e.preventDefault();
         $('.switcher.active').removeClass('active').addClass('inactive');
         $(this).removeClass('inactive').addClass('active');
+        var newSrc = $(this).data( "video" );
+        var video = document.getElementById('interface-video');
+        var sources = video.getElementsByTagName('source');
+        sources[0].src = getVideoUrl('mp4', newSrc); //mp4 /static/video/MP4/wallet.mp4
+        sources[1].src = getVideoUrl('ogv', newSrc); //ogv
+        sources[2].src = getVideoUrl('webm', newSrc); //webm
+        video.load();
     });
+
+    function getVideoUrl(type, name) {
+        if (type === 'mp4') return '/static/video/MP4/'+name+'.mp4';
+        if (type === 'ogv') return '/static/video/OGV/'+name+'.mp4';
+        return '/static/video/WEBM/'+name+'.mp4';
+    }
 
     function bindStickyHandler() {
         // @todo config
