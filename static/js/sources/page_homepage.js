@@ -93,6 +93,8 @@ $(document).ready(function(){
   var screenWidth = $(window).width();
   if (screenWidth < 768){
         $("video").removeAttr('autoplay');
+        $("video").attr('preload',"none");
+
   } else {
     $("video").attr('autoplay');
   }
