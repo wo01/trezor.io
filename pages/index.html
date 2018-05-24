@@ -774,7 +774,7 @@
         <div class="row">
           <div class="col-lg-7 col-md-10 col-xs-12 text-xs-center text-sm-center text-md-left" id="mc_embed_signup">
             <h2>Don't miss good news & security updates from Trezor.</h2>
-            <form action="//trezor.us7.list-manage.com/subscribe/post?u=a87eb6070c965ef1be1b02854&id=0ac8b24e69"
+            <form action="https://trezor.us7.list-manage.com/subscribe?u=a87eb6070c965ef1be1b02854&id=0ac8b24e69&MERGE0=text@email.com&group[1][4]=true"
                   method="post" novalidate target="_blank" rel="noopener noreferrer" name="mc-embedded-subscribe-form"
                   id="mc-embedded-subscribe-form">
               <div id="mc_embed_signup_scroll">
@@ -794,6 +794,8 @@
   </div>
 </main>
 {% endblock %} {% block scripts %}
+<script type='text/javascript' src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
 <script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_homepage.js' %}"></script>
+
 {% endblock %}

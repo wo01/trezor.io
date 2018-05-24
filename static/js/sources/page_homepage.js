@@ -68,3 +68,13 @@ $(document).ready(function () {
   // init
   onPageLoaded();
 });
+
+// if the screen is smaller than 768px video will not be loaded.
+$(document).ready(function(){
+  var screenWidth = $(window).width();
+  if (screenWidth < 768){
+        $("video").removeAttr('autoplay');
+  } else {
+    $("video").attr('autoplay');
+  }
+});
