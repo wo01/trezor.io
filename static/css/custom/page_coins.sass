@@ -63,23 +63,27 @@
     th
       border-top: 0
 
+    .logo-wrapper
+      position: relative
+      display: block
+      width: 18px
+      height: 18px
+      text-align: center
+      font-size: .8em
+      line-height: 18px
+      +border-radius(50%)
+
     .logo
       display: inline-block
-      position: relative
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
       max-width: 18px
       max-height: 18px
       opacity: 0
       +transition(opacity 500ms ease-in-out)
       +border-radius(50%)
-
-      &.errored
-        &::after
-          content: ''
-          position: absolute
-          width: 18px
-          height: 18px
-          background: red
-          opacity: 1
 
       &.loaded
         opacity: 1

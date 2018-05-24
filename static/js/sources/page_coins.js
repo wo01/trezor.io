@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var coins = [],
         get_result = function (input) {
-            if (input === 'in progress') return 'Soon';
+            if (input === 'soon') return 'Soon';
             if (input === 'yes') return '<img src="/static/images/coins/check.svg" alt="">';
             return '-'
         },
@@ -15,9 +15,9 @@ $(document).ready(function () {
         },
         get_logo = function (ob) {
             if (typeof ob.links.Homepage !== 'undefined') {
-                return ('<img class="logo lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="//logo.clearbit.com/'+url_domain(ob.links.Homepage)+'?size=64">');
+                return ('<span class="logo-wrapper"><img class="logo lazy" data-name="'+ob.name+'" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="//logo.clearbit.com/'+url_domain(ob.links.Homepage)+'?size=64"></span>');
             }
-            return ('<span class="dynamic-logo"></span>')
+            return ('<span class="logo-wrapper errored" style="background-color:'+string_to_color(ob.name)+'">'+ob.name.split('')[0]+'</span>')
         },
         get_search_results = function (str) {
             $("tr.coin").each(function(){
@@ -56,7 +56,6 @@ $(document).ready(function () {
     $.getJSON("https://raw.githubusercontent.com/trezor/trezor-common/master/coins_details.json", function (result) {
 
         $('#all-coins').html('(' + coin_count(result.info) + ')');
-
         $.each(result.coins, function (i, field) {
             coins.push(field);
         });
@@ -99,12 +98,16 @@ $(document).ready(function () {
             selector: '.lazy',
             src: 'data-original',
             successClass: 'loaded',
-            errorClass: 'errored',
             error: function(elm, msg) {
                 if (msg === 'invalid') {
                     // Data-src is invalid
+                    var name = $(elm).data('name');
+                    var parent = $(elm).parent();
+                    $(parent).addClass('errored');
+                    $(parent).html(name.split('')[0]);
+                    console.warn(name, string_to_color(name));
+                    $(parent).css("background-color", string_to_color(name));
                 }
-                console.warn(elm, msg);
             },
             offset: 200
         });
