@@ -72,10 +72,10 @@
               </div>
               <h2>
                 Go offline.<br/>
-                Be safe with Trezor.
+                Store your coins with Trezor.
               </h2>
               <p class="lead">
-                Advanced cryptography, reliable and vetted hardware, simple and intuitive interface. Perfect synthesis.
+                Hardware wallet is the safest way to manage &amp; trade your cryptocurrencies.
               </p>
             </div>
             <div class="entry-image">
@@ -185,12 +185,10 @@
           <div class="col-md-6 text-md-left col-xs-12 text-xs-center">
             <h2>Fear hardware loss? No need.</h2>
             <p class="lead">
-              You can always recover access to your wallet from your offline backup. It only takes 5 minutes.
+              You can always recover access to your coins &amp; assets from your offline backup. It only takes 5 minutes.
+              <br><br>
+              <strong>See 3 reasons why.</strong>
             </p>
-            <div class="space-top">
-              <a href="https://blog.trezor.io/few-tips-store-your-recovery-seed-storing-backup-securely-2744ae7fdde6"
-                 class="arrow">Learn more about recovery</a>
-            </div>
           </div>
           <div class="col-md-6 text-md-left col-xs-12 text-xs-center">
             <img src="{% static '/static/images/seed.png' %}" class="seed-card lazy" alt="">
@@ -233,7 +231,14 @@
             </p>
           </div>
         </div>
-
+        <div class="row">
+          <div class="col-xs-12 text-xs-center">
+            <div class="space-top">
+              <a href="https://blog.trezor.io/few-tips-store-your-recovery-seed-storing-backup-securely-2744ae7fdde6"
+                 class="arrow">Learn more about recovery</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -384,16 +389,16 @@
                     <dd>Monochrome display with 2 buttons</dd>
                     <dt>Pin entry</dt>
                     <dd><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
-                      <span>Via computer or mobile</span></dd>
+                      <span>Securely via computer or mobile</span></dd>
                     <dt>Passphrase entry</dt>
                     <dd><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
-                      <span>Via computer or mobile</span></dd>
+                      <span>Securely via computer or mobile</span></dd>
                     <dt>Device recovery</dt>
                     <dd><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
-                      <span>Via computer or mobile</span></dd>
+                      <span>Securely via computer or mobile</span></dd>
                     <dt>Password Manager</dt>
                     <dd>
-                      <span><img src="{% static '/static/images/coins/check.svg' %}" alt=""> Storage on cloud</span>
+                      <span><img src="{% static '/static/images/coins/check.svg' %}" alt=""> Encrypted storage on cloud</span>
                     </dd>
                     <dt>U2F authentication</dt>
                     <dd>
@@ -548,9 +553,14 @@
                 </td>
               </tr>
               <tr>
-                <th class="table-title" scope="row">Interface</th>
+                <th class="table-title" scope="row">Display</th>
                 <td class="text-xs-center">Monochrome display with 2 buttons</td>
                 <td class="text-xs-center">Full color touchscreen</td>
+              </tr>
+              <tr>
+                <th class="table-title" scope="row">Beginner-friendly</th>
+                <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
               </tr>
               <tr class="divider">
                 <th class="table-title" scope="row">
@@ -564,9 +574,9 @@
                 <th scope="row">PIN entry</th>
                 <td class="text-xs-center">
                   <img src="{% static '/static/images/badges/pc_mobile.svg' %}" class="icon" alt="">
-                  <span>Via computer or mobile</span>
+                  <span>Securely via computer or mobile</span>
                 </td>
-                <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" class="icon" alt=""> On your
+                <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" class="icon" alt="">On your
                   Trezor
                 </td>
               </tr>
@@ -574,7 +584,7 @@
                 <th scope="row">Passphrase entry</th>
                 <td class="text-xs-center">
                   <img src="{% static '/static/images/badges/pc_mobile.svg' %}" class="icon" alt="">
-                  <span>Via computer or mobile</span>
+                  <span>Securely via computer or mobile</span>
                 </td>
                 <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your
                   Trezor
@@ -584,7 +594,7 @@
                 <th scope="row">Device recovery</th>
                 <td class="text-xs-center">
                   <img src="{% static '/static/images/badges/pc_mobile.svg' %}" class="icon" alt="">
-                  <span>Via computer or mobile</span>
+                  <span>Securely via computer or mobile</span>
                 </td>
                 <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your
                   Trezor
@@ -601,7 +611,7 @@
               </tr>
               <tr class="highlight">
                 <th scope="row">Password Manager<a href="./passwords/" class="arrow"></a></th>
-                <td class="text-xs-center"><img src="{% static '/static/images/badges/cloud.svg' %}" class="icon" alt="">Storage on cloud</td>
+                <td class="text-xs-center"><img src="{% static '/static/images/badges/cloud.svg' %}" class="icon" alt="">Encrypted storage on cloud</td>
                 <td class="text-xs-center"><img src="{% static '/static/images/badges/cloud.svg' %}" class="icon" alt=""> + &nbsp;<img src="{% static '/static/images/badges/sdcard.svg' %}" class="icon" alt="">soon on microSD card</td>
               </tr>
               <tr>
@@ -646,6 +656,17 @@
                   <img src="{% static '/static/images/coins/check.svg' %}" alt="">
                 </td>
               </tr>
+              <tr class="divider">
+                <th class="table-title" scope="row">
+                  Designed &amp; built in EU
+                </th>
+                <td class="text-xs-center">
+                  <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                </td>
+                <td class="text-xs-center">
+                  <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                </td>
+              </tr>
               <tr id="comparison-table-footer">
                 <th class="table-title" scope="row">Price</th>
                 <td class="text-xs-center">
@@ -681,6 +702,17 @@
         <div class="row">
           <div class="col-md-4 text-md-left col-xs-12 text-xs-center">
             <div class="badge">
+              <img src="{% static '/static/images/badges/interface.svg' %}" alt="">
+            </div>
+            <h3>
+              Easy-to-use, ready within 10 minutes.
+            </h3>
+            <p>
+              Intuitive and calming interface, inspiring your confidence.
+            </p>
+          </div>
+          <div class="col-md-4 text-md-left col-xs-12 text-xs-center">
+            <div class="badge">
               <img src="{% static '/static/images/badges/shield.svg' %}" alt="">
             </div>
             <h3>
@@ -701,17 +733,7 @@
               Compatible with many applications, ready for power users.
             </p>
           </div>
-          <div class="col-md-4 text-md-left col-xs-12 text-xs-center">
-            <div class="badge">
-              <img src="{% static '/static/images/badges/interface.svg' %}" alt="">
-            </div>
-            <h3>
-              Easy-to-use, ready within 10 minutes.
-            </h3>
-            <p>
-              Intuitive and calming interface, inspiring your confidence.
-            </p>
-          </div>
+
         </div>
         <div class="row devices">
           <div class="col-md-4 text-md-left col-xs-12 text-xs-center">
@@ -744,8 +766,7 @@
             <p class="lead">
               Join us and work on top-notch global projects related to Bitcoin and security. Become a part of our team
               resposible for several influential projects that marked milestones in the Bitcoin world. We love to work
-              with talented and enthusiastic developers,
-              marketers or designers.
+              with talented and enthusiastic developers.
             </p>
             <div>
               <a class="btn btn-primary-full" href="https://github.com/trezor" role="button" aria-label="GitHub Repos">GitHub

@@ -48,13 +48,16 @@ $(document).ready(function () {
         e.preventDefault();
         $('.switcher.active').removeClass('active').addClass('inactive');
         $(this).removeClass('inactive').addClass('active');
-        var newSrc = $(this).data( "video" );
-        var video = document.getElementById('interface-video');
-        var sources = video.getElementsByTagName('source');
-        sources[0].src = getVideoUrl('mp4', newSrc); //mp4 /static/video/MP4/wallet.mp4
-        sources[1].src = getVideoUrl('ogv', newSrc); //ogv
-        sources[2].src = getVideoUrl('webm', newSrc); //webm
-        video.load();
+        var newSrc = $(this).data('video');
+        $('#interface-video').fadeOut('slow', function() {
+            var video = document.getElementById('interface-video');
+            var sources = video.getElementsByTagName('source');
+            sources[0].src = getVideoUrl('mp4', newSrc); //mp4 /static/video/MP4/wallet.mp4
+            sources[1].src = getVideoUrl('ogv', newSrc); //ogv
+            sources[2].src = getVideoUrl('webm', newSrc); //webm
+            video.load();
+            $('#interface-video').fadeIn('slow');
+        });
     });
 
     function getVideoUrl(type, name) {
