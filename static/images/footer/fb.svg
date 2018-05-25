@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="18px" height="19px" viewBox="0 0 18 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="24px" height="25px" viewBox="0 0 24 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
     <title>Facebook-color</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <filter x="-0.1%" y="-0.5%" width="100.2%" height="100.9%" filterUnits="objectBoundingBox" id="filter-1">
-            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-            <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-        </filter>
-    </defs>
-    <g id="Product-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Trezor-product-page-Copy-15" transform="translate(-1065.000000, -859.000000)" fill="#929497">
-            <g id="Footer" filter="url(#filter-1)" transform="translate(0.000000, 586.000000)">
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Trezor-product-page-Copy-14" transform="translate(-1026.000000, -7119.000000)" fill="#929497">
+            <g id="Footer" transform="translate(0.000000, 6845.000000)">
                 <g id="Group-5">
                     <g>
-                        <g id="Group-31" transform="translate(953.000000, 274.867769)">
-                            <path d="M113.880651,16 C113.394138,16 113,15.6045305 113,15.1168676 L113,0.883070321 C113,0.395283235 113.3942,0 113.880651,0 L128.075455,0 C128.561782,0 128.956044,0.395283235 128.956044,0.883070321 L128.956044,15.1168676 C128.956044,15.6045926 128.56172,16 128.075455,16 L124.009439,16 L124.009439,9.80391822 L126.083464,9.80391822 L126.39402,7.38919521 L124.009439,7.38919521 L124.009439,5.84754713 C124.009439,5.1484291 124.203041,4.67200323 125.202813,4.67200323 L126.477974,4.67144448 L126.477974,2.51169685 C126.25744,2.48226945 125.500491,2.41652342 124.61984,2.41652342 C122.781332,2.41652342 121.52264,3.54184208 121.52264,5.60840295 L121.52264,7.38919521 L119.44329,7.38919521 L119.44329,9.80391822 L121.52264,9.80391822 L121.52264,16 L113.880651,16 Z" id="Facebook"></path>
+                        <g id="Group-31" transform="translate(913.000000, 274.867769)">
+                            <path d="M114.320977,24 C113.591208,24 113,23.4067958 113,22.6753014 L113,1.32460548 C113,0.592924852 113.591301,0 114.320977,0 L135.613182,0 C136.342673,0 136.934066,0.592924852 136.934066,1.32460548 L136.934066,22.6753014 C136.934066,23.4068889 136.34258,24 135.613182,24 L129.514159,24 L129.514159,14.7058773 L132.625197,14.7058773 L133.09103,11.0837928 L129.514159,11.0837928 L129.514159,8.7713207 C129.514159,7.72264365 129.804562,7.00800484 131.30422,7.00800484 L133.216962,7.00716672 L133.216962,3.76754527 C132.88616,3.72340417 131.750737,3.62478513 130.42976,3.62478513 C127.671998,3.62478513 125.78396,5.31276313 125.78396,8.41260443 L125.78396,11.0837928 L122.664936,11.0837928 L122.664936,14.7058773 L125.78396,14.7058773 L125.78396,24 L114.320977,24 Z" id="Facebook"></path>
                         </g>
                     </g>
                 </g>
