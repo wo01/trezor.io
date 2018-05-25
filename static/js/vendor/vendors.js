@@ -43,6 +43,7 @@ if (raf) {
     }
     var bLazy = new Blazy({
       selector: '.lazy',
+      successClass: 'loaded',
       src: canUseWebP() ? 'data-progressive' : 'data-original',
       offset: 200
     });
