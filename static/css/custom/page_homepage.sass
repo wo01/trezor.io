@@ -112,9 +112,10 @@
       color: $c_grey !important
       padding-bottom: 10px
       border-bottom: 2px solid $c_grey_bg
+      opacity: 0.8
 
     .switcher:hover
-      opacity: 0.8
+      opacity: 0.6
       +transition(all 0.1s)
 
   h2
@@ -173,15 +174,18 @@
       text-align: center
 
 .lost-section
-  padding: 130px 0 100px 0
+  padding: 140px 0 100px 0
   background-color: $c_subtle_gray
 
+  @media only screen and (max-width: $sm)
+    padding-top: 80px
+
   .space-top
-    padding-top: 14px
+    padding-top: 40px
 
   .heading
     padding-top: 40px
-    padding-bottom: 130px
+    padding-bottom: 200px
 
     @media only screen and (max-width: $md)
       padding-bottom: 10px
@@ -203,7 +207,7 @@
   .seed-card
     max-width: 100%
     position: absolute
-    top: -85px
+    top: -100px
     z-index: 0
 
     @media only screen and (max-width: $md)
@@ -226,7 +230,7 @@
     text-align: left
     padding-left: 0
     padding-bottom: 10px
-    padding-top: 40px
+    padding-top: 50px
 
     @media only screen and (max-width: $sm)
       text-align: center
