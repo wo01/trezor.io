@@ -3,7 +3,7 @@
   <div class="jumbotron video-wrapper">
     <img src="{% static '/static/images/photos/header.png' %}" class="hero-image"alt="">
     <div class="color-overlay"></div>
-    <video loop="" muted="" autoplay="" preload="metadata" poster="/static/images/photos/header.png" class="video-responsive">
+    <video loop="" muted="" autoplay="" id="jumbo-video" preload="metadata" poster="/static/images/photos/header.png" class="video-responsive">
       <source src="/static/video/mp4/trezor2.mp4" type="video/mp4">
       <source src="/static/video/ogv/trezor2.ogv" type="video/ogg">
       <source src="/static/video/webm/trezor2.webm" type="video/webm">
@@ -386,8 +386,10 @@
                         <a href="./coins/" class="arrow list">+500 more</a>
                       </div>
                     </dd>
-                    <dt>Interface</dt>
+                    <dt>Display</dt>
                     <dd>Monochrome display with 2 buttons</dd>
+                    <dt>Beginner-friendly</dt>
+                    <dd><img src="{% static '/static/images/coins/check.svg' %}" alt=""></dd>
                     <dt>Pin entry</dt>
                     <dd><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
                       <span>Securely via computer or mobile</span></dd>
@@ -413,6 +415,14 @@
                     <dd>
                       <img src="{% static '/static/images/coins/check.svg' %}" alt="">
                     </dd>
+                    <dt>Premium Support</dt>
+                    <dd>
+                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                    </dd>
+                    <dt>Designed &amp; built in EU</dt>
+                    <dd>
+                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                    </dd>
 
                   </dl>
                   <dl>
@@ -421,7 +431,7 @@
                   </dl>
                 </div>
                 <div class="comparison-footer">
-                  <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io?h=6c6f63616c682e7374"
+                  <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io"
                      role="button" aria-label="Get your Trezor">
                     Get your Trezor One</a>
                 </div>
@@ -452,8 +462,10 @@
                         <a href="./coins/" class="arrow list">+500 more</a>
                       </div>
                     </dd>
-                    <dt>Interface</dt>
+                    <dt>Display</dt>
                     <dd>Full color touchscreen</dd>
+                    <dt>Beginner-friendly</dt>
+                    <dd><img src="{% static '/static/images/coins/check.svg' %}" alt=""></dd>
                     <dt>Pin entry</dt>
                     <dd><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</dd>
                     <dt>Passphrase entry</dt>
@@ -484,6 +496,14 @@
                     <dd>
                       <img src="{% static '/static/images/coins/check.svg' %}" alt="">
                     </dd>
+                    <dt>Premium Support</dt>
+                    <dd>
+                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                    </dd>
+                    <dt>Designed &amp; built in EU</dt>
+                    <dd>
+                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                    </dd>
                   </dl>
                   <dl>
                     <dt>Price</dt>
@@ -491,7 +511,7 @@
                   </dl>
                 </div>
                 <div class="comparison-footer">
-                  <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io?h=6c6f63616c682e7374"
+                  <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io"
                      role="button" aria-label="Get your Trezor">
                     Get your Trezor One</a>
                 </div>
@@ -672,13 +692,13 @@
                 <th class="table-title" scope="row">Price</th>
                 <td class="text-xs-center">
                   <div class="table-title text-xs-center">89 EUR</div>
-                  <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io?h=6c6f63616c682e7374"
+                  <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io"
                      role="button" aria-label="Get your Trezor">
                     Get your Trezor One</a>
                 </td>
                 <td class="text-xs-center">
                   <div class="table-title text-xs-center">139 EUR</div>
-                  <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io?h=6c6f63616c682e7374"
+                  <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io"
                      role="button" aria-label="Get your Trezor">
                     Get your Trezor Model T</a>
                 </td>

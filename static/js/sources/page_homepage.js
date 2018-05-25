@@ -83,22 +83,19 @@ $(document).ready(function () {
         bindStickyHandler();
     });
 
+    var screenWidth = $(window).width();
+    if (screenWidth < 768){
+        $("#jumbo-video").removeAttr('autoplay');
+        $("#jumbo-video").attr('preload',"none");
+
+    } else {
+        $("#jumbo-video").attr('autoplay');
+    }
+
     function onPageLoaded() {
         bindStickyHandler();
     }
 
     // init
     onPageLoaded();
-});
-
-// if the screen is smaller than 768px video will not be loaded.
-$(document).ready(function(){
-  var screenWidth = $(window).width();
-  if (screenWidth < 768){
-        $("video").removeAttr('autoplay');
-        $("video").attr('preload',"none");
-
-  } else {
-    $("video").attr('autoplay');
-  }
 });
