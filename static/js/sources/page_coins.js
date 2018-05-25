@@ -69,6 +69,7 @@ $(document).ready(function () {
         coins.sort(function (a, b) {
             return b.marketcap_usd - a.marketcap_usd
         });
+
         $.each(coins, function (i, e) {
             var wrapper = $('<tr class="coin" id="' + e.shortcut + '"/>');
             wrapper.append($('<td>'+get_logo(e)+'</td>'));
@@ -105,7 +106,6 @@ $(document).ready(function () {
                     var parent = $(elm).parent();
                     $(parent).addClass('errored');
                     $(parent).html(name.split('')[0]);
-                    console.warn(name, string_to_color(name));
                     $(parent).css("background-color", string_to_color(name));
                 }
             },
