@@ -44,6 +44,16 @@ $(document).ready(function () {
         });
     });
 
+    $('.endor').click(function() {
+        if ($(this).hasClass('active')) {
+            return;
+        } else {
+            $('.endor.active').removeClass('active');
+            $(this).addClass('active');
+            $('#quote-content').html($(this).data('quote'));
+        }
+    });
+
     $('.switcher').click(function (e) {
         e.preventDefault();
         $('.switcher.active').removeClass('active').addClass('inactive');
