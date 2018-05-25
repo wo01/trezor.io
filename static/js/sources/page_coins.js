@@ -111,5 +111,20 @@ $(document).ready(function () {
             },
             offset: 200
         });
+        $(window).scroll(function (event) {
+            bindStickyHandler();
+        });
     });
+    function bindStickyHandler() {
+        // @todo config
+        var scrollPos = $(window).scrollTop();
+        var startPos = $('#content').offset().top;
+        var endPos = $('#subscribe').offset().top;
+
+        if (scrollPos > startPos && endPos > scrollPos) {
+            $('#table-head').addClass('sticky');
+        } else {
+            $('#table-head').removeClass('sticky');
+        }
+    }
 });
