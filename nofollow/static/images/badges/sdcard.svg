@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="16px" viewBox="0 0 12 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>sdcard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Trezor-product-page-Copy-14" transform="translate(-996.000000, -4807.000000)" fill="#929497">
+            <g id="Group-15" transform="translate(193.000000, 4281.000000)">
+                <g id="Group-13" transform="translate(0.000000, 45.000000)">
+                    <g id="Group-47">
+                        <g id="Features-One" transform="translate(0.000000, 121.000000)">
+                            <g id="Group-2">
+                                <g id="Group-44">
+                                    <g id="Group-45" transform="translate(0.000000, 271.000000)">
+                                        <path d="M803,89 L803,96 L804,96 L804,99 L803,99 L803,105 L815,105 L815,93.001 L811,89 L803,89 Z M809,95.001 L810,95.001 L810,91 L809,91 L809,95.001 Z M807,95.001 L808.001,95.001 L808.001,91 L807,91 L807,95.001 Z M805,95.001 L806,95.001 L806,91 L805,91 L805,95.001 Z M811,95.001 L812,95.001 L812,93.001 L811,93.001 L811,95.001 Z M809,99 L811,102.001 L807,102.001 L809,99 Z" id="sdcard"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

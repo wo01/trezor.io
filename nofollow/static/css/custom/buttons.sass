@@ -1,0 +1,79 @@
+.btn
+  border-width: 2px
+  padding: 10px 25px
+  font-weight: bold
+  +box-shadow(0 0 24px rgba(0, 0, 0, 0.05))
+  +transition(all 0.15s ease 0s)
+
+.btn-primary-noline
+  color: $c_green
+
+  &:hover
+    color: $c_green
+    text-decoration: underline
+
+.btn-primary-outline
+  color: $c_green
+  border-color: $c_green
+  padding: 15px 50px
+
+  &:hover
+    color: $c_grey_bg
+    background: $c_green
+    border-color: $c_green
+
+.btn-primary-full
+  color: $c_white !important
+  background-color: $c_green
+  border-color: $c_green
+  padding: 15px 50px
+  +transition(all 0.15s ease 0s)
+
+  &:hover
+    color: $c_grey_bg
+    +box-shadow(0 6px 24px rgba(0, 146, 69, 0.3))
+
+.btn-secondary-outline
+  color: $c_white
+  border-color: $c_white
+
+  &:hover
+    color: $c_grey_font
+    background: white
+    border-color: white
+
+.btn-secondary-noline
+  color: $c_grey_bg
+  text-decoration: underline
+
+  &:hover
+    color: $c_white
+    text-decoration: underline
+
+.btn-third-outline
+  color: $c_white
+  background-color: transparent
+  border-color: $c_green
+
+  &:hover
+    color: $c_grey_bg
+    background: $c_green
+    border-color: $c_green
+
+.btn-fourth-outline
+  color: $c_white
+  background-color: transparent
+  border-color: $c_white
+
+  &:hover
+    color: $c_grey
+    background: $c_white
+    border-color: $c_white
+
+.btn-tpm-white
+  color: $c_tpm_blue
+  background: $c_white
+
+  &:hover
+    color: $c_tpm_blue
+    +box-shadow(0 4px 24px rgba(0, 0, 0, 0.15))

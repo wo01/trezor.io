@@ -1,0 +1,55 @@
+%primaryTable
+  font-size: rem($f-base-size)
+  .divider 
+    background: #ffffff
+  .divider hr
+    margin: 0
+    height: 20px
+    border: none
+    background: #fff
+
+  .highlight
+    background: #fafafa
+
+  thead th
+    border: none
+    
+
+  .badges
+    display: flex
+    justify-content: space-between
+    width: 55%
+    margin: 0 auto
+
+    img
+      height: 23px
+
+  tbody tr
+    th, td
+      &:not(.table-title)
+        font-weight: $f-normal
+        color: #929497
+        
+    .table-title
+      font-family: $f-brand-family
+      font-size: rem($f-s3)
+      font-weight: $f-normal
+      color: #24292F
+      & + .btn
+        margin-top: 15px
+
+    th 
+      font-size: rem($f-s4)
+    td
+      vertical-align: middle
+      font-size: rem($f-s5)  
+
+    td img
+      height: 18px
+
+    
+
+.table-primary
+  @extend %primaryTable
+    
+    

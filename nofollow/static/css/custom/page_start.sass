@@ -1,0 +1,56 @@
+.margin-top
+  margin-top: 30px
+
+.start
+  background-color: $c_subtle_gray
+  padding: 48px 0 50px 0
+
+  h2
+    @media only screen and (max-width: $md)
+      margin-bottom: 30px
+
+  .thank-intro
+    padding: 4% 0 4% 0
+    background-color: $c_white
+    width: 100%
+
+  .nav-link
+    background-color: $c_white
+    padding: 70px 70px 30px 70px
+    width: 100%
+    margin-top: 20px
+    min-height: 400px
+    font-weight: bold
+    color: $c_grey_font
+    +transition(all 0.15s ease 0s)
+    +box-shadow(0 1px 6px 0 rgba(218, 218, 218, 1))
+    +border-radius(4px)
+
+    @media only screen and (max-width: $sm)
+      padding: 40px 40px 20px 40px
+      min-height: 300px
+
+
+    & > img
+      height: 155px
+      @media only screen and (max-width: $sm)
+        height: 110px
+
+    p
+      color: $c_grey_font
+      @media only screen and (max-width: $md)
+        font-size: 0.9em
+    h3
+      @media only screen and (max-width: $md)
+        font-size: 1.3em
+
+      @media only screen and (max-width: $sm)
+        font-size: 1.2em
+    i
+      margin-bottom: 6px
+      font-size: 1.6em
+      clear: both
+      display: block
+
+    &:hover
+      +box-shadow(0 6px 24px 0 rgba(0, 0, 0, 0.15))

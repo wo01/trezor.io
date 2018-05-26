@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="151px" height="30px" viewBox="0 0 151 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Trezor-product-page-Copy-14" transform="translate(-1081.000000, -4329.000000)">
+            <g id="Group-15" transform="translate(193.000000, 4281.000000)">
+                <g id="Group-13" transform="translate(0.000000, 45.000000)">
+                    <g id="Group-47"></g>
+                </g>
+                <g id="Features-T" transform="translate(698.000000, 48.000000)">
+                    <g id="Trezor-T">
+                        <g id="Group-3">
+                            <g id="Group-6" transform="translate(190.000000, 0.000000)">
+                                <g id="Best-choice">
+                                    <path d="M15.7909149,2.61064764e-15 L145,0 C148.313708,-6.08718376e-16 151,2.6862915 151,6 L151,24 C151,27.3137085 148.313708,30 145,30 L15.6872606,30 C13.9775756,30 12.3490885,29.2706384 11.2107073,27.9950558 L1.15467709,16.7270393 C0.492088014,15.9845928 0.476123283,14.8679579 1.11721609,14.1068724 L11.2019787,2.13455512 C12.3420105,0.781144721 14.0213409,1.2132439e-15 15.7909149,8.8817842e-16 Z" id="Rectangle-3" fill="#F5A623"></path>
+                                    <text id="Premium-choice" font-family="Roboto-Medium, Roboto" font-size="16" font-weight="400" line-spacing="28" fill="#FFFFFF">
+                                        <tspan x="21.7460938" y="20">Premium choice</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,47 @@
++keyframes(fadeIn)
+  from
+    opacity: 0
+  to
+    opacity: 1
+
++keyframes(pulsate)
+  0%
+    +transform(scale(0.1, 0.1))
+    opacity: 0.0
+  50%
+    opacity: 1.0
+  100%
+    +transform(scale(1.2, 1.2))
+    opacity: 0.0
+
++keyframes(target)
+  from
+    background: $c_white
+  50%
+    background: #ffffd3
+  to
+    background: $c_white
+
++keyframes(blink)
+  0%
+    opacity: 1
+  50%
+    opacity: 0
+  100%
+    opacity: 1
+
++keyframes(laundromat-right)
+  100%
+    +transform(rotate(360deg))
+
++keyframes(laundromat-left)
+  100%
+    +transform(rotate(-360deg))
+
+
++keyframes(rotate)
+  0%
+    +transform(rotate(0deg))
+
+  100%
+    +transform(rotate(360deg))

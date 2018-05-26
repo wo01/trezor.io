@@ -1,0 +1,129 @@
+.navbar
+  background: $c_black_bg
+  font-weight: 400
+  padding: .7rem
+  margin-bottom: -3.8rem
+  +filter(blur(0))
+  +unselectable()
+
+  .navbar-toggler
+    float: left
+    color: $c_white
+
+    &:focus, &:active
+      outline: none
+
+  .navbar-brand
+    position: relative
+    width: 140px
+    overflow: hidden
+
+    .trezor-logo
+      height: 26px
+      margin-top: -5px
+
+    .trezor-title
+      position: absolute
+      top: 0
+      right: 145px
+
+  .navbar-brand-mini
+    position: relative
+    display: inline-block
+    overflow: hidden
+    width: 80%
+    text-align: center
+
+    .trezor-logo
+      height: 26px
+      margin-top: 5px
+
+  .nav-link
+    color: $c_white
+    font-size: .9rem
+    font-weight: 400
+    padding: .425rem
+    text-rendering: optimizeLegibility
+    +transition(color 0.4s ease)
+
+    &[data-amount]:not([data-amount="0"])
+      position: relative
+      &::before
+        content: attr(data-amount)
+        display: inline-block
+        width: 16px
+        height: 16px
+        line-height: 16px
+        margin-right: 5px
+        font-size: 12px
+        font-weight: bold
+        background: $c_red
+        color: $c_white
+        will-change: transform
+        +transform(translateY(-15%))
+        +border-radius(50%)
+
+  form
+    color: rgba(255,255,255,.5)
+
+  select
+    background: transparent
+    border: 0
+    margin-left: -14px
+    color: rgba(255,255,255,.5)
+    padding: .425rem
+    cursor: pointer
+    +border-radius(0)
+    +appearance-none()
+
+    &:hover
+      color: $c_black
+
+    &:focus, &:active
+      outline: none
+
+
+  &.transparent
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    background: transparent
+    color: $c_black
+
+    @media only screen and (max-width: $sm)
+      position: relative
+      background: black
+
+      & > .navbar-toggler
+        color: $c_white !important
+
+      .active > .nav-link,
+      .active > .nav-link:hover
+        color: $c_white !important
+
+
+    .navbar-toggler
+      color: $c_black
+
+    .nav-link
+      color: $c_nav_grey
+
+      &:hover
+        color: $c_nav_active_grey
+
+    .active > .nav-link,
+    .active > .nav-link:hover
+      color: $c_nav_active_grey
+
+
+@media(max-width: $sm)
+  .navbar .navbar-nav>.nav-item
+    float: none
+    margin-left: .1rem
+
+  .navbar .navbar-nav
+    float: none
+
+  .navbar .collapse.in, .navbar .collapsing
+    clear: both
