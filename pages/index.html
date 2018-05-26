@@ -1,7 +1,7 @@
 {% extends "base_new.html" %} {% load i18n %} {% block body %}
 <header id="header">
   <div class="jumbotron video-wrapper">
-    <img src="{% static '/static/images/photos/header.png' %}" class="hero-image"alt="">
+    <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/photos/header.png" class="hero-image"alt="">
     <div class="color-overlay"></div>
     <video loop="" muted="" autoplay="" id="jumbo-video" preload="metadata" poster="/static/images/photos/header.png" class="video-responsive">
       <source src="/static/video/mp4/trezor2.mp4" type="video/mp4">
@@ -17,14 +17,14 @@
                 {% trans "The safe place for your coins." %}
               </h1>
               <div class="badges">
-                <a href="./coins/#BTC"><img src="{% static '/static/images/coins/btc.svg' %}" alt=""></a>
-                <a href="./coins/#LTC"><img src="{% static '/static/images/coins/ltc.svg' %}" alt=""></a>
-                <a href="./coins/#DASH"><img src="{% static '/static/images/coins/dash.svg' %}" alt=""></a>
-                <a href="./coins/#ZEC"><img src="{% static '/static/images/coins/zcash.svg' %}" alt=""></a>
-                <a href="./coins/#XEM"><img src="{% static '/static/images/coins/xem.svg' %}" alt=""></a>
-                <a href="./coins/#ETH"><img src="{% static '/static/images/coins/eth.svg' %}" alt=""></a>
-                <a href="./coins/#ETC"><img src="{% static '/static/images/coins/etc.svg' %}" alt=""></a>
-                <a href="./coins/#BCH"><img src="{% static '/static/images/coins/bcash.svg' %}" alt=""></a>
+                <a href="./coins/#BTC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/btc.svg" alt=""></a>
+                <a href="./coins/#LTC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/ltc.svg" alt=""></a>
+                <a href="./coins/#DASH"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/dash.svg" alt=""></a>
+                <a href="./coins/#ZEC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/zcash.svg" alt=""></a>
+                <a href="./coins/#XEM"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/xem.svg" alt=""></a>
+                <a href="./coins/#ETH"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/eth.svg" alt=""></a>
+                <a href="./coins/#ETC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/etc.svg" alt=""></a>
+                <a href="./coins/#BCH"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/bcash.svg" alt=""></a>
                 <a href="./coins/" class="arrow list">+500 more</a>
               </div>
               <a class="btn btn-primary-full shop-btn" href="https://shop.trezor.io" role="button"
@@ -47,7 +47,7 @@
           <div class="col-md-6 col-sm-12 entry text-xs-center">
             <div class="entry-content">
               <div class="badge">
-                <img src="{% static '/static/images/badges/bug.svg' %}" alt="">
+                <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/bug.svg" alt="">
               </div>
               <h2>
                 Information stored online<br/>
@@ -58,14 +58,14 @@
               </p>
             </div>
             <div class="entry-image">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{% static '/static/images/stolen.webp' %}" data-original="{% static '/static/images/stolen.png' %}" class="lazy" alt="">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{{ CURRENT_PAGE.absolute_final_url }}static/images/stolen.webp" data-original="{{ CURRENT_PAGE.absolute_final_url }}static/images/stolen.png" class="lazy" alt="">
             </div>
           </div>
 
           <div class="col-md-6 col-sm-12 entry text-xs-center">
             <div class="entry-content">
               <div class="badge">
-                <img src="{% static '/static/images/badges/ok.svg' %}" alt="">
+                <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/ok.svg" alt="">
               </div>
               <h2>
                 Go offline.<br/>
@@ -77,8 +77,8 @@
             </div>
             <div class="entry-image">
               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                   data-progressive="{% static '/static/images/devices.webp' %}"
-                   data-original="{% static '/static/images/devices.png' %}" class="lazy" alt="">
+                   data-progressive="{{ CURRENT_PAGE.absolute_final_url }}static/images/devices.webp"
+                   data-original="{{ CURRENT_PAGE.absolute_final_url }}static/images/devices.png" class="lazy" alt="">
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="badge">
-                  <img src="{% static '/static/images/badges/transparent.svg' %}" alt="">
+                  <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/transparent.svg" alt="">
                 </div>
                 <h3>
                   Transparent security.
@@ -114,7 +114,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="badge">
-                  <img src="{% static '/static/images/badges/support.svg' %}" alt="">
+                  <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/support.svg" alt="">
                 </div>
                 <h3>
                   5-star customer support.
@@ -128,7 +128,7 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="badge">
-                  <img src="{% static '/static/images/badges/interface.svg' %}" alt="">
+                  <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/interface.svg" alt="">
                 </div>
                 <h3>
                   Intuitive & convenient interface.
@@ -143,8 +143,8 @@
           <div class="col-lg-8 col-md-6 col-xs-12">
             <div class="row">
               <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                   data-progressive="{% static '/static/images/perspective.webp' %}"
-                   data-original="{% static '/static/images/perspective.png' %}" class="devices perspective lazy" alt="">
+                   data-progressive="{{ CURRENT_PAGE.absolute_final_url }}static/images/perspective.webp"
+                   data-original="{{ CURRENT_PAGE.absolute_final_url }}static/images/perspective.png" class="devices perspective lazy" alt="">
             </div>
           </div>
         </div>
@@ -153,21 +153,21 @@
           <div class="row">
 
               <div class="switcher active col-lg-6 col-sm-6 text-xs-center" data-video="wallet">
-                <div class="badges"><img src="{% static '/static/images/badges/wallet.svg' %}" alt=""></div>Wallet
+                <div class="badges"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/wallet.svg" alt=""></div>Wallet
               </div>
 
               <div class="switcher inactive col-lg-6  col-sm-6 text-xs-center" data-video="tpm">
-                <div class="badges"><img src="{% static '/static/images/badges/tpm.svg' %}" alt=""></div>Password Manager
+                <div class="badges"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/tpm.svg" alt=""></div>Password Manager
               </div>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 wallet-video">
-            <video loop="" muted="" autoplay="" preload="metadata" poster="{% static '/static/images/wallet_ui.webp' %}"
+            <video loop="" muted="" autoplay="" preload="metadata" poster="{{ CURRENT_PAGE.absolute_final_url }}static/images/wallet_ui.webp"
                     id="interface-video" class="perspective preview">
-              <source src="{% static '/static/video/MP4/wallet.mp4' %}" type="video/mp4">
-              <source src="{% static '/static/video/OGV/wallet.ogv' %}" type="video/ogg">
-              <source src="{% static '/static/video/WEBM/wallet.webm' %}" type="video/webm">
+              <source src="{{ CURRENT_PAGE.absolute_final_url }}static/video/MP4/wallet.mp4" type="video/mp4">
+              <source src="{{ CURRENT_PAGE.absolute_final_url }}static/video/OGV/wallet.ogv" type="video/ogg">
+              <source src="{{ CURRENT_PAGE.absolute_final_url }}static/video/WEBM/wallet.webm" type="video/webm">
             </video>
           </div>
         </div>
@@ -188,7 +188,7 @@
             </p>
           </div>
           <div class="col-md-6 text-md-left col-xs-12 text-xs-center">
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{% static '/static/images/seed.webp' %}" data-original="{% static '/static/images/seed.png' %}" class="seed-card lazy" alt="">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{{ CURRENT_PAGE.absolute_final_url }}static/images/seed.webp" data-original="{{ CURRENT_PAGE.absolute_final_url }}static/images/seed.png" class="seed-card lazy" alt="">
           </div>
         </div>
         <div class="row">
@@ -197,7 +197,7 @@
         <div class="row">
           <div class="col-md-4 text-md-left col-xs-12 text-xs-center">
             <div class="badge">
-              <img src="{% static '/static/images/badges/recovery.svg' %}" alt="">
+              <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/recovery.svg" alt="">
             </div>
             <h3>
               Recovery seed. Offline.
@@ -208,7 +208,7 @@
           </div>
           <div class="col-md-4 text-md-left col-xs-12 text-xs-center">
             <div class="badge">
-              <img src="{% static '/static/images/badges/unique.svg' %}" alt="">
+              <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/unique.svg" alt="">
             </div>
             <h3>
               Unique for you.
@@ -220,7 +220,7 @@
           </div>
           <div class="col-md-4 text-md-left col-xs-12 text-xs-center">
             <div class="badge">
-              <img src="{% static '/static/images/badges/compatible.svg' %}" alt="">
+              <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/compatible.svg" alt="">
             </div>
             <h3>
               Cross-compatible.
@@ -303,7 +303,7 @@
         <div class="row">
           <div class="col-xs-12 text-xs-center">
             <div class="badge">
-              <img src="{% static '/static/images/badges/community.svg' %}" alt="">
+              <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/community.svg" alt="">
             </div>
             <h3>Loved by the community</h3>
           </div>
@@ -362,9 +362,9 @@
               <div class="comparison">
                 <div class="comparison-header">
                   <div class="label">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{% static '/static/images/coins/t1.png' %}" data-original="{% static '/static/images/coins/t1.png' %}" class="lazy" alt="">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t1.png" data-original="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t1.png" class="lazy" alt="">
                     <span>Trezor One</span>
-                    <img class="label-img" src="{% static '/static/images/best_choice.svg' %}" alt="">
+                    <img class="label-img" src="{{ CURRENT_PAGE.absolute_final_url }}static/images/best_choice.svg" alt="">
                   </div>
                 </div>
                 <div class="comparison-body">
@@ -372,14 +372,14 @@
                     <dt>Supported coins</dt>
                     <dd>
                       <div class="badges">
-                        <a href="./coins/#BTC"><img src="{% static '/static/images/coins/btc.svg' %}" alt=""></a>
-                        <a href="./coins/#LTC"><img src="{% static '/static/images/coins/ltc.svg' %}" alt=""></a>
-                        <a href="./coins/#DASH"><img src="{% static '/static/images/coins/dash.svg' %}" alt=""></a>
-                        <a href="./coins/#ZEC"><img src="{% static '/static/images/coins/zcash.svg' %}" alt=""></a>
-                        <a href="./coins/#XEM"><img src="{% static '/static/images/coins/xem.svg' %}" alt=""></a>
-                        <a href="./coins/#ETH"><img src="{% static '/static/images/coins/eth.svg' %}" alt=""></a>
-                        <a href="./coins/#ETC"><img src="{% static '/static/images/coins/etc.svg' %}" alt=""></a>
-                        <a href="./coins/#BCH"><img src="{% static '/static/images/coins/bcash.svg' %}" alt=""></a>
+                        <a href="./coins/#BTC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/btc.svg" alt=""></a>
+                        <a href="./coins/#LTC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/ltc.svg" alt=""></a>
+                        <a href="./coins/#DASH"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/dash.svg" alt=""></a>
+                        <a href="./coins/#ZEC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/zcash.svg" alt=""></a>
+                        <a href="./coins/#XEM"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/xem.svg" alt=""></a>
+                        <a href="./coins/#ETH"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/eth.svg" alt=""></a>
+                        <a href="./coins/#ETC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/etc.svg" alt=""></a>
+                        <a href="./coins/#BCH"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/bcash.svg" alt=""></a>
                       </div>
                       <div class="text-xs-center">
                         <a href="./coins/" class="arrow list">+500 more</a>
@@ -388,39 +388,39 @@
                     <dt>Display</dt>
                     <dd>Monochrome display with 2 buttons</dd>
                     <dt>Beginner-friendly</dt>
-                    <dd><img src="{% static '/static/images/coins/check.svg' %}" alt=""></dd>
+                    <dd><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt=""></dd>
                     <dt>Pin entry</dt>
-                    <dd><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
+                    <dd><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/pc_mobile.svg" alt="">
                       <span>Securely via computer or mobile</span></dd>
                     <dt>Passphrase entry</dt>
-                    <dd><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
+                    <dd><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/pc_mobile.svg" alt="">
                       <span>Securely via computer or mobile</span></dd>
                     <dt>Device recovery</dt>
-                    <dd><img src="{% static '/static/images/badges/pc_mobile.svg' %}" alt="">
+                    <dd><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/pc_mobile.svg" alt="">
                       <span>Securely via computer or mobile</span></dd>
                     <dt>Password Manager</dt>
                     <dd>
-                      <span><img src="{% static '/static/images/coins/check.svg' %}" alt=""> Encrypted storage on cloud</span>
+                      <span><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt=""> Encrypted storage on cloud</span>
                     </dd>
                     <dt>U2F authentication</dt>
                     <dd>
-                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                      <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                     </dd>
                     <dt>Encryption via GPG</dt>
                     <dd>
-                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                      <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                     </dd>
                     <dt>SSH</dt>
                     <dd>
-                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                      <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                     </dd>
                     <dt>Premium Support</dt>
                     <dd>
-                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                      <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                     </dd>
                     <dt>Designed &amp; built in EU</dt>
                     <dd>
-                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                      <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                     </dd>
 
                   </dl>
@@ -438,9 +438,9 @@
               <div class="comparison">
                 <div class="comparison-header">
                   <div class="label">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{% static '/static/images/coins/t2.png' %}" data-original="{% static '/static/images/coins/t2.png' %}" class="lazy" alt="">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t2.png" data-original="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t2.png" class="lazy" alt="">
                     <span>Trezor Model T</span>
-                    <img class="label-img" src="{% static '/static/images/premium_choice.svg' %}" alt="">
+                    <img class="label-img" src="{{ CURRENT_PAGE.absolute_final_url }}static/images/premium_choice.svg" alt="">
                   </div>
                 </div>
                 <div class="comparison-body">
@@ -448,14 +448,14 @@
                     <dt>Supported coins</dt>
                     <dd>
                       <div class="badges">
-                        <a href="./coins/#BTC"><img src="{% static '/static/images/coins/btc.svg' %}" alt=""></a>
-                        <a href="./coins/#LTC"><img src="{% static '/static/images/coins/ltc.svg' %}" alt=""></a>
-                        <a href="./coins/#DASH"><img src="{% static '/static/images/coins/dash.svg' %}" alt=""></a>
-                        <a href="./coins/#ZEC"><img src="{% static '/static/images/coins/zcash.svg' %}" alt=""></a>
-                        <a href="./coins/#XEM"><img src="{% static '/static/images/coins/xem.svg' %}" alt=""></a>
-                        <a href="./coins/#ETH"><img src="{% static '/static/images/coins/eth.svg' %}" alt=""></a>
-                        <a href="./coins/#ETC"><img src="{% static '/static/images/coins/etc.svg' %}" alt=""></a>
-                        <a href="./coins/#BCH"><img src="{% static '/static/images/coins/bcash.svg' %}" alt=""></a>
+                        <a href="./coins/#BTC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/btc.svg" alt=""></a>
+                        <a href="./coins/#LTC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/ltc.svg" alt=""></a>
+                        <a href="./coins/#DASH"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/dash.svg" alt=""></a>
+                        <a href="./coins/#ZEC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/zcash.svg" alt=""></a>
+                        <a href="./coins/#XEM"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/xem.svg" alt=""></a>
+                        <a href="./coins/#ETH"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/eth.svg" alt=""></a>
+                        <a href="./coins/#ETC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/etc.svg" alt=""></a>
+                        <a href="./coins/#BCH"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/bcash.svg" alt=""></a>
                       </div>
                       <div class="text-xs-center">
                         <a href="./coins/" class="arrow list">+500 more</a>
@@ -464,28 +464,28 @@
                     <dt>Display</dt>
                     <dd>Full color touchscreen</dd>
                     <dt>Beginner-friendly</dt>
-                    <dd><img src="{% static '/static/images/coins/check.svg' %}" alt=""></dd>
+                    <dd><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt=""></dd>
                     <dt>Pin entry</dt>
-                    <dd><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</dd>
+                    <dd><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/trezor.svg" alt=""> On your Trezor</dd>
                     <dt>Passphrase entry</dt>
-                    <dd><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</dd>
+                    <dd><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/trezor.svg" alt=""> On your Trezor</dd>
                     <dt>Device recovery</dt>
-                    <dd><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your Trezor</dd>
+                    <dd><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/trezor.svg" alt=""> On your Trezor</dd>
                     <dt>Password Manager</dt>
                     <dd>
-                      <span><img src="{% static '/static/images/coins/check.svg' %}" alt=""> Storage on cloud + soon on microSD card</span>
+                      <span><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt=""> Storage on cloud + soon on microSD card</span>
                     </dd>
                     <dt>U2F authentication</dt>
                     <dd>
-                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                      <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                     </dd>
                     <dt>Encryption via GPG</dt>
                     <dd>
-                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                      <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                     </dd>
                     <dt>SSH</dt>
                     <dd>
-                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                      <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                     </dd>
                     <dt>On Trezor data &amp; file encryption</dt>
                     <dd>
@@ -493,15 +493,15 @@
                     </dd>
                     <dt>microSD card extension</dt>
                     <dd>
-                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                      <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                     </dd>
                     <dt>Premium Support</dt>
                     <dd>
-                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                      <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                     </dd>
                     <dt>Designed &amp; built in EU</dt>
                     <dd>
-                      <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                      <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                     </dd>
                   </dl>
                   <dl>
@@ -521,14 +521,14 @@
               <div class="inner">
                 <div class="empty-cell"></div>
                 <div class="label text-xs-center">
-                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{% static '/static/images/coins/t1.png' %}" data-original="{% static '/static/images/coins/t1.png' %}" class="lazy" alt="">
+                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t1.png" data-original="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t1.png" class="lazy" alt="">
                   <span>Trezor One</span>
-                  <img class="label-img" src="{% static '/static/images/best_choice.svg' %}" alt="">
+                  <img class="label-img" src="{{ CURRENT_PAGE.absolute_final_url }}static/images/best_choice.svg" alt="">
                 </div>
                 <div class="label text-xs-center">
-                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{% static '/static/images/coins/t2.png' %}" data-original="{% static '/static/images/coins/t2.png' %}" class="lazy" alt="">
+                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t2.png" data-original="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t2.png" class="lazy" alt="">
                   <span>Trezor Model T</span>
-                  <img class="label-img" src="{% static '/static/images/premium_choice.svg' %}" alt="">
+                  <img class="label-img" src="{{ CURRENT_PAGE.absolute_final_url }}static/images/premium_choice.svg" alt="">
                 </div>
               </div>
             </div>
@@ -539,16 +539,16 @@
                 <th scope="col"></th>
                 <th scope="col">
                   <div class="label">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{% static '/static/images/coins/t1.png' %}" data-original="{% static '/static/images/coins/t1.png' %}" class="lazy" alt="">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t1.png" data-original="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t1.png" class="lazy" alt="">
                     <span>Trezor One</span>
-                    <img class="label-img" src="{% static '/static/images/best_choice.svg' %}" alt="">
+                    <img class="label-img" src="{{ CURRENT_PAGE.absolute_final_url }}static/images/best_choice.svg" alt="">
                   </div>
                 </th>
                 <th scope="col">
                   <div class="label">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{% static '/static/images/coins/t2.png' %}" data-original="{% static '/static/images/coins/t2.png' %}" class="lazy" alt="">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t2.png" data-original="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t2.png" class="lazy" alt="">
                     <span>Trezor Model T</span>
-                    <img class="label-img" src="{% static '/static/images/premium_choice.svg' %}" alt="">
+                    <img class="label-img" src="{{ CURRENT_PAGE.absolute_final_url }}static/images/premium_choice.svg" alt="">
                   </div>
                 </th>
               </tr>
@@ -560,14 +560,14 @@
                 </th>
                 <td colspan="2">
                   <div class="badges">
-                    <a href="./coins/#BTC"><img src="{% static '/static/images/coins/btc.svg' %}" alt=""></a>
-                    <a href="./coins/#LTC"><img src="{% static '/static/images/coins/ltc.svg' %}" alt=""></a>
-                    <a href="./coins/#DASH"><img src="{% static '/static/images/coins/dash.svg' %}" alt=""></a>
-                    <a href="./coins/#ZEC"><img src="{% static '/static/images/coins/zcash.svg' %}" alt=""></a>
-                    <a href="./coins/#XEM"><img src="{% static '/static/images/coins/xem.svg' %}" alt=""></a>
-                    <a href="./coins/#ETH"><img src="{% static '/static/images/coins/eth.svg' %}" alt=""></a>
-                    <a href="./coins/#ETC"><img src="{% static '/static/images/coins/etc.svg' %}" alt=""></a>
-                    <a href="./coins/#BCH"><img src="{% static '/static/images/coins/bcash.svg' %}" alt=""></a>
+                    <a href="./coins/#BTC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/btc.svg" alt=""></a>
+                    <a href="./coins/#LTC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/ltc.svg" alt=""></a>
+                    <a href="./coins/#DASH"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/dash.svg" alt=""></a>
+                    <a href="./coins/#ZEC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/zcash.svg" alt=""></a>
+                    <a href="./coins/#XEM"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/xem.svg" alt=""></a>
+                    <a href="./coins/#ETH"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/eth.svg" alt=""></a>
+                    <a href="./coins/#ETC"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/etc.svg" alt=""></a>
+                    <a href="./coins/#BCH"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/bcash.svg" alt=""></a>
                     <a href="./coins/" class="arrow list">+500 more</a>
                   </div>
                 </td>
@@ -579,8 +579,8 @@
               </tr>
               <tr>
                 <th class="table-title" scope="row">Beginner-friendly</th>
-                <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
-                <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt=""></td>
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt=""></td>
               </tr>
               <tr class="divider">
                 <th class="table-title" scope="row">
@@ -593,30 +593,30 @@
               <tr class="highlight">
                 <th scope="row">PIN entry</th>
                 <td class="text-xs-center">
-                  <img src="{% static '/static/images/badges/pc_mobile.svg' %}" class="icon" alt="">
+                  <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/pc_mobile.svg" class="icon" alt="">
                   <span>Securely via computer or mobile</span>
                 </td>
-                <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" class="icon" alt="">On your
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/trezor.svg" class="icon" alt="">On your
                   Trezor
                 </td>
               </tr>
               <tr>
                 <th scope="row">Passphrase entry</th>
                 <td class="text-xs-center">
-                  <img src="{% static '/static/images/badges/pc_mobile.svg' %}" class="icon" alt="">
+                  <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/pc_mobile.svg" class="icon" alt="">
                   <span>Securely via computer or mobile</span>
                 </td>
-                <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/trezor.svg" alt=""> On your
                   Trezor
                 </td>
               </tr>
               <tr class="highlight">
                 <th scope="row">Device recovery</th>
                 <td class="text-xs-center">
-                  <img src="{% static '/static/images/badges/pc_mobile.svg' %}" class="icon" alt="">
+                  <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/pc_mobile.svg" class="icon" alt="">
                   <span>Securely via computer or mobile</span>
                 </td>
-                <td class="text-xs-center"><img src="{% static '/static/images/badges/trezor.svg' %}" alt=""> On your
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/trezor.svg" alt=""> On your
                   Trezor
                 </td>
               </tr>
@@ -631,26 +631,26 @@
               </tr>
               <tr class="highlight">
                 <th scope="row">Password Manager<a href="./passwords/" class="arrow"></a></th>
-                <td class="text-xs-center"><img src="{% static '/static/images/badges/cloud.svg' %}" class="icon" alt="">Encrypted storage on cloud</td>
-                <td class="text-xs-center"><img src="{% static '/static/images/badges/cloud.svg' %}" class="icon" alt=""> + &nbsp;<img src="{% static '/static/images/badges/sdcard.svg' %}" class="icon" alt="">soon on microSD card</td>
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/cloud.svg" class="icon" alt="">Encrypted storage on cloud</td>
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/cloud.svg" class="icon" alt=""> + &nbsp;<img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/sdcard.svg" class="icon" alt="">soon on microSD card</td>
               </tr>
               <tr>
                 <th scope="row">U2F authentication<a
                   href="https://blog.trezor.io/secure-two-factor-authentication-with-trezor-u2f-e940fd5a60af"
                   class="arrow"></a></th>
-                <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
-                <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt=""></td>
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt=""></td>
               </tr>
               <tr class="highlight">
                 <th scope="row">Encryption via GPG<a href="https://github.com/romanz/trezor-agent" class="arrow"></a>
                 </th>
-                <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
-                <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt=""></td>
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt=""></td>
               </tr>
               <tr>
                 <th scope="row">SSH<a href="https://github.com/romanz/trezor-agent" class="arrow"></a></th>
-                <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
-                <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt=""></td>
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt=""></td>
               </tr>
               <tr class="highlight">
                 <th scope="row">On Trezor data &amp; file encryption</th>
@@ -660,7 +660,7 @@
               <tr>
                 <th scope="row">microSD card</th>
                 <td class="text-xs-center">-</td>
-                <td class="text-xs-center"><img src="{% static '/static/images/coins/check.svg' %}" alt=""></td>
+                <td class="text-xs-center"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt=""></td>
               </tr>
               <tr class="divider">
                 <th class="table-title" scope="row">
@@ -669,11 +669,11 @@
                 </th>
                 <td class="text-xs-center">
                   <hr>
-                  <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                  <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                 </td>
                 <td class="text-xs-center">
                   <hr>
-                  <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                  <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                 </td>
               </tr>
               <tr class="divider">
@@ -681,10 +681,10 @@
                   Designed &amp; built in EU
                 </th>
                 <td class="text-xs-center">
-                  <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                  <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                 </td>
                 <td class="text-xs-center">
-                  <img src="{% static '/static/images/coins/check.svg' %}" alt="">
+                  <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/check.svg" alt="">
                 </td>
               </tr>
               <tr id="comparison-table-footer">
@@ -722,7 +722,7 @@
         <div class="row">
           <div class="col-md-4 text-md-left col-xs-12 text-xs-center">
             <div class="badge">
-              <img src="{% static '/static/images/badges/interface.svg' %}" alt="">
+              <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/interface.svg" alt="">
             </div>
             <h3>
               Easy-to-use, ready within 10 minutes.
@@ -733,7 +733,7 @@
           </div>
           <div class="col-md-4 text-md-left col-xs-12 text-xs-center">
             <div class="badge">
-              <img src="{% static '/static/images/badges/shield.svg' %}" alt="">
+              <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/shield.svg" alt="">
             </div>
             <h3>
               Manage your entire digital identity.
@@ -744,7 +744,7 @@
           </div>
           <div class="col-md-4 text-md-left col-xs-12 text-xs-center">
             <div class="badge">
-              <img src="{% static '/static/images/badges/display.svg' %}" alt="">
+              <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/display.svg" alt="">
             </div>
             <h3>
               Advanced features for expert users.
@@ -757,7 +757,7 @@
         </div>
         <div class="row devices">
           <div class="col-md-4 text-md-left col-xs-12 text-xs-center">
-            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{% static '/static/images/devices.webp' %}" data-original="{% static '/static/images/devices.png' %}" class="lazy" alt="">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-progressive="{{ CURRENT_PAGE.absolute_final_url }}static/images/devices.webp" data-original="{{ CURRENT_PAGE.absolute_final_url }}static/images/devices.png" class="lazy" alt="">
           </div>
           <div class="col-md-4 text-md-left col-xs-12 text-xs-center">
             <h3 class="f-s2">Don't risk your coins.</h3>
@@ -778,7 +778,7 @@
         <div class="row">
           <div class="col-xs-12 text-xs-center">
             <div class="badge">
-              <img src="{% static '/static/images/badges/github.svg' %}" alt="">
+              <img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/badges/github.svg" alt="">
             </div>
             <h2>
               Code the revolution.
@@ -834,7 +834,7 @@
 </main>
 {% endblock %} {% block scripts %}
 <script type='text/javascript' src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
-<script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_homepage.js' %}"></script>
+<script type='text/javascript' charset='utf-8' src="{{ CURRENT_PAGE.absolute_final_url }}static/js/vendor/vendors.js"></script>
+<script type='text/javascript' charset='utf-8' src="{{ CURRENT_PAGE.absolute_final_url }}static/js/sources/page_homepage.js"></script>
 
 {% endblock %}
