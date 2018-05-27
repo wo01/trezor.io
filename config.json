@@ -1,10 +1,10 @@
 {
-  "site-url": "https://trezor.io/nofollow/",
+  "site-url": "https://trezor.io",
   "USE_L10N" : true,
   "prettify": true,
   "context": {
     "CURRENT_PAGE": {
-      "absolute_final_url":"https://trezor.io/nofollow/"
+      "absolute_final_url":"https://trezor.io/"
     }
   }
 }

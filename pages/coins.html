@@ -22,8 +22,8 @@
     <tr>
       <th scope="col"></th>
       <th scope="col">Coin & Token name</th>
-      <th scope="col devices"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t1.png" alt="" height="24px">Trezor One</th>
-      <th scope="col devices"><img src="{{ CURRENT_PAGE.absolute_final_url }}static/images/coins/t2.png" alt="" height="24px">Trezor Model T</th>
+      <th scope="col devices"><img src="{% static '/static/images/coins/t1.png' %}" alt="" height="24px">Trezor One</th>
+      <th scope="col devices"><img src="{% static '/static/images/coins/t2.png' %}" alt="" height="24px">Trezor Model T</th>
       <th scope="col" class="hidden-sm-down">Links</th>
     </tr>
   </thead>
@@ -34,6 +34,6 @@
 </section>
 
 {% endblock %} {% block scripts %}
-<script type='text/javascript' charset='utf-8' src="{{ CURRENT_PAGE.absolute_final_url }}static/js/vendor/vendors.js"></script>
-<script type='text/javascript' charset='utf-8' src="{{ CURRENT_PAGE.absolute_final_url }}static/js/sources/page_coins.js"></script>
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_coins.js' %}"></script>
 {% endblock %}
