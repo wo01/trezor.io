@@ -57,7 +57,9 @@ $(document).ready(function () {
 
         $('#all-coins').html('(' + coin_count(result.info) + ')');
         $.each(result.coins, function (i, field) {
-            coins.push(field);
+            if (typeof(field.hidden ) === 'undefined') {
+                coins.push(field);
+            }
         });
         coins.sort(function (a, b) {
             var nameA = a.name.toLowerCase(),
