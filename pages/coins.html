@@ -18,18 +18,24 @@
   </div>
   <div class="container">
     <table class="table">
-  <thead class="thead" id="table-head">
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Coin & Token name</th>
-      <th scope="col devices"><img src="{% static '/static/images/coins/t1.png' %}" alt="" height="24px">Trezor One</th>
-      <th scope="col devices"><img src="{% static '/static/images/coins/t2.png' %}" alt="" height="24px">Trezor Model T</th>
-      <th scope="col" class="hidden-sm-down">Links</th>
-    </tr>
-  </thead>
-  <tbody id="content"></tbody>
-</table>
-
+      <thead class="thead" id="table-head">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Coin & Token name</th>
+        <th scope="col devices"><img src="{% static '/static/images/coins/t1.png' %}" alt="" height="24px"><span
+          class="hidden-sm-down"><span class="hidden-lg-down">Trezor </span>One</span></th>
+        <th scope="col devices"><img src="{% static '/static/images/coins/t2.png' %}" alt="" height="24px"><span
+          class="hidden-sm-down"><span class="hidden-lg-down">Trezor </span>Model T</span></th>
+        <th scope="col" class="hidden-sm-down">Links</th>
+      </tr>
+      </thead>
+      <tbody id="content">
+      </tbody>
+    </table>
+    <div class="loader-wrapper" id="loader">
+      <div class="loader">Loading...</div>
+    </div>
+    <div>Logos provided by <a href="http://clearbit.com/" rel="nofollow noopener noreferrer">Clearbit</a></div>
   </div>
 </section>
 
