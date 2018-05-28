@@ -1,6 +1,10 @@
 {
   "site-url": "https://trezor.io",
   "USE_L10N" : true,
+  "optimize": [
+    "js",
+    "css"
+  ],
   "prettify": true,
   "context": {
     "CURRENT_PAGE": {

@@ -71,9 +71,9 @@ $(document).ready(function () {
     });
 
     function getVideoUrl(type, name) {
-        if (type === 'mp4') return '/static/video/MP4/'+name+'.mp4';
-        if (type === 'ogv') return '/static/video/OGV/'+name+'.mp4';
-        return '/static/video/WEBM/'+name+'.mp4';
+        if (type === 'mp4') return '/static/video/mp4/'+name+'.mp4';
+        if (type === 'ogv') return '/static/video/ogv/'+name+'.mp4';
+        return '/static/video/webm/'+name+'.mp4';
     }
 
     function bindStickyHandler() {

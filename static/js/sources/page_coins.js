@@ -8,19 +8,19 @@ $(document).ready(function () {
         coin_count = function (ob) {
             return ob.t1_coins > ob.t2_coins ? ob.t1_coins : ob.t2_coins
         },
-        url_domain = function(data) {
+        url_domain = function (data) {
             var a = document.createElement('a');
             a.href = data;
             return a.hostname;
         },
         get_logo = function (ob) {
             if (typeof ob.links.Homepage !== 'undefined') {
-                return ('<span class="logo-wrapper"><img class="logo lazy" data-name="'+ob.name+'" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="//logo.clearbit.com/'+url_domain(ob.links.Homepage)+'?size=64"></span>');
+                return ('<span class="logo-wrapper"><img class="logo lazy" data-name="' + ob.name + '" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="//logo.clearbit.com/' + url_domain(ob.links.Homepage) + '?size=64"></span>');
             }
-            return ('<span class="logo-wrapper errored" style="background-color:'+string_to_color(ob.name)+'">'+ob.name.split('')[0]+'</span>')
+            return ('<span class="logo-wrapper errored" style="background-color:' + string_to_color(ob.name) + '">' + ob.name.split('')[0] + '</span>')
         },
         get_search_results = function (str) {
-            $("tr.coin").each(function(){
+            $("tr.coin").each(function () {
                 if (str.length > 1) {
                     if ($(this).text().search(new RegExp(str, "i")) < 0) {
                         $(this).fadeOut();
@@ -57,7 +57,9 @@ $(document).ready(function () {
 
         $('#all-coins').html('(' + coin_count(result.info) + ')');
         $.each(result.coins, function (i, field) {
-            coins.push(field);
+            if (typeof(field.hidden ) === 'undefined') {
+                coins.push(field);
+            }
         });
         coins.sort(function (a, b) {
             var nameA = a.name.toLowerCase(),
@@ -71,8 +73,8 @@ $(document).ready(function () {
         });
 
         $.each(coins, function (i, e) {
-            var wrapper = $('<tr class="coin" id="' + e.shortcut + '"/>');
-            wrapper.append($('<td>'+get_logo(e)+'</td>'));
+            var wrapper = $('<tr class="coin" data-href="./#' + e.shortcut + '" id="' + e.shortcut + '"/>');
+            wrapper.append($('<td>' + get_logo(e) + '</td>'));
             wrapper.append($('<td title="$' + e.marketcap_usd.toLocaleString() + '"><strong>' + e.name + '</strong> (' + e.shortcut + ')</td>'));
             wrapper.append($('<td>' + get_result(e.t1_enabled) + '</td>'));
             wrapper.append($('<td>' + get_result(e.t2_enabled) + '</td>'));
@@ -81,8 +83,9 @@ $(document).ready(function () {
             $.each(e.links, function (title, link) {
                 length--;
                 var separator = (length < 1) ? '' : ', ';
-                links.append('<a href="' + link + '" rel="nofollow noopener noreferrer">' + title + '</a>' + separator);
+                links.append('<a href="' + link + '" rel="nofollow noopener noreferrer" target="_blank">' + title + '</a>' + separator);
             });
+            $('#loader').hide();
             wrapper.append(links);
             $('#content').append(wrapper);
         });
@@ -93,13 +96,14 @@ $(document).ready(function () {
                     scrollTop: $(hash).offset().top
                 }, 600);
             }
-        };
+        }
+        ;
 
         var bLazy = new Blazy({
             selector: '.lazy',
             src: 'data-original',
             successClass: 'loaded',
-            error: function(elm, msg) {
+            error: function (elm, msg) {
                 if (msg === 'invalid') {
                     // Data-src is invalid
                     var name = $(elm).data('name');
@@ -113,6 +117,9 @@ $(document).ready(function () {
         });
         $(window).scroll(function (event) {
             bindStickyHandler();
+        });
+        $("tr.coin").click(function () {
+            window.location = $(this).data("href");
         });
     });
     function bindStickyHandler() {
