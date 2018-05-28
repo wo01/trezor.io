@@ -76,157 +76,46 @@
 
 
     
-<section class="tpm-jumbo" id="tpm">
-  <div class="overlay-image webp"></div>
-  <div class="overlay-color"></div>
-  <div class="overlay-image2 webp"></div>
-  <div class="container overlay-container">
-    <div class="offset-lg-2 col-lg-4 col-md-12 col-sm-12 text-lg-left text-md-center text-xs-center">
-      <div class="logo"><img class="lazy" src="/static/images/passwords/logo.png" alt="Trezor password manager"></div>
-    </div>
-    <div class="col-lg-6 col-md-12 col-sm-12 text-lg-left text-md-center text-xs-center">
-
-      <p>
-        <a class="btn btn-tpm-white" href="https://chrome.google.com/webstore/detail/trezor-password-manager/imloifkgjagghnncjkhggdhalmcnfklk" role="button">
-                    <span class="glyphicon glyphicon-chrome"></span> Download for Chrome</a>
-        <small>
-                    <div class="link">
-                        <span class="faded-text">Don't have a Trezor?</span>
-                        <a target="_blank" class="arrow" rel="noopener noreferrer"
-                           href="https://trezor.io/">Get one</a>
-                    </div>
-                </small>
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="tpm-trezor-owner">
+<section class="coins-section">
   <div class="container">
-    <div class="row heading">
-      <div class="col-xs-12 text-xs-center">
-        <h2>Expert-level encryption in your hands.</h2>
-        <p>
-           Trezor Password Manager benefits from the proven security design of the most trusted bitcoin hardware wallet. 
-        </p>
-      </div>
-    </div>
+    <h2>Supported coins & tokens <span id="all-coins"></span></h2>
+    <p>List of all coins & tokens supported by Trezor.</p>
+
+    <a class="btn btn-primary-full shop-btn hidden-sm-down" href="https://shop.trezor.io" role="button"
+       aria-label="Get your Trezor">
+      Get your Trezor now</a>
+  </div>
+  <div class="container">
     <div class="row">
-      <div class="col-md-4 col-sm-12 text-xs-center">
-        <div class="text-block">
-          <div class="presentation setup"></div>
-          <h3>Secure access to passwords.</h3>
-          <p>
-             Forget about master passwords. A simple click on your Trezor button is a much more secure way to unlock your password manager. 
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-12 text-xs-center">
-        <div class="text-block">
-          <div class="presentation use"></div>
-          <h3>Original Trezor security.</h3>
-          <p>
-             The open-source Trezor code has been reviewed by renowned security experts across the globe. 
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-12 text-xs-center">
-        <div class="text-block">
-          <div class="presentation recover"></div>
-          <h3>Lost? Restore.</h3>
-          <p>
-             Use your recovery seed of 24 words to regain access to your passwords, encrypted on Dropbox or Google Drive. 
-          </p>
-        </div>
+      <div class="col-xs-12 input-wrapper">
+        <input type="search" name="quick_search" placeholder="Quick search"
+               id="search">
       </div>
     </div>
   </div>
-</section>
-<section class="tpm-coffee webp">
   <div class="container">
-    <div class="row heading">
-      <div class="col-xs-12 text-xs-center">
-        <a class="btn btn-third-outline" href="mailto:support@satoshilabs.com" role="button"><i
-                        class="ion-social-github"></i> Send us feedback</a>
-        <div>
-          <small>
-                        
-                        The Trezor Password Manager has been released for public beta testing and we welcome your
-                        feedback and bug reports.
-                        
-                    </small>
+    <table class="table">
+      <thead class="thead" id="table-head">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Coin & Token name</th>
+        <th scope="col devices"><img src="/static/images/coins/t1.png" alt="" height="24px"><span
+          class="hidden-sm-down"><span class="hidden-lg-down">Trezor </span>One</span></th>
+        <th scope="col devices"><img src="/static/images/coins/t2.png" alt="" height="24px"><span
+          class="hidden-sm-down"><span class="hidden-lg-down">Trezor </span>Model T</span></th>
+        <th scope="col" class="hidden-sm-down">Links</th>
+      </tr>
+      </thead>
+      <tbody id="content">
+      </tbody>
+    </table>
+    <div class="loader-wrapper" id="loader">
+      <div class="loader">Loading...</div>
+    </div>
+    <div>Logos provided by <a href="http://clearbit.com/" rel="nofollow noopener noreferrer">Clearbit</a></div>
+  </div>
+</section>
 
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="tpm-faq">
-  <div class="container">
-    <div class="row heading">
-      <div class="col-xs-12 text-xs-center">
-        <h2>Frequently Asked Questions</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="row">
-          <div class="col-md-4 col-xs-12">
-            <b>Why is a "master password" a bad idea?</b>
-          </div>
-          <div class="col-md-8 col-xs-12">
-            <p>
-               Traditional password managers share one weak point - the master password. Once someone knows your Master Password, they can get all of your passwords. Trezor Password Manager doesn't require a master password. Instead, your Trezor is
-              the master key to your passwords. 
-            </p>
-            <p>
-               Reports of master password breaches in <a href="http://thehackernews.com/2014/07/critical-vulnerability-and-privacy.html">RoboForm</a> and <a href="https://www.wired.com/2015/06/hack-brief-password-manager-lastpass-got-breached-hard/">LastPass</a>.
-              
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-xs-12">
-            <b>Why use Trezor?</b>
-          </div>
-          <div class="col-md-8 col-xs-12">
-            <p>
-               Trezor is the most secure and most ubiquitous hardware wallet in the world. It uses cutting-edge cryptography to protect digital money and any valuable online assets such as passwords. 
-            </p>
-            <p>
-               Since its launch in 2014, Trezor has been embraced by users in almost 100 countries and continues to receive excellent reviews from renowned security experts. 
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-xs-12">
-            <b>How does Trezor encrypt password entries?</b>
-          </div>
-          <div class="col-md-8 col-xs-12">
-            <p>
-               Trezor encrypts each password entry separately with a unique key. 
-            </p>
-            <p>
-               The signature is derived from a unique private key on the Trezor. All private keys are generated in its secure offline environment and never leave the device, making Trezor impenetrable by hackers or malware. 
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-xs-12">
-            <b>How can I import / export my passwords?</b>
-          </div>
-          <div class="col-md-8 col-xs-12">
-            <p>
-               While we are in the testing phase, you can't. We will add these features once all basic functionalities are well tested and stable across most platforms. 
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
     
@@ -325,6 +214,7 @@
 
     
 <script type='text/javascript' charset='utf-8' src="/static/js/vendor/vendors.js"></script>
+<script type='text/javascript' charset='utf-8' src="/static/js/sources/page_coins.js"></script>
 
 
     <script type='text/javascript' charset='utf-8'>

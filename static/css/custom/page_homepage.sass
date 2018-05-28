@@ -1,489 +1,425 @@
-
-/* SUB NAVIGATION */
-
-.sub-nav
-  padding: 18px 0
-
-  .nav
-    .trezor-logo
-      width: 100px
-      margin-top: -5px
-
-    a.nav-link
-      text-transform: uppercase
-      font-weight: bold
-      font-size: .85rem
-      color: $c_grey
-      +unselectable()
-
-      &.active
-        color: $c_white !important
-
-    a.buy
-      margin-top: -10px
-      margin-bottom: -10px
-
-.sticky
-  position: fixed
-  left: 0
-  right: 0
-  top: 0
-  z-index: 2
-  height: 64px
-  width: 100%
-  background: $c_black
-
-/* USAGE SECTION */
+.main-content
+  .lazy
+    +transition(opacity 500ms ease-in-out)
+    opacity: 0
+    &.loaded
+      opacity: 1
 
 .usage-section
-  
-  .item
-    position: relative
-    display: block
-    height: 200px
-    +transition(all 0.15s ease 0s)
-    +border-radius(4px)
-
-    .wallet-logos
-      position: relative
-      width: 100px
-      height: 100px
-      margin: 0 auto 13px auto
-      background: url("../images/cryptowalleticons.png")
-      background-repeat: no-repeat
-      background-size: 100px auto
-
-    &:hover, &:focus
-      text-decoration: none !important
-      +box-shadow(0 0 24px rgba(0, 0, 0, 0.15))
-
-      .wallet-logos
-        background: url("../images/cryptowalleticons-hover.png")
-        background-repeat: no-repeat
-        background-size: 100px auto
-
-      i
-        color: $c_green
-
-    h3
-      font-size: 1.1em
-      padding-top: 5px
-      font-weight: bold
-      color: $c_grey_font
-
-    .usage-icon
-      position: relative
-      color: $c_grey_font
-      font-size: 6em
-      clear: both
-      display: block
-
-      &.btc
-        padding-top: 30px
-
-      .overlay
-        position: absolute
-        width: 100%
-        top: 2px
-        text-align: center
-
-        & > *
-          vertical-align: middle
-          color: $c_white
-          font-size: .3em
-
-        &.passwords
-          letter-spacing: -10px
-          margin-left: -3px
-
-          & > *
-            font-size: .15em
-
-
-/* INTRO SECTION */
-
-.intro-section
-  background-color: $c_grey_bg
+  padding: 0 !important
+  position: relative
+  display: block
+  width: 100%
+  min-height: 100%
 
   h2
-    padding: 10px 0 0 0
+    font-weight: bold
 
-  h3
-    font-size: 1.1em
-    font-style: $default_font
-    font-weight: bolder
-    color: $c_grey_font
+    @media only screen and (max-width: $md)
+      font-size: 1.8em
 
-  .text-block
-    width: 78%
-    position: relative
-    margin: 0 auto
-    padding-bottom: 20px
+    @media only screen and (max-width: $sm)
+      font-size: 1.3em
 
-  .presentation
+    @media only screen and (max-width: $xs)
+      font-size: 1.6em
+
+  .badge
     width: 100%
-    max-width: 200px
-    max-height: 200px
+    padding: 20px
     position: relative
-    margin: 0 auto
-    +box-shadow(0 0 24px rgba(0, 0, 0, 0.05))
-    +border-radius(50%)
-    background: url("../images/photos/usage.webp")
-    background-repeat: no-repeat
-    background-size: 450%
-
-    &.no-webp
-      background: url("../images/photos/usage.png")
-      background-repeat: no-repeat
-      background-size: 450%
-
-    &:after
-      content: ""
-      display: block
-      padding-bottom: 100%
-
-    &.setup
-      background-position: 0 0
-
-    &.use
-      background-position: 46% 0
-
-    &.recover
-      background-position: 90% 0
-
-  @media screen and (max-width: $sm)
-    &
-      padding-top: 60px
-
-/* BITCOIN SECTION */
-
-.bitcoin-section
-  position: relative
-  background: $c_brownish_black
-  overflow: hidden
-  color: $c_white
-  padding-bottom: 80px
-
-  @media only screen and (min-width: $sm)
-    padding-bottom: 20px
-
-  .heading
-    padding-bottom: 0
-
-    p
-      padding: 20px 0 10px 0
-      max-width: 85%
-      margin: 0 auto
-      color: $c_grey
-      @media only screen and (min-width: $sm)
-        margin: 0
-
-    img.hand
-      max-width: 800px
-      width: 100%
-      max-height: 100%
-
-      @media only screen and (min-width: $sm)
-        width: 140%
-        margin: 60px 0 -40px -160px
-      @media only screen and (min-width: $md)
-        width: 100%
-        margin: 0 0 -55px -20px
-      @media only screen and (min-width: $lg)
-        width: 100%
-        margin: -30px 0 -60px -20px
-
-/* BUSINESES SECTION */
-
-.business-section
-  background: $c_black
-  color: $c_white
-  padding-bottom: 50px
-
-img.business-logo
-  margin-bottom: 30px
-  max-width: 86px
-  max-height: 46px
-  opacity: .75
-
-/* ALTCOIN SECTION */
-
-.altcoin-section
-  background: $c_green
-  color: $c_white
-
-  a
-    color: $c_white
-
-    &:hover, &:focus
-      color: $c_white
-
-  .item
-    min-height: 120px
+    display: block
     text-align: center
-    color: $c_white
-    +transition(all 0.15s ease 0s)
-    +border-radius(4px)
 
-    &:hover
-      text-decoration: none
-      +box-shadow(0 0 24px rgba(0, 0, 0, 0.15))
-
-  .coins
-    padding-top: 38px
-
-  .altcoins-logo
-    background-image: url("/static/images/altcoins/altcoins-logo.png")
-    background-size: 50px auto
-    background-repeat: no-repeat
+  .half-shadow
     display: block
-    margin: 0 auto 7px auto
-
-    &-dash
-      width: 50px
-      height: 50px
-      background-position: 0 0
-
-    &-etc
-      width: 29px
-      height: 50px
-      background-position: 0 -50px
-
-    &-eth
-      width: 30.3px
-      height: 50px
-      background-position: 0 -100px
-
-    &-ltc
-      width: 50px
-      height: 50px
-      background-position: 0 -150px
-
-    &-zcash
-      width: 50px
-      height: 50px
-      background-position: 0 -200px
-
-  .heading
-    padding-bottom: 0
-
-    h3
-      line-height: 2em
-
-    p
-      padding: 20px 0 30px 0
-      max-width: 85%
-      margin: 0 auto
-
-      @media only screen and (min-width: $md)
-        margin: 0
-
-/* FEATURES SECTION */
-
-.features-section
-  position: relative
-  background: $c_black
-  color: $c_white
-
-  .heading
-    padding-bottom: 0
-  p
-    color: $c_grey
-
-  .entry
-    min-height: 220px
-
-  .hidden-content
     position: absolute
-    top: 0
-    left: 0
-    width: 1px
-    height: 1px
-    visibility: hidden
-
-  .trezor-render
-    max-width: 80%
-    margin: 0 auto
-
-  canvas#featureCanvas
-    position: relative
-    height: 600px
-    width: 100%
-    display: block
+    width: 50%
+    height: 100%
+    background-color: $c_subtle_gray
     z-index: 0
 
-  .point
-    position: absolute
-    background: rgba($c_white, .6)
-    top: 432px
-    left: 583px
-    width: 6px
-    height: 6px
-    z-index: 1
-    +border-radius(50%)
-
-    &:before
-      position: absolute
-      left: -17px
-      top: -17px
-      content: ""
-      width: 40px
-      height: 40px
-      background: rgba($c_white, .4)
-      opacity: 0
-      +border-radius(50%)
-      +animation(pulsate 1.8s infinite ease-out)
-
-    &:after
-      position: absolute
-      left: -17px
-      top: -17px
-      content: ""
-      width: 40px
-      height: 40px
-      background: rgba($c_white, .4)
-      opacity: 0
-      +border-radius(50%)
-      +animation(pulsate 1.8s infinite ease-out 0.4s)
-
-
-/* MEDIA SECTION */
-
-.media
-  padding-top: 0
-  margin-top: -60px
-
-  img
-    height: 30px
-    margin: 20px
-    opacity: .6
-    width: auto
-    cursor: pointer
-    +grey(100%)
-
-    &:hover
-      +grey(0)
-
-/* SPECIFICATION SECTION */
-
-.specification-section
-  background-color: $c_grey_bg
-
-  .shape
-    width: 90%
-    max-width: 90%
-    margin: 0 auto
-    opacity: .5
-
-  .spec
-    position: relative
-    width: 90%
-    margin: 0 auto
-    margin-top: 20px
-
-  .spec-block
-    position: relative
-
-    b
-      position: absolute
-      font-size: .9em
-      display: inline-block
-
-    span
-      margin-left: 100px
-      display: inline-block
-      position: relative
-
-/* DEVELOPERS SECTION */
-
-.devs-section
-  background: url("/static/images/devs_bg.webp")
-  background-size: auto 100%
-  background-repeat: no-repeat
-  background-position: center center
-  +background-size(cover)
-
-  &.no-webp
-    background: url("/static/images/devs_bg.png")
-    background-size: auto 100%
-    background-repeat: no-repeat
-    background-position: center center
-    +background-size(cover)
-
-  h2, h3
-    color: $c_white
-  p
-    color: $c_grey_bg
-
-  .button-area
-    .btn
-      margin: 10px
-
-    a.plain
-      display: block
-      margin-top: 30px
-      color: white
-
-/* IDEALS SECTION */
-
-.ideals-section
-  position: relative
-  background: $c_black
-  color: $c_white
-
-  p
-    color: $c_grey_bg
-
-/* CEO SECTION */
-
-.ceo-section
-  .ceos
-    .header
+    @media only screen and (max-width: $sm)
       width: 100%
-      max-width: 280px
-      max-height: 280px
+
+  .container
+    z-index: 1
+
+  .row
+    display: flex
+
+    @media only screen and (max-width: $xs)
       display: block
-      overflow: hidden
-      position: relative
-      margin: 0 auto
-      margin-bottom: 8px
-      margin-top: 20px
-      +border-radius(50%)
 
-      &:after
-        content: ""
-        display: block
-        padding-bottom: 100%
-
-    .stick
-      background: url("/static/images/team_faces/stick.png")
-      background-repeat: no-repeat
-      background-size: 100%
-
-    .slush
-      background: url("/static/images/team_faces/slush.png")
-      background-repeat: no-repeat
-      background-size: 100%
+  .entry
+    padding-top: 2em
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: space-between
 
     h3
-      font-size: 1.3em
-      padding-top: 25px
-
-    .title
+      padding-top: 14px
+      padding-bottom: 12px
+      margin-bottom: 0
+      font-size: 1.8em
+      line-height: 1.2em
       font-weight: bold
-      margin-top: -15px
-      color: $c_grey
+      color: $c_jumbo_grey
 
-/* ENDORSEMENTS SECTION */
+    .lead
+      max-width: 80%
+      font-size: 1rem
+      margin: 0 auto
+      padding-bottom: 4em
+      padding-top: 0
 
-.endorsements-section
+    img
+      max-width: 70%
 
-  .endorsements
+.entry-content
+  @media only screen and (min-width: $sm)
+    min-height: 300px
+
+.features-section
+  padding-bottom: 0
+
+  .wallet-video
+    width: 100%
+    z-index: -9
+    top: 5px
+    display: block
+
+    @media only screen and (max-width: $sm)
+      display: none
+
+  .slider
+    width: 60%
+    padding: 40px 0 10px 0
+    margin: 0 auto 20px auto
+    font-size: 1.1em
+    font-weight: 400
+    display: block
+    cursor: pointer
+
+    @media only screen and (max-width: $sm)
+      display: none
+
+    .badges
+      height: 24px
+      padding-right: 10px
+      display: inline-block
+
+    .active
+      padding-bottom: 10px
+      border-bottom: 2px solid $c_green
+
+    .inactive
+      color: $c_grey !important
+      padding-bottom: 10px
+      border-bottom: 2px solid $c_grey_bg
+      opacity: 0.8
+
+    .switcher:hover
+      opacity: 0.6
+      +transition(all 0.1s)
+
+  h2
+    padding-top: 5px
+    margin-bottom: 10px
+    font-size: 1.8em
+    line-height: 1.2em
+    font-weight: bold
+    color: $c_jumbo_grey
+
+  p
+    font-size: 1rem
+
+
+    @media only screen and (max-width: $xs)
+      max-width: 320px
+      margin: 10px auto 10px auto
+
+    &.lead
+      font-size: 1.05rem
+
+  h3
+    padding-top: 14px
+    padding-bottom: 12px
+    margin-bottom: 0
+    font-size: 1.1em
+    font-weight: bold
+    color: $c_jumbo_grey
+
+  .perspective
+    max-width: 100%
+    margin: 0 auto
+    display: block
+    padding-top: 100px
+
+    &.preview
+      padding: 0
+      +box-shadow(0 12px 80px rgba(30, 30, 30, 0.1))
+      +border-radius(6px)
+
+  .devices
+    @media only screen and (max-width: $md)
+      padding-top: 140px
+      max-width: 135%
+
+    @media only screen and (max-width: $sm)
+      padding-top: 30px
+      max-width: 100%
+
+  .badge
+    text-align: left
+    padding-left: 0
+    padding-bottom: 0
+    padding-top: 40px
+
+    @media only screen and (max-width: $sm)
+      text-align: center
+
+.lost-section
+  padding: 100px 0 100px 0
+  background-color: $c_subtle_gray
+
+  @media only screen and (max-width: $sm)
+    padding-top: 80px
+
+  .space-top
+    padding-top: 70px
+
+  .heading
+    padding-top: 40px
+    padding-bottom: 120px
+
+    @media only screen and (max-width: $md)
+      padding-bottom: 10px
+    @media only screen and (max-width: $sm)
+      padding-bottom: 0
+
+  h2
+    padding-top: 5px
+    margin-bottom: 10px
+    font-size: 1.8em
+    line-height: 1.2em
+    font-weight: bold
+    color: $c_jumbo_grey
+
+    @media only screen and (max-width: $xs)
+      max-width: 300px
+      margin: 0 auto 10px auto
+
+  .seed-card
+    max-width: 85%
+    position: absolute
+    top: -100px
+    z-index: 0
+
+    @media only screen and (max-width: $md)
+      position: relative
+      top: 20px
+
+    @media only screen and (max-width: $sm)
+      position: relative
+      top: 60px
+
+  h3
+    padding-top: 5px
+    padding-bottom: 5px
+    margin-bottom: 0
+    font-size: 1.1em
+    font-weight: bold
+    color: $c_jumbo_grey
+
+  .badge
+    text-align: left
+    padding-left: 0
+    padding-bottom: 10px
+    padding-top: 50px
+
+    @media only screen and (max-width: $sm)
+      text-align: center
+
+  p
+    font-size: 1rem
+    margin-bottom: 0
+
+    @media only screen and (max-width: $xs)
+      max-width: 320px
+      margin: 10px auto 10px auto
+
+    &.lead
+      font-size: 1.05rem
+
+  .foot
+    padding-top: 50px
+    padding-bottom: 20px
+
+.media-section
+  padding-bottom: 50px
+  padding-top: 60px
+
+  .whitespace-top
+    margin-top: 25px
+    @media only screen and (max-width: $xs)
+      margin-top: 0 !important
+
+  .companies
+    width: 119px
+    height: 26px
+    overflow: hidden
+    position: relative
+    margin: 0 auto
+    margin-top: 10px
+    background: url("/static/images/media.svg") no-repeat
+    background-size: 100%
+
+    @media only screen and (max-width: $sm)
+      margin-top: 25px !important
+
+    &:after
+      content: ""
+      display: block
+
+    &.cnn
+      background-position: 0 0
+    &.coindesk
+      background-position: 0 20%
+    &.forbes
+      background-position: 0 40%
+    &.bitwala
+      background-position: 0 60%
+    &.magazine
+      background-position: 0 80%
+    &.bitstamp
+      background-position: 0 100%
+
+  h2
+    padding-top: 5px
+    margin-bottom: 10px
+    font-size: 1.8em
+    line-height: 1.2em
+    font-weight: bold
+    color: $c_jumbo_grey
+
+    @media only screen and (max-width: $xs)
+      max-width: 290px
+      margin: 0 auto 20px auto
+
+  img
+    @media only screen and (max-width: $md)
+      margin-top: 10px
+      max-height: 70px
+
+    @media only screen and (max-width: $sm)
+      margin-top: 40px
+      max-height: 80px
+
+    @media only screen and (max-width: $xs)
+      margin-top: 50px
+      max-height: 60px
+
+  p
+    font-size: 1em
+    margin-bottom: 0
+    line-height: 1.5rem
+
+    &.lead
+      font-size: 1.1rem
+      margin-bottom: 20px
+
+.community-section
+  padding-top: 0
+
+  .badge
+    padding-top: 30px
+
+  h3
+    padding-top: 14px
+    padding-bottom: 12px
+    margin-bottom: 0
+    font-size: 1.1em
+    font-weight: bold
+    color: $c_jumbo_grey
+
+  q
+    padding-top: 20px
+    padding-bottom: 30px
+    color: $c_nav_grey
+    font-size: 2.2em
+    font-style: italic
+    font-weight: 300
+    line-height: 1.4em
+    display: block
+    max-width: 80%
+    margin: 0 auto
+    min-height: 140px
+    text-rendering: optimizeLegibility
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+
+    @media only screen and (max-width: $sm)
+      min-height: 180px
+      font-size: 1.8em
+
+  .community
+    margin-top: 20px
+
+    h5
+      font-size: 1.1em
+      padding: 5px 0 20px 0
+      opacity: .5
+
+    .head-wrapper
+      position: relative
+      display: block
+      width: 30%
+      min-width: 200px
+      height: 120px
+      margin: 0 auto
+
+      .endor
+        position: absolute
+        top: 10px
+        width: 42px
+        left: 50%
+        right: 50%
+        cursor: pointer
+        opacity: .5
+        +transition(all .2s ease-out)
+
+        &:hover
+          opacity: 1 !important
+          h5
+            opacity: 1 !important
+        &.center
+          position: relative
+          left: auto
+          right: auto
+          margin: 0 auto
+        &.left
+          left: 0
+          right: auto
+        &.right
+          right: 0
+          left: auto
+
+        &.active
+          top: -10px
+          opacity: 1
+          .header
+            border: 2px solid $c_green
+            padding: 2px
+            width: 42px
+            height: 42px
+          h5
+            opacity: 1
+
+
     .header
-      width: 100%
-      max-width: 40px
-      max-height: 40px
-      float: left
+      width: 40px
+      height: 40px
       overflow: hidden
       position: relative
       margin: 0 auto
@@ -518,33 +454,320 @@ img.business-logo
       &.waldo
         background-position: 0 97.5%
 
-    h4
-      font-size: 1em
-      font-weight: bolder
-      display: inline-block
-      padding: 12px 0 10px 16px
+
+.recap-section
+  background-color: $c_subtle_gray
+  padding-bottom: 0
+
+  .shop-btn
+    @media only screen and (max-width: $xs)
+      min-width: 90%
+
+  h2
+    padding-top: 5px
+    margin-bottom: 10px
+    font-size: 1.8em
+    line-height: 1.2em
+    font-weight: bold
+    color: $c_jumbo_grey
+
+    @media only screen and (max-width: $xs)
+      font-size: 1.6em
+
+  p
+    font-size: 1rem
+    margin-bottom: 0
+
+    @media only screen and (max-width: $xs)
+      max-width: 320px
+      margin: 10px auto 10px auto
+
+    &.lead
+      font-size: 1.05rem
+      margin-bottom: 20px
+
+  h3
+    padding-top: 5px
+    padding-bottom: 5px
+    margin-bottom: 0
+    font-size: 1.1em
+    font-weight: bold
+    color: $c_jumbo_grey
+
+  .badge
+    text-align: left
+    padding-left: 0
+    padding-bottom: 7px
+    padding-top: 40px
+
+    @media only screen and (max-width: $sm)
+      text-align: center
+
+  .devices
+    img
+      width: 90%
+      max-width: 90%
+      margin-top: 40px
+
+      @media only screen and (max-width: $sm)
+        display: none
+
+    h3
+      font-size: 1.6em
+      margin-top: 115px
+
+      @media only screen and (max-width: $md)
+        margin-top: 95px
+        font-size: 1.4em
+
+      @media only screen and (max-width: $sm)
+        margin-top: 30px
 
 
-    blockquote
-      padding: 0.5em 10px
-      font-style: italic
-      font-size: .9em
-      quotes: "\201C""\201C""\201C""\2019"
+    a
+      margin-top: 110px
+
+      @media only screen and (max-width: $md)
+        margin-top: 85px
+
+      @media only screen and (max-width: $sm)
+        margin: 20px 0 40px 0
+
+.subscribe-section
+  width: 100%
+  height: 450px
+  background-image: url("/static/images/subscribe.png")
+  background-repeat: no-repeat
+  color: $c_white
+  padding-top: 140px
+  +background-size(cover)
+
+  @media only screen and (max-width: $sm)
+    padding-top: 120px
+
+  @media only screen and (max-width: $xs)
+    padding-top: 100px
+
+  h2
+    max-width: 420px
+    font-weight: bold
+    margin-bottom: 20px
+
+    @media only screen and (max-width: $sm)
+      margin: 0 auto 20px auto
+
+    @media only screen and (max-width: $xs)
+      font-size: 1.7em
+
+  .email-form
+    width: 100%
+    max-width: 320px
+    height: 54px
+    padding-left: 20px
+    border-radius: 4px
+    border: 0px solid white
+    background: $c_white
+    margin: 20px 0 10px 0
+
+    @media only screen and (max-width: $sm)
+      max-width: 100%
+
+  .subscribe-btn
+    margin-left: 10px
+    @media only screen and (max-width: $sm)
+      min-width: 100%
+      margin-left: 0
+
+    @media only screen and (max-width: $xs)
+      min-width: 100%
+
+.devs-section
+  padding-top: 130px
+  padding-bottom: 160px
+
+  .btn
+    @media only screen and (max-width: $xs)
+      min-width: 90%
+
+  .spacing
+    @media only screen and (max-width: $xs)
+      margin-top: 10px
+
+  h2
+    margin-top: 10px
+    margin-bottom: 15px
+    font-size: 1.8em
+    line-height: 1.2em
+    font-weight: bold
+    color: $c_jumbo_grey
+
+  a
+    min-width: 250px
+    +box-shadow(0)
+
+  p
+    font-size: 1rem
+    margin-bottom: 0
+
+    &.lead
+      font-size: 1.05rem
+      max-width: 600px
+      margin: 0 auto
+      margin-bottom: 20px
+
+.comparison-section
+  padding-top: 40px
+
+  .table-headline
+    margin-bottom: -45px
+
+    @media only screen and (max-width: $md)
+      margin-bottom: 0
+
+  .icon
+    padding-right: 5px
+
+  .badges
+    width: 80%
+
+    img
+      height: 24px
+
+  .list
+    line-height: 1.5em
+    vertical-align: baseline
+
+    img
+      margin-right: 10px
+
+  .btn
+    @media only screen and (max-width: $md)
+      min-width: 630px
+
+    @media only screen and (max-width: $sm)
+      min-width: 450px
+
+    @media only screen and (max-width: $xs)
+      min-width: 90%
+
+  h2
+    font-size: 1.8em
+    font-weight: bold
+
+  .lead
+    font-size: 1.1em
+
+    @media only screen and (max-width: $sm)
+      margin-bottom: 40px
+
+  .label
+    font-weight: bold
+    position: relative
+
+    @media only screen and (min-width: $md)
+      display: flex
+      align-items: center
+      justify-content: center
+
+    img
+      margin: 0 14px 0 20px
+      height: 32px
+      &:first-child
+        margin-left: 0
+
+    .label-img
+      position: absolute
+      right: -50px
+      +transform(scale(0.8, 0.8))
+
+      @media only screen and (max-width: $lg)
+        right: -70px !important
+
+      @media only screen and (max-width: $md)
+        right: 0 !important
+        position: relative !important
+        margin: 0 0 0 -10px
+
+  .comparison
+    background-color: $c_white
+    +box-shadow(0 4px 24px rgba(0, 0, 0, 0.12))
+    border-radius: 6px
+    padding: 30px 10px 30px 10px
+    text-align: center
+
+  .comparison + .comparison
+    margin-top: 4rem
+
+  .comparison dl
+    margin: 1em 0
+    padding: 1em 0 0 0
+
+    .badges
+      width: 100%
+      img
+        margin-left: 10px
+
+    dd
+      margin-bottom: 1.4em
+      font-size: 1.4em
+      padding-bottom: 30px
+      border-bottom: 1px solid $c_subtle_gray
+
+    dt
+      font-weight: 400
       color: $c_grey
+      margin-bottom: 10px
 
-      &:before
-        font-family: Georgia, serif
-        color: $c_grey
-        content: open-quote
-        font-size: 4em
-        line-height: 0.1em
-        margin-right: 0.25em
-        vertical-align: -0.4em
+    .price
+      font-weight: bold
+      font-size: 1.8em
 
-    .endorsements-person
-      margin-bottom: 30px
-      padding-bottom: 30px
+  .comparison-header
+    .label img
+      width: 20px
+    .label .label-img
+      width: 125px
 
-    .endorsements-list
-      margin-bottom: 30px
-      padding-bottom: 30px
+  .comparison-table-header-sticky
+    //display: none
+    z-index: 3
+    transform: translateY(-100%)
+    transition: transform 0.3s ease
+
+    @media only screen and (max-width: $md)
+      display: none !important
+
+    &:not(.active)
+      height: 0
+      overflow: hidden
+
+    .inner
+      display: flex
+      width: 1110px
+      max-width: 100%
+      margin: 0 auto
+
+    &.active
+      transform: translateY(0)
+      display: block
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+      max-width: 100%
+      overflow: visible
+      background: #fff
+      padding: 1rem 0
+      border-bottom: 1px solid #ddd
+
+      .label-img
+        right: -170px
+        @media only screen and (max-width: $lg)
+          right: -160px !important
+
+    .empty-cell
+      width: 452px
+    .label + .label
+      margin-left: 278px
+      @media only screen and (max-width: $lg)
+        margin-left: 200px !important
