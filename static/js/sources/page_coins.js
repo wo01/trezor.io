@@ -83,7 +83,7 @@ $(document).ready(function () {
             $.each(e.links, function (title, link) {
                 length--;
                 var separator = (length < 1) ? '' : ', ';
-                links.append('<a href="' + link + '" rel="nofollow noopener noreferrer">' + title + '</a>' + separator);
+                links.append('<a href="' + link + '" rel="nofollow noopener noreferrer" target="_blank">' + title + '</a>' + separator);
             });
             $('#loader').hide();
             wrapper.append(links);
