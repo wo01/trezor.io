@@ -99,7 +99,7 @@ $(document).ready(function () {
             hashlink = hashlink.split('?')[0];
             if ($(hashlink).length) {
                 $('html, body').animate({
-                    scrollTop: $(hashlink).offset().top
+                    scrollTop: $(hashlink).offset().top - 50
                 }, 600);
             }
         }
@@ -126,9 +126,6 @@ $(document).ready(function () {
         });
         $( window ).resize(function() {
             sizeElements();
-        });
-        $("tr.coin").click(function () {
-            window.location = $(this).data("href");
         });
     });
 
