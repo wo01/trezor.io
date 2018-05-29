@@ -89,11 +89,11 @@ $(document).ready(function () {
             wrapper.append(links);
             $('#content').append(wrapper);
         });
-        var hash = window.location.hash;
-        if (typeof hash !== "undefined" && hash.length !== 0) {
-            if ($(hash).length) {
+        var hashlink = window.location.hash;
+        if (typeof hashlink !== "undefined" && hashlink.length !== 0) {
+            if ($(hashlink).length) {
                 $('html, body').animate({
-                    scrollTop: $(hash).offset().top
+                    scrollTop: $(hashlink).offset().top
                 }, 600);
             }
         }
