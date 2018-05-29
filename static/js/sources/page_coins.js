@@ -122,13 +122,25 @@ $(document).ready(function () {
         });
         $(window).scroll(function (event) {
             bindStickyHandler();
+            sizeElements();
+        });
+        $( window ).resize(function() {
+            sizeElements();
         });
         $("tr.coin").click(function () {
             window.location = $(this).data("href");
         });
     });
+
+    function sizeElements() {
+        $('#invisible-offset').width($('#visible-offset').width());
+        $('#invisible-name').width($('#visible-name').width());
+        $('#invisible-t1').width($('#visible-t1').width());
+        $('#invisible-t2').width($('#visible-t2').width());
+        $('#invisible-links').width($('#visible-links').width());
+    }
+
     function bindStickyHandler() {
-        // @todo config
         var scrollPos = $(window).scrollTop();
         var startPos = $('#content').offset().top;
         var endPos = $('#subscribe').offset().top;
