@@ -52,9 +52,14 @@ $(document).ready(function () {
         }
         get_search_results(valThis.toLowerCase());
     });
-
-    $.getJSON("./static/json/coins_details.json", function (result) {
-
+    var test = window.location.hash;
+    var JSON_URL = '/static/json/coins_details.json';
+    test = test.split('?')[1];
+    if (typeof test !== "undefined" && test.length !== 0 && test === 'test') {
+        console.warn('loaded remote json');
+        JSON_URL = 'https://raw.githubusercontent.com/trezor/trezor-common/master/coins_details.json';
+    }
+    $.getJSON(JSON_URL, function (result) {
         $('#all-coins').html('(' + coin_count(result.info) + ')');
         $.each(result.coins, function (i, field) {
             if (typeof(field.hidden ) === 'undefined') {
@@ -91,6 +96,7 @@ $(document).ready(function () {
         });
         var hashlink = window.location.hash;
         if (typeof hashlink !== "undefined" && hashlink.length !== 0) {
+            hashlink = hashlink.split('?')[0];
             if ($(hashlink).length) {
                 $('html, body').animate({
                     scrollTop: $(hashlink).offset().top
