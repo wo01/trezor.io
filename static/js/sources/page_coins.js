@@ -53,7 +53,7 @@ $(document).ready(function () {
         get_search_results(valThis.toLowerCase());
     });
 
-    $.getJSON("https://raw.githubusercontent.com/trezor/trezor-common/master/coins_details.json", function (result) {
+    $.getJSON("./static/json/coins_details.json", function (result) {
 
         $('#all-coins').html('(' + coin_count(result.info) + ')');
         $.each(result.coins, function (i, field) {
@@ -97,7 +97,6 @@ $(document).ready(function () {
                 }, 600);
             }
         }
-        ;
 
         var bLazy = new Blazy({
             selector: '.lazy',
