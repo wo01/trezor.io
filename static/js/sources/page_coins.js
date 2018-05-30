@@ -32,6 +32,13 @@ $(document).ready(function () {
                 }
             });
         },
+        set_search = function (e) {
+                var valThis = $(this).val();
+                if (e.keyCode === 27) {
+                    $('#search').blur();
+                }
+                get_search_results(valThis.toLowerCase());
+        },
         string_to_color = function (str) {
             var hash = 0;
             for (var i = 0; i < str.length; i++) {
@@ -45,15 +52,10 @@ $(document).ready(function () {
             return color;
         };
 
-    $('#search').keyup(function (e) {
-        var valThis = $(this).val();
-        if (e.keyCode === 27) {
-            $('#search').blur();
-        }
-        get_search_results(valThis.toLowerCase());
-    });
+    $('#search').keyup( $.debounce( 150, set_search) );
     var test = window.location.hash;
     var JSON_URL = '/static/json/coins_details.json';
+
     test = test.split('?')[1];
     if (typeof test !== "undefined" && test.length !== 0 && test === 'test') {
         console.warn('loaded remote json');
@@ -92,7 +94,7 @@ $(document).ready(function () {
             });
             $('#loader').hide();
             wrapper.append(links);
-            $('#content').append(wrapper);
+            $.debounce( 150, $('#content').append(wrapper) )
         });
         var hashlink = window.location.hash;
         if (typeof hashlink !== "undefined" && hashlink.length !== 0) {
@@ -120,13 +122,11 @@ $(document).ready(function () {
             },
             offset: 200
         });
-        $(window).scroll(function (event) {
+        sizeElements();
+        $(window).scroll( function (event) {
             bindStickyHandler();
-            sizeElements();
         });
-        $( window ).resize(function() {
-            sizeElements();
-        });
+        $( window ).resize(sizeElements);
     });
 
     function sizeElements() {
@@ -135,6 +135,7 @@ $(document).ready(function () {
         $('#invisible-t1').width($('#visible-t1').width());
         $('#invisible-t2').width($('#visible-t2').width());
         $('#invisible-links').width($('#visible-links').width());
+        return false;
     }
 
     function bindStickyHandler() {
