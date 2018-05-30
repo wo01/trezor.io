@@ -1,6 +1,36 @@
 .coins-section
   min-height: 90vh
 
+  .wrapper
+    display: block
+    min-height: 100vh
+    position: relative
+
+    .bottom
+      position: absolute
+      left: 0
+      bottom: 0
+
+  .header-line
+    position: relative
+    z-index: 2
+
+    &-invisible
+      position: fixed
+      top: -40px
+      z-index: 10
+      width: 100%
+      opacity: 0
+      +transition(opacity 0.12s ease 0s)
+      &.sticky
+        top: 0
+        position: fixed
+        opacity: 1
+        background-color: $c_white !important
+
+  table
+    position: relative
+
   .input-wrapper
     position: relative
     display: inline-block
@@ -61,8 +91,6 @@
     top: 0
 
   .table
-    min-height: 100vh
-
     th
       border-top: 0
 
