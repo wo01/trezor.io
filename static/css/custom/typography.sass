@@ -1,0 +1,65 @@
+// ----
+// Typography generator
+// ----
+
+@function rem($size)
+  $rem-size: $size / $f-base-size
+  @return #{$rem-size}rem
+
+
+// basic vars
+$f-base-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+$f-base-size: 16
+$f-line-height: 1 + ($f-base-size / 100)
+$f-brand-family: 'trezor'
+$f-normal: 400 // font-weight
+$f-bold: 500 // font-weight
+$f-smoothing: antialiased
+
+// control size vars (in px of course)
+$f-s1: 60
+$f-s2: 28
+$f-s3: 18
+$f-s4: 16
+$f-s5: 14
+$f-s6: 12
+
+// Body properties
+body
+  -webkit-font-smoothing: $f-smoothing
+  text-rendering: optimizeLegibility
+  font: $f-normal #{$f-base-size - 2}px $f-base-family
+  line-height: $f-line-height
+
+// Font faces
+@font-face
+  font-family: $f-brand-family
+  font-style: normal
+  font-weight: $f-bold
+  src: url("/static/fonts/trezor-extrabold.woff") format("woff")
+
+@font-face
+  font-family: $f-brand-family
+  font-style: normal
+  font-weight: normal
+  src: url("/static/fonts/trezor-bold.woff") format("woff")
+
+// mixin to put things together
+=generate-sizes($args...)
+  @for $i from 1 through length($args)
+    h#{$i}, .f-s#{$i}
+      font: $f-bold ( rem(nth($args, $i)) + / $f-line-height ) $f-brand-family !important
+
+  h3, h4, h5, h6
+    font-weight: $f-normal !important
+
+// generate sizes
++generate-sizes($f-s1, $f-s2, $f-s3, $f-s4, $f-s5, $f-s6)
+
+// typo elements specifics
+p
+  font-size: rem($f-s4)
+  line-height: 1.5
+p.lead
+  font-size: rem($f-s3)
+  line-height: 1.5

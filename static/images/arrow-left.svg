@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="9px" viewBox="0 0 14 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-down</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Trezor-product-page-Copy-14" transform="translate(-296.000000, -1915.000000)" stroke="#01B757">
+            <g id="Group-54" transform="translate(213.000000, 1401.000000)">
+                <g id="Group-19" transform="translate(0.000000, 120.000000)">
+                    <g id="H3" transform="translate(0.000000, 245.000000)">
+                        <g id="Group-33" transform="translate(2.000000, 145.000000)">
+                            <g id="arrow-down" transform="translate(88.000000, 8.500000) rotate(-90.000000) translate(-88.000000, -8.500000) translate(84.000000, 2.000000)">
+                                <path d="M4,0 L4,12" id="Shape"></path>
+                                <polyline id="Shape" points="8 8 4 13 0 8"></polyline>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

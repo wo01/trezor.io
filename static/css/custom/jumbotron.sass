@@ -1,100 +1,153 @@
+header
+  width: 100%
+  z-index: 3
+  overflow: hidden
+  background-color: $c_grey_bg
+
+  @media only screen and (max-width: $sm)
+    height: 100vh
+
 .jumbotron
   position: relative
-  height: 100%
-  min-height: 400px
-  width: auto
-  text-align: center
+  height: auto
+  width: 100%
   margin-bottom: 0
-  background-image: url("/static/images/photos/1-600.webp")
-  background-size: auto 100%
-  background-repeat: no-repeat
-  background-position: center center
+  padding: 0
+  background-color: $c_jumbo_white
+  z-index: 3
   +background-size(cover)
   +border-radius(0)
-  @media only screen and (min-width: 400px)
+
+  @media only screen and (max-width: $md)
+    background-position: left
+    background-size: 140%
+
+  @media only screen and (max-width: $sm)
+    background-size: 160%
+
+  @media only screen and (max-width: $xs)
+    background-image: none
+    background-color: $c_jumbo_white
+
+  .jumbotron-inner
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    @media only screen and (max-width: $sm)
+      height: 100vh
+      text-align: center
+
+  .video-responsive
+    z-index: 0
+    height: auto
+    max-width: 100%
+    display: block
+    padding: 0
+    position: relative
+    width: 100%
+
+    @media only screen and (max-width: $sm)
+      display: none
+
+  .hero-image
+    width: auto
+    z-index: 1
+    display: none
+    position: relative
+    @media only screen and (max-width: $sm)
+      display: block
+
+  .list
+
+    @media only screen and (max-width: $sm)
+      display: block
+      margin: 30px 0 10px 0
+
+    @media only screen and (max-width: $xs)
+      padding: 0
+      display: block
+      text-align: center
+
+  .btn-primary-full
+    @media only screen and (max-width: $md)
+      min-width: 400px
+      margin: 0 auto
+
+    @media only screen and (min-width: $sm)
+      max-width: 400px
+
+    @media only screen and (max-width: $xs)
+      min-width: 90%
+
+  //@media only screen and (min-width: 400px)
     background-image: url("/static/images/photos/1-1200.webp")
-  @media only screen and (min-width: 600px)
+  //@media only screen and (min-width: 600px)
     background-image: url("/static/images/photos/1-1200.webp")
-  @media only screen and (min-width: 800px)
+  //@media only screen and (min-width: 800px)
     background-image: url("/static/images/photos/1-1500.webp")
 
   &.no-webp
-    background-image: url("/static/images/photos/1-600.jpg")
+    background-image: url("/static/images/photos/header.png")
     background-size: auto 100%
     background-repeat: no-repeat
     background-position: center center
     +background-size(cover)
-    @media only screen and (min-width: 400px)
+    //@media only screen and (min-width: 400px)
       background-image: url("/static/images/photos/1-1200.jpg")
-    @media only screen and (min-width: 600px)
+    //@media only screen and (min-width: 600px)
       background-image: url("/static/images/photos/1-1200.jpg")
-    @media only screen and (min-width: 800px)
+    //@media only screen and (min-width: 800px)
       background-image: url("/static/images/photos/1-1500.jpg")
 
+  .content
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    position: absolute
+    z-index: 2
 
   .container
     height: 100%
-    min-height: 400px
-    width: auto
 
-    .top
-      position: absolute
-      top: 20%
-      left: 0
-      right: 0
+    .row
+      height: 100%
 
-      .width-wrapper
-        display: block
-        position: relative
-        text-align: left
-        margin: 0 auto
-        width: 90%
-        max-width: 550px
+      .col
+        height: 100%
 
-    .bottom
-      position: absolute
-      bottom: 50px
-      left: 0
-      right: 0
+        .badges
+          width: 100%
+          padding: 30px 0 30px 0
+
+          @media only screen and (max-width: $md)
+            text-align: center
+
+          img
+            height: 28px
+            margin-right: 22px
+
+            @media only screen and (max-width: $sm)
+              margin: 0 7px 0 7px
+
+            @media only screen and (max-width: $sm)
+              margin: 0 4px 0 4px
+
 
     h1, p
-      color: $c_white
+      color: $c_jumbo_grey
 
     h1
-      font-size: 3.2em
-      white-space: nowrap
+      font-size: 3.9em
+      font-weight: bold
+      text-align: left
+      max-width: 410px
 
-    .lead-ghost
-      visibility: hidden
-      display: none
+      @media only screen and (max-width: $md)
+        text-align: center
+        margin: 0 auto
 
-    .lead
-      text-align: center
-      white-space: nowrap
-      font-size: 1.9em
-
-  .platform-icons
-    color: $c_white
-
-    .fa
-      padding: 10px 10px 0 10px
-      font-size: 1.5em
-
-  .strip
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
-    width: 100%
-    background: rgba($c_grey_bg, .7)
-
-    p
-      margin: 10px 0 10px 0
-
-  .typed-cursor
-    opacity: 1
-    will-change: opacity
-    -webkit-animation: blink 0.7s infinite
-    -moz-animation: blink 0.7s infinite
-    animation: blink 0.7s infinite
-
+      @media only screen and (max-width: $xs)
+        max-width: 320px

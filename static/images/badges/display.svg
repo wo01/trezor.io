@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 30</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 18 18 18 18 0 0 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Trezor-product-page-Copy-14" transform="translate(-579.000000, -5324.000000)">
+            <g id="Group-59" transform="translate(0.000000, 5144.000000)">
+                <g id="Group-56" transform="translate(209.000000, 60.000000)">
+                    <g id="Group-55">
+                        <g id="H3" transform="translate(370.000000, 120.000000)">
+                            <g id="Group-30">
+                                <circle id="Oval-4-Copy-4" fill="#FBE8C8" cx="22.5" cy="22.5" r="22.5"></circle>
+                                <g id="Page-1" transform="translate(14.000000, 14.000000)">
+                                    <path d="M16.875,12.9375 C16.875,13.246875 16.621875,13.5 16.3125,13.5 L1.6875,13.5 C1.378125,13.5 1.125,13.246875 1.125,12.9375 L1.125,1.6875 C1.125,1.378125 1.378125,1.125 1.6875,1.125 L16.3125,1.125 C16.621875,1.125 16.875,1.378125 16.875,1.6875 L16.875,12.9375 Z M16.3125,0 L1.6875,0 C0.757125,0 0,0.757125 0,1.6875 L0,12.9375 C0,13.867875 0.757125,14.625 1.6875,14.625 L6.75,14.625 L6.75,16.59375 C6.75,16.750125 6.625125,16.875 6.46875,16.875 L3.65625,16.875 C3.499875,16.875 3.375,16.999875 3.375,17.15625 L3.375,17.71875 C3.375,17.875125 3.499875,18 3.65625,18 L14.34375,18 C14.500125,18 14.625,17.875125 14.625,17.71875 L14.625,17.15625 C14.625,16.999875 14.500125,16.875 14.34375,16.875 L11.53125,16.875 C11.374875,16.875 11.25,16.750125 11.25,16.59375 L11.25,14.625 L16.3125,14.625 C17.242875,14.625 18,13.867875 18,12.9375 L18,1.6875 C18,0.757125 17.242875,0 16.3125,0 Z" id="Fill-1" fill="#FFA000"></path>
+                                    <mask id="mask-2" fill="white">
+                                        <use xlink:href="#path-1"></use>
+                                    </mask>
+                                    <g id="Clip-4"></g>
+                                    <path d="M2.25,11.25 L15.75,11.25 L15.75,2.25 L2.25,2.25 L2.25,11.25 Z" id="Fill-3" fill="#FFA000" mask="url(#mask-2)"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

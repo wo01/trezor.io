@@ -1,0 +1,38 @@
+{% load i18n %}
+<nav class="navbar navbar-dark transparent navbar-full" role="navigation" aria-label="Global Navigation">
+    <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar1"
+            aria-controls="exCollapsingNavbar1" aria-expanded="false" aria-label="Toggle navigation">
+        &#9776;
+    </button>
+    <a class="navbar-brand-mini hidden-md-up" href="{% url '/' %}"><img class="trezor-logo"
+                                                            src="{% static '/images/trezor-logo.png' %}"
+                                                            alt="best bitcoin wallet and security device"/></a>
+    <div class="container">
+        <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar1">
+            <a class="navbar-brand hidden-sm-down" href="{% url '/' %}"><img class="trezor-logo"
+                                                                 src="{% static '/images/trezor-logo-black.png' %}"
+                                                                 alt="best bitcoin wallet and security device"/><span
+                    class="trezor-title">TREZOR.io</span></a>
+            <ul class="nav navbar-nav float-sm-left float-md-right float-xs-left social">
+                <li class="nav-item">
+                    <a class="nav-link shop-btn" href="https://shop.trezor.io" data-amount="0" title="Go to shop and order TREZOR">{% trans "Shop" %}</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url '/' %}" title="Presentation page of TREZOR - bitcoin wallet and security device">{% trans "Trezor" %}<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://trezor.io/start" title="Visit Wallet for your TREZOR security device">{% trans "Wallet" %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://doc.satoshilabs.com/">{% trans "Docs" %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url '/support' %}">{% trans "Support" %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://blog.trezor.io/">{% trans "Blog" %}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

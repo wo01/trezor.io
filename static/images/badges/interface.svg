@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>layout</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Trezor-product-page-Copy-14" transform="translate(-214.000000, -2007.000000)">
+            <g id="Group-54" transform="translate(213.000000, 1401.000000)">
+                <g id="Group-19" transform="translate(0.000000, 120.000000)">
+                    <g id="H3-Copy" transform="translate(0.000000, 486.000000)">
+                        <g id="layout" transform="translate(1.000000, 0.000000)">
+                            <circle id="Oval-4-Copy-5" fill="#D1E9FA" cx="22.5" cy="22.5" r="22.5"></circle>
+                            <g id="Group-29" transform="translate(15.000000, 15.000000)" fill="#2EA3FB">
+                                <path d="M7.11111111,7.11111111 L16,7.11111111 L16,14 C16,15.1045695 15.1045695,16 14,16 L7.11111111,16 L7.11111111,7.11111111 Z" id="Rectangle-path-Copy-4"></path>
+                                <path d="M0,7.11111111 L5.33333333,7.11111111 L5.33333333,16 L2,16 C0.8954305,16 1.3527075e-16,15.1045695 0,14 L0,7.11111111 Z" id="Rectangle-path-Copy-5"></path>
+                                <path d="M2,0 L14,0 C15.1045695,7.78148667e-16 16,0.8954305 16,2 L16,5.33333333 L0,5.33333333 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z" id="Rectangle-path-Copy-6"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
