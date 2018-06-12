@@ -103,6 +103,13 @@
     @media only screen and (max-width: $sm)
       display: none
 
+    .video
+      position: absolute
+      transition: opacity 1s
+      opacity: 0
+    .video.show
+      opacity: 1
+
   .slider
     width: 60%
     padding: 40px 0 10px 0

@@ -54,20 +54,21 @@ $(document).ready(function () {
         }
     });
 
+    var vid = $('.wallet-video .video.show video')[0];
+        vid.load();
+        vid.onloadeddata = function() {
+            var h = $('.wallet-video .video.show').height();
+            $('.wallet-video').height(h);
+        }
+
     $('.switcher').click(function (e) {
         e.preventDefault();
+        var newSrc = $(this).data('video');
+
         $('.switcher.active').removeClass('active').addClass('inactive');
         $(this).removeClass('inactive').addClass('active');
-        var newSrc = $(this).data('video');
-        $('#interface-video').fadeOut('slow', function() {
-            var video = document.getElementById('interface-video');
-            var sources = video.getElementsByTagName('source');
-            sources[0].src = getVideoUrl('mp4', newSrc); //mp4 /static/video/MP4/wallet.mp4
-            sources[1].src = getVideoUrl('ogv', newSrc); //ogv
-            sources[2].src = getVideoUrl('webm', newSrc); //webm
-            video.load();
-            $('#interface-video').fadeIn('slow');
-        });
+        $('.wallet-video .video').removeClass('show');
+        $('.wallet-video .video[data-target="' + newSrc + '"]').addClass('show');
     });
 
     function getVideoUrl(type, name) {

@@ -164,12 +164,20 @@
         <div class="row">
           <img src="{% static '/static/images/wallet_ui.png' %}" class="wallet-ui" alt="">
           <div class="col-xs-12 wallet-video">
-            <video loop="" muted="" autoplay="" preload="metadata" poster="{% static '/static/images/wallet_ui.webp' %}"
-                    id="interface-video" class="perspective preview">
-              <source src="{% static '/static/video/mp4/wallet.mp4' %}" type="video/mp4">
-              <source src="{% static '/static/video/ogv/wallet.ogv' %}" type="video/ogg">
-              <source src="{% static '/static/video/webm/wallet.webm' %}" type="video/webm">
-            </video>
+            <div class="video show" data-target="wallet">
+              <video loop="" muted="" autoplay="" preload="metadata" poster="{% static '/static/images/wallet_ui.webp' %}" class="perspective preview">
+                <source src="{% static '/static/video/mp4/wallet.mp4' %}" type="video/mp4">
+                <source src="{% static '/static/video/ogv/wallet.ogv' %}" type="video/ogg">
+                <source src="{% static '/static/video/webm/wallet.webm' %}" type="video/webm">
+              </video>
+            </div>
+            <div class="video" data-target="tpm">
+              <video loop="" muted="" autoplay="" preload="metadata" poster="{% static '/static/images/wallet_ui.webp' %}" class="perspective preview">
+                <source src="{% static '/static/video/mp4/tpm.mp4' %}" type="video/mp4">
+                <source src="{% static '/static/video/ogv/tpm.ogv' %}" type="video/ogg">
+                <source src="{% static '/static/video/webm/tpm.webm' %}" type="video/webm">
+              </video>
+            </div>
           </div>
         </div>
       </div>
