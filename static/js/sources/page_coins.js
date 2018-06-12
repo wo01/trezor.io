@@ -20,17 +20,25 @@ $(document).ready(function () {
             return ('<span class="logo-wrapper errored" style="background-color:' + string_to_color(ob.name) + '">' + ob.name.split('')[0] + '</span>')
         },
         get_search_results = function (str) {
+            var hasResults = false;
             $("tr.coin").each(function () {
                 if (str.length > 1) {
                     if ($(this).text().search(new RegExp(str, "i")) < 0) {
                         $(this).fadeOut();
                     } else {
+                        hasResults = true;
                         $(this).show();
                     }
                 } else {
                     $(this).show();
                 }
             });
+
+            if (hasResults) {
+                $('#noresults').hide();
+            } else {
+                $('#noresults').show();
+            }
         },
         set_search = function (e) {
                 var valThis = $(this).val();
