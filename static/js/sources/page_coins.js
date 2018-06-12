@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    new ClipboardJS('.clipboard');
+
     var coins = [],
         get_result = function (input) {
             if (input === 'soon') return 'Soon';
@@ -88,9 +90,10 @@ $(document).ready(function () {
         });
 
         $.each(coins, function (i, e) {
+            var coinUrl = window.location.origin + '/coins/#' + e.shortcut;
             var wrapper = $('<tr class="coin" data-href="./#' + e.shortcut + '" id="' + e.shortcut + '"/>');
             wrapper.append($('<td>' + get_logo(e) + '</td>'));
-            wrapper.append($('<td title="$' + e.marketcap_usd.toLocaleString() + '"><strong>' + e.name + '</strong> (' + e.shortcut + ')</td>'));
+            wrapper.append($('<td title="$' + e.marketcap_usd.toLocaleString() + '"><strong>' + e.name + '</strong> (' + e.shortcut + ') <a href="#' + e.shortcut + '" class="clipboard"  data-clipboard-text="' + coinUrl + '"><i class="fa fa-copy"></i> <small>copy</small></a><span class="copied"><i class="fa fa-check-circle"></i> copied!</span></td>'));
             wrapper.append($('<td>' + get_result(e.t1_enabled) + '</td>'));
             wrapper.append($('<td>' + get_result(e.t2_enabled) + '</td>'));
             var links = $('<td class="hidden-sm-down" />');
@@ -104,12 +107,34 @@ $(document).ready(function () {
             wrapper.append(links);
             $.debounce( 150, $('#content').append(wrapper) )
         });
+
+        $('a.clipboard').click(function(e) {
+            e.preventDefault();
+            
+            var hash = $(e.currentTarget).attr('href').substring(1);
+            var scrollTop = $('tr#' + hash).offset().top;
+
+            $('tr.coin').removeClass('active');
+            $('tr#' + hash).addClass('active');
+           
+            $('html, body').animate({
+                scrollTop: scrollTop - 48
+            }, 600, function() {
+                if (history.pushState) {
+                    history.pushState(null, null, '#' + hash);
+                } else {
+                    window.location.hash = '#' + hash;
+                }
+            });
+        });
+
         var hashlink = window.location.hash;
         if (typeof hashlink !== "undefined" && hashlink.length !== 0) {
             hashlink = hashlink.split('?')[0];
             if ($(hashlink).length) {
+                $(hashlink).addClass('active');
                 $('html, body').animate({
-                    scrollTop: $(hashlink).offset().top - 50
+                    scrollTop: $(hashlink).offset().top - 48
                 }, 600);
             }
         }
