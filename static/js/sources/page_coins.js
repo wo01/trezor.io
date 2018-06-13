@@ -93,7 +93,7 @@ $(document).ready(function () {
             var coinUrl = window.location.origin + '/coins/#' + e.shortcut;
             var wrapper = $('<tr class="coin" data-href="./#' + e.shortcut + '" id="' + e.shortcut + '"/>');
             wrapper.append($('<td>' + get_logo(e) + '</td>'));
-            wrapper.append($('<td title="$' + e.marketcap_usd.toLocaleString() + '"><strong>' + e.name + '</strong> (' + e.shortcut + ') <a href="#' + e.shortcut + '" class="clipboard"  data-clipboard-text="' + coinUrl + '"><i class="fa fa-link"></i> copy</a><span class="copied"><i class="fa fa-check-circle"></i> copied!</span></td>'));
+            wrapper.append($('<td title="$' + e.marketcap_usd.toLocaleString() + '"><strong>' + e.name + '</strong> (' + e.shortcut + ') <a href="#' + e.shortcut + '" class="clipboard"  data-clipboard-text="' + coinUrl + '" data-toggle="tooltip" data-title="copy"><i class="fa fa-link"></i></a><span class="copied"><i class="fa fa-check-circle"></i> copied!</span></td>'));
             wrapper.append($('<td>' + get_result(e.t1_enabled) + '</td>'));
             wrapper.append($('<td>' + get_result(e.t2_enabled) + '</td>'));
             var links = $('<td class="hidden-sm-down" />');
@@ -160,13 +160,12 @@ $(document).ready(function () {
             bindStickyHandler();
         });
         $( window ).resize(sizeElements);
+        $('[data-toggle="tooltip"]').tooltip();
     });
 
     function sizeElements() {
         $('#invisible-offset').width($('#visible-offset').width());
         $('#invisible-name').width($('#visible-name').width());
-        $('#invisible-t1').width($('#visible-t1').width());
-        $('#invisible-t2').width($('#visible-t2').width());
         $('#invisible-links').width($('#visible-links').width());
         return false;
     }
