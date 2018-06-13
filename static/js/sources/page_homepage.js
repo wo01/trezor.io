@@ -1,5 +1,6 @@
 /* our code */
 $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip()
 
     $.fn.shuffle = function () {
         var allElems = this.get(),
