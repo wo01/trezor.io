@@ -69,7 +69,16 @@ $(document).ready(function () {
         $('.switcher.active').removeClass('active').addClass('inactive');
         $(this).removeClass('inactive').addClass('active');
         $('.wallet-video .video').removeClass('show');
-        $('.wallet-video .video[data-target="' + newSrc + '"]').addClass('show');
+        $('.wallet-video .video video').each(function(i, el) {
+            el.pause();
+        });
+        
+        setTimeout(function() {
+            $('.wallet-video .video[data-target="' + newSrc + '"]').addClass('show');
+            setTimeout(function() {
+                $('.wallet-video .video[data-target="' + newSrc + '"] video')[0].play();    
+            }, 500);
+        }, 500);
     });
 
     function getVideoUrl(type, name) {
