@@ -632,6 +632,48 @@
       margin: 0 auto
       margin-bottom: 20px
 
+
+/* CEO SECTION */
+.ceo-section
+  background: #FAFAFA
+
+  .ceos
+    .header
+      width: 100%
+      max-width: 280px
+      max-height: 280px
+      display: block
+      overflow: hidden
+      position: relative
+      margin: 0 auto
+      margin-bottom: 8px
+      margin-top: 20px
+      +border-radius(50%)
+
+      &:after
+        content: ""
+        display: block
+        padding-bottom: 100%
+
+    .stick
+      background: url("/static/images/team_faces/stick.png")
+      background-repeat: no-repeat
+      background-size: 100%
+
+    .slush
+      background: url("/static/images/team_faces/slush.png")
+      background-repeat: no-repeat
+      background-size: 100%
+
+    h3
+      font-size: 1.3em
+      padding-top: 25px
+
+    .title
+      font-weight: bold
+      margin-top: -15px
+      color: $c_grey
+
 .comparison-section
   padding-top: 40px
 
