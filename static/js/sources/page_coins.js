@@ -118,7 +118,7 @@ $(document).ready(function () {
             }
             var coinUrl = window.location.origin + '/coins/#' + shortcut;
             var wrapper = $('<tr class="coin" data-href="./#' + e.shortcut + '" id="' + shortcut + '"/>');
-            wrapper.append($('<td><span class="logo-wrapper"><img src="/static/images/pixel.jpg" class="lazy" id="COIN-' + shortcut.toUpperCase() + '" data-clearbit="' + get_logo(e) + '" data-name="' + e.name + '"></span></td>'));
+            wrapper.append($('<td><span class="logo-wrapper"><img class="lazy" id="COIN-' + shortcut.toUpperCase() + '" data-clearbit="' + get_logo(e) + '" data-name="' + e.name + '"></span></td>'));
             wrapper.append($('<td title="$' + e.marketcap_usd.toLocaleString() + '"><strong>' + e.name + '</strong> (' + e.shortcut + ') <a href="#' + shortcut + '" class="clipboard"  data-clipboard-text="' + coinUrl + '" data-toggle="tooltip" data-title="copy"><i class="fa fa-link"></i></a><span class="copied"><i class="fa fa-check-circle"></i> copied!</span></td>'));
             wrapper.append($('<td>' + get_result(e.t1_enabled) + '</td>'));
             wrapper.append($('<td>' + get_result(e.t2_enabled) + '</td>'));
@@ -183,15 +183,6 @@ $(document).ready(function () {
                 }
             });
 
-            $('img[src="/static/images/pixel.jpg"]').each(function(i, el) {
-                var image = $(el).data('clearbit');
-
-                if (image) {
-                    $(el).attr('data-original', image);
-                }
-            });
-
-
             var bLazy = new Blazy({
                 selector: '.lazy',
                 src: 'data-original',
@@ -206,6 +197,17 @@ $(document).ready(function () {
                     }
                 },
                 offset: 200
+            });
+
+            setTimeout(function() {
+                $('img').each(function(i, el) {
+                    var src = $(el).attr('src');
+                    var image = $(el).data('clearbit');
+
+                    if (!src && image) {
+                        $(el).attr('data-original', image);
+                    }
+                });
             });
         });
     });
