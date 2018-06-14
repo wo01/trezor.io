@@ -3,17 +3,21 @@ COINMARKET_SYMBLOS = {
     'CryptoCarbon': 'CCRB',
     'DATAcoin': 'DATA',
     'BLX (Bullion)': 'CBX',
-    'CAT (BitClave)': 'CAT',
+    'CAT (BitClave)': 'CATC',
     'CAT (Blockcat)': 'CAT',
-    'CCC (ICONOMI)': 'ICN',
+    'CCC (ICONOMI)': 'CCCI',
     'CC3': 'COAL',
     'CoinCrowd': 'CRC',
     'CTG': 'GLT',
     'APT': 'AIX',
-    'DROP (dropil)': 'DROP',
+    'DROP (dropil)': 'DROPL',
     'BLX (Iconomi)': 'ICN',
     'LINK (Chainlink)': 'LINK',
-    'LNC-Linker Coin': 'LNC'
+    'LNC-Linker Coin': 'LNC',
+    'BTL (Battle)': 'BTL',
+    'BTL (Bitlle)': 'BTLL',
+    'CATs (BitClave)_Old': 'BTLLO',
+    'CCC (CryptoCrashCourse)': 'CCC'
 };
 
 $(document).ready(function () {
@@ -108,13 +112,14 @@ $(document).ready(function () {
         });
 
         $.each(coins, function (i, e) {
+            var shortcut = e.shortcut;
             if (COINMARKET_SYMBLOS[e.shortcut]) {
-                e.shortcut = COINMARKET_SYMBLOS[e.shortcut];
+                shortcut = COINMARKET_SYMBLOS[e.shortcut];
             }
-            var coinUrl = window.location.origin + '/coins/#' + e.shortcut;
-            var wrapper = $('<tr class="coin" data-href="./#' + e.shortcut + '" id="' + e.shortcut + '"/>');
-            wrapper.append($('<td><span class="logo-wrapper"><img src="/static/images/pixel.jpg" class="lazy" id="COIN-' + e.shortcut.toUpperCase() + '" data-clearbit="' + get_logo(e) + '" data-name="' + e.name + '"></span></td>'));
-            wrapper.append($('<td title="$' + e.marketcap_usd.toLocaleString() + '"><strong>' + e.name + '</strong> (' + e.shortcut + ') <a href="#' + e.shortcut + '" class="clipboard"  data-clipboard-text="' + coinUrl + '" data-toggle="tooltip" data-title="copy"><i class="fa fa-link"></i></a><span class="copied"><i class="fa fa-check-circle"></i> copied!</span></td>'));
+            var coinUrl = window.location.origin + '/coins/#' + shortcut;
+            var wrapper = $('<tr class="coin" data-href="./#' + e.shortcut + '" id="' + shortcut + '"/>');
+            wrapper.append($('<td><span class="logo-wrapper"><img src="/static/images/pixel.jpg" class="lazy" id="COIN-' + shortcut.toUpperCase() + '" data-clearbit="' + get_logo(e) + '" data-name="' + e.name + '"></span></td>'));
+            wrapper.append($('<td title="$' + e.marketcap_usd.toLocaleString() + '"><strong>' + e.name + '</strong> (' + e.shortcut + ') <a href="#' + shortcut + '" class="clipboard"  data-clipboard-text="' + coinUrl + '" data-toggle="tooltip" data-title="copy"><i class="fa fa-link"></i></a><span class="copied"><i class="fa fa-check-circle"></i> copied!</span></td>'));
             wrapper.append($('<td>' + get_result(e.t1_enabled) + '</td>'));
             wrapper.append($('<td>' + get_result(e.t2_enabled) + '</td>'));
             var links = $('<td class="hidden-sm-down" />');
@@ -192,7 +197,6 @@ $(document).ready(function () {
                 src: 'data-original',
                 successClass: 'loaded',
                 error: function (elm, msg) {
-                    console.log(msg)
                     if (msg === 'invalid') {
                         // Data-src is invalid
                         var name = $(elm).data('name');
