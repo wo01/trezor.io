@@ -1,3 +1,21 @@
+COINMARKET_SYMBLOS = { 
+    'ROCK': 'RKT',
+    'CryptoCarbon': 'CCRB',
+    'DATAcoin': 'DATA',
+    'BLX (Bullion)': 'CBX',
+    'CAT (BitClave)': 'CAT',
+    'CAT (Blockcat)': 'CAT',
+    'CCC (ICONOMI)': 'ICN',
+    'CC3': 'COAL',
+    'CoinCrowd': 'CRC',
+    'CTG': 'GLT',
+    'APT': 'AIX',
+    'DROP (dropil)': 'DROP',
+    'BLX (Iconomi)': 'ICN',
+    'LINK (Chainlink)': 'LINK',
+    'LNC-Linker Coin': 'LNC'
+};
+
 $(document).ready(function () {
     new ClipboardJS('.clipboard');
 
@@ -17,9 +35,9 @@ $(document).ready(function () {
         },
         get_logo = function (ob) {
             if (typeof ob.links.Homepage !== 'undefined') {
-                return ('<span class="logo-wrapper"><img class="logo lazy" data-name="' + ob.name + '" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-original="//logo.clearbit.com/' + url_domain(ob.links.Homepage) + '?size=64"></span>');
+                return '//logo.clearbit.com/' + url_domain(ob.links.Homepage) + '?size=64';
             }
-            return ('<span class="logo-wrapper errored" style="background-color:' + string_to_color(ob.name) + '">' + ob.name.split('')[0] + '</span>')
+            return false;
         },
         get_search_results = function (str) {
             var hasResults = false;
@@ -90,9 +108,12 @@ $(document).ready(function () {
         });
 
         $.each(coins, function (i, e) {
+            if (COINMARKET_SYMBLOS[e.shortcut]) {
+                e.shortcut = COINMARKET_SYMBLOS[e.shortcut];
+            }
             var coinUrl = window.location.origin + '/coins/#' + e.shortcut;
             var wrapper = $('<tr class="coin" data-href="./#' + e.shortcut + '" id="' + e.shortcut + '"/>');
-            wrapper.append($('<td>' + get_logo(e) + '</td>'));
+            wrapper.append($('<td><span class="logo-wrapper"><img src="/static/images/pixel.jpg" class="lazy" id="COIN-' + e.shortcut.toUpperCase() + '" data-clearbit="' + get_logo(e) + '" data-name="' + e.name + '"></span></td>'));
             wrapper.append($('<td title="$' + e.marketcap_usd.toLocaleString() + '"><strong>' + e.name + '</strong> (' + e.shortcut + ') <a href="#' + e.shortcut + '" class="clipboard"  data-clipboard-text="' + coinUrl + '" data-toggle="tooltip" data-title="copy"><i class="fa fa-link"></i></a><span class="copied"><i class="fa fa-check-circle"></i> copied!</span></td>'));
             wrapper.append($('<td>' + get_result(e.t1_enabled) + '</td>'));
             wrapper.append($('<td>' + get_result(e.t2_enabled) + '</td>'));
@@ -139,28 +160,50 @@ $(document).ready(function () {
             }
         }
 
-        var bLazy = new Blazy({
-            selector: '.lazy',
-            src: 'data-original',
-            successClass: 'loaded',
-            error: function (elm, msg) {
-                if (msg === 'invalid') {
-                    // Data-src is invalid
-                    var name = $(elm).data('name');
-                    var parent = $(elm).parent();
-                    $(parent).addClass('errored');
-                    $(parent).html(name.split('')[0]);
-                    $(parent).css("background-color", string_to_color(name));
-                }
-            },
-            offset: 200
-        });
         sizeElements();
         $(window).scroll( function (event) {
             bindStickyHandler();
         });
         $( window ).resize(sizeElements);
         $('[data-toggle="tooltip"]').tooltip();
+
+        $.getJSON('https://api.coinmarketcap.com/v2/listings/', function (result) {
+            result.data.forEach(function(item) {
+                var isChar = item.symbol.match(/[a-zA-Z0-9\-]+/g);
+                if (isChar && isChar[0] == item.symbol) {
+                    var el = $('img#COIN-' + item.symbol);
+                    if (el[0]) {
+                        el.attr('data-original', 'https://s2.coinmarketcap.com/static/img/coins/32x32/' + item.id + '.png')
+                    }
+                }
+            });
+
+            $('img[src="/static/images/pixel.jpg"]').each(function(i, el) {
+                var image = $(el).data('clearbit');
+
+                if (image) {
+                    $(el).attr('data-original', image);
+                }
+            });
+
+
+            var bLazy = new Blazy({
+                selector: '.lazy',
+                src: 'data-original',
+                successClass: 'loaded',
+                error: function (elm, msg) {
+                    console.log(msg)
+                    if (msg === 'invalid') {
+                        // Data-src is invalid
+                        var name = $(elm).data('name');
+                        var parent = $(elm).parent();
+                        $(parent).html(name.split('')[0]);
+                        $(parent).css("background-color", string_to_color(name));
+                    }
+                },
+                offset: 200
+            });
+        });
     });
 
     function sizeElements() {
