@@ -97,11 +97,14 @@
     .logo-wrapper
       position: relative
       display: block
-      width: 18px
-      height: 18px
+      width: 16px
+      height: 16px
       text-align: center
       font-size: .8em
       line-height: 18px
+      color: $c_white
+      font-weight: bold
+      text-transform: uppercase
       +border-radius(50%)
 
     .logo
@@ -118,13 +121,65 @@
 
       &.loaded
         opacity: 1
+  td
+      .clipboard
+        margin-left: 10px
+        opacity: 0
+
+        .fa
+          font-size: 16px
+
+      .copied
+        margin-left: 10px
+        color: $c_green
+        display: none
+        font-style: italic
+
+  tr:hover
+      a.clipboard
+        opacity: 1
 
   tbody > tr:hover
     background-color: rgba($c_yellow, .1)
 
-  tbody > tr:target
+  tbody > tr:target,
+  tbody > tr.active
     border-left: 3px solid $c_orange
     +animation(target .5s linear)
+    background-color: rgba($c_yellow, .1)
+
+    td
+      a.clipboard
+        display: none
+      span.copied
+        display: inline-block
 
   .devices, img
     margin-right: 10px
+
+  #invisible-t1
+    width: 130px
+
+    @media only screen and (max-width: $lg)
+      width: auto
+
+    @media only screen and (max-width: $sm)
+      width: 70px
+
+  #invisible-t2
+    width: 155px
+
+    @media only screen and (max-width: $lg)
+      width: 150px
+
+    @media only screen and (max-width: $md)
+      width: 140px
+
+      img
+        margin-left: -10px
+
+  .logo-wrapper
+    img
+      width: 16px
+      height: 16px
+      +border-radius(100%)
