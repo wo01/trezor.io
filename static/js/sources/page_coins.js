@@ -1,4 +1,4 @@
-COINMARKET_SYMBLOS = { 
+COINMARKET_SYMBLOS = {
     'ROCK': 'RKT',
     'CryptoCarbon': 'CCRB',
     'DATAcoin': 'DATA',
@@ -22,7 +22,7 @@ COINMARKET_SYMBLOS = {
 
 $(document).ready(function () {
     new ClipboardJS('.clipboard');
-
+    
     var coins = [],
         get_result = function (input) {
             if (input === 'soon') return 'Soon';
@@ -57,7 +57,7 @@ $(document).ready(function () {
                     $(this).show();
                 }
             });
-
+            
             if (hasResults) {
                 $('#noresults').hide();
             } else {
@@ -65,11 +65,11 @@ $(document).ready(function () {
             }
         },
         set_search = function (e) {
-                var valThis = $(this).val();
-                if (e.keyCode === 27) {
-                    $('#search').blur();
-                }
-                get_search_results(valThis.toLowerCase());
+            var valThis = $(this).val();
+            if (e.keyCode === 27) {
+                $('#search').blur();
+            }
+            get_search_results(valThis.toLowerCase());
         },
         string_to_color = function (str) {
             var hash = 0;
@@ -83,23 +83,31 @@ $(document).ready(function () {
             }
             return color;
         };
-
-    $('#search').keyup( $.debounce( 150, set_search) );
+    
+    $('#search').keyup($.debounce(150, set_search));
     var test = window.location.hash;
     var JSON_URL = '/static/json/coins_details.json';
-
+    var hideDisaled = true;
     test = test.split('?')[1];
     if (typeof test !== "undefined" && test.length !== 0 && test === 'test') {
         console.warn('loaded remote json');
-        JSON_URL = 'https://raw.githubusercontent.com/trezor/trezor-common/master/coins_details.json';
+        hideDisaled = false;
+        JSON_URL = 'https://raw.githubusercontent.com/trezor/trezor-common/master/defs/coins_details.json';
     }
     $.getJSON(JSON_URL, function (result) {
         $('#all-coins').html('(' + coin_count(result.info) + ')');
+        
         $.each(result.coins, function (i, field) {
-            if (typeof(field.hidden ) === 'undefined') {
+            if (hideDisaled) {
+                if (typeof(field.hidden) === 'undefined') {
+                    coins.push(field);
+                }
+            } else {
                 coins.push(field);
             }
+            
         });
+        
         coins.sort(function (a, b) {
             var nameA = a.name.toLowerCase(),
                 nameB = b.name.toLowerCase();
@@ -110,16 +118,18 @@ $(document).ready(function () {
         coins.sort(function (a, b) {
             return b.marketcap_usd - a.marketcap_usd
         });
-
+        
         $.each(coins, function (i, e) {
             var shortcut = e.shortcut;
             if (COINMARKET_SYMBLOS[e.shortcut]) {
                 shortcut = COINMARKET_SYMBLOS[e.shortcut];
             }
             var coinUrl = window.location.origin + '/coins/#' + shortcut;
-            var wrapper = $('<tr class="coin" data-href="./#' + e.shortcut + '" id="' + shortcut + '"/>');
+            var hiddenClass = typeof(e.hidden) === 'undefined' ? ' ' : ' hidden';
+            var wrapper = $('<tr class="coin' + hiddenClass + '" data-href="./#' + e.shortcut + '" id="' + shortcut + '"/>');
+            var tempTitle = typeof e.marketcap_usd === 'undefined' ? " " : "$ " + e.marketcap_usd.toLocaleString();
             wrapper.append($('<td><span class="logo-wrapper"><img class="lazy" id="COIN-' + shortcut.toUpperCase() + '" data-clearbit="' + get_logo(e) + '" data-name="' + e.name + '"></span></td>'));
-            wrapper.append($('<td title="$' + e.marketcap_usd.toLocaleString() + '"><strong>' + e.name + '</strong> (' + e.shortcut + ') <a href="#' + shortcut + '" class="clipboard"  data-clipboard-text="' + coinUrl + '" data-toggle="tooltip" data-title="copy"><i class="fa fa-link"></i></a><span class="copied"><i class="fa fa-check-circle"></i> copied!</span></td>'));
+            wrapper.append($('<td title="' + tempTitle + '"><strong>' + e.name + '</strong> (' + e.shortcut + ') <a href="#' + shortcut + '" class="clipboard"  data-clipboard-text="' + coinUrl + '" data-toggle="tooltip" data-title="copy"><i class="fa fa-link"></i></a><span class="copied"><i class="fa fa-check-circle"></i> copied!</span></td>'));
             wrapper.append($('<td>' + get_result(e.t1_enabled) + '</td>'));
             wrapper.append($('<td>' + get_result(e.t2_enabled) + '</td>'));
             var links = $('<td class="hidden-sm-down" />');
@@ -131,21 +141,21 @@ $(document).ready(function () {
             });
             $('#loader').hide();
             wrapper.append(links);
-            $.debounce( 150, $('#content').append(wrapper) )
+            $.debounce(150, $('#content').append(wrapper))
         });
-
-        $('a.clipboard').click(function(e) {
+        
+        $('a.clipboard').click(function (e) {
             e.preventDefault();
             
             var hash = $(e.currentTarget).attr('href').substring(1);
             var scrollTop = $('tr#' + hash).offset().top;
-
+            
             $('tr.coin').removeClass('active');
             $('tr#' + hash).addClass('active');
-           
+            
             $('html, body').animate({
                 scrollTop: scrollTop - 48
-            }, 600, function() {
+            }, 600, function () {
                 if (history.pushState) {
                     history.pushState(null, null, '#' + hash);
                 } else {
@@ -153,9 +163,9 @@ $(document).ready(function () {
                 }
             });
         });
-
+        
         var hashlink = window.location.hash;
-        if (typeof hashlink !== "undefined" && hashlink.length !== 0) {
+        if (typeof hashlink !== "undefined" && hashlink.length !== 0 && hashlink.indexOf("test") === -1) {
             hashlink = hashlink.split('?')[0];
             if ($(hashlink).length) {
                 $(hashlink).addClass('active');
@@ -164,16 +174,16 @@ $(document).ready(function () {
                 }, 600);
             }
         }
-
+        
         sizeElements();
-        $(window).scroll( function (event) {
+        $(window).scroll(function (event) {
             bindStickyHandler();
         });
-        $( window ).resize(sizeElements);
+        $(window).resize(sizeElements);
         $('[data-toggle="tooltip"]').tooltip();
-
+        
         $.getJSON('https://api.coinmarketcap.com/v2/listings/', function (result) {
-            result.data.forEach(function(item) {
+            result.data.forEach(function (item) {
                 var isChar = item.symbol.match(/[a-zA-Z0-9\-]+/g);
                 if (isChar && isChar[0] == item.symbol) {
                     var el = $('img#COIN-' + item.symbol);
@@ -182,7 +192,7 @@ $(document).ready(function () {
                     }
                 }
             });
-
+            
             var bLazy = new Blazy({
                 selector: '.lazy',
                 src: 'data-original',
@@ -198,12 +208,12 @@ $(document).ready(function () {
                 },
                 offset: 200
             });
-
-            setTimeout(function() {
-                $('img').each(function(i, el) {
+            
+            setTimeout(function () {
+                $('img').each(function (i, el) {
                     var src = $(el).attr('src');
                     var image = $(el).data('clearbit');
-
+                    
                     if (!src && image) {
                         $(el).attr('data-original', image);
                     }
@@ -211,19 +221,19 @@ $(document).ready(function () {
             });
         });
     });
-
+    
     function sizeElements() {
         $('#invisible-offset').width($('#visible-offset').width());
         $('#invisible-name').width($('#visible-name').width());
         $('#invisible-links').width($('#visible-links').width());
         return false;
     }
-
+    
     function bindStickyHandler() {
         var scrollPos = $(window).scrollTop();
         var startPos = $('#content').offset().top;
         var endPos = $('#subscribe').offset().top;
-
+        
         if (scrollPos > startPos && endPos > scrollPos) {
             $('#table-head').addClass('sticky');
         } else {
