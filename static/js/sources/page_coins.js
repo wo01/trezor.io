@@ -17,7 +17,8 @@ COINMARKET_SYMBLOS = {
     'BTL (Battle)': 'BTL',
     'BTL (Bitlle)': 'BTLL',
     'CATs (BitClave)_Old': 'BTLLO',
-    'CCC (CryptoCrashCourse)': 'CCC'
+    'CCC (CryptoCrashCourse)': 'CCC',
+    '$FIXY NETWORK': 'FXY',
 };
 
 $(document).ready(function () {
@@ -98,6 +99,9 @@ $(document).ready(function () {
         $('#all-coins').html('(' + coin_count(result.info) + ')');
         
         $.each(result.coins, function (i, field) {
+            if (typeof field.marketcap_usd === 'undefined') {
+                field.marketcap_usd = 0;
+            }
             if (hideDisaled) {
                 if (typeof(field.hidden) === 'undefined') {
                     coins.push(field);
@@ -124,6 +128,7 @@ $(document).ready(function () {
             if (COINMARKET_SYMBLOS[e.shortcut]) {
                 shortcut = COINMARKET_SYMBLOS[e.shortcut];
             }
+            
             var coinUrl = window.location.origin + '/coins/#' + shortcut;
             var hiddenClass = typeof(e.hidden) === 'undefined' ? ' ' : ' hidden';
             var wrapper = $('<tr class="coin' + hiddenClass + '" data-href="./#' + e.shortcut + '" id="' + shortcut + '"/>');
@@ -133,10 +138,14 @@ $(document).ready(function () {
             wrapper.append($('<td>' + get_result(e.t1_enabled) + '</td>'));
             wrapper.append($('<td>' + get_result(e.t2_enabled) + '</td>'));
             var links = $('<td class="hidden-sm-down" />');
-            var length = Object.keys(e.links).length;
-            $.each(e.links, function (title, link) {
-                length--;
-                var separator = (length < 1) ? '' : ', ';
+            var newLinks = e.links;
+            if (typeof e.wallet !== 'undefined') {
+                newLinks = Object.assign(e.links, e.wallet);
+            }
+            var linkLng = Object.keys(newLinks).length;
+            $.each(newLinks, function (title, link) {
+                linkLng--;
+                var separator = (linkLng < 1) ? '' : ', ';
                 links.append('<a href="' + link + '" rel="nofollow noopener noreferrer" target="_blank">' + title + '</a>' + separator);
             });
             $('#loader').hide();
