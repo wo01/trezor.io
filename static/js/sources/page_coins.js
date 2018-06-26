@@ -83,6 +83,17 @@ $(document).ready(function () {
                 color += ('00' + value.toString(16)).substr(-2);
             }
             return color;
+        },
+        getWalletLinks = function (links) {
+            if (links) {
+                var r = [];
+                $.each(links, function(title, link) {
+                    r.push('<a href="' + link + '" target="_blank">' + title + '</a>');
+                });
+                return r.join(', ');
+            } else {
+                return '-';
+            }
         };
     
     $('#search').keyup($.debounce(150, set_search));
@@ -98,7 +109,8 @@ $(document).ready(function () {
     $.getJSON(JSON_URL, function (result) {
         $('#all-coins').html('(' + coin_count(result.info) + ')');
         
-        $.each(result.coins, function (i, field) {
+        var r = [];
+$.each(result.coins, function (i, field) {
             if (typeof field.marketcap_usd === 'undefined') {
                 field.marketcap_usd = 0;
             }
@@ -137,7 +149,8 @@ $(document).ready(function () {
             wrapper.append($('<td title="' + tempTitle + '"><strong>' + e.name + '</strong> (' + e.shortcut + ') <a href="#' + shortcut + '" class="clipboard"  data-clipboard-text="' + coinUrl + '" data-toggle="tooltip" data-title="copy"><i class="fa fa-link"></i></a><span class="copied"><i class="fa fa-check-circle"></i> copied!</span></td>'));
             wrapper.append($('<td>' + get_result(e.t1_enabled) + '</td>'));
             wrapper.append($('<td>' + get_result(e.t2_enabled) + '</td>'));
-            var links = $('<td class="hidden-sm-down" />');
+            wrapper.append($('<td class="hidden-xs-down">' + getWalletLinks(e.wallet) + '</td>'));
+            var links = $('<td class="hidden-md-down" />');
             var newLinks = e.links;
             if (typeof e.wallet !== 'undefined') {
                 newLinks = Object.assign(e.links, e.wallet);
