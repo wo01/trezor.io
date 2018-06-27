@@ -88,7 +88,7 @@ $(document).ready(function () {
             if (links) {
                 var r = [];
                 $.each(links, function(title, link) {
-                    r.push('<a href="' + link + '" target="_blank">' + title + '</a>');
+                    r.push('<a href="' + link + '" target="_blank" rel="nofollow noopener noreferrer">' + title + '</a>');
                 });
                 return r.join(', ');
             } else {
@@ -149,7 +149,7 @@ $.each(result.coins, function (i, field) {
             wrapper.append($('<td title="' + tempTitle + '"><strong>' + e.name + '</strong> (' + e.shortcut + ') <a href="#' + shortcut + '" class="clipboard"  data-clipboard-text="' + coinUrl + '" data-toggle="tooltip" data-title="copy"><i class="fa fa-link"></i></a><span class="copied"><i class="fa fa-check-circle"></i> copied!</span></td>'));
             wrapper.append($('<td>' + get_result(e.t1_enabled) + '</td>'));
             wrapper.append($('<td>' + get_result(e.t2_enabled) + '</td>'));
-            wrapper.append($('<td class="hidden-xs-down">' + getWalletLinks(e.wallet) + '</td>'));
+            wrapper.append($('<td>' + getWalletLinks(e.wallet) + '</td>'));
             var links = $('<td class="hidden-md-down" />');
             var newLinks = e.links;
             if (typeof e.wallet !== 'undefined') {
@@ -247,6 +247,9 @@ $.each(result.coins, function (i, field) {
     function sizeElements() {
         $('#invisible-offset').width($('#visible-offset').width());
         $('#invisible-name').width($('#visible-name').width());
+        $('#invisible-t1').width($('#visible-t1').width());
+        $('#invisible-t2').width($('#visible-t2').width());
+        $('#invisible-wallets').width($('#visible-wallets').width());
         $('#invisible-links').width($('#visible-links').width());
         return false;
     }
