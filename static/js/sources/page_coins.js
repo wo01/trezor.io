@@ -151,12 +151,8 @@ $.each(result.coins, function (i, field) {
             wrapper.append($('<td>' + get_result(e.t2_enabled) + '</td>'));
             wrapper.append($('<td>' + getWalletLinks(e.wallet) + '</td>'));
             var links = $('<td class="hidden-md-down" />');
-            var newLinks = e.links;
-            if (typeof e.wallet !== 'undefined') {
-                newLinks = Object.assign(e.links, e.wallet);
-            }
-            var linkLng = Object.keys(newLinks).length;
-            $.each(newLinks, function (title, link) {
+            var linkLng = Object.keys(e.links).length;
+            $.each(e.links, function (title, link) {
                 linkLng--;
                 var separator = (linkLng < 1) ? '' : ', ';
                 links.append('<a href="' + link + '" rel="nofollow noopener noreferrer" target="_blank">' + title + '</a>' + separator);
