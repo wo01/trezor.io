@@ -92,7 +92,7 @@ $(document).ready(function () {
             'eventValue': ''
         });            
     });
-    $('#HP_Pick_GetTrezorOne').click(function (e) {
+    $('.HP_Pick_GetTrezorOne').click(function (e) {
         dataLayer.push({
             'event': 'InteractionUI',
             'eventCategory': 'Button',
@@ -101,7 +101,7 @@ $(document).ready(function () {
             'eventValue': ''
         });                      
     });
-    $('#HP_Pick_GetTrezorT').click(function (e) {
+    $('.HP_Pick_GetTrezorT').click(function (e) {
         dataLayer.push({
             'event': 'InteractionUI',
             'eventCategory': 'Button',
