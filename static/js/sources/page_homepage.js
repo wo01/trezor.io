@@ -81,6 +81,16 @@ $(document).ready(function () {
         }, 500);
     });
 
+    $('#hp_shop_cta').click(function (e) {
+        dataLayer.push({
+            'event': 'InteractionUI',
+            'eventCategory': 'Button',
+            'eventAction': 'Click',
+            'eventLabel': 'HP_Header_GetTrezor',
+            'eventValue': ''
+        });            
+    });
+
     function getVideoUrl(type, name) {
         if (type === 'mp4') return '/static/video/mp4/'+name+'.mp4';
         if (type === 'ogv') return '/static/video/ogv/'+name+'.mp4';
