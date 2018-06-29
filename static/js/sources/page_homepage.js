@@ -81,7 +81,9 @@ $(document).ready(function () {
         }, 500);
     });
 
-    $('#hp_shop_cta').click(function (e) {
+
+    /* Google Analytics */
+    $('#HP_Header_GetTrezor').click(function (e) {
         dataLayer.push({
             'event': 'InteractionUI',
             'eventCategory': 'Button',
@@ -90,6 +92,43 @@ $(document).ready(function () {
             'eventValue': ''
         });            
     });
+    $('#HP_Pick_GetTrezorOne').click(function (e) {
+        dataLayer.push({
+            'event': 'InteractionUI',
+            'eventCategory': 'Button',
+            'eventAction': 'Click',
+            'eventLabel': 'HP_Pick_GetTrezorOne',
+            'eventValue': ''
+        });                      
+    });
+    $('#HP_Pick_GetTrezorT').click(function (e) {
+        dataLayer.push({
+            'event': 'InteractionUI',
+            'eventCategory': 'Button',
+            'eventAction': 'Click',
+            'eventLabel': 'HP_Pick_GetTrezorT',
+            'eventValue': ''
+        });         
+    });
+    $('#HP_Safe_GetToday').click(function (e) {
+        dataLayer.push({
+            'event': 'InteractionUI',
+            'eventCategory': 'Button',
+            'eventAction': 'Click',
+            'eventLabel': 'HP_Safe_GetToday',
+            'eventValue': ''
+        });               
+    });
+    $('.HP_Footer_Newsletter').click(function (e) {                
+        dataLayer.push({
+            'event': 'InteractionForm',
+            'eventCategory': 'Form',
+            'eventAction': 'Submit',
+            'eventLabel': 'HP_Footer_Newsletter',
+            'eventValue': ''
+        });
+    });
+    /* End Google Analytics */
 
     function getVideoUrl(type, name) {
         if (type === 'mp4') return '/static/video/mp4/'+name+'.mp4';
