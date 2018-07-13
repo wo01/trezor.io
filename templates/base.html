@@ -32,6 +32,14 @@
   <meta name="twitter:image:src" content="https://trezor.io/static/images/trezor_social02.jpg">
   <meta name="twitter:domain" content="https://trezor.io/">
   <link rel="stylesheet" href="{% static '/static/css/style.css?' %}{% now "mdHY" %}">
+  {% block gtm_before_hook %}
+  <script>
+    dataLayer = [{
+      'pageType': 'content',
+      'currency': 'EUR'
+    }]
+  </script>
+  {% endblock %}
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
