@@ -288,7 +288,7 @@
             "name": "Decred",
             "shortcut": "DCR",
             "t1_enabled": "yes",
-            "t2_enabled": "yes",
+            "t2_enabled": "soon",
             "type": "coin"
         },
         "coin:DGB": {
