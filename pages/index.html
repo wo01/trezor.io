@@ -1,9 +1,9 @@
 {% extends "base_new.html" %} {% load i18n %} {% block body %}
 <header id="header">
   <div class="jumbotron video-wrapper">
-    <img src="{% static '/static/images/photos/header.png' %}" class="hero-image"alt="">
+    <img src="{% static '/static/images/photos/header.jpg' %}" class="hero-image"alt="">
     <div class="color-overlay"></div>
-    <video loop="" muted="" autoplay="" id="jumbo-video" preload="metadata" poster="/static/images/photos/header.png" class="video-responsive">
+    <video loop="" muted="" autoplay="" id="jumbo-video" preload="metadata" poster="/static/images/photos/header.jp2" class="video-responsive">
       <source src="/static/video/mp4/trezor2.mp4" type="video/mp4">
       <source src="/static/video/ogv/trezor2.ogv" type="video/ogg">
       <source src="/static/video/webm/trezor2.webm" type="video/webm">
@@ -162,7 +162,7 @@
           </div>
         </div>
         <div class="row">
-          <img src="{% static '/static/images/wallet_ui.png' %}" class="wallet-ui" alt="">
+          <img src="{% static '/static/images/wallet_ui.jpg' %}" class="wallet-ui" alt="">
           <div class="col-xs-12 wallet-video">
             <div class="video show" data-target="wallet">
               <video loop="" muted="" autoplay="" preload="metadata" poster="{% static '/static/images/wallet_ui.webp' %}" class="perspective preview">
@@ -172,7 +172,7 @@
               </video>
             </div>
             <div class="video" data-target="tpm">
-              <video loop="" muted="" autoplay="" preload="metadata" poster="{% static '/static/images/tpm_ui.png' %}" class="perspective preview">
+              <video loop="" muted="" autoplay="" preload="metadata" poster="{% static '/static/images/tpm_ui.jp2' %}" class="perspective preview">
                 <source src="{% static '/static/video/mp4/tpm.mp4' %}" type="video/mp4">
                 <source src="{% static '/static/video/ogv/tpm.ogv' %}" type="video/ogg">
                 <source src="{% static '/static/video/webm/tpm.webm' %}" type="video/webm">
