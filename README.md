@@ -14,3 +14,10 @@ To enable internationalization for your project:
   4. Edit the .po file that was created with translations.
 
 
+
+## Building
+1. Install cactus `pip3 install cactus`
+2. Install pyScss `pip3 install pyScss`
+3. Install cactus' external dependencies `brew install closure-compiler` & `brew install yuicompressor`
+4. Build `cactus build`
+5. Serve locally `cactus serve`
