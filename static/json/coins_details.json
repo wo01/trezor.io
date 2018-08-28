@@ -11383,8 +11383,8 @@
         "erc20:eth:VEN": {
             "address": "0xD850942eF8811f2A866692A623011bDE52a462C1",
             "links": {
-                "Github": "https://github.com/vechain-team",
-                "Homepage": "https://tokensale.vechain.com/en"
+                "Github": "https://github.com/vechain",
+                "Homepage": "https://www.vechain.org"
             },
             "marketcap_usd": 0,
             "name": "Vechain",
