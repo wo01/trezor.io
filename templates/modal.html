@@ -1,0 +1,19 @@
+{% load i18n %}
+<!-- Modals -->
+<div class="modal fade" id="{{ target }}" tabindex="-1" role="dialog" aria-labelledby="{{ target }}_{{ title }}" aria-hidden="true">
+  <div class="modal-dialog modal-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h3>{{ title }}</h3>
+        <p class="text">
+          {{ text_html|safe }}
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a href="{{ button_link }}" class="btn btn-primary-full">{{ button_text }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end Modals -->

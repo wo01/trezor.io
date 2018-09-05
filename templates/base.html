@@ -52,7 +52,18 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6BZ9VS"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-  {% include "global_nav.html" %} {% block body %} {% endblock %} {% include "footer.html" %} {% block scripts %} {% endblock %}
+  {% include "global_nav.html" %}
+  
+  {% block body %}
+  {% endblock %}
+
+  {% include "footer.html" %}
+
+  {% block modals %}
+  {% endblock %}
+
+  {% block scripts %}
+  {% endblock %}
 
 </body>
 
