@@ -20,7 +20,7 @@
     </div>
     <div class="row">
       <div class="col-lg-6 col-md-6 col-xs-12">
-        <a href="https://wallet.trezor.io">
+        <div class="data-link" data-toggle="modal" data-target="#modalTrezorOne">
           <div class="text-xs-center nav-link">
             <img src="/static/images/start/T1.png" alt="Trezor One">
             <h3>
@@ -30,10 +30,10 @@
               You will be redirected to TREZOR Wallet to setup your device.
             </p>
           </div>
-        </a>
+        </div>
       </div>
       <div class="col-lg-6 col-md-6 col-xs-12">
-        <a href="https://beta-wallet.trezor.io">
+        <div class="data-link" data-toggle="modal" data-target="#modalTrezorT">
           <div class="text-xs-center nav-link">
             <img src="/static/images/start/T2.png" alt="Trezor Model T">
             <h3>
@@ -43,11 +43,22 @@
               You will be redirected to TREZOR Beta Wallet to setup your device.
             </p>
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
-{% endblock body %} {% block scripts %}
+{% endblock %} 
+
+
+{% block modals %}
+
+{% include "modal.html" with target="modalTrezorOne" title="Before you start" text_html="<p>Please make sure the hologram seals on the box are authentic. If the hologram seals are missing or look differently from the one in the video below, contact immediately our support at <a href=//trezor.io/support target=_blank>trezor.io/support</a>.</p><hr><p>The hologram seals are only on the box, not on the device itself. More information about the hologram seal can be found in this <a href=https://blog.trezor.io/trezor-one-tamper-evident-packaging-f98d3f63569d target=_blank>article</a>.</p>" button_link="https://wallet.trezor.io/" button_text="Continue to wallet"%}
+
+{% include "modal.html" with target="modalTrezorT" title="Before you start" text_html="<p>Please make sure the hologram seal on your device is authentic. If the hologram seal is missing or looks differently from the one in the video below, contact immediately our support at <a href=//trezor.io/support target=_blank>trezor.io/support</a>.</p><hr><p>The hologram seal is only on the device, not the box. More information about the hologram seal can be found in this <a href=https://blog.trezor.io/trezor-one-tamper-evident-packaging-f98d3f63569d target=_blank>article</a>.</p>" button_link="https://beta-wallet.trezor.io/" button_text="Continue to wallet"%}
+{% endblock %}
+
+
+{% block scripts %}
 <script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
 {% endblock %}
