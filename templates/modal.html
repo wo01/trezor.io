@@ -1,10 +1,15 @@
 {% load i18n %}
 <!-- Modals -->
-<div class="modal fade" id="{{ target }}" tabindex="-1" role="dialog" aria-labelledby="{{ target }}_{{ title }}" aria-hidden="true">
+<div class="modal fade {{extraClass}}" id="{{ target }}" tabindex="-1" role="dialog" aria-labelledby="{{ target }}_{{ title }}" aria-hidden="true">
   <div class="modal-dialog modal-centered" role="document">
     <div class="modal-content">
       <div class="modal-body">
         <h3>{{ title }}</h3>
+        <div class="embed-responsive embed-responsive-16by9">
+          <video loop="" muted="" autoplay="" id="jumbo-video" preload="metadata" poster="/static/images/photos/header.png" class="video-responsive">
+            <source src="{{ videosrc }}" type="video/mp4">
+          </video>
+        </div>
         <p class="text">
           {{ text_html|safe }}
         </p>
