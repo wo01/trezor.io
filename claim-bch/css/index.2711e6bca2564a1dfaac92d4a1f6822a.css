@@ -543,6 +543,34 @@ main {
 .component-send fieldset .verify-address-button:hover .verify-address-tooltip {
   display: block;
 }
+.component-send fieldset .cashaddr-hint {
+  padding-left: 17%;
+  font-size: 12px;
+  color: #f4a827;
+}
+.component-send fieldset .cashaddr-hint:before {
+  display: inline-block;
+  font-family: 'glyphiconsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  content: "\EA0C";
+  vertical-align: -2px;
+  margin-right: 8px;
+  font-size: 14px;
+}
+.component-send fieldset .cashaddr-converter {
+  padding-left: 17%;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+.component-send fieldset .cashaddr-converter a {
+  color: #4cc148;
+}
+.component-send fieldset .input-row,
+.component-send fieldset .cashaddr-row {
+  padding-bottom: 0px;
+}
 .component-send fieldset span {
   margin-left: 15px;
   font-size: 12px;
@@ -589,6 +617,12 @@ main {
   margin-top: 1px;
   padding-bottom: 10px;
 }
+.component-send fieldset span.verify-address-hint {
+  display: block;
+  margin-left: 17%;
+  margin-top: 1px;
+  padding-bottom: 10px;
+}
 .component-send fieldset span.amount-hint {
   position: relative;
   display: none;
@@ -627,6 +661,12 @@ main {
 }
 .component-send fieldset span.amount-hint:hover .amount-tooltip {
   display: block;
+}
+.component-send fieldset span.cashaddr-input {
+  margin: 0px;
+}
+.component-send fieldset span.cashaddr-input input {
+  width: 550px;
 }
 .component-send fieldset button {
   margin-left: 17%;
@@ -688,6 +728,11 @@ main {
 }
 .component-send fieldset.foreign-address .address-hint {
   color: #f4a827;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+.component-send fieldset.foreign-address .cashaddr-row {
+  padding-bottom: 10px;
 }
 .component-send fieldset.not-valid .address-input input {
   border-color: #fa3e3e;
@@ -705,6 +750,8 @@ main {
 }
 .component-send fieldset.not-valid .address-hint {
   color: #fa3e3e;
+  margin-bottom: 0px;
+  margin-top: 10px;
 }
 .component-send fieldset.foreign-address .address-input button,
 .component-send fieldset.not-valid .address-input button {
