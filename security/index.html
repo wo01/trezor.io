@@ -31,7 +31,7 @@
   <meta name="twitter:description" content="Discover the secure vault for your digital assets. Store bitcoins, litecoins, passwords, logins, and keys without worries." />
   <meta name="twitter:image:src" content="https://trezor.io/static/images/trezor_social02.jpg">
   <meta name="twitter:domain" content="https://trezor.io/">
-  <link rel="stylesheet" href="/static/css/style.css?0726162018">
+  <link rel="stylesheet" href="/static/css/style.css?0924142018">
   
   <script>
     dataLayer = [{
@@ -78,7 +78,7 @@
                     <a class="nav-link" href="//trezor.io/start" title="Visit Wallet for your TREZOR security device">Wallet</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="//doc.satoshilabs.com/">Docs</a>
+                    <a class="nav-link" href="//https://wiki.trezor.io/Welcome">Docs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/support">Support</a>
@@ -90,7 +90,9 @@
         </div>
     </div>
 </nav>
- 
+
+  
+  
 <section class="security">
   <div class="security-intro">
     <div class="container">
@@ -100,7 +102,7 @@
         </div>
         <div class="col-lg-7 col-xs-12 text-sm-left text-xs-center">
           <p>
-            In line with our transparency policy, we are publishing a comprehensive list of all the past security incidents of Trezor and our related services.
+            In line with our transparency policy, we are publishing a comprehensive list of all the past security issues of Trezor and our related services.
           </p>
         </div>
       </div>
@@ -167,7 +169,7 @@
         </div>
         <div class="security-last col-lg-6 col-xs-12 text-sm-left text-xs-center">
           <div class="text-block">
-            <a href="https://doc.satoshilabs.com/trezor-faq/threats.html" class="arrow">Learn more about security</a>
+            <a href="https://wiki.trezor.io/Security:Threats" class="arrow">Learn more about security</a>
           </div>
         </div>
       </div>
@@ -178,10 +180,10 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
-          <h2>Past incidents.</h2>
+          <h2>Past issues.</h2>
         </div>
         <div class="col-lg-7 col-xs-12 text-sm-left text-xs-center">
-          <p>Incidents not listed below are most likely not real, or they are a misrepresentation with factual inaccuracies.</p>
+          <p>Issues not listed below are most likely not real, or they are a misrepresentation with factual inaccuracies.</p>
         </div>
       </div>
       <div class="timeline hidden-md-down">
@@ -207,6 +209,14 @@
               <p>February 2018</p>
               <div class="dot"></div>
             </div>
+            <div class="date" id="date-6" data-target="6">
+              <p>June 2018</p>
+              <div class="dot"></div>
+            </div>
+            <div class="date" id="date-7" data-target="7">
+              <p>August 2018</p>
+              <div class="dot"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -222,7 +232,7 @@
               <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">01</div>
             </div>
             <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
-              <h4>Incident</h4>
+              <h4>Issue</h4>
               <p>Malicious ScriptSig in transaction</p>
               <h4>Detail</h4>
               <p>A specially crafted transaction could extract the private key. Knowledge of PIN and passphrase was required.</p>
@@ -254,6 +264,7 @@
             </div>
           </div>
         </div>
+
         <div id="detail-2" class="detail collapse">
           <div class="badge">Fixed in 1 day</div>
           <div class="row">
@@ -261,7 +272,7 @@
               <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">02</div>
             </div>
             <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
-              <h4>Incident</h4>
+              <h4>Issue</h4>
               <p>SpendMultisig malicious change in transaction</p>
               <h4>Detail</h4>
               <p>A specially crafted multisig transaction could contain a change output of an attacker, which wasn't confirmed by the user.</p>
@@ -293,6 +304,7 @@
             </div>
           </div>
         </div>
+
         <div id="detail-3" class="detail collapse">
           <div class="badge">Fixed in 4 days</div>
           <div class="row">
@@ -300,7 +312,7 @@
               <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">03</div>
             </div>
             <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
-              <h4>Incident</h4>
+              <h4>Issue</h4>
               <p>Possible key extraction with oscilloscope</p>
               <h4>Detail</h4>
               <p>With physical access to the device and an oscilloscope, the private key could have been extracted from the device.</p>
@@ -311,7 +323,6 @@
               <div class="badge-bordered">Needs physical access</div>
             </div>
           </div>
-
           <div class="row">
             <div class="col-lg-2 offset-lg-1 col-sm-3 col-xs-12 text-sm-left text-xs-center">
               <h4>Fixed in firmware</h4>
@@ -331,6 +342,7 @@
             </div>
           </div>
         </div>
+
         <div id="detail-4" class="detail collapse">
           <div class="badge">Fixed in 8 days</div>
           <div class="row">
@@ -338,18 +350,17 @@
               <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">04</div>
             </div>
             <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
-              <h4>Incident</h4>
+              <h4>Issue</h4>
               <p>SRAM memory access</p>
               <h4>Detail</h4>
               <p>The SRAM was not cleared on soft reset, allowing extraction using special firmware and direct access to the device board.</p>
             </div>
             <div class="col-lg-5 offset-lg-1 col-xs-12 text-sm-left text-xs-center">
               <h4>Type</h4>
-              <p>–</p>
+              <p>Platform reset attack</p>
               <div class="badge-bordered">Needs physical access</div>
             </div>
           </div>
-
           <div class="row">
             <div class="col-lg-2 offset-lg-1 col-sm-3 col-xs-12 text-sm-left text-xs-center">
               <h4>Fixed in firmware</h4>
@@ -371,6 +382,7 @@
             </div>
           </div>
         </div>
+
         <div id="detail-5" class="detail collapse">
           <div class="badge">Fixed in 35 days</div>
           <div class="row">
@@ -378,7 +390,7 @@
               <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">05</div>
             </div>
             <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
-              <h4>Incident</h4>
+              <h4>Issue</h4>
               <p>STM32F205 chip issue</p>
               <h4>Detail</h4>
               <p>The bootloader memory write-protection is not working as intended in the STM32F205, which is used in the Trezor One. The issue was solved by activating the Memory Protection Unit, keeping the bootloader safe from unauthorized write-access.</p>
@@ -389,7 +401,6 @@
               <div class="badge-bordered">Needs physical access</div>
             </div>
           </div>
-
           <div class="row">
             <div class="col-lg-2 offset-lg-1 col-sm-3 col-xs-12 text-sm-left text-xs-center">
               <h4>Fixed in firmware</h4>
@@ -410,17 +421,100 @@
             </div>
           </div>
         </div>
+
+        <div id="detail-6" class="detail collapse">
+          <div class="badge">Fixed in 30 days</div>
+          <div class="row">
+            <div class="col-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">06</div>
+            </div>
+            <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
+              <h4>Issue</h4>
+              <p>Message processing error</p>
+              <h4>Detail</h4>
+              <p>Specially crafted USB packets could trigger buffer and stack overflows which could lead to code execution on older firmwares.</p>
+            </div>
+            <div class="col-lg-5 offset-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <h4>Type</h4>
+              <p>Buffer/stack overflow</p>
+              <div class="badge-bordered">Remote</div> <span class="additional">*still requires physical confirmation</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-2 offset-lg-1 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Fixed in firmware</h4>
+              <p>1.6.2</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Reported by</h4>
+              <p>Christian Reitter</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Date reported</h4>
+              <p>2018-06-25</p>
+            </div>
+            <div class="col-lg-5 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>More info</h4>
+              <a href="https://github.com/trezor/trezor-mcu/commit/c9113fd3f5fcd78e9e560dbac75ed5aae359eb2d">GitHub</a>,
+              <a href="https://blog.trezor.io/details-about-the-security-updates-in-trezor-one-firmware-1-6-2-a3b25b668e98">Official blogpost</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="detail-7" class="detail collapse">
+          <div class="badge">Fixed in 23 days</div>
+          <div class="row">
+            <div class="col-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">07</div>
+            </div>
+            <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
+              <h4>Issue</h4>
+              <p>MPU circumvention via SYSCFG registers</p>
+              <h4>Detail</h4>
+              <p>Security fix deployed via the 1.6.1 firmware update could be circumvented via clever use of the SYSCFG registers. This was fixed by completely disabling the SYSCFG registers via the MPU.</p>
+            </div>
+            <div class="col-lg-5 offset-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <h4>Type</h4>
+              <p>Supply chain attack</p>
+              <div class="badge-bordered">Needs physical access</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-2 offset-lg-1 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Fixed in firmware</h4>
+              <p>1.6.3</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Reported by</h4>
+              <p>Sunny</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Date reported</h4>
+              <p>2018-08-07</p>
+            </div>
+            <div class="col-lg-5 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>More info</h4>
+              <a href="https://github.com/trezor/trezor-mcu/commit/fdd5cbe20271634dc9ba4424ae40f1d11332cdf2">GitHub</a>,
+              <a href="https://blog.trezor.io/trezor-one-firmware-update-1-6-3-73894c0506d">Official blogpost</a>
+            </div>
+          </div>
+        </div>
+
       </div>
+
       <div class="row">
         <div class="col-lg-12 text-lg-left text-md-center">
           <div><strong>Notes</strong></div>
-          <p class="small">
-            In June 2017, we were contacted by Josh Datko and Chris Quartier, regarding a theoretical fault attack vector, by glitching the clock or VCC of the device. Josh and Chris
-            <a href="https://www.youtube.com/watch?v=hAtoRrxFBWs">presented</a> their findings at <a href="https://media.defcon.org/DEF%20CON%2025/DEF%20CON%2025%20presentations/DEFCON-25-Datko-and-Quartier-Breaking-Bitcoin-Hardware-Wallets.pdf">DEFCON</a>, and we incorporated their recommendations in the firmware version 1.5.1. As their disclosure did not reveal any provably exploitable vulnerabilities, we are not categorizing it as an issue, but we are mentioning it for the sake of completeness.
-          </p>
           <br />
           <p class="small">
-            In September 2017, after the release of firmware 1.5.2, the security update fixing the SRAM memory access, a Medium article surfaced, claiming Trezor has been hacked. The author then offered to sell the exploit to anyone who was willing to pay for it. We evaluated his allegations and found out that the supposed attack vector was closed by the firmware update 1.5.2. The author also referenced Datko and Quarier’s DEFCON presentation, in order for the article to gain credibility, further fueling speculation. Nonetheless, there are currently no known vulnerabilities affecting the Trezor.
+            In June 2017, we were contacted by security researchers Josh Datko and Chris Quartier, regarding a theoretical fault attack vector, by glitching the clock or VCC of the device. Josh and Chris
+            <a href="https://www.youtube.com/watch?v=hAtoRrxFBWs">presented</a> their findings at <a href="https://media.defcon.org/DEF%20CON%2025/DEF%20CON%2025%20presentations/DEFCON-25-Datko-and-Quartier-Breaking-Bitcoin-Hardware-Wallets.pdf">DEFCON</a>, and we incorporated their recommendations in the firmware version 1.5.1. As their disclosure did not reveal any provably exploitable vulnerabilities, we are not categorizing it as an issue, but we are mentioning it for the sake of completeness.
+          </p>
+          <p class="small">
+            In September 2017, after the release of firmware 1.5.2, the security update fixing the SRAM memory access, a Medium article surfaced, claiming Trezor has been hacked. We evaluated this allegations and found out that the supposed attack vector was closed by the just released firmware update.
+          </p>
+          <p class="small">
+            In August 2018, we were contacted by Filedescriptor, a security researcher, who reported CSRF issues in our Dropbox integration. The issues were fixed and deployed to production shortly after.
           </p>
         </div>
       </div>
@@ -438,7 +532,7 @@
           <div class="offset-lg-2 col-lg-10 col-xs-12 border-table">
             <div class="col-lg-1 text-xs-center col-xs-2 border-right">1</div>
             <div class="col-lg-5 col-xs-5 border-right">Sunny</div>
-            <div class="col-lg-6 col-xs-5">40.000 points</div>
+            <div class="col-lg-6 col-xs-5">50.000 points</div>
           </div>
         </div>
         <div class="col-lg-8">
@@ -465,7 +559,21 @@
         <div class="offset-lg-4 col-lg-8">
           <div class="offset-lg-2 col-lg-10 col-xs-12 border-table">
             <div class="col-lg-1 text-xs-center col-xs-2 border-right">5</div>
-            <div class="col-lg-5 col-xs-5 border-right"><a href="http://lkjhnk.com/">Luke Jahnke</a></div>
+            <div class="col-lg-5 col-xs-5 border-right">Christian Reitter</div>
+            <div class="col-lg-6 col-xs-5">10.000 points</div>
+          </div>
+        </div>
+        <div class="offset-lg-4 col-lg-8">
+          <div class="offset-lg-2 col-lg-10 col-xs-12 border-table">
+            <div class="col-lg-1 text-xs-center col-xs-2 border-right">6</div>
+            <div class="col-lg-5 col-xs-5 border-right">Filedescriptor</div>
+            <div class="col-lg-6 col-xs-5">1.000 points</div>
+          </div>
+        </div>
+        <div class="offset-lg-4 col-lg-8">
+          <div class="offset-lg-2 col-lg-10 col-xs-12 border-table">
+            <div class="col-lg-1 text-xs-center col-xs-2 border-right">7</div>
+            <div class="col-lg-5 col-xs-5 border-right">Luke Jahnke</div>
             <div class="col-lg-6 col-xs-5">1.000 points</div>
           </div>
         </div>
@@ -685,7 +793,9 @@
   </div>
 </section>
 
- 
+
+
+  
 <footer id="subscribe">
   <div class="bottom-part">
     <div class="container">
@@ -728,7 +838,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="//doc.satoshilabs.com/">Documentation</a>
+              <a class="nav-link" href="//https://wiki.trezor.io/Welcome">Documentation</a>
             </li>
 
             <li class="nav-item">
@@ -777,7 +887,12 @@
   </div>
   </div>
 </footer>
- 
+
+
+  
+  
+
+  
 <script type='text/javascript' charset='utf-8' src="/static/js/vendor/vendors.js"></script>
 <script type='text/javascript' charset='utf-8' src="/static/js/sources/page_security.js"></script>
 
