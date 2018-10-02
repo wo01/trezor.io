@@ -322,18 +322,18 @@
                 <h4 class="header">{% trans "I want to cancel my order." %}</h4>
                 <span class="text">
                     {% blocktrans %}
-                    <p>Here you can send your requests for canceling the paid orders. 
+                    <p>Here you can send your requests for canceling the paid orders.
                     </p><p>
                     All unpaid orders are automatically canceled after 12 hours, so there is no need to contact our support in such cases.
                     </p><p>
-                    Paid orders are processed within 48 hours during business days, if not stated otherwise by the notice during creating your order (backorder or special situation related to the status of our stock). 
+                    Paid orders are processed within 48 hours during business days, if not stated otherwise by the notice during creating your order (backorder or special situation related to the status of our stock).
                     </p><p>
                     It is possible to cancel the order only if it is not in "shipped" or "processing" status.</p>
                     </p><p>
                     We want to prioritize these requests, but please understand that our support team needs to get to your request first and since everything is processed from the oldest to the newest tickets, some requests
                     cannot be fulfilled in time. Therefore if you want to speed up the whole process, wait for the reply without updating your ticket (every new message to your ticket will reset the counter and put it at the end of the queue).
                     </p><p>
-                    <strong>All messages that are not related to the request for cancelation will be automatically deleted!!!</strong> 
+                    <strong>All messages that are not related to the request for cancelation will be automatically deleted!!!</strong>
                     <p>
                     If you fulfill the needed criteria, please <a href="#" onclick="return gotoTroubleshooterOrder()"
                                                                        class="troubleshooterLink">contact our Support Team</a> to file your request.
@@ -418,7 +418,7 @@
                     <p>In case your device gets lost, you will need the seed for recovery - a simple process when you
     enter the words of your seed, in the order as prompted, into a new TREZOR device. You may also use any other Bitcoin
     wallet that supports the same standard as TREZOR (<a
-                                href="https://doc.satoshilabs.com/trezor-tech/cryptography.html#mnemonic-recovery-seed-bip39">BIP39</a>).</p><p>Do
+                                href="https://wiki.trezor.io/Cryptocurrency_standards#bip39">BIP39</a>).</p><p>Do
     not underestimate the process of writing down the seed; make sure you have all words correctly spelled and in the
     right order.</p>
                     <p>Never make a digital copy of your seed, i.e. do not store it in any form on any
@@ -437,7 +437,7 @@
                     </ul>
                     <p>This means that
     if you lose your Recovery seed, you may lose access to all of those features. Read more about "What If"
-    situations in the <a href="https://doc.satoshilabs.com/trezor-faq/threats.html">TREZOR User Manual</a>.</p>
+    situations in the <a href="https://wiki.trezor.io/Security:Threats">TREZOR User Manual</a>.</p>
                     {% endblocktrans %}
                 </span>
             </div>
@@ -461,7 +461,7 @@
     can be used with the same TREZOR device to create the so-called "hidden wallets," giving you a great
     advantage in situations such as being held at a gunpoint, (also known as the $5-wrench-attack). Use different
     passphrases to create "decoy" wallets with a low balance next to your main wallet. <a
-                            href="https://doc.satoshilabs.com/trezor-user/advanced_settings.html?highlight=hidden#using-passphrase-encrypted-seeds">Read
+                            href="https://wiki.trezor.io/Multi-passphrase_encryption_(hidden_wallets)">Read
     more ...</a></p>
                     {% endblocktrans %}
                 </span>
@@ -474,7 +474,7 @@
                     {% blocktrans %}
                     <p>You need to keep your recovery seed safe from theft. If your recovery seed is stolen and you do not have a passphrase protection set up, then your coins can be stolen. However, if you like, TREZOR can protect
     against recovery seed theft with <a
-                                href="https://doc.satoshilabs.com/trezor-user/advanced_settings.html#using-passphrase-encrypted-seeds">a
+                                href="https://wiki.trezor.io/Passphrase">a
     passphrase</a>, and therefore eliminate this risk.</p>
                     {% endblocktrans %}
                 </span>
@@ -718,7 +718,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                 <h4 class="header">{% trans "Unofficial firmware detected." %}</h4>
                 <span class="text">
                     {% blocktrans %}
-                    <p> <a href="https://doc.satoshilabs.com/trezor-user/updatingfirmware.html">Please, try running the
+                    <p> <a href="https://wiki.trezor.io/User_manual:Updating_the_Trezor_device_firmware">Please, try running the
     update again</a>.</p>
                     {% endblocktrans %}
                 </span>
@@ -733,7 +733,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                 <h4 class="header">{% trans "Firmware appears to be broken." %}</h4>
                 <span class="text">
                     {% blocktrans %}
-                    <ol><li><a href="https://doc.satoshilabs.com/trezor-user/updatingfirmware.html">Please, try running
+                    <ol><li><a href="https://wiki.trezor.io/User_manual:Updating_the_Trezor_device_firmware">Please, try running
     the update again</a>.</li><li>If it
     still doesn't work please try using different a USB cable and proceed to step 1.</li></ol>
                     {% endblocktrans %}
@@ -771,7 +771,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                 <h4 class="header">{% trans "Wallet shows wrong account information." %}</h4>
                 <span class="text">
                     {% blocktrans %}
-                    <ol><li>Run <a href="https://doc.satoshilabs.com/trezor-user/forgetting.html">Forget
+                    <ol><li>Run <a href="https://wiki.trezor.io/User_manual:Logging_out_of_Trezor_Wallet">Forget
     device</a></li><li>Unplug your TREZOR</li><li>Plug your TREZOR back in</li></ol>
                     {% endblocktrans %}
                 </span>
@@ -936,7 +936,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                 <span class="text">
                     {% blocktrans %}
                     <p>Please make sure that you are using a <a
-                            href="https://doc.satoshilabs.com/trezor-faq/overview.html#which-operating-systems-and-devices-support-trezor">supported configuration</a>.
+                            href="https://wiki.trezor.io/Operating_systems">supported configuration</a>.
     If yes, please follow one of the links below.</p>
                     {% endblocktrans %}
                 </span>
@@ -955,7 +955,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                 <span class="text">
                     {% blocktrans %}
                     <p>Please make sure that you you're using a <a
-                            href="https://doc.satoshilabs.com/trezor-faq/overview.html#which-operating-systems-and-devices-support-trezor">supported configuration</a>.
+                            href="https://wiki.trezor.io/Operating_systems">supported configuration</a>.
     If yes, please follow one of the links below.</p>
                     {% endblocktrans %}
                 </span>
@@ -1038,7 +1038,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                 <span class="text">
                     {% blocktrans %}
                     <p>Did you set the UDEV rules? You can find the necessary instructions  <a
-                            href="http://doc.satoshilabs.com/trezor-user/settingupchromeonlinux.html">here</a>.</p>
+                            href="https://wiki.trezor.io/User_manual:Setting_up_the_Chrome_extension_on_Linux">here</a>.</p>
                     {% endblocktrans %}
                 </span>
             </div>
@@ -1094,52 +1094,52 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                                 <tr class="row-even">
                                     <td>Bitcoin (BTC)</td>
                                     <td><a class="reference external"
-                                           href="https://doc.satoshilabs.com/trezor-apps/trezorwallet.html">TREZOR Wallet</a></td>
+                                           href="https://wiki.trezor.io/Apps:Trezor_Wallet">TREZOR Wallet</a></td>
                                 </tr>
                                 <tr class="row-odd">
                                     <td>Litecoin (LTC)</td>
-                                    <td><a class="reference external" href="https://doc.satoshilabs.com/trezor-apps/trezorwallet.html">TREZOR Wallet</a></td>
+                                    <td><a class="reference external" href="https://wiki.trezor.io/Apps:Trezor_Wallet">TREZOR Wallet</a></td>
                                 </tr>
                                 <tr class="row-even">
                                     <td>DASH</td>
-                                    <td><a class="reference external" href="https://doc.satoshilabs.com/trezor-apps/trezorwallet.html">TREZOR Wallet</a></td>
+                                    <td><a class="reference external" href="https://wiki.trezor.io/Apps:Trezor_Wallet">TREZOR Wallet</a></td>
                                 </tr>
                                 <tr class="row-odd">
                                     <td>Zcash (ZEC)</td>
-                                    <td><a class="reference external" href="https://doc.satoshilabs.com/trezor-apps/trezorwallet.html">TREZOR Wallet</a></td>
+                                    <td><a class="reference external" href="https://wiki.trezor.io/Apps:Trezor_Wallet">TREZOR Wallet</a></td>
                                 </tr>
                                 <tr class="row-even">
                                     <td>Bitcoin Cash / Bcash (BCH)</td>
-                                    <td><a class="reference external" href="https://doc.satoshilabs.com/trezor-apps/trezorwallet.html">TREZOR Wallet</a></td>
+                                    <td><a class="reference external" href="https://wiki.trezor.io/Apps:Trezor_Wallet">TREZOR Wallet</a></td>
                                 </tr>
                                 <tr class="row-odd">
                                     <td>Bitcoin Gold (BTG)</td>
-                                    <td><a class="reference external" href="https://doc.satoshilabs.com/trezor-apps/trezorwallet.html">TREZOR Wallet</a></td>
+                                    <td><a class="reference external" href="https://wiki.trezor.io/Apps:Trezor_Wallet">TREZOR Wallet</a></td>
                                 </tr>
                                 <tr class="row-even">
                                     <td>Ethereum (ETH)</td>
                                     <td><a class="reference external"
-                                           href="https://doc.satoshilabs.com/trezor-apps/mew.html">MyEtherWallet</a></td>
+                                           href="https://wiki.trezor.io/Apps:MyEtherWallet">MyEtherWallet</a></td>
                                 </tr>
                                 <tr class="row-odd">
                                     <td>Ethereum Classic (ETC)</td>
                                     <td><a class="reference external"
-                                           href="https://doc.satoshilabs.com/trezor-apps/mew.html">MyEtherWallet</a></td>
+                                           href="https://wiki.trezor.io/Apps:MyEtherWallet">MyEtherWallet</a></td>
                                 </tr>
                                 <tr class="row-even">
                                     <td><strong>All ERC-20 Tokens</strong></td>
                                     <td><a class="reference external"
-                                           href="https://doc.satoshilabs.com/trezor-apps/mew.html">MyEtherWallet</a></td>
+                                           href="https://wiki.trezor.io/Apps:MyEtherWallet">MyEtherWallet</a></td>
                                 </tr>
                                 <tr class="row-odd">
                                     <td>Expanse (EXP)</td>
                                     <td><a class="reference external"
-                                           href="https://doc.satoshilabs.com/trezor-apps/mew.html">MyEtherWallet</a></td>
+                                           href="https://wiki.trezor.io/Apps:MyEtherWallet">MyEtherWallet</a></td>
                                 </tr>
                                 <tr class="row-even">
                                     <td>UBIQ (UBQ)</td>
                                     <td><a class="reference external"
-                                           href="https://doc.satoshilabs.com/trezor-apps/mew.html">MyEtherWallet</a></td>
+                                           href="https://wiki.trezor.io/Apps:MyEtherWallet">MyEtherWallet</a></td>
                                 </tr>
                                 <tr class="row-odd">
                                     <td>NEM (XEM)</td>
@@ -1162,8 +1162,8 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                     </div>
                     <br>
                     <p>There are no wallet interfaces, which support TREZOR device for Dogecoin and Namecoin at the moment. They are only supported by the firmware.</p>
-                    <p>For more informations, visit our <a
-                            href="https://doc.satoshilabs.com/trezor-faq/overview.html#which-coins-are-currently-supported">FAQ page</a> describing supported coins.</p>
+                    <p>For more informations, visit <a
+                            href="https://trezor.io/coins/">our page</a> describing supported coins.</p>
                     {% endblocktrans %}
                 </span>
                 <ul class="option-list">
@@ -1355,8 +1355,8 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                    <p>The instructions are written for Bitcoin, but can be used even for Litecoin, Dash and ZCash. Please don't be mislead by the screenshots, the procedure is the same.
                    </p>
                     <p>The manual for <a
-                            href="http://doc.satoshilabs.com/trezor-user/receivingpayments.html">receiving</a> and for <a
-                            href="http://doc.satoshilabs.com/trezor-user/makingpayments.html">sending.</a></p>
+                            href="https://wiki.trezor.io/User_manual:Receiving_payments">receiving</a> and for <a
+                            href="https://wiki.trezor.io/User_manual:Making_payments">sending.</a></p>
                     {% endblocktrans %}
                 </span>
             </div>
@@ -1368,7 +1368,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                     {% blocktrans %}
                    <p>We're very pleased and excited that you've decided to apply for Affiliate / Reseller partnership.
                    </p><p>First of all, please take a few moments and look into our manual for some <a
-                        href="http://doc.satoshilabs.com/trezor-faq/affiliate.html">details.</a>
+                        href="https://wiki.trezor.io/Partner_portal#Affiliates">details.</a>
                    </p><p>Here is the link for the <a href="https://shop.trezor.io/sales/">Sales Partners form</a>. Once finished, our Sales Team will get back to you as soon as possible.
                    </p><p>Since the number of the requests is high, it may take some time until your email is answered. Thank you for your patience. The Support Team will provide you with the same information.</p>
                     {% endblocktrans %}
@@ -1398,7 +1398,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                    or only for recovery process that let you access the funds directly in the respective wallet.
                    </p>
                     <p>Here you can find the <a
-                            href="http://doc.satoshilabs.com/trezor-apps/index.html#recovering-funds-without-trezor-device">full list</a> of compatible services.
+                            href="https://wiki.trezor.io/Apps">full list</a> of compatible services.
                    Moreover, TREZOR is an open source project, so it is possible to use the code and build your own solution.</p>
                     {% endblocktrans %}
                 </span>
@@ -1438,7 +1438,7 @@ If it didn't help please have a look for any icon with a yellow triangle with "!
                     {% blocktrans %}
                    <p>You can check the status of your order when you log into your e-shop <a title="account"
                                                                                               href="https://shop.trezor.io/user/profile/">account</a>.
-                   </p><p>Orders are processed within 48 hours during business days, if not stated otherwise by the notice during creating your order (backorder or special situation related to the status of our stock). 
+                   </p><p>Orders are processed within 48 hours during business days, if not stated otherwise by the notice during creating your order (backorder or special situation related to the status of our stock).
                    </p><p>All unpaid orders are automatically canceled after 12 hours.</p>
                     {% endblocktrans %}
                 </span>
@@ -1632,8 +1632,8 @@ Please, for more information read <a title="claim bitcoin cash"
                     <p>
 			If, after a firmware update, your wallet balance is zero and the entire transaction history has disappeared from your accounts, then your TREZOR was most likely erased during the update process.
 			<br/><br/>
-			Please <a href="https://doc.satoshilabs.com/trezor-user/advanced_features.html?highlight=wipe#wiping-your-trezor-device">wipe your device</a> and then <a
-                            href="https://doc.satoshilabs.com/trezor-user/recovery.html">restore the original recovery seed</a> into your TREZOR.
+			Please <a href="https://wiki.trezor.io/User_manual:Wiping_the_Trezor_device">wipe your device</a> and then <a
+                            href="https://wiki.trezor.io/User_manual:Recovery">restore the original recovery seed</a> into your TREZOR.
 		    </p>
                     {% endblocktrans %}
 		</span>
@@ -1743,9 +1743,9 @@ Please, for more information read <a title="claim bitcoin cash"
                 <span class="text">
                     {% blocktrans %}
                     <p>
-							This is most likely a <em>false positive</em> information. Some antiviruses (typically Kaspersky or Norton) can detect TREZOR Bridge as a Trojan or Virus. 
+							This is most likely a <em>false positive</em> information. Some antiviruses (typically Kaspersky or Norton) can detect TREZOR Bridge as a Trojan or Virus.
 							However, TREZOR Bridge which was downloaded from our <a href="https://wallet.trezor.io">TREZOR wallet</a> or official <a href="https://wallet.trezor.io/data/bridge/latest/index.html">source page</a> is safe to use
-                     and virus/trojan free.       
+                     and virus/trojan free.
                      <br/><br/>
                      This issue was reported to most antiviruses producers and hopefully, TREZOR Bridge will be whitelisted as soon as possible.
                      <br/><br/>
@@ -1783,9 +1783,9 @@ Please, for more information read <a title="claim bitcoin cash"
                     {% blocktrans %}
                     <p>
 						   All TREZOR devices are distributed without the <strong>firmware</strong> software, which is automatically installed before you can set up your wallet for the first time.
-						   Therefore, if you received TREZOR with already installed firmware, it is a clear sign that someone used the device before you. 
+						   Therefore, if you received TREZOR with already installed firmware, it is a clear sign that someone used the device before you.
 						   <br/><br/>
-						   Our <strong>Bootloader</strong> (pre-installed) software, ensures that you're using the valid firmware version signed by us. If not, then there is a warning message on <strong>TREZOR display</strong>. 
+						   Our <strong>Bootloader</strong> (pre-installed) software, ensures that you're using the valid firmware version signed by us. If not, then there is a warning message on <strong>TREZOR display</strong>.
 						   Because the recovery seed is generated during TREZOR setup, there is not "your seed" by default, but the seed you will generate for yourself.
                      <br/><br/>
                      TREZOR box is protected by the <strong>seals</strong> and it is also virtually impossible to open the device without breaking it (the case is sealed using ultrasound), so you would see right away
@@ -1805,12 +1805,12 @@ Please, for more information read <a title="claim bitcoin cash"
                     {% blocktrans %}
                     <p>
 						   All TREZOR devices are distributed without the <strong>firmware</strong> software, which is automatically installed before you can set up your wallet for the first time.
-						   Therefore, if you received TREZOR with already installed firmware, it is a clear sign that someone used the device before you. 
+						   Therefore, if you received TREZOR with already installed firmware, it is a clear sign that someone used the device before you.
 						   <br/><br/>
-                     Our <strong>Bootloader</strong> (pre-installed) software, ensures that you're using the valid firmware version signed by us. If not, then there is a warning message on <strong>TREZOR display</strong>. 
+                     Our <strong>Bootloader</strong> (pre-installed) software, ensures that you're using the valid firmware version signed by us. If not, then there is a warning message on <strong>TREZOR display</strong>.
 						   Because the recovery seed is generated during TREZOR setup, there is not "your seed" by default, but the seed you will generate for yourself.
                      <br/><br/>
-                     TREZOR model T is protected itself by the <strong>seal</strong> on its USB-C port. If the holographic seal has been removed, it will leave marks on the device.  
+                     TREZOR model T is protected itself by the <strong>seal</strong> on its USB-C port. If the holographic seal has been removed, it will leave marks on the device.
                      It is also virtually impossible to open the device without breaking it (the case is sealed using ultrasound), so you would see right away if someone tampered with it.
                     </p>
                     {% endblocktrans %}
@@ -1827,7 +1827,7 @@ Please, for more information read <a title="claim bitcoin cash"
                     {% blocktrans %}
                     <p>
 							If you have something to report regarding the package (damaged products or accessories), then please <a href="https://satoshilabs.kayako.com/conversation/new/10">submit a ticket</a>
-							and attach the <strong>photos</strong> of the envelope and damaged parts so we can analyze it with relevant material. This will speed up the whole process.   
+							and attach the <strong>photos</strong> of the envelope and damaged parts so we can analyze it with relevant material. This will speed up the whole process.
                     </p>
                     {% endblocktrans %}
 		            </span>
