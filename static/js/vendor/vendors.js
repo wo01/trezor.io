@@ -108,23 +108,28 @@ $(document).ready(function () {
     }
 
     function getParams() {
-      var param = getParameterByName('a');
-      if (param) {
-        return ['a', param];
-      }
-      param = getParameterByName('h');
-      if (param) {
-        return ['h', param];
-      }
+      var params = ['r', 'a', 'h', 'offer_id', 'aff_id', 'source', 'aff_sub', 'aff_sub2', 'aff_click_id', 'aff_unique1', 'aff_unique2'];
+      var r = [];
 
-      var rawref = document.referrer;
-      if (rawref.length) {
-        var referrer = domainKey(domain(rawref));
-        if (referrer) {
-          return ['r', hexlify(referrer)];
-        }
+      params.forEach((value) => {
+      	var param = getParameterByName(value);
+		if (param) {
+			r.push([value, param]);
+		}
+      });
+
+      if (r.length > 0) {
+      	return r;
+      } else {
+		var rawref = document.referrer;
+		if (rawref.length) {
+			var referrer = domainKey(domain(rawref));
+			if (referrer) {
+			  return [['h', hexlify(referrer)]];
+			}
+		}
       }
-      return [];
+   	  return [];
     }
 
     function handleAffil() {
@@ -132,8 +137,6 @@ $(document).ready(function () {
       var cookie = Cookies.get(cookieName);
       var jparam = getParams();
       var setup = [];
-
-
 
       if (typeof cookie === 'undefined') {
         if (jparam.length > 0) {
@@ -143,10 +146,10 @@ $(document).ready(function () {
         }
       } else {
         // have cookie
-        cookie = JSON.parse(cookie);
-        if (cookie[0] === 'r') {
+        setup = cookie = JSON.parse(cookie);
+        if (cookie[0][0] === 'r') {
           // referrer cookie
-          if (jparam[0] === 'a' || jparam[0] === 'h') {
+          if (jparam[0][0] === 'a' || jparam[0][0] === 'h') {
             Cookies.remove(cookieName);
             setup = jparam;
             var content = JSON.stringify(jparam);
@@ -155,9 +158,9 @@ $(document).ready(function () {
             setup = cookie;
           }
         }
-        if (cookie[0] === 'a' || cookie[0] === 'h') {
+        if (cookie[0][0] === 'a' || cookie[0][0] === 'h') {
           // important cookie
-          if (cookie[0] === jparam[0] && cookie[1] === jparam[1]) {
+          if (cookie[0][0] === jparam[0][0] && cookie[0][1] === jparam[0][1]) {
             Cookies.remove(cookieName);
             var content = JSON.stringify(jparam);
             Cookies.set(cookieName, content, { expires: 7 });
@@ -165,9 +168,14 @@ $(document).ready(function () {
           setup = jparam;
         }
       }
+
       if (setup.length > 0) {
-        setup[0] = setup[0] === 'r' ? 'h' : setup[0];
-        prepareAffilAnchors('?'+setup[0]+'=' + setup[1]);
+      	anchors = [];
+      	setup.forEach((value, key) => {
+      		if (value[0] === 'r') value[0] = 'h';
+      		anchors.push(value[0] + '=' + value[1]);
+      	});
+        prepareAffilAnchors('?' + anchors.join('&'));
       }
       return;
     }
