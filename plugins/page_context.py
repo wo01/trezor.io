@@ -26,7 +26,7 @@ COINMARKET_SYMBLOS = {
 import json
 from django.template.defaulttags import register
 from operator import itemgetter
-from urlparse import urlparse
+from urllib.parse import urlparse
 
 @register.filter(name='get_item')
 def get_item(dictionary, key):
