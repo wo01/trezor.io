@@ -43,7 +43,7 @@
       <tbody id="content">
         {% for coin in coins %}
           {% with shortcut=coin.shortcut|coin_shortcut %}
-          <tr class="coin {% if coin.hidden %} hide {% endif %}" data-href="./#{{ shortcut }}" id="{{ shortcut }}"/>
+          <tr class="coin {% if coin.hidden %} hidden {% endif %} {{coin.network}}" data-href="./#{{ shortcut }}" id="{{ shortcut }}"/>
             <td>
               <span class="logo-wrapper">
                   <img class="b-lazy" id="COIN-{{ shortcut|to_upper }}" {% if coin.links.Homepage %}data-clearbit="https://logo.clearbit.com/{{ coin.links.Homepage|url_to_domain }}?size=64"{% endif %} data-name="{{ coin.name }}">
@@ -67,7 +67,7 @@
                 {% endwith %}
                 {% if not forloop.last %}, {% endif %}
               {% empty %}
-                -
+                <span>No wallet yet.</span>
               {% endfor %}
             </td>
             <td class="hidden-md-down" />

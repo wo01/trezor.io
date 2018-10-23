@@ -74,7 +74,7 @@ $(document).ready(function () {
                 }
             }
         },
-        initImages = function() {   
+        initImages = function() {
             $.getJSON('https://api.coinmarketcap.com/v2/listings/', function (result) {
                 result.data.forEach(function (item) {
                     var isChar = item.symbol.match(/[a-zA-Z0-9\-]+/g);
@@ -202,7 +202,7 @@ $(document).ready(function () {
                 });
                 return r.join(', ');
             } else {
-                return '-';
+                return 'No wallet, yet.';
             }
         };
 
