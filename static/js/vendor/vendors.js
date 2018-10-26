@@ -147,9 +147,9 @@ $(document).ready(function () {
       } else {
         // have cookie
         setup = cookie = JSON.parse(cookie);
-        if (cookie[0][0] === 'r') {
+        if (cookie && cookie[0] && cookie[0][0] === 'r') {
           // referrer cookie
-          if (jparam[0][0] === 'a' || jparam[0][0] === 'h') {
+          if (jparam && jparam[0] && (jparam[0][0] === 'a' || jparam[0][0] === 'h')) {
             Cookies.remove(cookieName);
             setup = jparam;
             var content = JSON.stringify(jparam);
@@ -158,7 +158,7 @@ $(document).ready(function () {
             setup = cookie;
           }
         }
-        if (cookie[0][0] === 'a' || cookie[0][0] === 'h') {
+        if (cookie && cookie[0] && (cookie[0][0] === 'a' || cookie[0][0] === 'h')) {
           // important cookie
           if (cookie[0][0] === jparam[0][0] && cookie[0][1] === jparam[0][1]) {
             Cookies.remove(cookieName);
@@ -172,7 +172,7 @@ $(document).ready(function () {
       if (setup.length > 0) {
       	anchors = [];
       	setup.forEach((value, key) => {
-      		if (value[0] === 'r') value[0] = 'h';
+      		if (value && value[0] === 'r') value[0] = 'h';
       		anchors.push(value[0] + '=' + value[1]);
       	});
         prepareAffilAnchors('?' + anchors.join('&'));
