@@ -1,6 +1,12 @@
 .coins-section
   min-height: 90vh
 
+  .lazy
+    +transition(opacity 500ms ease-in-out)
+    opacity: 0
+    &.loaded
+      opacity: 1
+
   .wrapper
     display: block
     min-height: 100vh

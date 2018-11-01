@@ -115,6 +115,22 @@ $(document).ready(function () {
 
     function onPageLoaded() {
         bindStickyHandler();
+
+        if (canUseWebP()) {
+            $('img[data-progressive]').each(function(i, elm) {
+                let progressive = $(elm).data('progressive');
+                $(elm).attr('data-echo', progressive);
+            });
+        }
+
+        echo.init({
+            offset: 100,
+            unload: false,
+            debounce: false,
+            callback: function(element, op) {
+                element.classList.add('loaded');
+            }
+        });
     }
 
     // init
