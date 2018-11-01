@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var activeId = 7;
+  var activeId = 8;
   var maxPage = $('.detail').length;
 
 
