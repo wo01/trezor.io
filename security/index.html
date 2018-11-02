@@ -31,7 +31,7 @@
   <meta name="twitter:description" content="Discover the secure vault for your digital assets. Store bitcoins, litecoins, passwords, logins, and keys without worries." />
   <meta name="twitter:image:src" content="https://trezor.io/static/images/trezor_social02.jpg">
   <meta name="twitter:domain" content="https://trezor.io/">
-  <link rel="stylesheet" href="/static/css/style.css?1023172018">
+  <link rel="stylesheet" href="/static/css/style.css?1102152018">
   
   <script>
     dataLayer = [{
@@ -215,6 +215,10 @@
             </div>
             <div class="date" id="date-7" data-target="7">
               <p>August 2018</p>
+              <div class="dot"></div>
+            </div>
+            <div class="date" id="date-8" data-target="8">
+              <p>October 2018</p>
               <div class="dot"></div>
             </div>
           </div>
@@ -496,6 +500,46 @@
               <h4>More info</h4>
               <a href="https://github.com/trezor/trezor-mcu/commit/fdd5cbe20271634dc9ba4424ae40f1d11332cdf2">GitHub</a>,
               <a href="https://blog.trezor.io/trezor-one-firmware-update-1-6-3-73894c0506d">Official blogpost</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="detail-8" class="detail collapse">
+          <div class="badge">Fixed in 29 days</div>
+          <div class="row">
+            <div class="col-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <div class="number-big col-lg-1 col-xs-12 text-md-center text-xs-center">07</div>
+            </div>
+            <div class="col-lg-5 col-xs-12 text-sm-left text-xs-center">
+              <h4>Issue</h4>
+              <p>Buffer overflow in bech32_decode and cash_decode</p>
+              <h4>Detail</h4>
+              <p>The C reference implementation for bech32 has an unsigned integer overflow that can lead to a buffer overflow. The cash_decode function in the trezor-crypto library allowed an out-of-bounds write. Both bugs were fixed by preventing the out-of-bounds accesses in the code.</p>
+            </div>
+            <div class="col-lg-5 offset-lg-1 col-xs-12 text-sm-left text-xs-center">
+              <h4>Type</h4>
+              <p>Supply chain attack</p>
+              <div class="badge-bordered">Remote DoS</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-2 offset-lg-1 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Fixed in firmware</h4>
+              <p>1.7.1</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Reported by</h4>
+              <p>Christian Reitter</p>
+            </div>
+            <div class="col-lg-2 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>Date reported</h4>
+              <p>2018-09-26</p>
+            </div>
+            <div class="col-lg-5 col-sm-3 col-xs-12 text-sm-left text-xs-center">
+              <h4>More info</h4>
+              <a href="https://github.com/trezor/trezor-crypto/commit/5c6b47288323a6cafe331304d2708a3c2a45f4b0">GitHub (bech32_decode)</a>,
+              <a href="https://github.com/trezor/trezor-crypto/commit/2bbbc3e15573294c6dd0273d2a8542ba42507eb0">GitHub (cash_decode)</a>,
+              <a href="https://blog.trezor.io/details-about-the-security-updates-in-trezor-one-firmware-1-7-1-5c34278425d8">Official blogpost</a>
             </div>
           </div>
         </div>
