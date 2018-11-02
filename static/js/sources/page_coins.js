@@ -21,6 +21,27 @@ COINMARKET_SYMBLOS = {
     '$FIXY NETWORK': 'FXY',
 };
 
+nameToIcon = function(elm) {
+    console.log(elm);
+    var name = $(elm).data('name');
+    var parent = $(elm).parent();
+    $(parent).html(name.split('')[0]);
+    $(parent).css("background-color", string_to_color(name));
+};
+
+string_to_color = function (str) {
+    var hash = 0;
+    for (var i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    var color = '#';
+    for (var i = 0; i < 3; i++) {
+        var value = (hash >> (i * 8)) & 0xFF;
+        color += ('00' + value.toString(16)).substr(-2);
+    }
+    return color;
+};
+
 $(document).ready(function () {
     new ClipboardJS('.clipboard');
     
@@ -81,39 +102,20 @@ $(document).ready(function () {
                     if (isChar && isChar[0] == item.symbol) {
                         var el = $('img#COIN-' + item.symbol);
                         if (el[0]) {
-                            el.attr('data-original', 'https://s2.coinmarketcap.com/static/img/coins/32x32/' + item.id + '.png')
+                            el.attr('data-echo', 'https://s2.coinmarketcap.com/static/img/coins/32x32/' + item.id + '.png')
                         }
                     }
                 });
-                
-                bLazy = new Blazy({
-                    selector: '.b-lazy',
-                    src: 'data-original',
-                    successClass: 'loaded',
-                    error: function (elm, msg) {
-                        if (msg === 'missing') {
-                            var clearbit = $(elm).data('clearbit');
-                            if (clearbit) {
-                                $(elm).removeAttr('data-clearbit');
-                                $(elm).attr('data-original', clearbit);
-                                bLazy.revalidate();
-                            } else {
-                                nameToIcon(elm);
-                            }
-                        }
-                        if (msg === 'invalid') {
-                            nameToIcon(elm);
-                        }
-                    },
-                    offset: 200
+
+                echo.init({
+                    offset: 100,
+                    unload: false,
+                    debounce: false,
+                    callback: function(element, op) {
+                        element.classList.add('loaded');
+                    }
                 });
             });
-        },
-        nameToIcon = function(elm) {
-            var name = $(elm).data('name');
-            var parent = $(elm).parent();
-            $(parent).html(name.split('')[0]);
-            $(parent).css("background-color", string_to_color(name));
         },
         sizeElements = function() {
             $('#invisible-offset').width($('#visible-offset').width());
@@ -182,18 +184,6 @@ $(document).ready(function () {
             }
             get_search_results(valThis.toLowerCase());
         },
-        string_to_color = function (str) {
-            var hash = 0;
-            for (var i = 0; i < str.length; i++) {
-                hash = str.charCodeAt(i) + ((hash << 5) - hash);
-            }
-            var color = '#';
-            for (var i = 0; i < 3; i++) {
-                var value = (hash >> (i * 8)) & 0xFF;
-                color += ('00' + value.toString(16)).substr(-2);
-            }
-            return color;
-        },
         getWalletLinks = function (links) {
             if (links) {
                 var r = [];
@@ -247,7 +237,7 @@ $(document).ready(function () {
                 var hiddenClass = typeof(e.hidden) === 'undefined' ? ' ' : ' hidden';
                 var wrapper = $('<tr class="coin' + hiddenClass + '" data-href="./#' + e.shortcut + '" id="' + shortcut + '"/>');
                 var tempTitle = typeof e.marketcap_usd === 'undefined' ? " " : "$ " + e.marketcap_usd.toLocaleString();
-                wrapper.append($('<td><span class="logo-wrapper"><img class="b-lazy" id="COIN-' + shortcut.toUpperCase() + '" ' + get_logo(e) + ' data-name="' + e.name + '"></span></td>'));
+                wrapper.append($('<td><span class="logo-wrapper"><img id="COIN-' + shortcut.toUpperCase() + '" ' + get_logo(e) + ' onerror="nameToIcon(this)" data-name="' + e.name + '" class="lazy"></span></td>'));
                 wrapper.append($('<td title="' + tempTitle + '"><strong>' + e.name + '</strong> (' + e.shortcut + ') <a href="#' + shortcut + '" class="clipboard"  data-clipboard-text="' + coinUrl + '" data-toggle="tooltip" data-title="copy"><i class="fa fa-link"></i></a><span class="copied"><i class="fa fa-check-circle"></i> copied!</span></td>'));
                 wrapper.append($('<td>' + get_result(e.t1_enabled) + '</td>'));
                 wrapper.append($('<td>' + get_result(e.t2_enabled) + '</td>'));

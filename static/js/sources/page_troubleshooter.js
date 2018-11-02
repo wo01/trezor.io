@@ -198,11 +198,11 @@ $(document).ready(function () {
   window.gotoTroubleshooter = function () {
     location.href = tb_link + '?technical=' + tech + steps;
     return false;
-  }
+  };
 
   window.gotoTroubleshooterOrder = function () {
     var ts_subject = document.getElementsByTagName('h4')[0].textContent;
     location.href = ts_link + '?subject=' + ts_subject;
     return false;
-  }
+  };
 });

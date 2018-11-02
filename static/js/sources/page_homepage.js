@@ -76,7 +76,7 @@ $(document).ready(function () {
         setTimeout(function() {
             $('.wallet-video .video[data-target="' + newSrc + '"]').addClass('show');
             setTimeout(function() {
-                $('.wallet-video .video[data-target="' + newSrc + '"] video')[0].play();    
+                $('.wallet-video .video[data-target="' + newSrc + '"] video')[0].play();
             }, 500);
         }, 500);
     });
@@ -164,6 +164,22 @@ $(document).ready(function () {
 
     function onPageLoaded() {
         bindStickyHandler();
+
+        if (canUseWebP()) {
+            $('img[data-progressive]').each(function(i, elm) {
+                var progressive = $(elm).data('progressive');
+                $(elm).attr('data-echo', progressive);
+            });
+        }
+
+        echo.init({
+            offset: 100,
+            unload: false,
+            debounce: false,
+            callback: function(element, op) {
+                element.classList.add('loaded');
+            }
+        });
     }
 
     // init

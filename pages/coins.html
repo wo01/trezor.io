@@ -47,6 +47,10 @@
             <td>
               <span class="logo-wrapper">
                   <img class="b-lazy" id="COIN-{{ shortcut|to_upper }}" {% if coin.links.Homepage %}data-clearbit="https://logo.clearbit.com/{{ coin.links.Homepage|url_to_domain }}?size=64"{% endif %} data-name="{{ coin.name }}">
+          <tr class="coin {% if coin.hidden %} hide {% endif %}" data-href="./#{{ shortcut }}" id="{{ shortcut }}"/>
+            <td>
+              <span class="logo-wrapper">
+                  <img id="COIN-{{ shortcut|to_upper }}" onerror="nameToIcon(this)" {% if coin.links.Homepage %}data-echo="https://logo.clearbit.com/{{ coin.links.Homepage|url_to_domain }}?size=64"{% endif %} data-name="{{ coin.name }}" class="lazy">
               </span>
             </td>
             <td title="{% if coin.marketcap_usd > 0 %}$ {{ coin.marketcap_usd|format_number }}{% endif %}"><strong>{{ coin.name }}</strong> ({{ shortcut }}) <a href="#{{ shortcut }}" class="clipboard"  data-clipboard-text="{{CURRENT_PAGE.absolute_final_url}}coins/#{{ shortcut }}" data-toggle="tooltip" data-title="copy"><i class="fa fa-link"></i></a><span class="copied"><i class="fa fa-check-circle"></i> copied!</span></td>
