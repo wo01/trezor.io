@@ -46,10 +46,6 @@
           <tr class="coin {% if coin.hidden %} hidden {% endif %} {{coin.network}}" data-href="./#{{ shortcut }}" id="{{ shortcut }}"/>
             <td>
               <span class="logo-wrapper">
-                  <img class="b-lazy" id="COIN-{{ shortcut|to_upper }}" {% if coin.links.Homepage %}data-clearbit="https://logo.clearbit.com/{{ coin.links.Homepage|url_to_domain }}?size=64"{% endif %} data-name="{{ coin.name }}">
-          <tr class="coin {% if coin.hidden %} hide {% endif %}" data-href="./#{{ shortcut }}" id="{{ shortcut }}"/>
-            <td>
-              <span class="logo-wrapper">
                   <img id="COIN-{{ shortcut|to_upper }}" onerror="nameToIcon(this)" {% if coin.links.Homepage %}data-echo="https://logo.clearbit.com/{{ coin.links.Homepage|url_to_domain }}?size=64"{% endif %} data-name="{{ coin.name }}" class="lazy">
               </span>
             </td>

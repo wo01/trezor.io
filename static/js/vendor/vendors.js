@@ -101,7 +101,7 @@ $(document).ready(function () {
       var params = ['r', 'a', 'h', 'offer_id', 'aff_id', 'source', 'aff_sub', 'aff_sub2', 'aff_click_id', 'aff_unique1', 'aff_unique2'];
       var r = [];
 
-      params.forEach((value) => {
+      params.forEach(function(value) {
       	var param = getParameterByName(value);
 		if (param) {
 			r.push([value, param]);
@@ -121,58 +121,53 @@ $(document).ready(function () {
       }
    	  return [];
     }
-
+    
     function handleAffil() {
-      var cookieName = 'trezor-affil';
-      var cookie = Cookies.get(cookieName);
-      var jparam = getParams();
-      var setup = [];
-
-      if (typeof cookie === 'undefined') {
-        if (jparam.length > 0) {
-          setup = jparam;
-          var content = JSON.stringify(jparam);
-          Cookies.set(cookieName, content, { expires: 7 });
+        var cookieName = 'trezor-affil';
+        var cookie = Cookies.get(cookieName);
+        var jparam = getParams();
+        var setup = [];
+        
+        if (typeof cookie === 'undefined') {
+            if (jparam.length > 0) {
+                setup = jparam;
+                var content = JSON.stringify(jparam);
+                Cookies.set(cookieName, content, { expires: 7 });
+            }
+        } else {
+            // have cookie
+            setup = cookie = JSON.parse(cookie);
+            if (cookie && cookie[0] && cookie[0][0] === 'r') {
+                // referrer cookie
+                if (jparam && jparam[0] && (jparam[0][0] === 'a' || jparam[0][0] === 'h')) {
+                    Cookies.remove(cookieName);
+                    setup = jparam;
+                    var content = JSON.stringify(jparam);
+                    Cookies.set(cookieName, content, { expires: 7 });
+                } else {
+                    setup = cookie;
+                }
+            }
+            if (cookie && cookie[0] && (cookie[0][0] === 'a' || cookie[0][0] === 'h')) {
+                // important cookie
+                if (cookie[0][0] === jparam[0][0] && cookie[0][1] === jparam[0][1]) {
+                    Cookies.remove(cookieName);
+                    var content = JSON.stringify(jparam);
+                    Cookies.set(cookieName, content, { expires: 7 });
+                }
+                setup = jparam;
+            }
         }
-      } else {
-        // have cookie
-        setup = cookie = JSON.parse(cookie);
-        if (cookie[0][0] === 'r') {
-          // referrer cookie
-          if (jparam[0][0] === 'a' || jparam[0][0] === 'h') {
-        if (cookie && cookie[0] && cookie[0][0] === 'r') {
-          // referrer cookie
-          if (jparam && jparam[0] && (jparam[0][0] === 'a' || jparam[0][0] === 'h')) {
-            Cookies.remove(cookieName);
-            setup = jparam;
-            var content = JSON.stringify(jparam);
-            Cookies.set(cookieName, content, { expires: 7 });
-          } else {
-            setup = cookie;
-          }
+        
+        if (setup.length > 0) {
+            anchors = [];
+            setup.forEach(function(value, key) {
+                if (value && value[0] === 'r') value[0] = 'h';
+                anchors.push(value[0] + '=' + value[1]);
+            });
+            prepareAffilAnchors('?' + anchors.join('&'));
         }
-        if (cookie[0][0] === 'a' || cookie[0][0] === 'h') {
-        if (cookie && cookie[0] && (cookie[0][0] === 'a' || cookie[0][0] === 'h')) {
-          // important cookie
-          if (cookie[0][0] === jparam[0][0] && cookie[0][1] === jparam[0][1]) {
-            Cookies.remove(cookieName);
-            var content = JSON.stringify(jparam);
-            Cookies.set(cookieName, content, { expires: 7 });
-          }
-          setup = jparam;
-        }
-      }
-
-      if (setup.length > 0) {
-      	anchors = [];
-      	setup.forEach((value, key) => {
-      		if (value[0] === 'r') value[0] = 'h';
-      		if (value && value[0] === 'r') value[0] = 'h';
-      		anchors.push(value[0] + '=' + value[1]);
-      	});
-        prepareAffilAnchors('?' + anchors.join('&'));
-      }
-      return;
+        return;
     }
 
     handleAffil();
