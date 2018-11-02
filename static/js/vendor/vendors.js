@@ -98,7 +98,7 @@ $(document).ready(function () {
     }
 
     function getParams() {
-      var params = ['r', 'a', 'h', 'offer_id', 'aff_id', 'source', 'aff_sub', 'aff_sub2', 'aff_click_id', 'aff_unique1', 'aff_unique2'];
+      var params = ['r', 'a', 'h', 'offer_id', 'aff_id', 'source', 'aff_sub', 'aff_sub2', 'aff_sub3', 'aff_sub4', 'aff_sub5', 'aff_click_id', 'aff_unique1', 'aff_unique2', 'aff_unique3', 'aff_unique4', 'aff_unique5'];
       var r = [];
 
       params.forEach(function(value) {
@@ -150,7 +150,7 @@ $(document).ready(function () {
             }
             if (cookie && cookie[0] && (cookie[0][0] === 'a' || cookie[0][0] === 'h')) {
                 // important cookie
-                if (cookie[0][0] === jparam[0][0] && cookie[0][1] === jparam[0][1]) {
+                if ((jparam && jparam[0] && jparam[0][0]) && cookie[0][0] === jparam[0][0] && cookie[0][1] === jparam[0][1]) {
                     Cookies.remove(cookieName);
                     var content = JSON.stringify(jparam);
                     Cookies.set(cookieName, content, { expires: 7 });
