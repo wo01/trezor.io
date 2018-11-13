@@ -26,9 +26,9 @@ $(document).ready(function () {
 	}
 
 	function setData(data) {
-		console.log(data)
 		appData = data;
 		localStorage.setItem('appData', JSON.stringify(data));
+		init();
 	}
 
 	function getNode(id) {
@@ -73,10 +73,8 @@ $(document).ready(function () {
 
 			if (node && node.connections) {
 				var parentNode = getParentNode(node.id);
-				console.log(parentNode)
 				if (parentNode) {
 					var href = '#' + parentNode.id;
-					console.log(href)
 					$('.back-btn > a').attr('href', href);
 					$('.back-btn').show();
 				}
@@ -91,7 +89,7 @@ $(document).ready(function () {
 
 	function prepareSearch() {
 		// prepare cats
-		var rootNode = getNode(1);
+		var rootNode = getNode(0);
 		rootNode.connections.forEach(function(conn) {
 			cats.push(conn.target);
 		});
@@ -183,8 +181,14 @@ $(document).ready(function () {
 		});
 	}
 
-	prepareSearch();
-	setId();
+	function init() {
+		prepareSearch();
+		setId();
+	}
+
+	if (appData) {
+		init();
+	}
 
 	window.onhashchange = setId;
 
