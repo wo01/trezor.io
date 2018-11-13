@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body %}
+<section class="troubleshooter" id="troubleshooter">
+	<div class="shadow-search" id="search-shadow"></div>
+	<div class="container">
+		<div class="pull-right">
+			<a href="#" class="btn btn-sm btn-open">Open file</a>
+			<input type="file" name="file" id="file-input" style="display: none;">
+		</div>
+		<h2>{% trans "Help center" %}</h2>
+		<div class="search_form">
+			<form action="#" type="get" class="input-wrapper" id="js-search">
+				<input type="search" name="quick_search" placeholder="Quick search your issue" id="search" accept=".json">
+			</form>
+			<div class="search-results" id="search-results">
+				<div class="category has-res">
+					<div class="row">
+						<div class="col-xs-12 results" id="results">
+						</div>
+					</div>
+				</div>
+				<div class="category no-res">
+					<div class="row">
+						<div class="col-xs-12 result-title">
+							<div class="res"><strong>No Results</strong></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div id="scene" class="scene">
+			<ul id="content">
+				<div class="content-wrapper current">
+					<h4 class="header"></h4>
+					<div class="text"></div>
+					<div class="back-btn">
+						<a class="arrow-back">Back</a>
+					</div>
+					<ul class="option-list"></ul>
+				</div>
+			</ul>
+		</div>
+	</div>
+</section>
+
+{% endblock body %}
+
+{% block scripts %}
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/vendor/vendors.js' %}"></script>
+<script type='text/javascript' charset='utf-8' src="{% static '/static/js/sources/page_help.js' %}"></script>
+{% endblock %}
