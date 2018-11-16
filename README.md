@@ -21,3 +21,6 @@ To enable internationalization for your project:
 3. Install cactus' external dependencies `brew install closure-compiler` & `brew install yuicompressor`
 4. Build `cactus build`
 5. Serve locally `cactus serve`
+
+## Docker build & run
+run docker client and `docker build -t tio .` than to run `docker run -it -p 127.0.0.1:8000:8000 tio`

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>bnb</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="crypto" transform="translate(-1244.000000, -677.000000)" fill="#F5BC00" fill-rule="nonzero">
+            <g id="bnb" transform="translate(1244.000000, 677.000000)">
+                <path d="M19.5855,26.8109606 L31.8795,14.4206614 L44.18,26.8175118 L51.3335,19.607685 L31.8795,0 L12.432,19.6011339 L19.5855,26.8109606 Z M7.38,24.6914016 L14.5335,31.9007244 L7.38,39.1110551 L0.2265,31.9012283 L7.38,24.6914016 Z M19.5855,36.9930079 L31.8795,49.3833071 L44.1795,36.9869606 L51.337,44.1927559 L51.3335,44.1967874 L31.8795,63.8039685 L12.4315,44.2033386 L12.4215,44.1932598 L19.5855,36.9930079 Z M63.533,31.904252 L56.38,39.1140787 L49.226,31.9047559 L56.3795,24.6944252 L63.533,31.904252 Z" id="Shape"></path>
+                <polygon id="Shape" points="39.1355 31.8982047 39.1385 31.8982047 31.8795 24.5820472 26.515 29.9887874 26.5145 29.9887874 25.8985 30.6101417 24.627 31.8916535 24.617 31.9017323 24.627 31.912315 31.8795 39.2219213 39.1385 31.9057638 39.142 31.9017323"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
